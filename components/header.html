@@ -1,279 +1,1363 @@
+<!-- =========================================================
+     VALIASS MASTER HEADER
+     File: components/header.html
+     ========================================================= -->
+
 <header class="valiass-header">
+
     <div class="header-inner">
 
-        <!-- BRAND -->
+        <!-- =================================================
+             BRAND
+             ================================================= -->
+
         <a href="index.html" class="valiass-brand">
-            <span class="valiass-logo">V</span>
-            <span class="valiass-name">VALIASS</span>
+
+            <span class="valiass-logo">
+                V
+            </span>
+
+            <span class="valiass-name">
+                VALIASS
+            </span>
+
         </a>
 
-        <!-- NAVIGATION -->
-        <nav class="valiass-nav">
 
-            <a href="index.html" data-page="index.html">
+        <!-- =================================================
+             MAIN NAVIGATION
+             ================================================= -->
+
+        <nav class="valiass-nav" aria-label="Main navigation">
+
+
+            <!-- HOME -->
+
+            <a
+                href="index.html"
+                data-page="index.html"
+            >
                 Home
             </a>
 
-            <a href="story.html" data-page="story.html">
+
+            <!-- STORY -->
+
+            <a
+                href="story.html"
+                data-page="story.html"
+            >
                 Story
             </a>
 
-            <a href="family.html" data-page="family.html">
+
+            <!-- FAMILY -->
+
+            <a
+                href="family.html"
+                data-page="family.html"
+            >
                 Family
             </a>
 
-            <a href="roots.html" data-page="roots.html">
+
+            <!-- ROOTS -->
+
+            <a
+                href="roots.html"
+                data-page="roots.html"
+            >
                 Roots
             </a>
 
-            <a href="branches.html" data-page="branches.html">
-                Branches
-            </a>
 
-            <a href="vision.html" data-page="vision.html">
+            <!-- =================================================
+                 BRANCHES DROPDOWN
+                 ================================================= -->
+
+            <div class="nav-dropdown branches-menu">
+
+                <button
+                    class="nav-dropdown-trigger"
+                    type="button"
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                >
+
+                    <span>
+                        Branches
+                    </span>
+
+                    <span class="dropdown-arrow">
+                        ↓
+                    </span>
+
+                </button>
+
+
+                <!-- =================================================
+                     BRANCHES MENU
+                     ================================================= -->
+
+                <div class="branches-dropdown">
+
+
+                    <!-- MENU INTRO -->
+
+                    <div class="branches-dropdown-header">
+
+                        <div class="branches-dropdown-title">
+                            OUR BRANCHES
+                        </div>
+
+                        <div class="branches-dropdown-subtitle">
+                            A growing tree of possibilities
+                        </div>
+
+                    </div>
+
+
+                    <!-- =================================================
+                         BRANCHES OVERVIEW
+                         ================================================= -->
+
+                    <a
+                        href="branches.html"
+                        class="branch-menu-overview"
+                        data-branch-page="branches.html"
+                    >
+
+                        <span class="overview-arrow">
+                            →
+                        </span>
+
+                        <span>
+                            Branches Overview
+                        </span>
+
+                    </a>
+
+
+                    <div class="dropdown-divider"></div>
+
+
+                    <!-- =================================================
+                         BRANCH 01 — GWAVES
+                         ================================================= -->
+
+                    <a
+                        href="branches/gwaves/index.html"
+                        class="branch-menu-item"
+                        data-branch-page="branches/gwaves/index.html"
+                    >
+
+                        <span class="branch-number">
+                            01
+                        </span>
+
+                        <span class="branch-menu-text">
+
+                            <strong>
+                                GWAVES
+                            </strong>
+
+                            <small>
+                                Ideas • Movement • Media
+                            </small>
+
+                        </span>
+
+                    </a>
+
+
+                    <!-- =================================================
+                         BRANCH 02 — FUTURE
+                         ================================================= -->
+
+                    <div class="branch-menu-item coming-soon">
+
+                        <span class="branch-number">
+                            02
+                        </span>
+
+                        <span class="branch-menu-text">
+
+                            <strong>
+                                Coming Soon
+                            </strong>
+
+                            <small>
+                                A new possibility
+                            </small>
+
+                        </span>
+
+                    </div>
+
+
+                    <!-- =================================================
+                         BRANCH 03 — FUTURE
+                         ================================================= -->
+
+                    <div class="branch-menu-item coming-soon">
+
+                        <span class="branch-number">
+                            03
+                        </span>
+
+                        <span class="branch-menu-text">
+
+                            <strong>
+                                Coming Soon
+                            </strong>
+
+                            <small>
+                                Another direction
+                            </small>
+
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+            <!-- VISION -->
+
+            <a
+                href="vision.html"
+                data-page="vision.html"
+            >
                 Vision
             </a>
 
-            <a href="contact.html" data-page="contact.html">
+
+            <!-- CONTACT -->
+
+            <a
+                href="contact.html"
+                data-page="contact.html"
+            >
                 Contact
             </a>
+
 
         </nav>
 
     </div>
+
 </header>
 
+
 <style>
-/* =========================================
-   VALIASS MASTER HEADER
-   ========================================= */
 
-.valiass-header{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:78px;
-    z-index:9999;
+/* =========================================================
+   ROOT
+   ========================================================= */
 
-    background:rgba(16,23,17,0.92);
-    backdrop-filter:blur(14px);
-    -webkit-backdrop-filter:blur(14px);
-
-    border-bottom:1px solid rgba(208,180,107,0.16);
+.valiass-header,
+.valiass-header *{
+    box-sizing:border-box;
 }
 
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.valiass-header{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+    right:0;
+
+    z-index:9999;
+
+    height:78px;
+
+    background:
+        rgba(14,25,19,.94);
+
+    border-bottom:
+        1px solid
+        rgba(208,180,107,.13);
+
+    backdrop-filter:
+        blur(18px);
+
+    -webkit-backdrop-filter:
+        blur(18px);
+
+    box-shadow:
+        0 8px 35px
+        rgba(0,0,0,.14);
+}
+
+
+/* =========================================================
+   HEADER INNER
+   ========================================================= */
+
 .header-inner{
-    width:min(1400px,92%);
+
+    width:100%;
+
     height:100%;
-    margin:0 auto;
+
+    padding:
+        0 5.5vw;
 
     display:flex;
+
     align-items:center;
+
     justify-content:space-between;
 }
 
-/* =========================================
-   BRAND — LEFT SIDE
-   ========================================= */
+
+/* =========================================================
+   VALIASS BRAND
+   ========================================================= */
 
 .valiass-brand{
+
     display:flex;
+
     align-items:center;
-    gap:13px;
+
+    gap:12px;
+
+    flex-shrink:0;
+
+    color:#f5f0e4;
 
     text-decoration:none;
-    color:#f4efe4;
+
+    transition:
+        opacity .3s ease;
+}
+
+.valiass-brand:hover{
+
+    opacity:.92;
+}
+
+
+/* =========================================================
+   CIRCULAR V LOGO
+   ========================================================= */
+
+.valiass-logo{
+
+    width:38px;
+    height:38px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    border:
+        1.5px solid
+        #d0b46b;
+
+    color:#d0b46b;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:20px;
+
+    font-weight:500;
+
+    line-height:1;
+
+    position:relative;
+
+    box-shadow:
+
+        0 0 0 1px
+        rgba(208,180,107,.08),
+
+        inset 0 0 12px
+        rgba(208,180,107,.06);
+}
+
+
+/* subtle inner circle */
+
+.valiass-logo::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:4px;
+
+    border-radius:50%;
+
+    border:
+        1px solid
+        rgba(208,180,107,.18);
+
+    pointer-events:none;
+}
+
+
+/* =========================================================
+   VALIASS WORDMARK
+   ========================================================= */
+
+.valiass-name{
+
+    font-family:
+        "Trebuchet MS",
+        Arial,
+        sans-serif;
+
+    font-size:20px;
+
+    font-weight:700;
+
+    letter-spacing:3.2px;
+
+    color:#f5f0e4;
+
+    line-height:1;
+
+    white-space:nowrap;
+
+    text-shadow:
+        0 1px 12px
+        rgba(0,0,0,.20);
+}
+
+
+/* =========================================================
+   MAIN NAVIGATION
+   ========================================================= */
+
+.valiass-nav{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:31px;
+
+    height:100%;
+}
+
+
+/* =========================================================
+   NORMAL NAV LINKS
+   ========================================================= */
+
+.valiass-nav > a,
+.nav-dropdown-trigger{
+
+    position:relative;
+
+    height:100%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:none;
+
+    border:0;
+
+    padding:0;
+
+    color:
+        rgba(244,239,227,.67);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:13px;
+
+    letter-spacing:.5px;
+
+    cursor:pointer;
+
+    white-space:nowrap;
+
+    text-decoration:none;
+
+    transition:
+        color .3s ease;
+}
+
+
+/* =========================================================
+   HOVER
+   ========================================================= */
+
+.valiass-nav > a:hover,
+.nav-dropdown-trigger:hover{
+
+    color:#f4efe3;
+}
+
+
+/* =========================================================
+   ACTIVE PAGE
+   ========================================================= */
+
+.valiass-nav > a.active,
+.nav-dropdown-trigger.active{
+
+    color:#d7bc76;
+}
+
+
+/* =========================================================
+   ACTIVE UNDERLINE
+   ========================================================= */
+
+.valiass-nav > a::after,
+.nav-dropdown-trigger::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    right:0;
+
+    bottom:17px;
+
+    height:1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #d0b46b,
+            transparent
+        );
+
+    transform:
+        scaleX(0);
+
+    transform-origin:center;
+
+    transition:
+        transform .35s ease;
+}
+
+
+.valiass-nav > a.active::after,
+.nav-dropdown-trigger.active::after{
+
+    transform:
+        scaleX(1);
+}
+
+
+/* =========================================================
+   BRANCHES
+   ========================================================= */
+
+.branches-menu{
+
+    position:relative;
+
+    height:100%;
+
+    display:flex;
+
+    align-items:center;
+}
+
+
+.nav-dropdown-trigger{
+
+    gap:7px;
+}
+
+
+.dropdown-arrow{
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size:9px;
+
+    color:
+        rgba(208,180,107,.72);
+
+    transform:
+        translateY(-1px);
+
+    transition:
+        transform .3s ease;
+}
+
+
+.branches-menu:hover
+.dropdown-arrow{
+
+    transform:
+        rotate(180deg)
+        translateY(1px);
+}
+
+
+.branches-menu.open
+.dropdown-arrow{
+
+    transform:
+        rotate(180deg)
+        translateY(1px);
+}
+
+
+/* =========================================================
+   BRANCHES DROPDOWN
+   ========================================================= */
+
+.branches-dropdown{
+
+    position:absolute;
+
+    top:calc(100% - 1px);
+
+    right:-35px;
+
+    width:360px;
+
+    padding:
+        28px 28px 25px;
+
+    background:
+        rgba(18,31,23,.98);
+
+    border:
+        1px solid
+        rgba(208,180,107,.20);
+
+    box-shadow:
+        0 25px 70px
+        rgba(0,0,0,.42);
+
+    backdrop-filter:
+        blur(20px);
+
+    -webkit-backdrop-filter:
+        blur(20px);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transform:
+        translateY(8px);
+
+    transition:
+        opacity .25s ease,
+        transform .25s ease,
+        visibility .25s ease;
+}
+
+
+/* =========================================================
+   DESKTOP HOVER
+   ========================================================= */
+
+@media(min-width:801px){
+
+    .branches-menu:hover
+    .branches-dropdown{
+
+        opacity:1;
+
+        visibility:visible;
+
+        transform:
+            translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   DROPDOWN HEADER
+   ========================================================= */
+
+.branches-dropdown-header{
+
+    padding-bottom:19px;
+}
+
+
+.branches-dropdown-title{
+
+    color:#d9c17d;
+
+    font-size:11px;
+
+    letter-spacing:2.5px;
+
+    margin-bottom:7px;
+}
+
+
+.branches-dropdown-subtitle{
+
+    color:
+        rgba(244,239,227,.53);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:12px;
+
+    letter-spacing:.2px;
+}
+
+
+/* =========================================================
+   OVERVIEW
+   ========================================================= */
+
+.branch-menu-overview{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:
+        13px 0;
+
+    color:
+        rgba(244,239,227,.88);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:13px;
+
+    text-decoration:none;
+
+    transition:
+        color .25s ease,
+        padding-left .25s ease;
+}
+
+
+.branch-menu-overview:hover{
+
+    color:#d9c17d;
+
+    padding-left:5px;
+}
+
+
+.overview-arrow{
+
+    color:#d0b46b;
+
+    font-size:15px;
+}
+
+
+/* =========================================================
+   DIVIDER
+   ========================================================= */
+
+.dropdown-divider{
+
+    height:1px;
+
+    margin:
+        8px 0 5px;
+
+    background:
+        rgba(208,180,107,.14);
+}
+
+
+/* =========================================================
+   BRANCH ITEMS
+   ========================================================= */
+
+.branch-menu-item{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    padding:
+        15px 0;
+
+    color:
+        rgba(244,239,227,.72);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    text-decoration:none;
+
+    transition:
+        color .25s ease,
+        transform .25s ease;
+}
+
+
+a.branch-menu-item:hover{
+
+    color:#ffffff;
+
+    transform:
+        translateX(5px);
+}
+
+
+/* =========================================================
+   BRANCH NUMBER
+   ========================================================= */
+
+.branch-number{
+
+    width:26px;
+
+    color:
+        rgba(208,180,107,.58);
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size:10px;
+
+    letter-spacing:1px;
 
     flex-shrink:0;
 }
 
-.valiass-logo{
-    width:38px;
-    height:38px;
 
-    border:1px solid rgba(208,180,107,0.75);
-    border-radius:50%;
+/* =========================================================
+   BRANCH TEXT
+   ========================================================= */
+
+.branch-menu-text{
 
     display:flex;
-    align-items:center;
-    justify-content:center;
 
-    color:#d0b46b;
+    flex-direction:column;
 
-    font-family:Georgia, "Times New Roman", serif;
-    font-size:18px;
-
-    transition:all .3s ease;
+    gap:4px;
 }
 
-.valiass-name{
-    font-family:Georgia, "Times New Roman", serif;
 
-    font-size:20px;
-    letter-spacing:5px;
+.branch-menu-text strong{
 
-    color:#f4efe4;
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
 
-    line-height:1;
+    font-size:14px;
+
+    font-weight:400;
+
+    letter-spacing:.7px;
 }
 
-/* =========================================
-   NAVIGATION
-   ========================================= */
 
-.valiass-nav{
-    display:flex;
-    align-items:center;
-    gap:30px;
+.branch-menu-text small{
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:11px;
+
+    color:
+        rgba(244,239,227,.43);
+
+    letter-spacing:.2px;
 }
 
-.valiass-nav a{
-    position:relative;
 
-    text-decoration:none;
+/* =========================================================
+   ACTIVE BRANCH
+   ========================================================= */
 
-    color:rgba(244,239,228,0.68);
+.branch-menu-item.active{
 
-    font-family:Arial, Helvetica, sans-serif;
-    font-size:12px;
-
-    letter-spacing:1.5px;
-    text-transform:uppercase;
-
-    padding:31px 0 27px;
-
-    transition:
-        color .3s ease,
-        opacity .3s ease;
+    color:#d9c17d;
 }
 
-.valiass-nav a::after{
-    content:"";
 
-    position:absolute;
-    left:0;
-    bottom:20px;
+.branch-menu-item.active
+.branch-number{
 
-    width:0;
-    height:1px;
-
-    background:#d0b46b;
-
-    transition:width .3s ease;
-}
-
-.valiass-nav a:hover{
-    color:#f4efe4;
-}
-
-.valiass-nav a:hover::after{
-    width:100%;
-}
-
-/* ACTIVE PAGE */
-
-.valiass-nav a.active{
     color:#d0b46b;
 }
 
-.valiass-nav a.active::after{
-    width:100%;
+
+.branch-menu-item.active
+.branch-menu-text small{
+
+    color:
+        rgba(208,180,107,.65);
 }
 
-/* =========================================
-   RESPONSIVE
-   ========================================= */
 
-@media(max-width:900px){
+/* =========================================================
+   COMING SOON
+   ========================================================= */
 
-    .header-inner{
-        width:94%;
-    }
+.branch-menu-item.coming-soon{
 
-    .valiass-nav{
-        gap:18px;
-        overflow-x:auto;
-        scrollbar-width:none;
-    }
+    opacity:.46;
 
-    .valiass-nav::-webkit-scrollbar{
-        display:none;
-    }
-
-    .valiass-nav a{
-        white-space:nowrap;
-        font-size:10px;
-        letter-spacing:1.2px;
-    }
-
+    cursor:default;
 }
 
-@media(max-width:650px){
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media(max-width:800px){
 
     .valiass-header{
+
         height:70px;
     }
 
+
     .header-inner{
+
+        padding:
+            0 20px;
+    }
+
+
+    .valiass-brand{
+
+        gap:9px;
+    }
+
+
+    .valiass-logo{
+
+        width:34px;
+        height:34px;
+
+        font-size:18px;
+    }
+
+
+    .valiass-name{
+
+        font-size:17px;
+
+        letter-spacing:2.5px;
+    }
+
+
+    .valiass-nav{
+
+        gap:20px;
+
+        overflow-x:auto;
+
+        overflow-y:visible;
+
+        scrollbar-width:none;
+
+        -ms-overflow-style:none;
+
+        max-width:65vw;
+    }
+
+
+    .valiass-nav::-webkit-scrollbar{
+
+        display:none;
+    }
+
+
+    .valiass-nav > a,
+    .nav-dropdown-trigger{
+
+        font-size:12px;
+
+        flex-shrink:0;
+    }
+
+
+    .valiass-nav > a::after,
+    .nav-dropdown-trigger::after{
+
+        bottom:9px;
+    }
+
+
+    /* MOBILE DROPDOWN */
+
+    .branches-dropdown{
+
+        position:fixed;
+
+        top:70px;
+
+        left:20px;
+
+        right:20px;
+
+        width:auto;
+
+        max-height:
+            calc(100vh - 90px);
+
+        overflow-y:auto;
+
+        padding:
+            24px 24px 20px;
+    }
+
+
+    .branches-menu.open
+    .branches-dropdown{
+
+        opacity:1;
+
+        visibility:visible;
+
+        transform:
+            translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media(max-width:480px){
+
+    .header-inner{
+
+        padding:
+            0 14px;
+    }
+
+
+    .valiass-brand{
+
+        gap:8px;
+    }
+
+
+    .valiass-logo{
+
+        width:32px;
+        height:32px;
+
+        font-size:17px;
+    }
+
+
+    .valiass-name{
+
+        font-size:15px;
+
+        letter-spacing:2px;
+    }
+
+
+    .valiass-nav{
+
+        max-width:62vw;
+
         gap:18px;
     }
 
-    .valiass-name{
-        font-size:17px;
-        letter-spacing:4px;
+
+    .valiass-nav > a,
+    .nav-dropdown-trigger{
+
+        font-size:11px;
     }
 
-    .valiass-logo{
-        width:34px;
-        height:34px;
-        font-size:16px;
-    }
-
-    .valiass-nav{
-        gap:16px;
-    }
-
-    .valiass-nav a{
-        padding:27px 0 23px;
-        font-size:9px;
-    }
-
-    .valiass-nav a::after{
-        bottom:16px;
-    }
 }
+
 </style>
 
+
 <script>
+
+/* =========================================================
+   VALIASS MASTER HEADER SCRIPT
+   ========================================================= */
+
 (function(){
 
-    let currentPage =
+    const currentPath =
         window.location.pathname
-        .split("/")
-        .pop()
-        .toLowerCase();
+        .toLowerCase()
+        .replace(/\\/g,"/");
 
-    if(currentPage === "" || currentPage === "/"){
-        currentPage = "index.html";
-    }
 
-    const links =
+    /* =====================================================
+       NORMAL NAVIGATION
+       ===================================================== */
+
+    const navLinks =
         document.querySelectorAll(
-            ".valiass-nav a[data-page]"
+            ".valiass-nav > a[data-page]"
         );
 
-    links.forEach(function(link){
 
-        const page =
-            link.getAttribute("data-page")
-            .toLowerCase();
+    navLinks.forEach(
+        function(link){
 
-        if(page === currentPage){
-            link.classList.add("active");
+            const page =
+                link
+                .getAttribute("data-page")
+                .toLowerCase();
+
+
+            const currentFile =
+                currentPath
+                .split("/")
+                .pop();
+
+
+            /* HOME */
+
+            if(
+                (
+                    currentFile === "" ||
+                    currentFile === "index.html"
+                ) &&
+                page === "index.html"
+            ){
+
+                if(
+                    !currentPath.includes(
+                        "/branches/"
+                    )
+                ){
+
+                    link.classList.add(
+                        "active"
+                    );
+
+                }
+
+            }
+
+
+            /* OTHER MAIN PAGES */
+
+            else if(
+                currentFile === page
+            ){
+
+                link.classList.add(
+                    "active"
+                );
+
+            }
+
         }
+    );
 
-    });
+
+    /* =====================================================
+       BRANCHES ACTIVE STATE
+       ===================================================== */
+
+    const branchesMenu =
+        document.querySelector(
+            ".branches-menu"
+        );
+
+
+    const branchesTrigger =
+        document.querySelector(
+            ".nav-dropdown-trigger"
+        );
+
+
+    const branchLinks =
+        document.querySelectorAll(
+            "[data-branch-page]"
+        );
+
+
+    let insideBranches = false;
+
+
+    /* BRANCHES OVERVIEW */
+
+    if(
+        currentPath.endsWith(
+            "/branches.html"
+        )
+    ){
+
+        insideBranches = true;
+
+    }
+
+
+    /* ANY BRANCH PAGE */
+
+    if(
+        currentPath.includes(
+            "/branches/"
+        )
+    ){
+
+        insideBranches = true;
+
+    }
+
+
+    if(insideBranches){
+
+        branchesTrigger.classList.add(
+            "active"
+        );
+
+    }
+
+
+    /* =====================================================
+       ACTIVE BRANCH ITEM
+       ===================================================== */
+
+    branchLinks.forEach(
+        function(link){
+
+            const branchPage =
+                link
+                .getAttribute(
+                    "data-branch-page"
+                )
+                .toLowerCase();
+
+
+            if(
+                currentPath.endsWith(
+                    branchPage
+                )
+            ){
+
+                link.classList.add(
+                    "active"
+                );
+
+            }
+
+        }
+    );
+
+
+    /* =====================================================
+       MOBILE TOGGLE
+       ===================================================== */
+
+    branchesTrigger.addEventListener(
+        "click",
+        function(event){
+
+            if(
+                window.innerWidth <= 800
+            ){
+
+                event.preventDefault();
+
+
+                const isOpen =
+                    branchesMenu.classList.contains(
+                        "open"
+                    );
+
+
+                branchesMenu.classList.toggle(
+                    "open",
+                    !isOpen
+                );
+
+
+                branchesTrigger.setAttribute(
+                    "aria-expanded",
+                    String(!isOpen)
+                );
+
+            }
+
+        }
+    );
+
+
+    /* =====================================================
+       CLOSE MOBILE DROPDOWN
+       ===================================================== */
+
+    document.addEventListener(
+        "click",
+        function(event){
+
+            if(
+                window.innerWidth <= 800 &&
+                !branchesMenu.contains(
+                    event.target
+                )
+            ){
+
+                branchesMenu.classList.remove(
+                    "open"
+                );
+
+
+                branchesTrigger.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
+
+            }
+
+        }
+    );
+
 
 })();
+
 </script>
