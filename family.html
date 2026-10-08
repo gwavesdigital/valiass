@@ -1,36 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Family — VALIASS</title>
 
 <style>
 
+/* =========================================================
+   VALIASS FAMILY PAGE
+   ========================================================= */
+
 :root{
     --milky:#fbfaf6;
     --milky-soft:#f5f3ec;
-    --ivory:#eee9dc;
-
     --green:#20382c;
     --green-dark:#101711;
-    --green-deep:#14251c;
-    --green-light:#385744;
-
     --gold:#d0b46b;
     --gold-soft:#b89c5d;
-
     --text:#26332b;
     --muted:#697168;
-
     --white:#ffffff;
 }
 
 *{
+    margin:0;
+    padding:0;
     box-sizing:border-box;
 }
 
@@ -39,211 +36,216 @@ html{
 }
 
 body{
-    margin:0;
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
     background:var(--milky);
     color:var(--text);
-    font-family:Arial, Helvetica, sans-serif;
+    overflow-x:hidden;
 }
 
 a{
     color:inherit;
+    text-decoration:none;
 }
 
-img{
-    max-width:100%;
-    display:block;
-}
-
-
-/* =====================================================
-   PAGE
-   ===================================================== */
-
-.family-page{
-    padding-top:78px;
+.header-space{
+    height:78px;
 }
 
 
-/* =====================================================
+/* =========================================================
    HERO
-   ===================================================== */
+   ========================================================= */
 
 .family-hero{
 
-    min-height:72vh;
+    min-height:78vh;
 
     position:relative;
 
     display:flex;
-    align-items:flex-end;
+    align-items:center;
+    justify-content:flex-start;
 
-    overflow:hidden;
+    text-align:left;
+
+    color:white;
+
+    padding:0 7vw;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            rgba(8,18,12,.76) 0%,
+            rgba(8,18,12,.48) 42%,
+            rgba(8,18,12,.18) 78%,
+            rgba(8,18,12,.28) 100%
+        ),
+
+        /* SAMPLE HERO IMAGE */
+        url("https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=2400&q=90")
+
+        center center / cover no-repeat;
+}
+
+.family-hero::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    pointer-events:none;
 
     background:
         linear-gradient(
             to bottom,
-            rgba(16,23,17,.15),
-            rgba(16,23,17,.90)
-        ),
-
-        url("https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=2200&q=85")
-        center/cover no-repeat;
+            transparent 55%,
+            rgba(8,17,12,.58) 100%
+        );
 }
 
-.family-hero-inner{
+.hero-content{
 
-    width:min(1200px,90%);
+    position:relative;
 
-    margin:0 auto;
+    z-index:2;
 
-    padding:100px 0 90px;
+    max-width:720px;
 
-    color:white;
+    padding:70px 0;
 }
 
-.eyebrow{
+.hero-kicker{
 
-    margin-bottom:20px;
-
-    color:var(--gold);
-
-    font-size:11px;
+    font-size:13px;
 
     letter-spacing:4px;
 
     text-transform:uppercase;
+
+    color:#e2cc8b;
+
+    margin-bottom:24px;
 }
 
-.family-hero h1{
+.hero-content h1{
 
-    margin:0;
+    font-size:
+        clamp(48px,6.5vw,88px);
 
-    max-width:900px;
-
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
+    line-height:1.03;
 
     font-weight:400;
 
-    font-size:
-        clamp(48px,7vw,92px);
+    letter-spacing:-2px;
 
-    line-height:.98;
+    margin-bottom:28px;
+
+    color:#ffffff;
 }
 
-.family-hero p{
+.hero-content p{
 
     max-width:650px;
 
-    margin:30px 0 0;
-
-    color:rgba(255,255,255,.78);
-
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
+    margin:0;
 
     font-size:19px;
 
-    line-height:1.75;
+    line-height:1.8;
+
+    color:rgba(255,255,255,.86);
 }
 
 
-/* =====================================================
+/* =========================================================
    INTRO
-   ===================================================== */
+   ========================================================= */
 
 .family-intro{
 
-    padding:120px 8%;
-
     background:var(--milky);
+
+    padding:120px 25px;
+
+    text-align:center;
 }
 
 .family-intro-inner{
 
-    width:min(1050px,100%);
-
+    max-width:850px;
     margin:auto;
-
-    display:grid;
-
-    grid-template-columns:.7fr 1.3fr;
-
-    gap:80px;
-
-    align-items:start;
 }
 
-.intro-small{
+.section-label{
 
-    color:var(--gold-soft);
-
-    font-size:11px;
+    font-size:12px;
 
     letter-spacing:3px;
 
     text-transform:uppercase;
+
+    color:var(--gold-soft);
+
+    margin-bottom:22px;
 }
 
 .family-intro h2{
 
-    margin:0;
-
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
+    font-size:
+        clamp(34px,5vw,58px);
 
     font-weight:400;
 
-    font-size:
-        clamp(34px,5vw,62px);
-
-    line-height:1.08;
+    line-height:1.15;
 
     color:var(--green);
+
+    margin-bottom:28px;
 }
 
-.family-intro-text{
+.family-intro p{
 
-    margin-top:25px;
-
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
-    font-size:21px;
+    font-size:19px;
 
     line-height:1.9;
 
-    color:#536057;
+    color:var(--muted);
 }
 
 
-/* =====================================================
-   FAMILY TREE SECTION
-   ===================================================== */
+/* =========================================================
+   FAMILY TREE
+   ========================================================= */
 
 .family-tree-section{
 
     position:relative;
 
-    padding:130px 4% 160px;
-
     overflow:hidden;
 
-    background:#eef0e8;
+    min-height:1150px;
+
+    padding:
+        150px 25px
+        160px;
+
+    background:#17261d;
+
+    color:white;
 }
 
 
-/* =====================================================
+/* =========================================================
    BANYAN BACKGROUND
-   ===================================================== */
+   SAMPLE IMAGE
+   ========================================================= */
 
 .banyan-background{
 
@@ -253,25 +255,41 @@ img{
 
     z-index:0;
 
+    /*
+       SAMPLE IMAGE:
+       Large Indian Banyan with aerial roots.
+       Later replace ONLY this URL with:
+       assets/family-banyan.jpg
+    */
+
     background:
 
         linear-gradient(
-            rgba(238,240,232,.78),
-            rgba(238,240,232,.90)
+            to bottom,
+            rgba(7,17,11,.08) 0%,
+            rgba(7,17,11,.16) 28%,
+            rgba(7,17,11,.30) 55%,
+            rgba(7,17,11,.54) 78%,
+            rgba(7,17,11,.80) 100%
         ),
 
-        url("https://images.unsplash.com/photo-1599707367072-cd6ada2bc375?auto=format&fit=crop&w=2400&q=90")
+        url("https://images.unsplash.com/photo-1711023458874-7d3f6f1e6b84?auto=format&fit=crop&w=2400&q=90")
+
         center center / cover no-repeat;
 
-    filter:saturate(.75);
+    filter:
+        saturate(.95)
+        contrast(1.05);
 
     transform:scale(1.03);
 }
 
 
-/* soft atmospheric overlay */
+/* =========================================================
+   GOLDEN ATMOSPHERE
+   ========================================================= */
 
-.banyan-background::after{
+.family-tree-section::before{
 
     content:"";
 
@@ -279,335 +297,244 @@ img{
 
     inset:0;
 
-    background:
+    z-index:1;
 
-        radial-gradient(
-            circle at center,
-            rgba(255,255,255,.05),
-            rgba(16,37,28,.12)
-        );
-}
-
-
-/* =====================================================
-   TREE HEADING
-   ===================================================== */
-
-.tree-heading{
-
-    position:relative;
-
-    z-index:3;
-
-    text-align:center;
-
-    margin-bottom:80px;
-}
-
-.tree-heading span{
-
-    display:block;
-
-    color:var(--gold-soft);
-
-    font-size:10px;
-
-    letter-spacing:4px;
-
-    text-transform:uppercase;
-
-    margin-bottom:18px;
-}
-
-.tree-heading h2{
-
-    margin:0;
-
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
-    font-weight:400;
-
-    color:var(--green);
-
-    font-size:
-        clamp(38px,5vw,64px);
-
-    text-shadow:
-        0 2px 20px rgba(255,255,255,.8);
-}
-
-.tree-heading p{
-
-    max-width:620px;
-
-    margin:22px auto 0;
-
-    color:#59645c;
-
-    line-height:1.8;
-}
-
-
-/* =====================================================
-   BANYAN MESSAGE
-   ===================================================== */
-
-.banyan-message{
-
-    position:relative;
-
-    z-index:3;
-
-    max-width:780px;
-
-    margin:0 auto 80px;
-
-    text-align:center;
-}
-
-.banyan-message h3{
-
-    margin:0;
-
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
-    font-size:
-        clamp(27px,4vw,42px);
-
-    line-height:1.25;
-
-    font-weight:400;
-
-    color:var(--green);
-}
-
-.banyan-message p{
-
-    margin:18px auto 0;
-
-    max-width:650px;
-
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
-    font-size:17px;
-
-    line-height:1.8;
-
-    color:#59645c;
-}
-
-
-/* =====================================================
-   TREE CANVAS
-   ===================================================== */
-
-.tree-wrap{
-
-    width:min(1250px,100%);
-
-    margin:auto;
-
-    position:relative;
-
-    z-index:2;
-
-    min-height:1000px;
-
-    padding:40px 20px 80px;
+    pointer-events:none;
 
     background:
 
         radial-gradient(
-            ellipse at center,
-            rgba(255,255,255,.78) 0%,
-            rgba(255,255,255,.46) 38%,
-            rgba(255,255,255,0) 72%
+            ellipse at 50% 18%,
+            rgba(236,205,125,.20) 0%,
+            rgba(236,205,125,.06) 28%,
+            transparent 55%
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(5,14,9,.44),
+            transparent 28%,
+            transparent 72%,
+            rgba(5,14,9,.44)
         );
 }
 
 
-/* subtle central trunk atmosphere */
+/* =========================================================
+   CINEMATIC VIGNETTE
+   ========================================================= */
 
-.tree-wrap::before{
+.family-tree-section::after{
 
     content:"";
 
     position:absolute;
 
-    left:50%;
+    inset:0;
 
-    top:0;
+    z-index:2;
 
-    bottom:0;
-
-    width:260px;
-
-    transform:translateX(-50%);
+    pointer-events:none;
 
     background:
 
         radial-gradient(
-            ellipse,
-            rgba(32,56,44,.12),
-            transparent 68%
+            ellipse at center,
+            transparent 18%,
+            rgba(4,12,8,.15) 58%,
+            rgba(4,12,8,.65) 100%
         );
-
-    pointer-events:none;
 }
 
 
-/* =====================================================
-   ANCESTRAL SECTION
-   ===================================================== */
+/* =========================================================
+   TREE CONTENT
+   ========================================================= */
 
-.ancestral{
+.family-tree-content{
 
     position:relative;
 
     z-index:3;
 
-    display:grid;
-
-    grid-template-columns:1fr 1fr;
-
-    gap:130px;
-
-    max-width:950px;
+    max-width:1250px;
 
     margin:auto;
 }
 
-.ancestor-column{
 
-    display:flex;
+/* =========================================================
+   TREE HEADING
+   ========================================================= */
 
-    flex-direction:column;
+.tree-heading{
 
-    align-items:center;
-}
+    max-width:760px;
 
-.family-node{
+    margin:
+        0 auto 75px;
 
     text-align:center;
+}
+
+.tree-heading .section-label{
+
+    color:#dfc477;
+
+    text-shadow:
+        0 2px 20px rgba(0,0,0,.5);
+}
+
+.tree-heading h2{
+
+    color:white;
+
+    font-size:
+        clamp(42px,5vw,68px);
+
+    font-weight:400;
+
+    line-height:1.05;
+
+    letter-spacing:-1.5px;
+
+    text-shadow:
+        0 4px 30px rgba(0,0,0,.75);
+
+    margin-bottom:22px;
+}
+
+.tree-heading p{
+
+    color:rgba(255,255,255,.82);
+
+    font-size:18px;
+
+    line-height:1.8;
+
+    text-shadow:
+        0 2px 15px rgba(0,0,0,.8);
+}
+
+
+/* =========================================================
+   FAMILY TREE PANEL
+   ========================================================= */
+
+.family-tree-diagram{
+
+    position:relative;
+
+    max-width:1100px;
+
+    margin:auto;
+
+    padding:
+        65px 45px
+        75px;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,.17),
+            rgba(255,255,255,.045)
+        );
+
+    border:
+        1px solid
+        rgba(255,255,255,.23);
+
+    box-shadow:
+
+        0 35px 100px
+        rgba(0,0,0,.40),
+
+        inset 0 1px 0
+        rgba(255,255,255,.15);
+
+    backdrop-filter:blur(7px);
+    -webkit-backdrop-filter:blur(7px);
+}
+
+
+/* =========================================================
+   ANCESTRAL LINES
+   ========================================================= */
+
+.ancestor-row{
+
+    display:grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap:90px;
+
+    align-items:start;
 
     position:relative;
 }
 
-.family-node .names{
+.ancestor-column{
 
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
+    text-align:center;
+}
 
-    color:var(--green);
+.family-name{
 
-    font-size:19px;
+    font-size:18px;
+
+    letter-spacing:.5px;
+
+    color:#ffffff;
 
     line-height:1.5;
 
     text-shadow:
-        0 2px 12px rgba(255,255,255,.95);
+        0 2px 15px rgba(0,0,0,.85);
 }
 
-.family-node .sub{
+.family-plus{
 
-    margin-top:6px;
+    display:block;
 
-    color:var(--muted);
+    margin:10px 0;
 
-    font-size:9px;
+    font-size:18px;
 
-    letter-spacing:2px;
-
-    text-transform:uppercase;
+    color:#e0c477;
 }
 
-.ancestor-couple{
-
-    padding:22px 28px;
-
-    border-top:1px solid rgba(56,87,68,.35);
-
-    border-bottom:1px solid rgba(56,87,68,.35);
-
-    background:rgba(255,255,255,.22);
-
-    backdrop-filter:blur(2px);
-}
-
-.vertical-line{
+.family-line{
 
     width:1px;
 
-    height:65px;
+    height:42px;
 
-    background:rgba(56,87,68,.38);
+    margin:12px auto;
+
+    background:
+
+        linear-gradient(
+            to bottom,
+            rgba(224,196,119,.85),
+            rgba(255,255,255,.30)
+        );
 }
 
 
-/* =====================================================
-   CENTRAL FAMILY UNION
-   ===================================================== */
-
-.central-union{
-
-    margin-top:100px;
-
-    position:relative;
-
-    display:flex;
-
-    flex-direction:column;
-
-    align-items:center;
-
-    z-index:4;
-}
-
-.union-line{
-
-    position:absolute;
-
-    top:-100px;
-
-    left:50%;
-
-    height:100px;
-
-    width:1px;
-
-    background:rgba(56,87,68,.38);
-}
-
-
-/* central couple */
+/* =========================================================
+   CENTRAL COUPLE
+   ========================================================= */
 
 .central-couple{
 
-    position:relative;
-
-    padding:34px 65px;
-
-    border:1px solid rgba(208,180,107,.75);
-
-    background:rgba(251,250,246,.78);
-
-    backdrop-filter:blur(8px);
+    margin-top:60px;
 
     text-align:center;
 
-    box-shadow:
-        0 15px 50px rgba(32,56,44,.10);
+    position:relative;
 }
 
 .central-couple::before{
@@ -616,172 +543,172 @@ img{
 
     position:absolute;
 
-    inset:7px;
-
-    border:1px solid rgba(208,180,107,.18);
-
-    pointer-events:none;
-}
-
-.central-couple .names{
-
-    position:relative;
-
-    z-index:2;
-
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
-    font-size:25px;
-
-    color:var(--green);
-
-    line-height:1.5;
-}
-
-
-/* =====================================================
-   CHILDREN
-   ===================================================== */
-
-.children-line{
-
-    position:relative;
-
-    width:72%;
-
-    height:120px;
-
-    margin-top:0;
-}
-
-.children-line::before{
-
-    content:"";
-
-    position:absolute;
+    top:-60px;
 
     left:25%;
 
-    right:25%;
-
-    top:0;
+    width:50%;
 
     height:1px;
 
-    background:rgba(56,87,68,.38);
+    background:
+
+        linear-gradient(
+            to right,
+            transparent,
+            rgba(224,196,119,.65),
+            transparent
+        );
 }
 
-.children-line::after{
+.central-names{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:25px;
+}
+
+.central-name{
+
+    font-size:22px;
+
+    color:#ffffff;
+
+    text-shadow:
+        0 2px 15px rgba(0,0,0,.85);
+}
+
+.central-symbol{
+
+    color:#e0c477;
+
+    font-size:20px;
+}
+
+
+/* =========================================================
+   CHILDREN
+   ========================================================= */
+
+.children-area{
+
+    position:relative;
+
+    margin-top:70px;
+
+    padding-top:40px;
+}
+
+.children-area::before{
 
     content:"";
 
     position:absolute;
 
-    left:50%;
-
     top:0;
 
-    bottom:0;
+    left:25%;
 
-    width:1px;
+    width:50%;
 
-    background:rgba(56,87,68,.38);
+    height:1px;
+
+    background:
+
+        linear-gradient(
+            to right,
+            transparent,
+            rgba(224,196,119,.65),
+            transparent
+        );
 }
 
-.child-stem{
+.children-area::after{
+
+    content:"";
 
     position:absolute;
 
     top:0;
 
+    left:50%;
+
     width:1px;
 
-    height:65px;
+    height:38px;
 
-    background:rgba(56,87,68,.38);
-}
-
-.child-stem.left{
-    left:25%;
-}
-
-.child-stem.right{
-    right:25%;
+    background:
+        rgba(224,196,119,.68);
 }
 
 .children{
 
-    width:80%;
-
-    margin-top:-45px;
-
     display:grid;
 
-    grid-template-columns:1fr 1fr;
+    grid-template-columns:
+        1fr 1fr;
 
-    gap:120px;
+    gap:60px;
 
     position:relative;
-
-    z-index:4;
 }
 
 .child{
 
     text-align:center;
 
-    padding:24px 15px;
+    position:relative;
 }
 
-.child .names{
+.child::before{
 
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
+    content:"";
 
-    color:var(--green);
+    position:absolute;
 
-    font-size:20px;
+    top:-40px;
+
+    left:50%;
+
+    width:1px;
+
+    height:40px;
+
+    background:
+        rgba(224,196,119,.68);
+}
+
+.child-name{
+
+    font-size:19px;
+
+    color:#ffffff;
 
     text-shadow:
-        0 2px 15px rgba(255,255,255,.95);
-}
-
-.child .meaning{
-
-    margin-top:8px;
-
-    color:var(--gold-soft);
-
-    font-size:9px;
-
-    letter-spacing:2px;
-
-    text-transform:uppercase;
+        0 2px 15px rgba(0,0,0,.85);
 }
 
 
-/* =====================================================
-   CONVERGENCE
-   ===================================================== */
+/* =========================================================
+   NEXT BRANCH
+   ========================================================= */
 
-.convergence{
+.next-generation{
 
-    width:55%;
+    margin-top:65px;
 
-    height:115px;
+    text-align:center;
 
     position:relative;
 
-    margin-top:0;
+    padding-top:45px;
 }
 
-.convergence::before,
-.convergence::after{
+.next-generation::before{
 
     content:"";
 
@@ -789,451 +716,387 @@ img{
 
     top:0;
 
+    left:50%;
+
     width:1px;
 
-    height:90px;
+    height:45px;
 
-    background:rgba(56,87,68,.38);
+    background:
+        rgba(224,196,119,.68);
 }
 
-.convergence::before{
+.next-name{
 
-    left:25%;
+    font-size:22px;
 
-    transform:rotate(28deg);
+    color:#ffffff;
 
-    transform-origin:top;
+    margin-bottom:22px;
+
+    text-shadow:
+        0 2px 15px rgba(0,0,0,.85);
 }
-
-.convergence::after{
-
-    right:25%;
-
-    transform:rotate(-28deg);
-
-    transform-origin:top;
-}
-
-
-/* =====================================================
-   SKANDA
-   ===================================================== */
-
-.skanda{
-
-    position:relative;
-
-    z-index:5;
-
-    text-align:center;
-}
-
-.skanda .names{
-
-    display:inline-block;
-
-    padding:29px 48px;
-
-    background:var(--green);
-
-    color:#f4efe4;
-
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
-    font-size:23px;
-
-    letter-spacing:.5px;
-
-    box-shadow:
-        0 20px 50px rgba(16,23,17,.18);
-}
-
-.skanda .meaning{
-
-    margin-top:15px;
-
-    color:var(--gold-soft);
-
-    font-size:10px;
-
-    letter-spacing:3px;
-
-    text-transform:uppercase;
-}
-
-
-/* =====================================================
-   NEXT BRANCH
-   ===================================================== */
 
 .next-branch{
 
-    display:flex;
-
-    flex-direction:column;
-
-    align-items:center;
-
-    margin-top:70px;
-}
-
-.next-line{
-
     width:1px;
 
-    height:80px;
+    height:45px;
 
-    background:rgba(56,87,68,.38);
+    background:
+
+        linear-gradient(
+            to bottom,
+            rgba(224,196,119,.85),
+            rgba(255,255,255,.30)
+        );
+
+    margin:auto;
 }
 
 .next-label{
 
-    padding:20px 38px;
+    display:inline-block;
 
-    border:1px solid rgba(208,180,107,.65);
+    margin-top:18px;
 
-    color:var(--gold-soft);
+    padding:
+        10px 22px;
 
-    font-size:11px;
+    border:
+        1px solid
+        rgba(224,196,119,.60);
+
+    color:#dfc477;
+
+    font-size:12px;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+    background:
+        rgba(10,22,15,.30);
+}
+
+
+/* =========================================================
+   BANYAN MESSAGE
+   ========================================================= */
+
+.banyan-message{
+
+    max-width:800px;
+
+    margin:
+        65px auto 0;
+
+    padding:
+        50px 40px;
+
+    text-align:center;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            rgba(8,20,13,.70),
+            rgba(8,20,13,.42)
+        );
+
+    border:
+        1px solid
+        rgba(224,196,119,.30);
+
+    box-shadow:
+        0 30px 70px
+        rgba(0,0,0,.38);
+
+    backdrop-filter:blur(9px);
+    -webkit-backdrop-filter:blur(9px);
+}
+
+.banyan-message h3{
+
+    color:white;
+
+    font-size:
+        clamp(29px,4vw,45px);
+
+    font-weight:400;
+
+    line-height:1.28;
+
+    margin-bottom:25px;
+}
+
+.banyan-message p{
+
+    color:
+        rgba(255,255,255,.75);
+
+    font-size:17px;
+
+    line-height:1.85;
+}
+
+.shelter-line{
+
+    margin-top:35px;
+
+    text-align:center;
+
+    color:#dfc477;
+
+    font-size:14px;
 
     letter-spacing:3px;
 
     text-transform:uppercase;
-
-    background:rgba(251,250,246,.75);
-
-    backdrop-filter:blur(5px);
 }
 
 
-/* =====================================================
-   FAMILY PHILOSOPHY
-   ===================================================== */
+/* =========================================================
+   TEXT SECTIONS
+   ========================================================= */
 
-.shelter-line{
+.family-section{
 
-    position:relative;
-
-    z-index:3;
-
-    max-width:700px;
-
-    margin:75px auto 0;
-
-    text-align:center;
-
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
-    font-size:21px;
-
-    line-height:1.8;
-
-    color:var(--green);
+    padding:
+        120px 25px;
 }
 
+.family-section-inner{
 
-/* =====================================================
-   STORY SECTIONS
-   ===================================================== */
+    max-width:900px;
 
-.family-story{
-
-    padding:120px 8%;
+    margin:auto;
 }
 
-.family-story.soft{
+.family-section.milky{
     background:var(--milky);
 }
 
-.family-story.cream{
+.family-section.soft{
     background:var(--milky-soft);
 }
 
-.story-inner{
-
-    width:min(1100px,100%);
-
-    margin:auto;
-
-    display:grid;
-
-    grid-template-columns:.6fr 1.4fr;
-
-    gap:90px;
-}
-
-.story-label{
-
-    color:var(--gold-soft);
-
-    font-size:10px;
-
-    letter-spacing:4px;
-
-    text-transform:uppercase;
-}
-
-.story-content h2{
-
-    margin:0 0 25px;
-
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
+.family-section h2{
 
     font-size:
-        clamp(34px,5vw,56px);
+        clamp(36px,5vw,58px);
+
+    line-height:1.15;
 
     font-weight:400;
 
     color:var(--green);
+
+    margin-bottom:30px;
 }
 
-.story-content p{
+.family-section p{
 
-    margin:0;
+    font-size:19px;
 
-    max-width:720px;
+    line-height:1.95;
 
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
+    color:var(--muted);
+
+    max-width:780px;
+}
+
+
+/* =========================================================
+   VALIASS CINEMATIC SECTION
+   ========================================================= */
+
+.valiass-statement{
+
+    position:relative;
+
+    min-height:65vh;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    color:white;
+
+    padding:90px 25px;
+
+    background:
+
+        linear-gradient(
+            rgba(13,27,19,.62),
+            rgba(13,27,19,.78)
+        ),
+
+        /* SAMPLE GROWTH IMAGE */
+        url("https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?auto=format&fit=crop&w=2200&q=90")
+
+        center center / cover no-repeat;
+}
+
+.valiass-statement-inner{
+
+    max-width:850px;
+}
+
+.valiass-statement h2{
+
+    font-size:
+        clamp(38px,6vw,72px);
+
+    font-weight:400;
+
+    line-height:1.1;
+
+    margin-bottom:28px;
+}
+
+.valiass-statement p{
 
     font-size:19px;
 
     line-height:1.9;
 
-    color:#59645c;
+    color:
+        rgba(255,255,255,.80);
 }
 
 
-/* =====================================================
-   VALIASS STATEMENT
-   ===================================================== */
-
-.family-statement{
-
-    min-height:70vh;
-
-    display:flex;
-
-    align-items:center;
-
-    position:relative;
-
-    color:white;
-
-    background:
-
-        linear-gradient(
-            rgba(16,23,17,.70),
-            rgba(16,23,17,.92)
-        ),
-
-        url("https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=2200&q=85")
-        center/cover no-repeat;
-}
-
-.statement-inner{
-
-    width:min(950px,88%);
-
-    margin:auto;
-
-    text-align:center;
-}
-
-.statement-inner span{
-
-    color:var(--gold);
-
-    font-size:10px;
-
-    letter-spacing:5px;
-
-    text-transform:uppercase;
-}
-
-.statement-inner h2{
-
-    margin:25px 0;
-
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
-    font-size:
-        clamp(42px,6vw,76px);
-
-    line-height:1.05;
-
-    font-weight:400;
-}
-
-.statement-inner p{
-
-    max-width:680px;
-
-    margin:auto;
-
-    color:rgba(255,255,255,.7);
-
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
-    font-size:19px;
-
-    line-height:1.8;
-}
-
-
-/* =====================================================
+/* =========================================================
    LEGACY
-   ===================================================== */
+   ========================================================= */
 
 .legacy{
 
-    padding:140px 8%;
-
     background:var(--milky);
+
+    padding:
+        125px 25px;
 
     text-align:center;
 }
 
 .legacy-inner{
 
-    width:min(850px,100%);
+    max-width:850px;
 
     margin:auto;
 }
 
 .legacy h2{
 
-    margin:0 0 30px;
-
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
+    font-size:
+        clamp(38px,5vw,60px);
 
     font-weight:400;
 
-    font-size:
-        clamp(40px,6vw,70px);
-
     color:var(--green);
+
+    margin-bottom:30px;
 }
 
 .legacy p{
 
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
+    font-size:19px;
 
-    font-size:20px;
+    line-height:1.95;
 
-    line-height:1.9;
+    color:var(--muted);
 
-    color:#59645c;
+    margin-bottom:35px;
 }
 
 .legacy-line{
 
-    margin-top:60px;
+    font-size:20px;
 
-    color:var(--gold-soft);
+    color:#9c824b;
 
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
-    font-size:24px;
+    letter-spacing:1px;
 }
 
 
-/* =====================================================
+/* =========================================================
    CTA
-   ===================================================== */
+   ========================================================= */
 
 .family-cta{
 
-    padding:120px 8%;
-
-    background:var(--green-dark);
+    background:var(--green);
 
     color:white;
+
+    padding:
+        120px 25px;
 
     text-align:center;
 }
 
+.family-cta-inner{
+
+    max-width:800px;
+
+    margin:auto;
+}
+
 .family-cta h2{
 
-    margin:0;
-
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
     font-size:
-        clamp(38px,5vw,62px);
+        clamp(40px,6vw,68px);
 
     font-weight:400;
+
+    line-height:1.1;
+
+    margin-bottom:25px;
 }
 
 .family-cta p{
 
-    max-width:600px;
-
-    margin:25px auto 35px;
-
-    color:rgba(255,255,255,.65);
-
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
     font-size:18px;
 
     line-height:1.8;
+
+    color:
+        rgba(255,255,255,.72);
+
+    margin-bottom:38px;
 }
 
-.family-cta a{
+.cta-button{
 
-    display:inline-block;
+    display:inline-flex;
 
-    padding:16px 28px;
+    align-items:center;
 
-    border:1px solid var(--gold);
+    justify-content:center;
 
-    color:var(--gold);
+    padding:
+        15px 28px;
 
-    text-decoration:none;
+    border:
+        1px solid
+        rgba(208,180,107,.75);
 
-    font-size:11px;
+    color:#e0c984;
 
-    letter-spacing:2px;
+    font-size:13px;
 
-    text-transform:uppercase;
+    letter-spacing:1.5px;
 
     transition:.3s ease;
 }
 
-.family-cta a:hover{
+.cta-button:hover{
 
     background:var(--gold);
 
@@ -1241,15 +1104,16 @@ img{
 }
 
 
-/* =====================================================
+/* =========================================================
    REVEAL
-   ===================================================== */
+   ========================================================= */
 
 .reveal{
 
     opacity:0;
 
-    transform:translateY(35px);
+    transform:
+        translateY(35px);
 
     transition:
         opacity .9s ease,
@@ -1260,102 +1124,127 @@ img{
 
     opacity:1;
 
-    transform:translateY(0);
+    transform:
+        translateY(0);
 }
 
 
-/* =====================================================
-   RESPONSIVE
-   ===================================================== */
+/* =========================================================
+   MOBILE
+   ========================================================= */
 
 @media(max-width:800px){
 
-    .family-page{
-        padding-top:70px;
+    .family-hero{
+
+        min-height:70vh;
+
+        padding:0 25px;
     }
 
-    .family-intro-inner,
-    .story-inner{
-        grid-template-columns:1fr;
-        gap:35px;
+    .hero-content h1{
+        font-size:52px;
     }
 
-    .ancestral{
-        gap:50px;
-    }
-
-    .tree-wrap{
-        min-height:1100px;
-    }
-
-    .children{
-        width:100%;
-        gap:20px;
-    }
-
-    .children-line{
-        width:90%;
-    }
-
-    .convergence{
-        width:75%;
-    }
-
-    .central-couple{
-        padding:25px 30px;
-    }
-
-    .central-couple .names{
-        font-size:19px;
-    }
-
-    .family-node .names{
+    .hero-content p{
         font-size:16px;
     }
 
-    .child .names{
-        font-size:16px;
+    .family-tree-section{
+
+        min-height:auto;
+
+        padding:
+            100px 15px
+            110px;
     }
 
-    .skanda .names{
-        font-size:18px;
-        padding:23px 28px;
-    }
-}
+    .family-tree-diagram{
 
-
-@media(max-width:550px){
-
-    .family-hero-inner{
-        padding-bottom:65px;
+        padding:
+            45px 15px
+            55px;
     }
 
-    .ancestral{
-        grid-template-columns:1fr;
-        gap:55px;
-    }
-
-    .children{
-        gap:0;
-    }
-
-    .family-story,
-    .legacy{
-        padding:90px 7%;
-    }
-
-    .banyan-message{
+    .tree-heading{
         margin-bottom:50px;
     }
 
-    .banyan-message h3{
-        font-size:27px;
+    .tree-heading h2{
+        font-size:43px;
     }
 
-    .banyan-message p{
+    .ancestor-row{
+        gap:25px;
+    }
+
+    .family-name{
+        font-size:13px;
+    }
+
+    .central-names{
+        gap:12px;
+    }
+
+    .central-name{
         font-size:16px;
     }
 
+    .children{
+        gap:20px;
+    }
+
+    .child-name{
+        font-size:15px;
+    }
+
+    .next-name{
+        font-size:17px;
+    }
+
+    .banyan-message{
+        padding:35px 22px;
+    }
+
+    .banyan-message h3{
+        font-size:30px;
+    }
+
+    .banyan-message p{
+        font-size:15px;
+    }
+
+    .shelter-line{
+        font-size:12px;
+    }
+}
+
+@media(max-width:480px){
+
+    .family-tree-section{
+        padding-left:10px;
+        padding-right:10px;
+    }
+
+    .ancestor-row{
+        gap:12px;
+    }
+
+    .family-name{
+        font-size:11px;
+    }
+
+    .central-name{
+        font-size:14px;
+    }
+
+    .child-name{
+        font-size:12px;
+    }
+
+    .next-name{
+        font-size:15px;
+    }
 }
 
 </style>
@@ -1367,13 +1256,12 @@ img{
 
 
 <!-- =====================================================
-     SHARED HEADER
+     HEADER
      ===================================================== -->
 
-<div id="valiass-header"></div>
+<div id="header-placeholder"></div>
 
-
-<main class="family-page">
+<div class="header-space"></div>
 
 
 <!-- =====================================================
@@ -1382,21 +1270,20 @@ img{
 
 <section class="family-hero">
 
-    <div class="family-hero-inner">
+    <div class="hero-content">
 
-        <div class="eyebrow">
-            FAMILY
+        <div class="hero-kicker">
+            Family
         </div>
 
         <h1>
-            Before there were branches,
-            there were roots.
+            Before there was a name,
+            there was a family.
         </h1>
 
         <p>
-            A story of people, values, experiences
-            and the connections that continue
-            from one generation to the next.
+            Before there were ideas, there were values.
+            Before there were branches, there were roots.
         </p>
 
     </div>
@@ -1412,32 +1299,19 @@ img{
 
     <div class="family-intro-inner">
 
-        <div>
-
-            <div class="intro-small">
-                Where it begins
-            </div>
-
+        <div class="section-label">
+            Where Everything Begins
         </div>
 
-        <div>
+        <h2>
+            A story is never built by one generation.
+        </h2>
 
-            <h2>
-                Before there was a name,
-                there was a family.
-            </h2>
-
-            <div class="family-intro-text">
-
-                Before there were ideas,
-                there were values.
-
-                Before there were branches,
-                there were roots.
-
-            </div>
-
-        </div>
+        <p>
+            It grows quietly through people,
+            relationships, experiences and values —
+            carried from one generation to another.
+        </p>
 
     </div>
 
@@ -1450,66 +1324,42 @@ img{
 
 <section class="family-tree-section reveal">
 
-
-    <!-- BIG BANYAN -->
-
     <div class="banyan-background"></div>
 
-
-    <div class="tree-heading">
-
-        <span>
-            Our Family
-        </span>
-
-        <h2>
-            The Roots Behind VALIASS
-        </h2>
-
-        <p>
-            Every branch carries something from
-            the roots that came before it.
-        </p>
-
-    </div>
+    <div class="family-tree-content">
 
 
-    <!-- BANYAN MESSAGE -->
+        <div class="tree-heading">
 
-    <div class="banyan-message">
+            <div class="section-label">
+                Our Family
+            </div>
 
-        <h3>
-            A tree is not only measured by
-            how high it grows,
-            but by how many it can shelter.
-        </h3>
+            <h2>
+                The roots behind us.
+            </h2>
 
-        <p>
-            Like the Banyan, a family grows through
-            generations — creating roots, branches,
-            connections and a place for many to belong.
-        </p>
+            <p>
+                Every branch begins somewhere.
+                Every branch carries something forward.
+            </p>
 
-    </div>
-
-
-    <!-- TREE -->
-
-    <div class="tree-wrap">
+        </div>
 
 
-        <!-- ANCESTRAL ROOTS -->
+        <!-- FAMILY TREE -->
 
-        <div class="ancestral">
+        <div class="family-tree-diagram">
 
 
-            <!-- LEFT -->
+            <div class="ancestor-row">
 
-            <div class="ancestor-column">
 
-                <div class="family-node ancestor-couple">
+                <!-- LEFT -->
 
-                    <div class="names">
+                <div class="ancestor-column">
+
+                    <div class="family-name">
 
                         MASINA SURANNA
                         <br>
@@ -1519,14 +1369,51 @@ img{
 
                     </div>
 
+                    <div class="family-line"></div>
+
+                    <div class="family-name">
+
+                        VISWANADHAM
+
+                    </div>
+
                 </div>
 
-                <div class="vertical-line"></div>
 
-                <div class="family-node">
+                <!-- RIGHT -->
 
-                    <div class="names">
-                        VISWANADHAM
+                <div class="ancestor-column">
+
+                    <div class="family-name">
+
+                        MADDIPATI SUBBANNA
+
+                    </div>
+
+                    <div class="family-line"></div>
+
+                    <div class="family-name">
+
+                        MADDIPATI VENKATA RAJU
+
+                    </div>
+
+                    <span class="family-plus">
+                        +
+                    </span>
+
+                    <div class="family-name">
+
+                        SATHYAVATHI
+
+                    </div>
+
+                    <div class="family-line"></div>
+
+                    <div class="family-name">
+
+                        VENKATA LAKSHMI
+
                     </div>
 
                 </div>
@@ -1534,39 +1421,21 @@ img{
             </div>
 
 
-            <!-- RIGHT -->
+            <!-- CENTRAL COUPLE -->
 
-            <div class="ancestor-column">
+            <div class="central-couple">
 
-                <div class="family-node">
+                <div class="central-names">
 
-                    <div class="names">
-                        MADDIPATI SUBBANNA
+                    <div class="central-name">
+                        VISWANADHAM
                     </div>
 
-                </div>
-
-                <div class="vertical-line"></div>
-
-                <div class="family-node ancestor-couple">
-
-                    <div class="names">
-
-                        MADDIPATI VENKATA RAJU
-                        <br>
+                    <div class="central-symbol">
                         +
-                        <br>
-                        SATHYAVATHI
-
                     </div>
 
-                </div>
-
-                <div class="vertical-line"></div>
-
-                <div class="family-node">
-
-                    <div class="names">
+                    <div class="central-name">
                         VENKATA LAKSHMI
                     </div>
 
@@ -1574,101 +1443,44 @@ img{
 
             </div>
 
-        </div>
 
+            <!-- CHILDREN -->
 
-        <!-- CENTRAL UNION -->
+            <div class="children-area">
 
-        <div class="central-union">
+                <div class="children">
 
-            <div class="union-line"></div>
+                    <div class="child">
 
+                        <div class="child-name">
+                            VENKATA ALIAS SURI
+                        </div>
 
-            <div class="central-couple">
-
-                <div class="names">
-
-                    VISWANADHAM
-                    <br>
-                    +
-                    <br>
-                    VENKATA LAKSHMI
-
-                </div>
-
-            </div>
-
-
-            <!-- TWO BRANCHES -->
-
-            <div class="children-line">
-
-                <span class="child-stem left"></span>
-
-                <span class="child-stem right"></span>
-
-            </div>
-
-
-            <div class="children">
-
-
-                <div class="child">
-
-                    <div class="names">
-                        VENKATA ALIAS SURI
                     </div>
 
-                    <div class="meaning">
-                        One Branch
+                    <div class="child">
+
+                        <div class="child-name">
+                            VENKATA ALIAS SUBBU
+                        </div>
+
                     </div>
 
                 </div>
 
 
-                <div class="child">
+                <div class="next-generation">
 
-                    <div class="names">
-                        VENKATA ALIAS SUBBU
+                    <div class="next-name">
+                        VEERA ALIAS SKANDA
                     </div>
 
-                    <div class="meaning">
-                        One Branch
+                    <div class="next-branch"></div>
+
+                    <div class="next-label">
+                        The Next Branch
                     </div>
 
-                </div>
-
-            </div>
-
-
-            <!-- CONVERGING BRANCHES -->
-
-            <div class="convergence"></div>
-
-
-            <!-- SKANDA -->
-
-            <div class="skanda">
-
-                <div class="names">
-                    VEERA ALIAS SKANDA
-                </div>
-
-                <div class="meaning">
-                    The Next Generation
-                </div>
-
-            </div>
-
-
-            <!-- NEXT BRANCH -->
-
-            <div class="next-branch">
-
-                <div class="next-line"></div>
-
-                <div class="next-label">
-                    The Next Branch
                 </div>
 
             </div>
@@ -1678,13 +1490,31 @@ img{
 
         <!-- SHELTER MESSAGE -->
 
-        <div class="shelter-line">
+        <div class="banyan-message">
 
-            “One family.
-            Many lives.
-            One shelter.”
+            <h3>
+                A tree is not only measured by
+                how high it grows,
+                but by how many it can shelter.
+            </h3>
+
+            <p>
+                Like the Banyan, a family grows through
+                generations — creating roots, branches,
+                connections and a place for many to belong.
+            </p>
 
         </div>
+
+
+        <div class="shelter-line">
+
+            One family.
+            Many lives.
+            One shelter.
+
+        </div>
+
 
     </div>
 
@@ -1695,34 +1525,26 @@ img{
      ROOTS
      ===================================================== -->
 
-<section class="family-story soft reveal">
+<section class="family-section milky reveal">
 
-    <div class="story-inner">
+    <div class="family-section-inner">
 
-        <div class="story-label">
+        <div class="section-label">
             Roots
         </div>
 
-        <div class="story-content">
+        <h2>
+            Where We Begin
+        </h2>
 
-            <h2>
-                Where We Begin
-            </h2>
-
-            <p>
-                Roots are more than the people who came
-                before us. They are the things they quietly
-                left within us.
-
-                Family, relationships, traditions, struggles,
-                love, simple ways of living that shape who
-                we become.
-
-                Roots don't ask to be seen.
-                They simply keep us grounded.
-            </p>
-
-        </div>
+        <p>
+            Roots are more than the people who came before us.
+            They are the things they quietly left within us.
+            Family, relationships, traditions, struggles, love,
+            simple ways of living that shape who we become.
+            Roots don't ask to be seen.
+            They simply keep us grounded.
+        </p>
 
     </div>
 
@@ -1733,35 +1555,28 @@ img{
      VALUES
      ===================================================== -->
 
-<section class="family-story cream reveal">
+<section class="family-section soft reveal">
 
-    <div class="story-inner">
+    <div class="family-section-inner">
 
-        <div class="story-label">
+        <div class="section-label">
             Values
         </div>
 
-        <div class="story-content">
+        <h2>
+            What We Carry
+        </h2>
 
-            <h2>
-                What We Carry
-            </h2>
-
-            <p>
-                With every generation, something continues.
-
-                Respect for people.
-                Standing together.
-                Keeping our word.
-                Learning from life.
-                Staying connected to where we come from.
-
-                These aren't written rules.
-                They are values lived, experienced
-                and passed forward.
-            </p>
-
-        </div>
+        <p>
+            With every generation, something continues.
+            Respect for people.
+            Standing together.
+            Keeping our word.
+            Learning from life.
+            Staying connected to where we come from.
+            These aren't written rules.
+            They are values lived, experienced and passed forward.
+        </p>
 
     </div>
 
@@ -1772,37 +1587,29 @@ img{
      EXPERIENCE
      ===================================================== -->
 
-<section class="family-story soft reveal">
+<section class="family-section milky reveal">
 
-    <div class="story-inner">
+    <div class="family-section-inner">
 
-        <div class="story-label">
+        <div class="section-label">
             Experience
         </div>
 
-        <div class="story-content">
+        <h2>
+            What Life Teaches
+        </h2>
 
-            <h2>
-                What Life Teaches
-            </h2>
-
-            <p>
-                Roots give us stability.
-                Life gives us experience.
-
-                Every generation walks a different path.
-                Different choices.
-                Different challenges.
-                Different dreams.
-
-                But every experience adds another layer
-                to the tree.
-
-                What we experience becomes what we understand.
-                What we understand becomes what we carry forward.
-            </p>
-
-        </div>
+        <p>
+            Roots give us stability.
+            Life gives us experience.
+            Every generation walks a different path.
+            Different choices.
+            Different challenges.
+            Different dreams.
+            But every experience adds another layer to the tree.
+            What we experience becomes what we understand.
+            What we understand becomes what we carry forward.
+        </p>
 
     </div>
 
@@ -1813,33 +1620,27 @@ img{
      IDEAS
      ===================================================== -->
 
-<section class="family-story cream reveal">
+<section class="family-section soft reveal">
 
-    <div class="story-inner">
+    <div class="family-section-inner">
 
-        <div class="story-label">
+        <div class="section-label">
             Ideas
         </div>
 
-        <div class="story-content">
+        <h2>
+            What Begins to Grow
+        </h2>
 
-            <h2>
-                What Begins to Grow
-            </h2>
-
-            <p>
-                When roots become strong and experience
-                becomes wisdom, ideas begin to take shape.
-
-                Some ideas remain thoughts.
-                Some become experiments.
-                And some become something real.
-
-                Different direction.
-                Same roots.
-            </p>
-
-        </div>
+        <p>
+            When roots become strong and experience becomes wisdom,
+            ideas begin to take shape.
+            Some ideas remain thoughts.
+            Some become experiments.
+            And some become something real.
+            Different direction.
+            Same roots.
+        </p>
 
     </div>
 
@@ -1850,29 +1651,25 @@ img{
      VALIASS
      ===================================================== -->
 
-<section class="family-statement reveal">
+<section class="valiass-statement reveal">
 
-    <div class="statement-inner">
+    <div class="valiass-statement-inner">
 
-        <span>
+        <div class="section-label">
             VALIASS
-        </span>
+        </div>
 
         <h2>
-            Not the beginning.
-            Another branch.
+            One more branch
+            in a much bigger story.
         </h2>
 
         <p>
             VALIASS is not the beginning of the story.
-            It is one more branch in a story that started
-            much earlier.
-
-            A place where our roots, values and experiences
-            come together with new ideas.
-
-            Not to repeat the past,
-            but to carry its strength into the future.
+            It is one more branch in a story that started much earlier.
+            A place where our roots, values and experiences come together
+            with new ideas.
+            Not to repeat the past, but to carry its strength into the future.
         </p>
 
     </div>
@@ -1888,18 +1685,20 @@ img{
 
     <div class="legacy-inner">
 
-        <h2>
+        <div class="section-label">
             Legacy
+        </div>
+
+        <h2>
+            What We Leave Behind
         </h2>
 
         <p>
             A tree doesn't grow for one season.
             It grows through generations.
-
             One branch becomes another.
             One idea creates another possibility.
             One generation leaves something for the next.
-
             Roots to remember.
             Values to live by.
             Experience to learn from.
@@ -1908,7 +1707,9 @@ img{
 
         <div class="legacy-line">
 
-            One origin. Strong roots. Many possibilities.
+            One origin.
+            Strong roots.
+            Many possibilities.
 
         </div>
 
@@ -1923,53 +1724,56 @@ img{
 
 <section class="family-cta reveal">
 
-    <h2>
-        Every branch starts somewhere.
-    </h2>
+    <div class="family-cta-inner">
 
-    <p>
-        And every new possibility begins
-        with a conversation.
-    </p>
+        <h2>
+            Every branch starts somewhere.
+        </h2>
 
-    <a href="contact.html">
-        Start A Conversation →
-    </a>
+        <p>
+            And every new possibility begins with a conversation.
+        </p>
+
+        <a
+            href="contact.html"
+            class="cta-button"
+        >
+            Start A Conversation →
+        </a>
+
+    </div>
 
 </section>
 
 
-</main>
-
-
 <!-- =====================================================
-     SHARED FOOTER
+     FOOTER
      ===================================================== -->
 
-<div id="valiass-footer"></div>
+<div id="footer-placeholder"></div>
 
 
 <script>
 
-
-/* =====================================================
-   LOAD SHARED HEADER + FOOTER
-   ===================================================== */
+/* =========================================================
+   LOAD HEADER / FOOTER
+   ========================================================= */
 
 async function loadComponent(
     elementId,
-    componentPath
+    filePath
 ){
 
     try{
 
         const response =
-            await fetch(componentPath);
+            await fetch(filePath);
 
         if(!response.ok){
 
             throw new Error(
-                `Could not load ${componentPath}`
+                "Unable to load " +
+                filePath
             );
 
         }
@@ -1977,15 +1781,72 @@ async function loadComponent(
         const html =
             await response.text();
 
-        document.getElementById(elementId)
+        document
+            .getElementById(elementId)
             .innerHTML = html;
 
-    }
 
-    catch(error){
+        /* ACTIVE PAGE */
+
+        if(
+            elementId ===
+            "header-placeholder"
+        ){
+
+            let currentPage =
+                window.location.pathname
+                    .split("/")
+                    .pop()
+                    .toLowerCase();
+
+
+            if(
+                currentPage === "" ||
+                currentPage === "/"
+            ){
+
+                currentPage =
+                    "index.html";
+
+            }
+
+
+            const links =
+                document.querySelectorAll(
+                    ".valiass-nav a[data-page]"
+                );
+
+
+            links.forEach(
+                function(link){
+
+                    const page =
+                        link
+                            .getAttribute(
+                                "data-page"
+                            )
+                            .toLowerCase();
+
+
+                    if(
+                        page ===
+                        currentPage
+                    ){
+
+                        link.classList.add(
+                            "active"
+                        );
+
+                    }
+
+                }
+            );
+
+        }
+
+    }catch(error){
 
         console.error(
-            "VALIASS component error:",
             error
         );
 
@@ -1995,63 +1856,141 @@ async function loadComponent(
 
 
 loadComponent(
-    "valiass-header",
+    "header-placeholder",
     "components/header.html"
 );
 
-
 loadComponent(
-    "valiass-footer",
+    "footer-placeholder",
     "components/footer.html"
 );
 
 
-/* =====================================================
-   SCROLL REVEAL
-   ===================================================== */
+/* =========================================================
+   REVEAL
+   ========================================================= */
 
-const revealElements =
-    document.querySelectorAll(".reveal");
-
-
-const revealObserver =
-    new IntersectionObserver(
-
-        function(entries){
-
-            entries.forEach(function(entry){
-
-                if(entry.isIntersecting){
-
-                    entry.target
-                        .classList
-                        .add("visible");
-
-                    revealObserver
-                        .unobserve(entry.target);
-
-                }
-
-            });
-
-        },
-
-        {
-            threshold:.12
-        }
-
+const reveals =
+    document.querySelectorAll(
+        ".reveal"
     );
 
 
-revealElements.forEach(function(element){
+const observer =
+    new IntersectionObserver(
+        function(entries){
 
-    revealObserver.observe(element);
+            entries.forEach(
+                function(entry){
 
-});
+                    if(
+                        entry.isIntersecting
+                    ){
 
+                        entry
+                            .target
+                            .classList
+                            .add("visible");
+
+                        observer
+                            .unobserve(
+                                entry.target
+                            );
+
+                    }
+
+                }
+            );
+
+        },
+        {
+            threshold:.12
+        }
+    );
+
+
+reveals.forEach(
+    function(element){
+
+        observer.observe(
+            element
+        );
+
+    }
+);
+
+
+/* =========================================================
+   BANYAN PARALLAX
+   ========================================================= */
+
+const banyan =
+    document.querySelector(
+        ".banyan-background"
+    );
+
+
+if(banyan){
+
+    window.addEventListener(
+        "scroll",
+        function(){
+
+            const section =
+                document.querySelector(
+                    ".family-tree-section"
+                );
+
+            if(!section){
+                return;
+            }
+
+            const rect =
+                section.getBoundingClientRect();
+
+            const h =
+                window.innerHeight;
+
+
+            if(
+                rect.bottom > 0 &&
+                rect.top < h
+            ){
+
+                const progress =
+                    (
+                        h - rect.top
+                    )
+                    /
+                    (
+                        h + rect.height
+                    );
+
+
+                const movement =
+                    (
+                        progress - .5
+                    ) * 18;
+
+
+                banyan.style.transform =
+                    "scale(1.03) translateY("
+                    +
+                    movement
+                    +
+                    "px)";
+
+            }
+
+        },
+        {
+            passive:true
+        }
+    );
+
+}
 
 </script>
-
 
 </body>
 </html>
