@@ -1,834 +1,914 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Contact — VALIASS</title>
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>VALIASS — Contact</title>
+
+<meta name="description"
+      content="Let's grow something. Start a conversation with VALIASS.">
 
 <style>
-:root {
-    --cream: #f4efe4;
-    --cream-dark: #e9e0cf;
-    --green: #20382c;
-    --green-dark: #14251c;
-    --green-light: #385744;
-    --olive: #707b55;
-    --gold: #b49352;
-    --brown: #765b40;
-    --text: #344239;
-    --muted: #667064;
-    --white: #fffdf8;
-}
+
+:root{
+    --cream:#f4efe4;
+    --cream-soft:#ebe3d3;
+
+    --green:#20382c;
+    --green-dark:#101711;
+    --green-deep:#14251c;
+    --green-light:#385744;
+
+    --gold:#d0b46b;
+    --gold-soft:#b89c5d;
+
+    --text:#27342c;
+    --muted:#687067;
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    --white:#ffffff;
 }
 
-html {
-    scroll-behavior: smooth;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-body {
-    background: var(--cream);
-    color: var(--text);
-    font-family: Arial, Helvetica, sans-serif;
-    overflow-x: hidden;
+html{
+    scroll-behavior:smooth;
 }
 
-/* ================= NAVIGATION ================= */
+body{
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
 
-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
+    background:var(--cream);
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    color:var(--text);
 
-    padding: 22px 6%;
-    transition: 0.4s ease;
+    overflow-x:hidden;
 }
 
-nav.scrolled {
-    background: rgba(244, 239, 228, 0.92);
-    backdrop-filter: blur(12px);
-    box-shadow: 0 5px 25px rgba(32, 56, 44, 0.08);
+a{
+    text-decoration:none;
 }
 
-.logo {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 23px;
-    letter-spacing: 5px;
-    color: var(--green);
-    text-decoration: none;
+#valiass-header,
+#valiass-footer{
+    position:relative;
+    z-index:1000;
 }
 
-.nav-links {
-    display: flex;
-    gap: 28px;
-    list-style: none;
-}
 
-.nav-links a {
-    text-decoration: none;
-    color: var(--green);
-    font-size: 12px;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    position: relative;
-}
+/* =====================================
+   HERO
+===================================== */
 
-.nav-links a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -7px;
-    width: 0;
-    height: 1px;
-    background: var(--gold);
-    transition: 0.3s;
-}
+.contact-hero{
 
-.nav-links a:hover::after {
-    width: 100%;
-}
+    min-height:100vh;
 
-/* ================= HERO ================= */
+    position:relative;
 
-.hero {
-    min-height: 92vh;
-    padding: 170px 8% 100px;
+    display:flex;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items:center;
 
-    position: relative;
-    overflow: hidden;
-}
+    justify-content:center;
 
-.hero-content {
-    max-width: 1050px;
-    text-align: center;
-    position: relative;
-    z-index: 2;
-}
+    text-align:center;
 
-.eyebrow {
-    color: var(--gold);
-    font-size: 12px;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    margin-bottom: 25px;
-}
+    color:white;
 
-.hero h1 {
-    font-family: Georgia, "Times New Roman", serif;
-    font-weight: normal;
-    font-size: clamp(58px, 10vw, 145px);
-    line-height: 0.88;
-    color: var(--green);
-    letter-spacing: -5px;
-}
+    background-image:
+        linear-gradient(
+            rgba(10,18,13,.45),
+            rgba(10,18,13,.78)
+        ),
+        url("https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=2200&q=90");
+
+    background-size:cover;
 
-.hero h1 span {
-    color: var(--brown);
-    font-style: italic;
+    background-position:center;
+
+    background-attachment:fixed;
 }
+
+.contact-hero-content{
+
+    width:90%;
 
-.hero-text {
-    max-width: 650px;
-    margin: 42px auto 0;
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 22px;
-    line-height: 1.7;
-    color: var(--muted);
+    max-width:950px;
+
+    margin:auto;
+
+    padding-top:80px;
 }
+
+.contact-kicker{
+
+    font-size:11px;
+
+    letter-spacing:5px;
+
+    text-transform:uppercase;
 
-.hero-text strong {
-    color: var(--green);
-    font-weight: normal;
+    color:var(--gold);
+
+    margin-bottom:28px;
 }
+
+.contact-hero h1{
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(55px,9vw,120px);
+
+    line-height:.95;
 
-/* Organic background circles */
+    letter-spacing:-3px;
 
-.orb {
-    position: absolute;
-    border-radius: 50%;
-    opacity: 0.35;
-    pointer-events: none;
+    font-weight:400;
 }
 
-.orb.one {
-    width: 350px;
-    height: 350px;
-    background: var(--cream-dark);
-    top: 12%;
-    left: -150px;
+.contact-hero p{
+
+    max-width:620px;
+
+    margin:
+        35px auto 0;
+
+    font-size:16px;
+
+    line-height:1.9;
+
+    color:rgba(255,255,255,.76);
 }
+
+.hero-line{
 
-.orb.two {
-    width: 260px;
-    height: 260px;
-    background: #d8d9bf;
-    right: -100px;
-    bottom: 5%;
+    width:80px;
+
+    height:1px;
+
+    background:var(--gold);
+
+    margin:
+        45px auto 0;
 }
+
+
+/* =====================================
+   COMMON
+===================================== */
+
+.contact-section{
 
-.orb.three {
-    width: 90px;
-    height: 90px;
-    border: 1px solid var(--gold);
-    top: 25%;
-    right: 16%;
+    padding:
+        125px 7%;
 }
 
-/* ================= INTRO ================= */
+.contact-container{
 
-.intro {
-    padding: 130px 8%;
-    background: var(--white);
-    text-align: center;
+    width:100%;
+
+    max-width:1150px;
+
+    margin:auto;
 }
+
+.contact-label{
+
+    font-size:10px;
+
+    letter-spacing:4px;
+
+    text-transform:uppercase;
 
-.section-label {
-    color: var(--gold);
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    font-size: 11px;
-    margin-bottom: 22px;
+    color:var(--gold-soft);
+
+    margin-bottom:20px;
 }
+
+.contact-title{
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(40px,5vw,70px);
+
+    line-height:1.08;
 
-.intro h2 {
-    font-family: Georgia, "Times New Roman", serif;
-    font-weight: normal;
-    font-size: clamp(40px, 6vw, 78px);
-    line-height: 1;
-    color: var(--green);
-    max-width: 850px;
-    margin: auto;
+    font-weight:400;
+
+    color:var(--green-dark);
+
+    margin-bottom:30px;
 }
+
+.contact-text{
+
+    max-width:680px;
+
+    font-size:16px;
+
+    line-height:2;
 
-.intro h2 em {
-    color: var(--brown);
+    color:var(--muted);
 }
 
-.intro p {
-    max-width: 650px;
-    margin: 35px auto 0;
-    line-height: 1.9;
-    color: var(--muted);
-    font-size: 16px;
+.contact-text p + p{
+
+    margin-top:22px;
 }
+
+
+/* =====================================
+   INVITATION
+===================================== */
 
-/* ================= CONTACT OPTIONS ================= */
+.invitation{
 
-.options {
-    padding: 120px 8%;
+    background:var(--cream);
+
+    text-align:center;
+
+    padding:
+        140px 7%;
 }
+
+.invitation-inner{
 
-.options-header {
-    max-width: 850px;
-    margin-bottom: 65px;
+    max-width:900px;
+
+    margin:auto;
 }
 
-.options-header h2 {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: clamp(42px, 6vw, 75px);
-    line-height: 1;
-    font-weight: normal;
-    color: var(--green);
+.invitation .contact-text{
+
+    margin:auto;
 }
+
+.invitation h2{
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(42px,6vw,75px);
+
+    line-height:1.08;
 
-.options-header p {
-    margin-top: 25px;
-    color: var(--muted);
-    max-width: 550px;
-    line-height: 1.8;
+    font-weight:400;
+
+    color:var(--green-dark);
 }
+
+
+/* =====================================
+   THREE WAYS
+===================================== */
 
-.option-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
+.three-ways{
+
+    background:#fff;
 }
+
+.three-ways-intro{
+
+    max-width:750px;
 
-.option {
-    background: var(--white);
-    padding: 45px 35px;
-    min-height: 270px;
-    border: 1px solid rgba(32, 56, 44, 0.08);
-    transition: 0.4s ease;
+    margin-bottom:70px;
 }
 
-.option:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 25px 50px rgba(32, 56, 44, 0.08);
+.ways-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap:2px;
 }
+
+.way-card{
+
+    min-height:350px;
+
+    padding:45px 35px;
 
-.option-number {
-    font-family: Georgia, "Times New Roman", serif;
-    color: var(--gold);
-    font-size: 18px;
+    background:var(--cream-soft);
+
+    border:
+        1px solid
+        rgba(32,56,44,.06);
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:space-between;
+
+    transition:
+        transform .4s ease,
+        background .4s ease;
 }
+
+.way-card:hover{
 
-.option h3 {
-    margin-top: 45px;
-    font-family: Georgia, "Times New Roman", serif;
-    font-weight: normal;
-    color: var(--green);
-    font-size: 28px;
+    transform:translateY(-7px);
+
+    background:#e4dac5;
 }
+
+.way-number{
+
+    font-family:Georgia,serif;
 
-.option p {
-    margin-top: 15px;
-    line-height: 1.7;
-    color: var(--muted);
-    font-size: 14px;
+    font-size:18px;
+
+    color:var(--gold-soft);
 }
+
+.way-card h3{
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
 
-/* ================= CONVERSATION ================= */
+    font-size:
+        clamp(30px,4vw,45px);
 
-.conversation {
-    background: var(--green);
-    color: var(--cream);
-    padding: 130px 8%;
+    font-weight:400;
+
+    color:var(--green-dark);
 }
+
+.way-card p{
 
-.conversation-inner {
-    max-width: 1150px;
-    margin: auto;
+    font-size:13px;
 
-    display: grid;
-    grid-template-columns: 0.9fr 1.1fr;
-    gap: 100px;
-    align-items: start;
+    line-height:1.9;
+
+    color:var(--muted);
 }
+
+
+/* =====================================
+   FORM SECTION
+===================================== */
 
-.conversation-copy .section-label {
-    color: #d1b978;
+.form-section{
+
+    background:var(--green-dark);
+
+    color:var(--cream);
+
+    padding:
+        135px 7%;
 }
+
+.form-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        .8fr 1.2fr;
 
-.conversation-copy h2 {
-    font-family: Georgia, "Times New Roman", serif;
-    font-weight: normal;
-    font-size: clamp(45px, 6vw, 78px);
-    line-height: 0.98;
+    gap:100px;
+
+    align-items:start;
 }
 
-.conversation-copy p {
-    margin-top: 30px;
-    color: #c7d0c8;
-    line-height: 1.8;
-    max-width: 450px;
+.form-intro .contact-label{
+
+    color:var(--gold);
 }
+
+.form-intro h2{
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(42px,5vw,68px);
+
+    line-height:1.08;
 
-/* ================= FORM ================= */
+    font-weight:400;
 
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
+    margin-bottom:30px;
 }
 
-.field {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+.form-intro p{
+
+    max-width:430px;
+
+    font-size:14px;
+
+    line-height:1.9;
+
+    color:rgba(244,239,228,.60);
 }
+
+
+/* =====================================
+   FORM
+===================================== */
 
-.field label {
-    font-size: 11px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: #c8d0c8;
+.contact-form{
+
+    width:100%;
 }
 
-.field input,
-.field select,
-.field textarea {
-    width: 100%;
-    border: none;
-    border-bottom: 1px solid rgba(255,255,255,0.3);
-    background: transparent;
-    color: var(--cream);
-    padding: 14px 2px;
-    font-size: 16px;
-    font-family: Arial, Helvetica, sans-serif;
-    outline: none;
+.form-group{
+
+    margin-bottom:30px;
 }
+
+.form-group label{
+
+    display:block;
+
+    font-size:10px;
+
+    letter-spacing:2px;
 
-.field input:focus,
-.field select:focus,
-.field textarea:focus {
-    border-bottom-color: var(--gold);
+    text-transform:uppercase;
+
+    color:rgba(244,239,228,.55);
+
+    margin-bottom:10px;
 }
+
+.form-group input,
+.form-group textarea{
+
+    width:100%;
+
+    border:none;
+
+    border-bottom:
+        1px solid
+        rgba(255,255,255,.18);
 
-.field select {
-    color: var(--cream);
+    background:transparent;
+
+    padding:
+        13px 0;
+
+    color:var(--cream);
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size:15px;
+
+    outline:none;
+
+    transition:
+        border-color .3s ease;
 }
 
-.field select option {
-    color: var(--green);
+.form-group textarea{
+
+    min-height:120px;
+
+    resize:vertical;
 }
+
+.form-group input:focus,
+.form-group textarea:focus{
 
-.field textarea {
-    min-height: 130px;
-    resize: vertical;
+    border-bottom-color:
+        var(--gold);
 }
 
-.field input::placeholder,
-.field textarea::placeholder {
-    color: #9ba99f;
+.form-group input::placeholder,
+.form-group textarea::placeholder{
+
+    color:
+        rgba(244,239,228,.30);
 }
 
-.submit-btn {
-    align-self: flex-start;
-    margin-top: 15px;
+.submit-button{
 
-    padding: 17px 30px;
+    margin-top:10px;
 
-    background: var(--gold);
-    color: var(--green-dark);
+    display:inline-flex;
 
-    border: none;
-    cursor: pointer;
+    align-items:center;
 
-    font-size: 11px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
+    gap:15px;
 
-    transition: 0.3s ease;
-}
+    padding:
+        16px 28px;
+
+    border:
+        1px solid
+        var(--gold);
 
-.submit-btn:hover {
-    background: var(--cream);
-    transform: translateY(-3px);
+    background:transparent;
+
+    color:var(--cream);
+
+    font-family:Arial,Helvetica,sans-serif;
+
+    font-size:11px;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+    cursor:pointer;
+
+    transition:.35s ease;
 }
+
+.submit-button:hover{
 
-/* ================= DIRECT CONTACT ================= */
+    background:var(--gold);
 
-.direct {
-    padding: 120px 8%;
-    background: var(--cream);
+    color:var(--green-dark);
 }
+
+
+/* =====================================
+   DIRECT CONTACT
+===================================== */
+
+.direct-contact{
 
-.direct-inner {
-    max-width: 1100px;
-    margin: auto;
-    text-align: center;
+    background:var(--cream-soft);
+
+    padding:
+        125px 7%;
 }
+
+.direct-grid{
+
+    display:grid;
 
-.direct h2 {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: clamp(40px, 6vw, 72px);
-    font-weight: normal;
-    color: var(--green);
+    grid-template-columns:
+        1fr 1fr;
+
+    gap:80px;
+
+    align-items:center;
 }
+
+.direct-content{
 
-.direct p {
-    max-width: 600px;
-    margin: 25px auto 55px;
-    line-height: 1.8;
-    color: var(--muted);
+    max-width:600px;
 }
 
-.contact-details {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+.direct-items{
+
+    margin-top:45px;
 }
+
+.direct-item{
+
+    padding:
+        22px 0;
 
-.detail {
-    padding: 35px 20px;
-    background: var(--white);
+    border-bottom:
+        1px solid
+        rgba(39,52,44,.12);
 }
 
-.detail span {
-    display: block;
-    color: var(--gold);
-    font-size: 10px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    margin-bottom: 15px;
+.direct-item:first-child{
+
+    border-top:
+        1px solid
+        rgba(39,52,44,.12);
 }
+
+.direct-item span{
+
+    display:block;
 
-.detail a,
-.detail div {
-    color: var(--green);
-    text-decoration: none;
-    line-height: 1.6;
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 18px;
+    font-size:10px;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+    color:var(--gold-soft);
+
+    margin-bottom:8px;
 }
+
+.direct-item a,
+.direct-item p{
+
+    color:var(--green-dark);
 
-.detail a:hover {
-    color: var(--brown);
+    font-size:16px;
+
+    line-height:1.7;
 }
 
-/* ================= WHATSAPP ================= */
+.direct-item a{
 
-.whatsapp-area {
-    margin-top: 55px;
+    transition:.3s ease;
 }
 
-.whatsapp-area p {
-    margin: 0 auto 20px;
+.direct-item a:hover{
+
+    color:var(--gold-soft);
 }
 
-.whatsapp-btn {
-    display: inline-block;
-    padding: 17px 32px;
 
-    background: var(--green);
-    color: var(--cream);
+/* =====================================
+   FINAL MESSAGE
+===================================== */
 
-    text-decoration: none;
+.final-message{
 
-    font-size: 11px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
+    min-height:75vh;
 
-    transition: 0.3s;
-}
+    display:flex;
 
-.whatsapp-btn:hover {
-    background: var(--brown);
-    transform: translateY(-3px);
-}
+    align-items:center;
 
-/* ================= CLOSING ================= */
+    justify-content:center;
 
-.closing {
-    min-height: 75vh;
-    padding: 130px 8%;
+    text-align:center;
 
-    background: var(--white);
+    color:white;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background-image:
+        linear-gradient(
+            rgba(16,23,17,.35),
+            rgba(16,23,17,.82)
+        ),
+        url("https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=2200&q=90");
 
-    text-align: center;
+    background-size:cover;
 
-    position: relative;
-    overflow: hidden;
-}
+    background-position:center;
 
-.closing-content {
-    position: relative;
-    z-index: 2;
+    background-attachment:fixed;
 }
 
-.closing h2 {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: clamp(55px, 9vw, 125px);
-    line-height: 0.88;
-    font-weight: normal;
-    color: var(--green);
-    letter-spacing: -4px;
-}
+.final-message-inner{
 
-.closing h2 em {
-    color: var(--brown);
+    width:90%;
+
+    max-width:950px;
+
+    margin:auto;
 }
+
+.final-message .contact-label{
 
-.closing p {
-    max-width: 550px;
-    margin: 35px auto;
-    color: var(--muted);
-    line-height: 1.8;
+    color:var(--gold);
 }
 
-.branch-btn {
-    display: inline-block;
-    padding: 16px 28px;
+.final-message h2{
 
-    border: 1px solid var(--green);
-    color: var(--green);
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
 
-    text-decoration: none;
+    font-size:
+        clamp(45px,7vw,90px);
 
-    font-size: 11px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
+    line-height:1.05;
 
-    transition: 0.3s;
+    font-weight:400;
 }
 
-.branch-btn:hover {
-    background: var(--green);
-    color: var(--cream);
-}
+.final-message p{
 
-/* Decorative seed */
+    max-width:600px;
 
-.seed {
-    position: absolute;
-    width: 18px;
-    height: 28px;
-    border: 1px solid var(--gold);
-    border-radius: 80% 20% 80% 20%;
-    transform: rotate(35deg);
-    bottom: 16%;
-    left: 17%;
-}
+    margin:
+        30px auto 0;
+
+    font-size:15px;
 
-.seed::after {
-    content: "";
-    position: absolute;
-    width: 1px;
-    height: 80px;
-    background: var(--gold);
-    left: 7px;
-    top: 20px;
-    transform: rotate(-20deg);
-    transform-origin: top;
+    line-height:1.9;
+
+    color:rgba(255,255,255,.68);
 }
 
-/* ================= FOOTER ================= */
 
-footer {
-    background: var(--green-dark);
-    color: #aeb9af;
-    padding: 35px 6%;
+/* =====================================
+   REVEAL
+===================================== */
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.reveal{
 
-    font-size: 10px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-}
+    opacity:0;
+
+    transform:
+        translateY(35px);
 
-footer a {
-    color: #c7d0c8;
-    text-decoration: none;
+    transition:
+        opacity 1s ease,
+        transform 1s ease;
 }
 
-/* ================= ANIMATION ================= */
+.reveal.show{
 
-.reveal {
-    opacity: 0;
-    transform: translateY(35px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
-}
+    opacity:1;
 
-.reveal.visible {
-    opacity: 1;
-    transform: translateY(0);
+    transform:
+        translateY(0);
 }
+
+
+/* =====================================
+   RESPONSIVE
+===================================== */
 
-/* ================= MOBILE ================= */
+@media(max-width:900px){
 
-@media (max-width: 850px) {
+    .contact-section{
 
-    nav {
-        padding: 18px 5%;
+        padding:90px 7%;
     }
 
-    .nav-links {
-        display: none;
+    .ways-grid{
+
+        grid-template-columns:1fr;
     }
 
-    .hero {
-        min-height: 85vh;
-        padding: 140px 7% 80px;
+    .form-grid{
+
+        grid-template-columns:1fr;
+
+        gap:60px;
     }
 
-    .hero h1 {
-        letter-spacing: -2px;
+    .direct-grid{
+
+        grid-template-columns:1fr;
+
+        gap:50px;
     }
 
-    .hero-text {
-        font-size: 18px;
-    }
+    .contact-hero,
+    .final-message{
 
-    .option-grid,
-    .contact-details {
-        grid-template-columns: 1fr;
-    }
-
-    .conversation-inner {
-        grid-template-columns: 1fr;
-        gap: 60px;
-    }
-
-    .conversation {
-        padding: 90px 7%;
-    }
-
-    .options,
-    .intro,
-    .direct {
-        padding: 90px 7%;
-    }
-
-    .closing {
-        min-height: 65vh;
-        padding: 100px 7%;
-    }
-
-    .closing h2 {
-        letter-spacing: -2px;
-    }
-
-    footer {
-        flex-direction: column;
-        gap: 15px;
-        text-align: center;
+        background-attachment:scroll;
     }
 }
+
+
+@media(max-width:600px){
+
+    .contact-hero{
+
+        min-height:90vh;
+    }
+
+    .contact-hero-content{
+
+        width:86%;
+
+        padding-top:70px;
+    }
+
+    .contact-hero h1{
+
+        letter-spacing:-1px;
+    }
+
+    .contact-hero p{
+
+        font-size:14px;
+
+        line-height:1.8;
+    }
+
+    .contact-section{
+
+        padding:
+            75px 7%;
+    }
+
+    .invitation,
+    .form-section,
+    .direct-contact{
+
+        padding:
+            95px 7%;
+    }
+
+    .way-card{
+
+        min-height:280px;
+
+        padding:35px 28px;
+    }
+
+    .final-message{
+
+        min-height:70vh;
+    }
+}
+
 </style>
+
 </head>
+
 
 <body>
 
-<!-- ================= NAV ================= -->
 
-<nav id="navbar">
+<!-- =====================================
+     SHARED HEADER
+===================================== -->
 
-    <!-- Replace LOGO with actual VALIASS logo later -->
-    <a href="index.html" class="logo">VALIASS</a>
-
-    <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="story.html">Story</a></li>
-        <li><a href="roots.html">Roots</a></li>
-        <li><a href="branches.html">Branches</a></li>
-        <li><a href="vision.html">Vision</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
-
-</nav>
+<div id="valiass-header"></div>
 
 
-<!-- ================= HERO ================= -->
+<!-- =====================================
+     HERO
+===================================== -->
 
-<section class="hero">
+<section class="contact-hero">
 
-    <div class="orb one"></div>
-    <div class="orb two"></div>
-    <div class="orb three"></div>
+    <div class="contact-hero-content reveal">
 
-    <div class="hero-content reveal">
-
-        <div class="eyebrow">
-            The Beginning Of Something
+        <div class="contact-kicker">
+            The Next Beginning
         </div>
 
         <h1>
-            LET'S<br>
-            <span>GROW</span>
-            SOMETHING
+            Let's Grow
+            Something.
         </h1>
 
-        <p class="hero-text">
-            Every meaningful journey begins with a conversation.
-            <br><br>
-            Maybe you have an idea.
-            Maybe you want to build something.
-            Maybe you don't know what it is yet.
-            <br><br>
-            <strong>Let's talk.</strong>
+        <p>
+            Some ideas begin with a clear plan.
+            Some begin with a simple conversation.
+            Tell us what's on your mind.
         </p>
 
+        <div class="hero-line"></div>
+
     </div>
 
 </section>
 
 
-<!-- ================= INTRO ================= -->
+<!-- =====================================
+     INVITATION
+===================================== -->
 
-<section class="intro reveal">
+<section class="invitation">
 
-    <div class="section-label">
-        Where Branches Begin
-    </div>
+    <div class="invitation-inner reveal">
 
-    <h2>
-        Some branches begin with a clear plan.
-        <br>
-        Some begin with a <em>conversation.</em>
-    </h2>
-
-    <p>
-        You don't need to have everything figured out before you reach out.
-        Bring us your thought, your question, your possibility —
-        and let's explore where it can grow.
-    </p>
-
-</section>
-
-
-<!-- ================= OPTIONS ================= -->
-
-<section class="options">
-
-    <div class="options-header reveal">
-
-        <div class="section-label">
-            Why Connect
+        <div class="contact-label">
+            01 — Start Here
         </div>
 
         <h2>
-            Bring us what you're thinking.
+            Every branch starts
+            with a conversation.
         </h2>
 
-        <p>
-            Every idea has a different beginning.
-            Start wherever you are.
-        </p>
-
-    </div>
-
-
-    <div class="option-grid">
-
-        <div class="option reveal">
-
-            <div class="option-number">01</div>
-
-            <h3>Have An Idea?</h3>
+        <div class="contact-text">
 
             <p>
-                Something is on your mind.
-                Let's give it space to grow.
+                You don't need to have everything figured out.
             </p>
 
-        </div>
-
-
-        <div class="option reveal">
-
-            <div class="option-number">02</div>
-
-            <h3>Want To Collaborate?</h3>
-
             <p>
-                Different people. Different strengths.
-                One shared possibility.
+                Maybe you have an idea.
+                Maybe you want to collaborate.
+                Maybe you are thinking about building
+                something completely new.
             </p>
 
-        </div>
-
-
-        <div class="option reveal">
-
-            <div class="option-number">03</div>
-
-            <h3>Build A New Branch?</h3>
-
             <p>
-                Have an idea that could become something bigger?
-                Let's explore it together.
+                Start with a conversation.
             </p>
 
         </div>
@@ -838,39 +918,135 @@ footer a {
 </section>
 
 
-<!-- ================= CONVERSATION ================= -->
+<!-- =====================================
+     THREE WAYS
+===================================== -->
 
-<section class="conversation">
+<section class="contact-section three-ways">
 
-    <div class="conversation-inner">
+    <div class="contact-container">
 
-        <div class="conversation-copy reveal">
+        <div class="three-ways-intro reveal">
 
-            <div class="section-label">
-                Start A Conversation
+            <div class="contact-label">
+                02 — What Brings You Here?
+            </div>
+
+            <h2 class="contact-title">
+                There are many ways
+                a conversation can begin.
+            </h2>
+
+        </div>
+
+
+        <div class="ways-grid">
+
+
+            <div class="way-card reveal">
+
+                <div class="way-number">
+                    01
+                </div>
+
+                <h3>
+                    Have an Idea?
+                </h3>
+
+                <p>
+                    Tell us what you are thinking.
+                    It can be a business idea,
+                    creative concept or something
+                    that is still taking shape.
+                </p>
+
+            </div>
+
+
+            <div class="way-card reveal">
+
+                <div class="way-number">
+                    02
+                </div>
+
+                <h3>
+                    Want to Collaborate?
+                </h3>
+
+                <p>
+                    Good ideas become better when
+                    different perspectives come together.
+                    Let's explore what we can create.
+                </p>
+
+            </div>
+
+
+            <div class="way-card reveal">
+
+                <div class="way-number">
+                    03
+                </div>
+
+                <h3>
+                    Build a New Branch?
+                </h3>
+
+                <p>
+                    Maybe something new belongs
+                    on the VALIASS tree.
+                    Let's talk about where it could grow.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================
+     FORM
+===================================== -->
+
+<section class="form-section">
+
+    <div class="contact-container form-grid">
+
+
+        <div class="form-intro reveal">
+
+            <div class="contact-label">
+                03 — Your Idea
             </div>
 
             <h2>
-                No formality.<br>
-                Just a conversation.
+                Tell us
+                what's growing.
             </h2>
 
             <p>
-                You don't have to prepare a presentation.
-                You don't need the perfect words.
-                Just tell us what you're thinking.
-            </p>
-
-            <p>
-                Good ideas often start simply.
+                Keep it simple.
+                A name, a way to reach you,
+                and a few words about what
+                you have in mind is enough
+                to start the conversation.
             </p>
 
         </div>
 
 
-        <form class="contact-form reveal" id="contactForm">
+        <form
+            class="contact-form reveal"
+            action="#"
+            method="POST"
+        >
 
-            <div class="field">
+
+            <div class="form-group">
 
                 <label for="name">
                     Your Name
@@ -879,80 +1055,76 @@ footer a {
                 <input
                     type="text"
                     id="name"
-                    placeholder="Enter your name"
+                    name="name"
+                    placeholder="Your name"
                     required
                 >
 
             </div>
 
 
-            <div class="field">
+            <div class="form-group">
 
                 <label for="email">
-                    Your Email
+                    Email
                 </label>
 
                 <input
                     type="email"
                     id="email"
-                    placeholder="Enter your email"
+                    name="email"
+                    placeholder="your@email.com"
                     required
                 >
 
             </div>
 
 
-            <div class="field">
+            <div class="form-group">
 
-                <label for="reason">
-                    What brings you here?
+                <label for="phone">
+                    Phone
                 </label>
 
-                <select id="reason">
-
-                    <option value="I have an idea">
-                        I have an idea
-                    </option>
-
-                    <option value="I want to collaborate">
-                        I want to collaborate
-                    </option>
-
-                    <option value="I want to build something">
-                        I want to build something
-                    </option>
-
-                    <option value="I want to know more about VALIASS">
-                        I want to know more about VALIASS
-                    </option>
-
-                    <option value="Something else">
-                        Something else
-                    </option>
-
-                </select>
+                <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="Your phone number"
+                >
 
             </div>
 
 
-            <div class="field">
+            <div class="form-group">
 
                 <label for="message">
-                    Tell Us A Little About It
+                    Your Idea
                 </label>
 
                 <textarea
                     id="message"
-                    placeholder="What's on your mind?"
+                    name="message"
+                    placeholder="Tell us a little about what you're thinking..."
                     required
                 ></textarea>
 
             </div>
 
 
-            <button type="submit" class="submit-btn">
-                Begin The Conversation →
+            <button
+                type="submit"
+                class="submit-button"
+            >
+
+                Start A Conversation
+
+                <span>
+                    →
+                </span>
+
             </button>
+
 
         </form>
 
@@ -961,84 +1133,80 @@ footer a {
 </section>
 
 
-<!-- ================= DIRECT CONTACT ================= -->
+<!-- =====================================
+     DIRECT CONTACT
+===================================== -->
 
-<section class="direct">
+<section class="direct-contact">
 
-    <div class="direct-inner reveal">
-
-        <div class="section-label">
-            Reach VALIASS
-        </div>
-
-        <h2>
-            Prefer a direct conversation?
-        </h2>
-
-        <p>
-            Sometimes the simplest way to begin is just to say hello.
-        </p>
+    <div class="contact-container direct-grid">
 
 
-        <div class="contact-details">
+        <div class="direct-content reveal">
 
-            <div class="detail">
-
-                <span>Email</span>
-
-                <a href="mailto:team.valiass@gmail.com">
-                    team.valiass@gmail.com
-                </a>
-
+            <div class="contact-label">
+                04 — Direct
             </div>
 
+            <h2 class="contact-title">
+                Prefer a simple
+                conversation?
+            </h2>
 
-            <div class="detail">
+            <div class="contact-text">
 
-                <span>Call</span>
-
-                <a href="tel:+918985361991">
-                    8985361991
-                </a>
-
-                <br><br>
-
-                <a href="tel:+919133140148">
-                    9133140148
-                </a>
-
-            </div>
-
-
-            <div class="detail">
-
-                <span>Location</span>
-
-                <div>
-                    Ippanapadu,<br>
-                    Mandapeta,<br>
-                    East Godavari,<br>
-                    Andhra Pradesh — 533340
-                </div>
+                <p>
+                    You can reach us directly.
+                    Sometimes the best beginning
+                    is simply saying hello.
+                </p>
 
             </div>
 
         </div>
 
 
-        <div class="whatsapp-area">
+        <div class="direct-items reveal">
 
-            <p>
-                Want to talk right now?
-            </p>
 
-            <a
-                href="https://wa.me/918985361991"
-                target="_blank"
-                class="whatsapp-btn"
-            >
-                Start On WhatsApp →
-            </a>
+            <div class="direct-item">
+
+                <span>
+                    Email
+                </span>
+
+                <a href="mailto:hello@valiass.com">
+                    hello@valiass.com
+                </a>
+
+            </div>
+
+
+            <div class="direct-item">
+
+                <span>
+                    Phone
+                </span>
+
+                <a href="tel:+919999999999">
+                    +91 99999 99999
+                </a>
+
+            </div>
+
+
+            <div class="direct-item">
+
+                <span>
+                    Based In
+                </span>
+
+                <p>
+                    Andhra Pradesh, India
+                </p>
+
+            </div>
+
 
         </div>
 
@@ -1047,146 +1215,152 @@ footer a {
 </section>
 
 
-<!-- ================= CLOSING ================= -->
+<!-- =====================================
+     FINAL MESSAGE
+===================================== -->
 
-<section class="closing">
+<section class="final-message">
 
-    <div class="seed"></div>
+    <div class="final-message-inner reveal">
 
-    <div class="closing-content reveal">
-
-        <div class="section-label">
-            A New Beginning
+        <div class="contact-label">
+            VALIASS
         </div>
 
         <h2>
-            EVERY BRANCH<br>
-            STARTS <em>SOMEWHERE.</em>
+            One conversation
+            can start a new branch.
         </h2>
 
         <p>
-            Maybe this conversation is where yours begins.
+            One origin.
+            Strong roots.
+            Many possibilities.
         </p>
-
-        <a href="branches.html" class="branch-btn">
-            Explore Our Branches →
-        </a>
 
     </div>
 
 </section>
 
 
-<!-- ================= FOOTER ================= -->
+<!-- =====================================
+     SHARED FOOTER
+===================================== -->
 
-<footer>
-
-    <div>
-        VALIASS — ONE ORIGIN. STRONG ROOTS. MANY POSSIBILITIES.
-    </div>
-
-    <a href="index.html">
-        Back To VALIASS ↑
-    </a>
-
-</footer>
+<div id="valiass-footer"></div>
 
 
-<!-- ================= JAVASCRIPT ================= -->
+<!-- =====================================
+     COMPONENT LOADER
+===================================== -->
 
 <script>
 
-/* Navbar scroll */
+async function loadComponent(
+    elementId,
+    componentPath
+){
 
-const navbar = document.getElementById("navbar");
+    try{
 
-window.addEventListener("scroll", () => {
+        const response =
+            await fetch(componentPath);
 
-    if (window.scrollY > 40) {
-        navbar.classList.add("scrolled");
-    } else {
-        navbar.classList.remove("scrolled");
+        if(!response.ok){
+
+            throw new Error(
+                `Could not load ${componentPath}`
+            );
+
+        }
+
+        const html =
+            await response.text();
+
+        document.getElementById(
+            elementId
+        ).innerHTML = html;
+
     }
 
-});
+    catch(error){
 
+        console.error(
+            "VALIASS component error:",
+            error
+        );
 
-/* Reveal animation */
-
-const reveals = document.querySelectorAll(".reveal");
-
-const observer = new IntersectionObserver(
-
-    entries => {
-
-        entries.forEach(entry => {
-
-            if (entry.isIntersecting) {
-
-                entry.target.classList.add("visible");
-
-                observer.unobserve(entry.target);
-
-            }
-
-        });
-
-    },
-
-    {
-        threshold: 0.12
     }
 
+}
+
+
+loadComponent(
+    "valiass-header",
+    "components/header.html"
 );
 
-reveals.forEach(element => {
-    observer.observe(element);
-});
+
+loadComponent(
+    "valiass-footer",
+    "components/footer.html"
+);
 
 
-/* Contact form → WhatsApp */
+/* =====================================
+   SCROLL REVEAL
+===================================== */
 
-document.getElementById("contactForm").addEventListener("submit", function(e) {
-
-    e.preventDefault();
-
-    const name =
-        document.getElementById("name").value.trim();
-
-    const email =
-        document.getElementById("email").value.trim();
-
-    const reason =
-        document.getElementById("reason").value;
-
-    const message =
-        document.getElementById("message").value.trim();
+const revealElements =
+    document.querySelectorAll(".reveal");
 
 
-    const whatsappMessage =
-`Hello VALIASS,
+const revealObserver =
+    new IntersectionObserver(
 
-My name is ${name}.
+        (entries) => {
 
-Email: ${email}
+            entries.forEach(
+                (entry) => {
 
-I'm reaching out because:
-${reason}
+                    if(
+                        entry.isIntersecting
+                    ){
 
-About my idea:
-${message}
+                        entry.target.classList.add(
+                            "show"
+                        );
 
-I would like to start a conversation.`;
+                        revealObserver.unobserve(
+                            entry.target
+                        );
 
-    const whatsappURL =
-        "https://wa.me/918985361991?text=" +
-        encodeURIComponent(whatsappMessage);
+                    }
 
-    window.open(whatsappURL, "_blank");
+                }
+            );
 
-});
+        },
+
+        {
+            threshold:0.12
+        }
+
+    );
+
+
+revealElements.forEach(
+    (element) => {
+
+        revealObserver.observe(
+            element
+        );
+
+    }
+);
 
 </script>
+
 
 </body>
 </html>
