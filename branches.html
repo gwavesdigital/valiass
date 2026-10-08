@@ -1,22 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="viewport"
-      content="width=device-width, initial-scale=1.0">
-
-<title>VALIASS — Branches</title>
+<title>Branches — VALIASS</title>
 
 <meta name="description"
-      content="Explore the branches of VALIASS — different directions, different identities, one origin.">
+content="The growing initiatives of VALIASS — each branch carrying the same roots, values and five creative forces.">
 
 <style>
 
 :root{
-    --cream:#f4efe4;
-    --cream-soft:#ebe3d3;
+    --milky:#fbfaf6;
+    --milky-soft:#f5f3ec;
+    --ivory:#eee9dc;
 
     --green:#20382c;
     --green-dark:#101711;
@@ -26,16 +24,11 @@
     --gold:#d0b46b;
     --gold-soft:#b89c5d;
 
-    --text:#27342c;
-    --muted:#687067;
+    --text:#26332b;
+    --muted:#697168;
 
     --white:#ffffff;
 }
-
-
-/* =========================
-   RESET
-========================= */
 
 *{
     margin:0;
@@ -48,16 +41,15 @@ html{
 }
 
 body{
-    font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
-
-    background:var(--cream);
-
+    background:var(--milky);
     color:var(--text);
+    font-family:Arial, Helvetica, sans-serif;
+    line-height:1.7;
+}
 
-    overflow-x:hidden;
+a{
+    color:inherit;
+    text-decoration:none;
 }
 
 img{
@@ -65,925 +57,1014 @@ img{
     width:100%;
 }
 
-a{
-    text-decoration:none;
-}
-
-#valiass-header,
-#valiass-footer{
-    position:relative;
-    z-index:1000;
+.container{
+    width:min(1180px,90%);
+    margin:auto;
 }
 
 
-/* =========================
+/* =========================================================
    HERO
-========================= */
+========================================================= */
 
 .branches-hero{
-
-    min-height:100vh;
-
+    min-height:92vh;
     position:relative;
-
     display:flex;
     align-items:center;
+    overflow:hidden;
 
-    color:white;
-
-    background-image:
+    background:
         linear-gradient(
             90deg,
-            rgba(10,18,13,.78),
-            rgba(10,18,13,.40),
-            rgba(10,18,13,.68)
+            rgba(10,18,13,.94) 0%,
+            rgba(10,18,13,.75) 42%,
+            rgba(10,18,13,.28) 72%,
+            rgba(10,18,13,.10) 100%
         ),
-        url("https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=2200&q=90");
-
-    background-size:cover;
-
-    background-position:center;
-
-    background-attachment:fixed;
+        url("https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=2200&q=85")
+        center/cover no-repeat;
 }
 
-.branches-hero-content{
-
-    width:86%;
-
-    max-width:1200px;
-
-    margin:auto;
-
-    padding-top:80px;
+.hero-content{
+    width:min(760px,90%);
+    margin-left:max(5%,calc((100vw - 1180px)/2));
+    color:var(--white);
+    padding:120px 0 100px;
 }
 
-.branches-kicker{
-
-    font-size:11px;
-
-    letter-spacing:5px;
-
-    text-transform:uppercase;
-
+.hero-kicker{
     color:var(--gold);
-
-    margin-bottom:25px;
+    text-transform:uppercase;
+    letter-spacing:4px;
+    font-size:12px;
+    margin-bottom:24px;
 }
 
-.branches-hero h1{
-
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
-    font-size:
-        clamp(58px,9vw,120px);
-
+.hero-content h1{
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:clamp(54px,8vw,105px);
     line-height:.95;
-
-    letter-spacing:-3px;
-
     font-weight:400;
-
-    max-width:900px;
+    letter-spacing:-3px;
+    margin-bottom:28px;
 }
 
-.branches-hero p{
+.hero-content h1 span{
+    color:var(--gold);
+}
 
+.hero-content p{
     max-width:620px;
-
-    margin-top:35px;
-
-    font-size:16px;
-
-    line-height:1.9;
-
-    color:rgba(255,255,255,.76);
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:clamp(20px,2.2vw,28px);
+    line-height:1.5;
+    color:#eee9dc;
 }
 
 .hero-line{
-
-    width:80px;
-
+    width:90px;
     height:1px;
-
     background:var(--gold);
-
-    margin-top:45px;
+    margin-top:35px;
 }
 
 
-/* =========================
+/* =========================================================
    COMMON
-========================= */
+========================================================= */
 
-.branches-section{
-
-    padding:
-        125px 7%;
+.section{
+    padding:120px 0;
 }
 
-.branches-container{
-
-    width:100%;
-
-    max-width:1150px;
-
-    margin:auto;
-}
-
-.branches-label{
-
-    font-size:10px;
-
-    letter-spacing:4px;
-
-    text-transform:uppercase;
-
+.section-kicker{
     color:var(--gold-soft);
-
+    text-transform:uppercase;
+    letter-spacing:3px;
+    font-size:11px;
     margin-bottom:20px;
 }
 
-.branches-title{
-
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
-    font-size:
-        clamp(40px,5vw,70px);
-
-    line-height:1.08;
-
+.section-title{
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:clamp(40px,5vw,68px);
+    line-height:1.05;
     font-weight:400;
-
     color:var(--green-dark);
-
-    margin-bottom:30px;
+    letter-spacing:-1.5px;
 }
 
-.branches-text{
-
+.section-intro{
     max-width:720px;
-
-    font-size:16px;
-
-    line-height:2;
-
+    margin-top:28px;
     color:var(--muted);
-}
-
-.branches-text p + p{
-
-    margin-top:22px;
+    font-size:17px;
+    line-height:1.9;
 }
 
 
-/* =========================
-   PHILOSOPHY
-========================= */
+/* =========================================================
+   BRANCH PHILOSOPHY
+========================================================= */
 
 .branch-philosophy{
-
-    background:var(--cream);
-
-    text-align:center;
-
-    padding:
-        135px 7%;
+    background:var(--milky);
 }
 
-.branch-philosophy-inner{
-
-    max-width:900px;
-
-    margin:auto;
-}
-
-.branch-philosophy .branches-text{
-
-    margin:auto;
-}
-
-.branch-philosophy .branches-label{
-
-    color:var(--gold-soft);
-}
-
-.branch-philosophy h2{
-
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
-    font-size:
-        clamp(38px,5vw,65px);
-
-    font-weight:400;
-
-    line-height:1.18;
-
-    color:var(--green-dark);
-}
-
-
-/* =========================
-   TREE JOURNEY
-========================= */
-
-.branch-tree{
-
-    min-height:75vh;
-
-    display:flex;
-
+.philosophy-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:90px;
     align-items:center;
+}
 
-    background-image:
+.philosophy-copy p{
+    color:var(--muted);
+    font-size:17px;
+    line-height:1.95;
+    margin-top:25px;
+}
+
+.philosophy-visual{
+    min-height:520px;
+    position:relative;
+    overflow:hidden;
+}
+
+.philosophy-visual img{
+    height:520px;
+    object-fit:cover;
+}
+
+.philosophy-overlay{
+    position:absolute;
+    inset:0;
+    background:
         linear-gradient(
-            rgba(16,23,17,.35),
-            rgba(16,23,17,.78)
-        ),
-        url("https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=2200&q=90");
-
-    background-size:cover;
-
-    background-position:center;
-
-    background-attachment:fixed;
-
-    color:white;
+            180deg,
+            transparent 35%,
+            rgba(16,23,17,.72)
+        );
 }
 
-.branch-tree-content{
-
-    width:86%;
-
-    max-width:1150px;
-
-    margin:auto;
+.philosophy-quote{
+    position:absolute;
+    left:40px;
+    right:40px;
+    bottom:35px;
+    color:#fff;
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:30px;
+    line-height:1.35;
 }
 
-.branch-tree-content .branches-label{
 
+/* =========================================================
+   PANCHA BHUTHALU INTRO
+========================================================= */
+
+.elements-intro{
+    background:var(--green-dark);
+    color:#fff;
+    text-align:center;
+}
+
+.elements-intro .section-kicker{
     color:var(--gold);
 }
 
-.branch-tree-content h2{
-
-    max-width:850px;
-
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
-    font-size:
-        clamp(45px,7vw,90px);
-
-    font-weight:400;
-
-    line-height:1.05;
+.elements-intro .section-title{
+    color:#f5f0e4;
 }
 
-.branch-tree-content p{
+.elements-intro .section-intro{
+    margin-left:auto;
+    margin-right:auto;
+    color:#bfc8bf;
+}
 
-    max-width:600px;
-
-    margin-top:30px;
-
-    font-size:16px;
-
-    line-height:1.9;
-
-    color:rgba(255,255,255,.70);
+.five-line{
+    width:90px;
+    height:1px;
+    background:var(--gold);
+    margin:35px auto 0;
 }
 
 
-/* =========================
-   GWAVES
-========================= */
+/* =========================================================
+   FIVE FORCES
+========================================================= */
 
-.gwaves-section{
-
-    background:var(--green-dark);
-
-    color:var(--cream);
-
-    padding:
-        135px 7%;
+.forces{
+    background:var(--milky-soft);
 }
 
-.gwaves-container{
-
-    max-width:1150px;
-
-    margin:auto;
+.forces-heading{
+    text-align:center;
+    margin-bottom:65px;
 }
 
-.gwaves-grid{
+.forces-heading .section-intro{
+    margin-left:auto;
+    margin-right:auto;
+}
 
+.forces-grid{
     display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:14px;
+}
 
-    grid-template-columns:
-        1fr 1fr;
+.force-card{
+    min-height:470px;
+    position:relative;
+    overflow:hidden;
+    background:#17231b;
+}
 
-    gap:90px;
+.force-card img{
+    position:absolute;
+    inset:0;
+    height:100%;
+    object-fit:cover;
+    transition:transform .7s ease;
+}
 
+.force-card:hover img{
+    transform:scale(1.05);
+}
+
+.force-card::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+        linear-gradient(
+            180deg,
+            rgba(0,0,0,.03) 25%,
+            rgba(0,0,0,.82) 100%
+        );
+}
+
+.force-content{
+    position:absolute;
+    z-index:2;
+    left:25px;
+    right:25px;
+    bottom:25px;
+    color:#fff;
+}
+
+.force-number{
+    color:var(--gold);
+    font-size:11px;
+    letter-spacing:3px;
+    margin-bottom:8px;
+}
+
+.force-content h3{
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:32px;
+    font-weight:400;
+    margin-bottom:10px;
+}
+
+.force-content p{
+    font-size:13px;
+    line-height:1.65;
+    color:#d7ddd7;
+}
+
+
+/* =========================================================
+   FIVE FORCES MESSAGE
+========================================================= */
+
+.five-message{
+    padding:140px 0;
+    background:#fff;
+    text-align:center;
+}
+
+.five-message h2{
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:clamp(42px,6vw,76px);
+    font-weight:400;
+    line-height:1.05;
+    color:var(--green-dark);
+}
+
+.five-message h2 span{
+    color:var(--gold-soft);
+}
+
+.five-message p{
+    max-width:680px;
+    margin:30px auto 0;
+    color:var(--muted);
+    font-size:17px;
+    line-height:1.9;
+}
+
+
+/* =========================================================
+   SHARED DNA
+========================================================= */
+
+.shared-dna{
+    background:var(--green-deep);
+    color:#fff;
+}
+
+.shared-dna .section-title{
+    color:#f5f0e4;
+}
+
+.dna-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:80px;
     align-items:center;
 }
 
-.gwaves-image{
+.dna-copy p{
+    color:#c5cec7;
+    font-size:17px;
+    line-height:1.95;
+    margin-top:25px;
+}
 
-    height:620px;
+.dna-list{
+    border-top:1px solid rgba(208,180,107,.35);
+}
 
-    overflow:hidden;
+.dna-item{
+    display:flex;
+    align-items:flex-start;
+    gap:25px;
+    padding:25px 0;
+    border-bottom:1px solid rgba(208,180,107,.2);
+}
 
+.dna-item span{
+    color:var(--gold);
+    font-size:12px;
+    letter-spacing:2px;
+    min-width:35px;
+}
+
+.dna-item strong{
+    color:#f5f0e4;
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:22px;
+    font-weight:400;
+}
+
+
+/* =========================================================
+   TREE JOURNEY
+========================================================= */
+
+.tree-journey{
+    background:var(--milky);
+}
+
+.journey{
+    margin-top:70px;
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
     position:relative;
 }
 
-.gwaves-image img{
-
-    height:100%;
-
-    object-fit:cover;
-
-    transition:
-        transform 1.2s ease;
+.journey::before{
+    content:"";
+    position:absolute;
+    top:23px;
+    left:10%;
+    right:10%;
+    height:1px;
+    background:#d8ccb0;
 }
 
-.gwaves-image:hover img{
-
-    transform:scale(1.04);
+.journey-step{
+    position:relative;
+    text-align:center;
+    z-index:1;
 }
 
-.gwaves-content .branches-label{
-
-    color:var(--gold);
+.journey-dot{
+    width:47px;
+    height:47px;
+    margin:auto;
+    border-radius:50%;
+    border:1px solid var(--gold);
+    background:var(--milky);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:var(--gold-soft);
+    font-family:Georgia,"Times New Roman",serif;
 }
 
-.gwaves-content h2{
-
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
-    font-size:
-        clamp(50px,6vw,85px);
-
+.journey-step h3{
+    margin-top:22px;
+    font-family:Georgia,"Times New Roman",serif;
     font-weight:400;
+    font-size:22px;
+    color:var(--green);
+}
 
-    line-height:.95;
+.journey-step p{
+    margin:10px auto 0;
+    max-width:150px;
+    color:var(--muted);
+    font-size:13px;
+}
 
-    letter-spacing:-2px;
 
-    color:var(--cream);
+/* =========================================================
+   EVERY BRANCH CARRIES FIVE
+========================================================= */
 
+.branch-wheel{
+    background:var(--milky-soft);
+    text-align:center;
+}
+
+.wheel{
+    width:min(500px,90vw);
+    height:min(500px,90vw);
+    margin:70px auto 0;
+    border:1px solid #d4c79f;
+    border-radius:50%;
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.wheel::before{
+    content:"";
+    position:absolute;
+    width:65%;
+    height:65%;
+    border:1px solid rgba(208,180,107,.45);
+    border-radius:50%;
+}
+
+.wheel-center{
+    position:relative;
+    z-index:2;
+    width:145px;
+    height:145px;
+    border-radius:50%;
+    background:var(--green-dark);
+    color:#f5f0e4;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:20px;
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:20px;
+}
+
+.wheel-label{
+    position:absolute;
+    width:95px;
+    font-family:Georgia,"Times New Roman",serif;
+    color:var(--green);
+    font-size:18px;
+}
+
+.wheel-label small{
+    display:block;
+    font-family:Arial,Helvetica,sans-serif;
+    color:var(--muted);
+    font-size:10px;
+    letter-spacing:1px;
+    margin-top:4px;
+}
+
+.wheel-earth{
+    top:18px;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+.wheel-water{
+    right:18px;
+    top:50%;
+    transform:translateY(-50%);
+}
+
+.wheel-fire{
+    bottom:35px;
+    right:80px;
+}
+
+.wheel-air{
+    bottom:35px;
+    left:80px;
+}
+
+.wheel-space{
+    left:18px;
+    top:50%;
+    transform:translateY(-50%);
+}
+
+
+/* =========================================================
+   GWAVES
+========================================================= */
+
+.gwaves{
+    background:var(--green-dark);
+    color:#fff;
+    overflow:hidden;
+}
+
+.gwaves-inner{
+    width:min(1180px,90%);
+    margin:auto;
+}
+
+.gwaves-kicker{
+    color:var(--gold);
+    text-transform:uppercase;
+    letter-spacing:4px;
+    font-size:11px;
     margin-bottom:25px;
 }
 
-.gwaves-intro{
-
-    font-size:17px;
-
-    line-height:1.9;
-
-    color:rgba(244,239,228,.70);
-
-    max-width:600px;
-}
-
-.gwaves-line{
-
-    width:70px;
-
-    height:1px;
-
-    background:var(--gold);
-
-    margin:
-        35px 0;
-}
-
-.gwaves-meaning{
-
-    display:grid;
-
-    grid-template-columns:
-        repeat(2,1fr);
-
-    gap:12px;
-
-    margin-top:30px;
-}
-
-.gwaves-word{
-
-    padding:18px 20px;
-
-    border:
-        1px solid
-        rgba(255,255,255,.10);
-
-    background:
-        rgba(255,255,255,.035);
-}
-
-.gwaves-word strong{
-
-    display:block;
-
-    font-family:Georgia,serif;
-
-    font-size:20px;
-
-    color:var(--gold);
-
-    margin-bottom:7px;
-}
-
-.gwaves-word span{
-
-    font-size:11px;
-
-    line-height:1.6;
-
-    color:rgba(244,239,228,.55);
-}
-
-
-/* =========================
-   GWAVES WORK
-========================= */
-
-.work-section{
-
-    background:#fff;
-
-    padding:
-        125px 7%;
-}
-
-.work-intro{
-
-    max-width:750px;
-
-    margin-bottom:70px;
-}
-
-.work-grid{
-
-    display:grid;
-
-    grid-template-columns:
-        repeat(2,1fr);
-
-    gap:2px;
-}
-
-.work-card{
-
-    min-height:300px;
-
-    padding:45px;
-
-    background:var(--cream-soft);
-
-    border:
-        1px solid
-        rgba(32,56,44,.06);
-
-    transition:
-        transform .4s ease,
-        background .4s ease;
-}
-
-.work-card:hover{
-
-    transform:translateY(-6px);
-
-    background:#e4dac5;
-}
-
-.work-number{
-
-    font-family:Georgia,serif;
-
-    color:var(--gold-soft);
-
-    font-size:18px;
-
-    margin-bottom:55px;
-}
-
-.work-card h3{
-
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
-    font-size:30px;
-
+.gwaves-title{
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:clamp(55px,9vw,110px);
+    line-height:.9;
     font-weight:400;
-
-    color:var(--green-dark);
-
-    margin-bottom:16px;
+    color:#f5f0e4;
+    letter-spacing:-4px;
 }
 
-.work-card p{
+.gwaves-title span{
+    color:var(--gold);
+}
 
-    font-size:13px;
+.gwaves-subtitle{
+    margin-top:28px;
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:clamp(24px,3vw,38px);
+    line-height:1.3;
+    color:#e8e2d4;
+    max-width:800px;
+}
 
-    line-height:1.9;
+.gwaves-subtitle strong{
+    color:var(--gold);
+    font-weight:400;
+}
 
-    color:var(--muted);
+.gwaves-story{
+    margin-top:90px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:80px;
+    align-items:start;
+}
+
+.gwaves-image{
+    min-height:650px;
+    position:relative;
+    overflow:hidden;
+}
+
+.gwaves-image img{
+    height:650px;
+    object-fit:cover;
+}
+
+.gwaves-image::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+        linear-gradient(
+            180deg,
+            rgba(0,0,0,.05),
+            rgba(0,0,0,.55)
+        );
+}
+
+.gwaves-image-caption{
+    position:absolute;
+    z-index:2;
+    left:30px;
+    bottom:30px;
+    color:#fff;
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:25px;
+    line-height:1.35;
+    max-width:380px;
+}
+
+.gwaves-copy{
+    padding-top:15px;
+}
+
+.gwaves-copy h3{
+    color:var(--gold);
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:34px;
+    font-weight:400;
+    margin-bottom:25px;
+}
+
+.gwaves-copy p{
+    color:#c7cec8;
+    font-size:17px;
+    line-height:1.95;
+    margin-bottom:25px;
+}
+
+.gwaves-copy p strong{
+    color:#f1eadc;
+    font-weight:500;
+}
+
+.gwaves-flow{
+    margin-top:65px;
+    border-top:1px solid rgba(208,180,107,.35);
+    border-bottom:1px solid rgba(208,180,107,.35);
+    padding:30px 0;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.gwaves-flow span{
+    color:#eee8dc;
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:17px;
+}
+
+.gwaves-flow i{
+    color:var(--gold);
+    font-style:normal;
+}
+
+.gwaves-signature{
+    margin-top:75px;
+    text-align:center;
+    padding-bottom:20px;
+}
+
+.gwaves-signature p{
+    color:#aeb8b0;
+    text-transform:uppercase;
+    letter-spacing:3px;
+    font-size:10px;
+    margin-bottom:15px;
+}
+
+.gwaves-signature h3{
+    color:#f5f0e4;
+    font-family:Georgia,"Times New Roman",serif;
+    font-weight:400;
+    font-size:clamp(32px,4vw,55px);
 }
 
 
-/* =========================
-   FUTURE BRANCHES
-========================= */
+/* =========================================================
+   EXPLORE GWAVES
+========================================================= */
 
-.future-section{
-
-    background:var(--cream-soft);
-
-    padding:
-        135px 7%;
+.explore-gwaves{
+    background:var(--milky);
+    text-align:center;
+    padding:130px 0;
 }
 
-.future-container{
-
-    max-width:1150px;
-
+.explore-gwaves-inner{
+    max-width:760px;
     margin:auto;
 }
 
-.future-intro{
+.explore-gwaves .section-kicker{
+    color:var(--gold-soft);
+}
 
-    max-width:750px;
+.explore-gwaves .section-title{
+    margin-bottom:25px;
+}
 
-    margin-bottom:70px;
+.explore-gwaves p{
+    max-width:650px;
+    margin:0 auto;
+    color:var(--muted);
+    font-size:17px;
+    line-height:1.9;
+}
+
+.explore-gwaves-button{
+    display:inline-block;
+    margin-top:38px;
+    padding:15px 30px;
+    border:1px solid var(--gold-soft);
+    color:var(--green);
+    font-size:11px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    transition:all .3s ease;
+}
+
+.explore-gwaves-button:hover{
+    background:var(--green-dark);
+    border-color:var(--green-dark);
+    color:#f5f0e4;
+}
+
+
+/* =========================================================
+   FUTURE BRANCHES
+========================================================= */
+
+.future{
+    background:var(--milky-soft);
 }
 
 .future-grid{
-
+    margin-top:60px;
     display:grid;
-
-    grid-template-columns:
-        repeat(3,1fr);
-
-    gap:2px;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
 }
 
 .future-card{
-
-    min-height:360px;
-
-    padding:45px 35px;
-
-    border:
-        1px solid
-        rgba(32,56,44,.10);
-
-    background:
-        rgba(255,255,255,.30);
-
+    min-height:270px;
+    border:1px solid #ded8c9;
+    padding:40px;
+    background:#fbfaf6;
     display:flex;
-
     flex-direction:column;
-
     justify-content:space-between;
-
-    transition:
-        .4s ease;
-}
-
-.future-card:hover{
-
-    transform:translateY(-6px);
-
-    background:#f4efe4;
 }
 
 .future-number{
-
-    font-family:Georgia,serif;
-
-    font-size:17px;
-
     color:var(--gold-soft);
+    letter-spacing:3px;
+    font-size:11px;
 }
 
 .future-card h3{
-
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
-    font-size:32px;
-
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:31px;
     font-weight:400;
-
-    color:var(--green-dark);
+    color:var(--green);
 }
 
 .future-card p{
-
-    font-size:13px;
-
-    line-height:1.8;
-
     color:var(--muted);
-}
-
-.future-infinity{
-
-    font-size:48px;
-
-    font-family:Georgia,serif;
-
-    color:var(--gold-soft);
+    font-size:14px;
 }
 
 
-/* =========================
+/* =========================================================
    CLOSING
-========================= */
+========================================================= */
 
 .branches-closing{
-
-    background:var(--green);
-
-    color:var(--cream);
-
+    min-height:620px;
+    display:flex;
+    align-items:center;
     text-align:center;
+    color:#fff;
 
-    padding:
-        140px 7%;
+    background:
+        linear-gradient(
+            rgba(15,25,18,.83),
+            rgba(15,25,18,.83)
+        ),
+        url("https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=2200&q=85")
+        center/cover no-repeat;
 }
 
-.branches-closing-inner{
-
-    max-width:900px;
-
+.closing-content{
+    width:min(850px,90%);
     margin:auto;
 }
 
-.branches-closing .branches-label{
-
+.closing-content .section-kicker{
     color:var(--gold);
 }
 
-.branches-closing h2{
-
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
-    font-size:
-        clamp(42px,6vw,75px);
-
-    line-height:1.08;
-
+.closing-content h2{
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:clamp(44px,6vw,76px);
+    line-height:1.05;
     font-weight:400;
+    margin-bottom:28px;
 }
 
-.branches-closing p{
-
+.closing-content p{
+    color:#d0d7d1;
+    font-size:17px;
     max-width:650px;
-
-    margin:30px auto 45px;
-
-    color:rgba(244,239,228,.65);
-
-    font-size:15px;
-
+    margin:auto;
     line-height:1.9;
 }
 
-.branch-button{
-
-    display:inline-flex;
-
-    align-items:center;
-
-    gap:15px;
-
-    padding:
-        16px 28px;
-
-    border:
-        1px solid
-        var(--gold);
-
-    color:var(--cream);
-
-    font-size:11px;
-
+.closing-button{
+    display:inline-block;
+    margin-top:38px;
+    padding:15px 28px;
+    border:1px solid var(--gold);
+    color:#f5f0e4;
+    font-size:12px;
     letter-spacing:2px;
-
     text-transform:uppercase;
-
-    transition:.35s ease;
+    transition:all .3s ease;
 }
 
-.branch-button:hover{
-
+.closing-button:hover{
     background:var(--gold);
-
     color:var(--green-dark);
 }
 
 
-/* =========================
-   REVEAL
-========================= */
-
-.reveal{
-
-    opacity:0;
-
-    transform:
-        translateY(35px);
-
-    transition:
-        opacity 1s ease,
-        transform 1s ease;
-}
-
-.reveal.show{
-
-    opacity:1;
-
-    transform:
-        translateY(0);
-}
-
-
-/* =========================
+/* =========================================================
    RESPONSIVE
-========================= */
+========================================================= */
 
-@media(max-width:900px){
+@media(max-width:1000px){
 
-    .branches-section{
-
-        padding:90px 7%;
+    .forces-grid{
+        grid-template-columns:repeat(2,1fr);
     }
 
-    .gwaves-grid{
+    .force-card:last-child{
+        grid-column:1/-1;
+    }
 
+    .philosophy-grid,
+    .dna-grid,
+    .gwaves-story{
         grid-template-columns:1fr;
-
-        gap:55px;
     }
 
-    .gwaves-image{
-
-        height:480px;
+    .philosophy-visual,
+    .philosophy-visual img{
+        min-height:450px;
+        height:450px;
     }
 
-    .work-grid{
+    .gwaves-image,
+    .gwaves-image img{
+        min-height:500px;
+        height:500px;
+    }
 
+    .journey{
         grid-template-columns:1fr;
+        gap:45px;
+    }
+
+    .journey::before{
+        display:none;
+    }
+
+    .journey-dot{
+        background:var(--milky);
+    }
+}
+
+
+@media(max-width:700px){
+
+    .section{
+        padding:85px 0;
+    }
+
+    .branches-hero{
+        min-height:80vh;
+    }
+
+    .hero-content{
+        padding:100px 0 70px;
+        margin-left:5%;
+    }
+
+    .hero-content h1{
+        letter-spacing:-2px;
+    }
+
+    .philosophy-grid,
+    .dna-grid{
+        gap:45px;
+    }
+
+    .forces-grid{
+        grid-template-columns:1fr;
+    }
+
+    .force-card:last-child{
+        grid-column:auto;
+    }
+
+    .force-card{
+        min-height:420px;
+    }
+
+    .wheel{
+        width:320px;
+        height:320px;
+    }
+
+    .wheel-center{
+        width:105px;
+        height:105px;
+        font-size:15px;
+    }
+
+    .wheel-label{
+        font-size:14px;
+        width:70px;
+    }
+
+    .wheel-earth{
+        top:8px;
+    }
+
+    .wheel-water{
+        right:5px;
+    }
+
+    .wheel-space{
+        left:5px;
+    }
+
+    .wheel-fire{
+        right:40px;
+        bottom:18px;
+    }
+
+    .wheel-air{
+        left:40px;
+        bottom:18px;
+    }
+
+    .gwaves-title{
+        letter-spacing:-2px;
+    }
+
+    .gwaves-flow{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:12px;
     }
 
     .future-grid{
-
         grid-template-columns:1fr;
-    }
-
-    .branches-hero,
-    .branch-tree{
-
-        background-attachment:scroll;
-    }
-}
-
-
-@media(max-width:600px){
-
-    .branches-hero{
-
-        min-height:90vh;
-    }
-
-    .branches-hero-content{
-
-        width:86%;
-
-        padding-top:70px;
-    }
-
-    .branches-hero h1{
-
-        letter-spacing:-1px;
-    }
-
-    .branches-hero p{
-
-        font-size:14px;
-
-        line-height:1.8;
-    }
-
-    .branches-section{
-
-        padding:
-            75px 7%;
-    }
-
-    .branch-philosophy,
-    .gwaves-section,
-    .future-section,
-    .branches-closing{
-
-        padding:
-            95px 7%;
-    }
-
-    .gwaves-image{
-
-        height:390px;
-    }
-
-    .gwaves-meaning{
-
-        grid-template-columns:1fr;
-    }
-
-    .work-card{
-
-        min-height:260px;
-
-        padding:35px 28px;
-    }
-
-    .work-number{
-
-        margin-bottom:35px;
-    }
-
-    .future-card{
-
-        min-height:300px;
-
-        padding:35px 28px;
-    }
-
-    .branch-tree{
-
-        min-height:70vh;
     }
 }
 
 </style>
-
 </head>
 
 
 <body>
 
 
-<!-- =====================================
+<!-- =========================================================
      SHARED HEADER
-===================================== -->
+========================================================= -->
 
-<div id="valiass-header"></div>
+<div id="site-header"></div>
 
 
-<!-- =====================================
+<!-- =========================================================
      HERO
-===================================== -->
+========================================================= -->
 
 <section class="branches-hero">
 
-    <div class="branches-hero-content reveal">
+    <div class="hero-content">
 
-        <div class="branches-kicker">
-            The Possibilities
+        <div class="hero-kicker">
+            VALIASS / BRANCHES
         </div>
 
         <h1>
-            Our Branches
+            Many branches.<br>
+            <span>One spirit.</span>
         </h1>
 
         <p>
-            Different directions.
-            Different identities.
-            Different possibilities.
-            But one origin connects them all.
+            Every possibility grows from the same roots,
+            carries the same values, and finds its own direction.
         </p>
 
         <div class="hero-line"></div>
@@ -993,36 +1074,58 @@ a{
 </section>
 
 
-<!-- =====================================
-     PHILOSOPHY
-===================================== -->
+<!-- =========================================================
+     BRANCH PHILOSOPHY
+========================================================= -->
 
-<section class="branch-philosophy">
+<section class="section branch-philosophy">
 
-    <div class="branch-philosophy-inner reveal">
+    <div class="container philosophy-grid">
 
-        <div class="branches-label">
-            01 — One Origin
+        <div class="philosophy-copy">
+
+            <div class="section-kicker">
+                The Branches
+            </div>
+
+            <h2 class="section-title">
+                One tree.<br>
+                Many directions.
+            </h2>
+
+            <p>
+                A tree does not grow one branch and stop.
+                It grows according to its environment, its strength,
+                its journey and the space around it.
+            </p>
+
+            <p>
+                VALIASS grows in the same way.
+                Every branch can have its own identity,
+                purpose and direction — while remaining connected
+                to the same origin.
+            </p>
+
+            <p>
+                Different branches.
+                Different possibilities.
+                One living system.
+            </p>
+
         </div>
 
-        <h2>
-            A branch does not have
-            to look like another branch.
-        </h2>
+        <div class="philosophy-visual">
 
-        <div class="branches-text">
+            <img
+                src="https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?auto=format&fit=crop&w=1400&q=85"
+                alt="Tree branches">
 
-            <p>
-                Each idea deserves the freedom
-                to become what it is meant to be.
-            </p>
+            <div class="philosophy-overlay"></div>
 
-            <p>
-                A new initiative can have its own
-                identity, audience, purpose and
-                personality while still remaining
-                connected to the same roots.
-            </p>
+            <div class="philosophy-quote">
+                “A strong tree gives every branch
+                the freedom to find its own direction.”
+            </div>
 
         </div>
 
@@ -1031,29 +1134,210 @@ a{
 </section>
 
 
-<!-- =====================================
-     TREE
-===================================== -->
+<!-- =========================================================
+     PANCHA BHUTHALU INTRO
+========================================================= -->
 
-<section class="branch-tree">
+<section class="section elements-intro">
 
-    <div class="branch-tree-content reveal">
+    <div class="container">
 
-        <div class="branches-label">
-            02 — The Tree
+        <div class="section-kicker">
+            The Common Force
         </div>
 
+        <h2 class="section-title">
+            Five forces.<br>
+            One creative spirit.
+        </h2>
+
+        <p class="section-intro">
+            Every VALIASS branch carries the same five forces within it.
+            They are not separate branches. They are the common DNA
+            that shapes how we think, create and move forward.
+        </p>
+
+        <div class="five-line"></div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     PANCHA BHUTHALU
+========================================================= -->
+
+<section class="section forces">
+
+    <div class="container">
+
+        <div class="forces-heading">
+
+            <div class="section-kicker">
+                Pancha Bhuthalu
+            </div>
+
+            <h2 class="section-title">
+                The five forces within every branch.
+            </h2>
+
+            <p class="section-intro">
+                Earth gives us foundation. Water gives us movement.
+                Fire gives us energy. Air gives us freedom.
+                Space gives us possibility.
+            </p>
+
+        </div>
+
+
+        <div class="forces-grid">
+
+
+            <article class="force-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1000&q=85"
+                    alt="Earth">
+
+                <div class="force-content">
+
+                    <div class="force-number">
+                        01 / EARTH
+                    </div>
+
+                    <h3>Foundation</h3>
+
+                    <p>
+                        Roots, values, responsibility and the strength
+                        to build something that lasts.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="force-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=85"
+                    alt="Water">
+
+                <div class="force-content">
+
+                    <div class="force-number">
+                        02 / WATER
+                    </div>
+
+                    <h3>Movement</h3>
+
+                    <p>
+                        Flow, adaptability and the ability to keep
+                        moving through changing circumstances.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="force-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1478827536114-da961b7a73f8?auto=format&fit=crop&w=1000&q=85"
+                    alt="Fire">
+
+                <div class="force-content">
+
+                    <div class="force-number">
+                        03 / FIRE
+                    </div>
+
+                    <h3>Energy</h3>
+
+                    <p>
+                        Passion, courage, ambition and the energy
+                        required to turn possibility into action.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="force-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1000&q=85"
+                    alt="Air">
+
+                <div class="force-content">
+
+                    <div class="force-number">
+                        04 / AIR
+                    </div>
+
+                    <h3>Freedom</h3>
+
+                    <p>
+                        Ideas, imagination and the freedom to look
+                        beyond what already exists.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="force-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?auto=format&fit=crop&w=1000&q=85"
+                    alt="Space">
+
+                <div class="force-content">
+
+                    <div class="force-number">
+                        05 / SPACE
+                    </div>
+
+                    <h3>Possibility</h3>
+
+                    <p>
+                        The room to imagine, experiment, connect
+                        and create something completely new.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     FIVE FORCES MESSAGE
+========================================================= -->
+
+<section class="five-message">
+
+    <div class="container">
+
         <h2>
-            One tree.
-            Many directions.
+            Five forces.<br>
+            <span>One creative spirit.</span>
         </h2>
 
         <p>
-            Some branches may grow into businesses.
-            Some may become creative ventures.
-            Some may become experiments.
-            Some may lead somewhere we cannot
-            imagine yet.
+            Every initiative may look different on the outside.
+            But underneath, the same forces continue to shape
+            the way we think, create and grow.
         </p>
 
     </div>
@@ -1061,103 +1345,66 @@ a{
 </section>
 
 
-<!-- =====================================
-     GWAVES
-===================================== -->
+<!-- =========================================================
+     SHARED DNA
+========================================================= -->
 
-<section class="gwaves-section">
+<section class="section shared-dna">
 
-    <div class="gwaves-container gwaves-grid">
+    <div class="container dna-grid">
 
-        <div class="gwaves-image reveal">
+        <div class="dna-copy">
 
-            <img
-                src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1400&q=85"
-                alt="Creative workspace"
-            >
+            <div class="section-kicker">
+                Shared DNA
+            </div>
+
+            <h2 class="section-title">
+                Different branches.<br>
+                Same roots.
+            </h2>
+
+            <p>
+                A branch can become a business, a creative platform,
+                a media idea, a product, a service or something
+                that does not exist yet.
+            </p>
+
+            <p>
+                Its identity can change.
+                Its audience can change.
+                Its direction can change.
+                But the foundation remains connected.
+            </p>
 
         </div>
 
 
-        <div class="gwaves-content reveal">
+        <div class="dna-list">
 
-            <div class="branches-label">
-                03 — First Branch
+            <div class="dna-item">
+                <span>01</span>
+                <strong>Think from the roots.</strong>
             </div>
 
-            <h2>
-                GWAVES
-            </h2>
-
-            <div class="gwaves-intro">
-
-                The first living branch of VALIASS.
-
-                A creative digital direction built
-                around ideas, storytelling, branding,
-                digital experiences and new ways
-                of making ideas move.
-
+            <div class="dna-item">
+                <span>02</span>
+                <strong>Move with purpose.</strong>
             </div>
 
-            <div class="gwaves-line"></div>
+            <div class="dna-item">
+                <span>03</span>
+                <strong>Create with courage.</strong>
+            </div>
 
+            <div class="dna-item">
+                <span>04</span>
+                <strong>Stay open to possibility.</strong>
+            </div>
 
-            <div class="gwaves-meaning">
-
-
-                <div class="gwaves-word">
-
-                    <strong>
-                        G
-                    </strong>
-
-                    <span>
-                        Godavari
-                    </span>
-
-                </div>
-
-
-                <div class="gwaves-word">
-
-                    <strong>
-                        I
-                    </strong>
-
-                    <span>
-                        Ippanapadu
-                    </span>
-
-                </div>
-
-
-                <div class="gwaves-word">
-
-                    <strong>
-                        WE
-                    </strong>
-
-                    <span>
-                        You + I + Us
-                    </span>
-
-                </div>
-
-
-                <div class="gwaves-word">
-
-                    <strong>
-                        WAVES
-                    </strong>
-
-                    <span>
-                        Movement · Energy · Togetherness
-                    </span>
-
-                </div>
-
-
+            <div class="dna-item">
+                <span>05</span>
+                <strong>Keep growing.</strong>
             </div>
 
         </div>
@@ -1167,115 +1414,103 @@ a{
 </section>
 
 
-<!-- =====================================
-     GWAVES WORK
-===================================== -->
+<!-- =========================================================
+     TREE JOURNEY
+========================================================= -->
 
-<section class="work-section">
+<section class="section tree-journey">
 
-    <div class="branches-container">
+    <div class="container">
 
-        <div class="work-intro reveal">
-
-            <div class="branches-label">
-                04 — What This Branch Creates
-            </div>
-
-            <h2 class="branches-title">
-                Ideas that move.
-            </h2>
-
-            <div class="branches-text">
-
-                <p>
-                    GWAVES is where creative thinking
-                    becomes something people can see,
-                    experience and remember.
-                </p>
-
-            </div>
-
+        <div class="section-kicker">
+            The Journey
         </div>
 
+        <h2 class="section-title">
+            From roots to possibilities.
+        </h2>
 
-        <div class="work-grid">
+        <p class="section-intro">
+            Every branch begins somewhere.
+            Every idea takes a journey before it becomes something real.
+        </p>
 
 
-            <div class="work-card reveal">
+        <div class="journey">
 
-                <div class="work-number">
+            <div class="journey-step">
+
+                <div class="journey-dot">
                     01
                 </div>
 
-                <h3>
-                    Storytelling
-                </h3>
+                <h3>Roots</h3>
 
                 <p>
-                    Turning everyday ideas,
-                    people and businesses into
-                    stories worth remembering.
+                    Values and origin
                 </p>
 
             </div>
 
 
-            <div class="work-card reveal">
+            <div class="journey-step">
 
-                <div class="work-number">
+                <div class="journey-dot">
                     02
                 </div>
 
-                <h3>
-                    Branding
-                </h3>
+                <h3>Thought</h3>
 
                 <p>
-                    Finding the personality,
-                    voice and visual direction
-                    behind a brand.
+                    A possibility begins
                 </p>
 
             </div>
 
 
-            <div class="work-card reveal">
+            <div class="journey-step">
 
-                <div class="work-number">
+                <div class="journey-dot">
                     03
                 </div>
 
-                <h3>
-                    AI Video
-                </h3>
+                <h3>Idea</h3>
 
                 <p>
-                    Exploring new creative possibilities
-                    through AI-assisted visual storytelling
-                    and advertising.
+                    A direction takes shape
                 </p>
 
             </div>
 
 
-            <div class="work-card reveal">
+            <div class="journey-step">
 
-                <div class="work-number">
+                <div class="journey-dot">
                     04
                 </div>
 
-                <h3>
-                    Digital
-                </h3>
+                <h3>Action</h3>
 
                 <p>
-                    Websites, social presence and
-                    digital experiences that help
-                    ideas reach people.
+                    The idea starts moving
                 </p>
 
             </div>
 
+
+            <div class="journey-step">
+
+                <div class="journey-dot">
+                    05
+                </div>
+
+                <h3>Branch</h3>
+
+                <p>
+                    A new possibility grows
+                </p>
+
+            </div>
 
         </div>
 
@@ -1284,97 +1519,287 @@ a{
 </section>
 
 
-<!-- =====================================
-     FUTURE BRANCHES
-===================================== -->
+<!-- =========================================================
+     EVERY BRANCH CARRIES ALL FIVE
+========================================================= -->
 
-<section class="future-section">
+<section class="section branch-wheel">
 
-    <div class="future-container">
+    <div class="container">
 
-        <div class="future-intro reveal">
+        <div class="section-kicker">
+            The VALIASS Principle
+        </div>
 
-            <div class="branches-label">
-                05 — What Comes Next
+        <h2 class="section-title">
+            Every branch carries all five.
+        </h2>
+
+        <p class="section-intro">
+            The forces don't belong to individual initiatives.
+            They live within every initiative.
+        </p>
+
+
+        <div class="wheel">
+
+            <div class="wheel-center">
+                EVERY<br>
+                BRANCH
             </div>
 
-            <h2 class="branches-title">
-                The tree is still growing.
-            </h2>
+            <div class="wheel-label wheel-earth">
+                Earth
+                <small>ROOTS</small>
+            </div>
 
-            <div class="branches-text">
+            <div class="wheel-label wheel-water">
+                Water
+                <small>FLOW</small>
+            </div>
+
+            <div class="wheel-label wheel-fire">
+                Fire
+                <small>ENERGY</small>
+            </div>
+
+            <div class="wheel-label wheel-air">
+                Air
+                <small>IDEAS</small>
+            </div>
+
+            <div class="wheel-label wheel-space">
+                Space
+                <small>POSSIBILITY</small>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     GWAVES
+========================================================= -->
+
+<section class="section gwaves">
+
+    <div class="gwaves-inner">
+
+        <div class="gwaves-kicker">
+            BRANCH 01 / CREATIVE MOVEMENT
+        </div>
+
+        <h2 class="gwaves-title">
+            G<span>W</span>AVES
+        </h2>
+
+        <div class="gwaves-subtitle">
+            <strong>Ideas that flow.</strong><br>
+            Like the Godavari waves.<br>
+            Towards the Sea of Innovation.
+        </div>
+
+
+        <div class="gwaves-story">
+
+
+            <div class="gwaves-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1400&q=85"
+                    alt="River flowing through nature">
+
+                <div class="gwaves-image-caption">
+                    From the roots of the Godavari
+                    to the waves of ideas.
+                </div>
+
+            </div>
+
+
+            <div class="gwaves-copy">
+
+                <h3>
+                    Where ideas flow like the Godavari.
+                </h3>
 
                 <p>
-                    GWAVES is only the beginning.
-                    The future may bring branches
-                    we have not imagined yet.
+                    GWAVES is inspired by the way the Godavari flows.
                 </p>
+
+                <p>
+                    It begins from its roots, gathers strength through
+                    its journey, touches many lives, takes different
+                    turns, and keeps moving forward.
+                </p>
+
+                <p>
+                    In the same way, an idea should never remain still.
+                </p>
+
+                <p>
+                    An idea can begin as a thought.
+                    It can gather people, energy and creativity.
+                    It can become a story, a brand, a product
+                    or an experience.
+                </p>
+
+                <p>
+                    And just like the Godavari keeps flowing towards
+                    the sea, our ideas keep moving towards something
+                    bigger — <strong>the Sea of Innovation.</strong>
+                </p>
+
+                <p>
+                    <strong>GWAVES is that movement.</strong>
+                </p>
+
+                <p>
+                    A creative space where ideas flow,
+                    evolve and move forward.
+                </p>
+
+
+                <div class="gwaves-flow">
+
+                    <span>ROOTS</span>
+                    <i>→</i>
+
+                    <span>FLOW</span>
+                    <i>→</i>
+
+                    <span>WAVES</span>
+                    <i>→</i>
+
+                    <span>INNOVATION</span>
+                    <i>→</i>
+
+                    <span>SEA</span>
+
+                </div>
 
             </div>
 
         </div>
+
+
+        <div class="gwaves-signature">
+
+            <p>
+                The GWAVES philosophy
+            </p>
+
+            <h3>
+                From the roots of the Godavari<br>
+                to the waves of ideas<br>
+                towards the Sea of Innovation.
+            </h3>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     EXPLORE GWAVES
+========================================================= -->
+
+<section class="section explore-gwaves">
+
+    <div class="container">
+
+        <div class="explore-gwaves-inner">
+
+            <div class="section-kicker">
+                EXPLORE THE BRANCH
+            </div>
+
+            <h2 class="section-title">
+                Follow the flow.
+            </h2>
+
+            <p>
+                GWAVES is where ideas begin to move —
+                from thoughts and stories to creative possibilities
+                and the Sea of Innovation.
+            </p>
+
+            <a
+                href="branches/gwaves/index.html"
+                class="explore-gwaves-button">
+                Explore GWAVES →
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     FUTURE BRANCHES
+========================================================= -->
+
+<section class="section future">
+
+    <div class="container">
+
+        <div class="section-kicker">
+            The Tree Is Still Growing
+        </div>
+
+        <h2 class="section-title">
+            More branches will come.
+        </h2>
+
+        <p class="section-intro">
+            Some ideas already have a direction.
+            Some are still taking shape.
+            And some haven't been imagined yet.
+        </p>
 
 
         <div class="future-grid">
 
 
-            <div class="future-card reveal">
+            <article class="future-card">
 
                 <div class="future-number">
                     BRANCH 02
                 </div>
 
                 <h3>
-                    Something New
+                    Coming Soon
                 </h3>
 
                 <p>
-                    A future idea waiting for
-                    the right moment to grow.
+                    A new possibility waiting to take shape.
                 </p>
 
-            </div>
+            </article>
 
 
-            <div class="future-card reveal">
+            <article class="future-card">
 
                 <div class="future-number">
                     BRANCH 03
                 </div>
 
                 <h3>
-                    Another Direction
+                    Coming Soon
                 </h3>
 
                 <p>
-                    Different purpose.
-                    Different identity.
-                    Same roots.
+                    Another direction growing from the same roots.
                 </p>
 
-            </div>
-
-
-            <div class="future-card reveal">
-
-                <div class="future-number">
-                    BRANCH ∞
-                </div>
-
-                <h3>
-                    Possibilities
-                </h3>
-
-                <p>
-                    Because we don't want to decide
-                    today what the tree can become tomorrow.
-                </p>
-
-                <div class="future-infinity">
-                    ∞
-                </div>
-
-            </div>
+            </article>
 
 
         </div>
@@ -1384,40 +1809,34 @@ a{
 </section>
 
 
-<!-- =====================================
+<!-- =========================================================
      CLOSING
-===================================== -->
+========================================================= -->
 
 <section class="branches-closing">
 
-    <div class="branches-closing-inner reveal">
+    <div class="closing-content">
 
-        <div class="branches-label">
-            06 — Keep Growing
+        <div class="section-kicker">
+            VALIASS
         </div>
 
         <h2>
-            Every branch starts
-            from somewhere.
+            Every branch carries<br>
+            the same spirit.
         </h2>
 
         <p>
-            GWAVES is one beginning.
-            The next branch may come from a new idea,
-            a new collaboration or a completely
-            unexpected direction.
+            Different ideas may take different paths.
+            But every possibility begins from the same origin,
+            grows through the same values, and moves toward
+            something bigger.
         </p>
 
         <a
-            href="vision.html"
-            class="branch-button"
-        >
-            See Our Vision
-
-            <span>
-                →
-            </span>
-
+            href="contact.html"
+            class="closing-button">
+            Start A Conversation →
         </a>
 
     </div>
@@ -1425,124 +1844,177 @@ a{
 </section>
 
 
-<!-- =====================================
+<!-- =========================================================
      SHARED FOOTER
-===================================== -->
+========================================================= -->
 
-<div id="valiass-footer"></div>
+<div id="site-footer"></div>
 
 
-<!-- =====================================
-     COMPONENT LOADER
-===================================== -->
+<!-- =========================================================
+     LOAD HEADER / FOOTER
+========================================================= -->
 
 <script>
 
-async function loadComponent(
-    elementId,
-    componentPath
-){
+fetch("components/header.html")
+.then(response => response.text())
+.then(data => {
 
-    try{
+    document.getElementById("site-header").innerHTML = data;
 
-        const response =
-            await fetch(componentPath);
+    const currentPath =
+        window.location.pathname
+        .toLowerCase()
+        .replace(/\\/g,"/");
 
-        if(!response.ok){
+    const navLinks =
+        document.querySelectorAll(".valiass-nav > a[data-page]");
 
-            throw new Error(
-                `Could not load ${componentPath}`
-            );
+    navLinks.forEach(function(link){
+
+        const page =
+            link.getAttribute("data-page").toLowerCase();
+
+        const currentFile =
+            currentPath.split("/").pop();
+
+        if(
+            (currentFile === "" || currentFile === "index.html") &&
+            page === "index.html"
+        ){
+
+            if(!currentPath.includes("/branches/gwaves/")){
+                link.classList.add("active");
+            }
 
         }
 
-        const html =
-            await response.text();
+        else if(currentFile === page){
 
-        document.getElementById(
-            elementId
-        ).innerHTML = html;
+            link.classList.add("active");
+
+        }
+
+    });
+
+
+    const branchesMenu =
+        document.querySelector(".branches-menu");
+
+    const branchesTrigger =
+        document.querySelector(".nav-dropdown-trigger");
+
+    const branchLinks =
+        document.querySelectorAll("[data-branch-page]");
+
+    let insideBranches = false;
+
+    if(currentPath.endsWith("/branches.html")){
+        insideBranches = true;
+    }
+
+    if(currentPath.includes("/branches/")){
+        insideBranches = true;
+    }
+
+    if(insideBranches && branchesTrigger){
+
+        branchesTrigger.classList.add("active");
 
     }
 
-    catch(error){
 
-        console.error(
-            "VALIASS component error:",
-            error
-        );
+    branchLinks.forEach(function(link){
 
-    }
+        const branchPage =
+            link
+            .getAttribute("data-branch-page")
+            .toLowerCase();
 
-}
+        if(currentPath.endsWith(branchPage)){
 
+            link.classList.add("active");
 
-loadComponent(
-    "valiass-header",
-    "components/header.html"
-);
+        }
 
-
-loadComponent(
-    "valiass-footer",
-    "components/footer.html"
-);
+    });
 
 
-/* =========================
-   SCROLL REVEAL
-========================= */
+    if(branchesTrigger){
 
-const revealElements =
-    document.querySelectorAll(".reveal");
+        branchesTrigger.addEventListener(
+            "click",
+            function(event){
 
+                if(window.innerWidth <= 800){
 
-const revealObserver =
-    new IntersectionObserver(
+                    event.preventDefault();
 
-        (entries) => {
+                    const isOpen =
+                        branchesMenu &&
+                        branchesMenu.classList.contains("open");
 
-            entries.forEach(
-                (entry) => {
+                    if(branchesMenu){
 
-                    if(
-                        entry.isIntersecting
-                    ){
-
-                        entry.target.classList.add(
-                            "show"
-                        );
-
-                        revealObserver.unobserve(
-                            entry.target
+                        branchesMenu.classList.toggle(
+                            "open",
+                            !isOpen
                         );
 
                     }
 
+                    branchesTrigger.setAttribute(
+                        "aria-expanded",
+                        String(!isOpen)
+                    );
+
                 }
-            );
 
-        },
-
-        {
-            threshold:0.12
-        }
-
-    );
-
-
-revealElements.forEach(
-    (element) => {
-
-        revealObserver.observe(
-            element
+            }
         );
 
     }
-);
+
+
+    document.addEventListener(
+        "click",
+        function(event){
+
+            if(
+                window.innerWidth <= 800 &&
+                branchesMenu &&
+                !branchesMenu.contains(event.target)
+            ){
+
+                branchesMenu.classList.remove("open");
+
+                if(branchesTrigger){
+
+                    branchesTrigger.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
+
+                }
+
+            }
+
+        }
+    );
+
+});
+
+
+fetch("components/footer.html")
+.then(response => response.text())
+.then(data => {
+
+    document.getElementById("site-footer").innerHTML = data;
+
+});
 
 </script>
-
 
 </body>
 </html>
