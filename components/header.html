@@ -1,193 +1,444 @@
 <header class="valiass-header">
 
-  <div class="header-inner">
+    <div class="header-inner">
 
-    <!-- LEFT: LOGO + NAME -->
-    <a href="index.html" class="valiass-brand">
-      <span class="valiass-logo">V</span>
-      <span class="valiass-name">VALIASS</span>
-    </a>
+        <!-- BRAND -->
+        <a href="index.html" class="valiass-brand">
 
-    <!-- RIGHT: SECTIONS -->
-    <nav class="valiass-nav">
-      <a href="index.html" class="active">Home</a>
-      <a href="story.html">Story</a>
-      <a href="roots.html">Roots</a>
-      <a href="branches.html">Branches</a>
-      <a href="vision.html">Vision</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+            <span class="valiass-logo">V</span>
 
-  </div>
+            <span class="valiass-name">
+                VALIASS
+            </span>
+
+        </a>
+
+
+        <!-- NAVIGATION -->
+        <nav class="valiass-nav">
+
+            <a href="index.html" data-page="index.html">
+                Home
+            </a>
+
+            <a href="story.html" data-page="story.html">
+                Story
+            </a>
+
+            <a href="roots.html" data-page="roots.html">
+                Roots
+            </a>
+
+            <a href="branches.html" data-page="branches.html">
+                Branches
+            </a>
+
+            <a href="vision.html" data-page="vision.html">
+                Vision
+            </a>
+
+            <a href="contact.html" data-page="contact.html">
+                Contact
+            </a>
+
+        </nav>
+
+    </div>
 
 </header>
 
+
 <style>
 
-/* ================================
-   VALIASS HEADER
-================================ */
+/* =====================================================
+   VALIASS — PREMIUM MASTER HEADER
+   ===================================================== */
 
-.valiass-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 78px;
+.valiass-header{
 
-  z-index: 1000;
+    position:fixed;
 
-  background: rgba(16, 23, 17, 0.60);
+    top:0;
+    left:0;
 
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+    width:100%;
+    height:78px;
 
-  border-bottom: 1px solid rgba(255,255,255,0.08);
-}
+    z-index:1000;
 
-.header-inner {
-  width: 90%;
-  max-width: 1250px;
-  height: 100%;
+    background:
+        rgba(16,23,17,.72);
 
-  margin: auto;
+    backdrop-filter:
+        blur(18px);
 
-  display: flex;
-  align-items: center;
+    -webkit-backdrop-filter:
+        blur(18px);
 
-  justify-content: space-between;
+    border-bottom:
+        1px solid
+        rgba(255,255,255,.07);
 }
 
 
-/* ================================
-   LEFT BRAND
-================================ */
+/* =====================================================
+   INNER
+   ===================================================== */
 
-.valiass-brand {
-  display: flex;
-  align-items: center;
-  gap: 12px;
+.header-inner{
 
-  text-decoration: none;
-  color: #f4eee2;
+    width:90%;
+    max-width:1250px;
 
-  flex-shrink: 0;
-}
+    height:100%;
 
-.valiass-logo {
-  width: 40px;
-  height: 40px;
+    margin:auto;
 
-  border: 1px solid #d8bd7a;
-  border-radius: 50%;
+    display:flex;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    align-items:center;
 
-  font-family: Georgia, serif;
-  font-size: 17px;
-
-  color: #d8bd7a;
-}
-
-.valiass-name {
-  font-family: Georgia, "Times New Roman", serif;
-
-  font-size: 19px;
-
-  letter-spacing: 5px;
-
-  font-weight: 400;
+    justify-content:space-between;
 }
 
 
-/* ================================
-   RIGHT NAVIGATION
-================================ */
+/* =====================================================
+   BRAND
+   ===================================================== */
 
-.valiass-nav {
-  display: flex;
+.valiass-brand{
 
-  align-items: center;
+    display:flex;
 
-  gap: 30px;
-}
+    align-items:center;
 
-.valiass-nav a {
-  position: relative;
+    gap:12px;
 
-  text-decoration: none;
+    text-decoration:none;
 
-  color: rgba(244,238,226,0.72);
+    color:#f4eee2;
 
-  font-family: Arial, sans-serif;
-
-  font-size: 12px;
-
-  letter-spacing: 1px;
-
-  padding: 8px 0;
-
-  transition: 0.3s ease;
-}
-
-.valiass-nav a:hover {
-  color: #ffffff;
+    flex-shrink:0;
 }
 
 
-/* ACTIVE SECTION */
+.valiass-logo{
 
-.valiass-nav a.active {
-  color: #ffffff;
+    width:40px;
+    height:40px;
+
+    border:
+        1px solid
+        rgba(216,189,122,.9);
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:17px;
+
+    color:#d8bd7a;
+
+    transition:
+        .35s ease;
 }
 
-.valiass-nav a.active::after {
-  content: "";
 
-  position: absolute;
+.valiass-brand:hover .valiass-logo{
 
-  left: 0;
-  bottom: -5px;
+    background:#d8bd7a;
 
-  width: 100%;
-  height: 1px;
-
-  background: #d8bd7a;
+    color:#101711;
 }
 
 
-/* ================================
+.valiass-name{
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:19px;
+
+    letter-spacing:5px;
+
+    font-weight:400;
+}
+
+
+/* =====================================================
+   NAV
+   ===================================================== */
+
+.valiass-nav{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:32px;
+}
+
+
+.valiass-nav a{
+
+    position:relative;
+
+    padding:9px 0;
+
+    color:
+        rgba(244,238,226,.62);
+
+    text-decoration:none;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size:11px;
+
+    letter-spacing:1.4px;
+
+    transition:
+        color .35s ease;
+}
+
+
+/* NORMAL HOVER */
+
+.valiass-nav a:hover{
+
+    color:#f4eee2;
+}
+
+
+/* =====================================================
+   SELECTED PAGE
+   ===================================================== */
+
+.valiass-nav a.active{
+
+    color:#d8bd7a;
+
+}
+
+
+/* Elegant gold line */
+
+.valiass-nav a.active::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    right:0;
+
+    bottom:0;
+
+    height:1px;
+
+    background:#d8bd7a;
+
+    box-shadow:
+        0 0 8px
+        rgba(216,189,122,.22);
+
+    animation:
+        activePage .4s ease;
+}
+
+
+@keyframes activePage{
+
+    from{
+
+        opacity:0;
+
+        transform:
+            scaleX(.35);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+            scaleX(1);
+
+    }
+
+}
+
+
+/* =====================================================
    MOBILE
-================================ */
+   ===================================================== */
 
-@media (max-width: 800px) {
+@media(max-width:800px){
 
-  .valiass-header {
-    height: auto;
-    min-height: 72px;
-  }
+    .valiass-header{
 
-  .header-inner {
-    width: 90%;
-    padding: 12px 0;
+        height:72px;
+    }
 
-    gap: 20px;
-  }
 
-  .valiass-nav {
-    gap: 18px;
+    .header-inner{
 
-    overflow-x: auto;
+        width:92%;
 
-    white-space: nowrap;
-  }
+        gap:18px;
+    }
 
-  .valiass-nav a {
-    font-size: 10px;
-  }
+
+    .valiass-nav{
+
+        gap:19px;
+
+        overflow-x:auto;
+
+        white-space:nowrap;
+
+        scrollbar-width:none;
+    }
+
+
+    .valiass-nav::-webkit-scrollbar{
+
+        display:none;
+    }
+
+
+    .valiass-nav a{
+
+        font-size:10px;
+
+        letter-spacing:1px;
+    }
+
+
+    .valiass-name{
+
+        font-size:16px;
+
+        letter-spacing:4px;
+    }
+
+
+    .valiass-logo{
+
+        width:36px;
+        height:36px;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+   ===================================================== */
+
+@media(max-width:520px){
+
+    .header-inner{
+
+        width:94%;
+    }
+
+
+    .valiass-brand{
+
+        gap:8px;
+    }
+
+
+    .valiass-name{
+
+        font-size:14px;
+
+        letter-spacing:3px;
+    }
+
+
+    .valiass-logo{
+
+        width:33px;
+        height:33px;
+
+        font-size:15px;
+    }
+
+
+    .valiass-nav{
+
+        gap:15px;
+    }
 
 }
 
 </style>
+
+
+<script>
+
+/* =====================================================
+   AUTOMATIC ACTIVE PAGE
+   ===================================================== */
+
+(function(){
+
+    let currentPage =
+        window.location.pathname
+        .split("/")
+        .pop()
+        .toLowerCase();
+
+
+    /* Root URL = Home */
+
+    if(
+        currentPage === "" ||
+        currentPage === "/"
+    ){
+
+        currentPage = "index.html";
+
+    }
+
+
+    const links =
+        document.querySelectorAll(
+            ".valiass-nav a[data-page]"
+        );
+
+
+    links.forEach(function(link){
+
+        const page =
+            link
+            .getAttribute("data-page")
+            .toLowerCase();
+
+
+        if(page === currentPage){
+
+            link.classList.add("active");
+
+        }
+
+    });
+
+})();
+
+</script>
