@@ -4,1225 +4,1696 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>GWAVES.DIGITAL — A VALIASS Initiative</title>
+<title>GWAVES.DIGITAL — Where Ideas Flow</title>
+
+<meta
+    name="description"
+    content="GWAVES.DIGITAL — Where ideas flow like the Godavari. Websites, stories, videos and digital experiences."
+>
 
 <style>
 
-:root {
-    --cream: #f4efe4;
-    --cream-light: #fffdf8;
-    --green: #20382c;
-    --green-dark: #14251c;
-    --green-light: #385744;
-    --olive: #707b55;
-    --gold: #b49352;
-    --brown: #765b40;
-    --blue-green: #416c69;
-    --text: #344239;
-    --muted: #667064;
+/* =========================================================
+   GWAVES — DESIGN SYSTEM
+========================================================= */
+
+:root{
+    --cream:#f4efe4;
+    --cream-light:#fffdf8;
+    --green:#20382c;
+    --green-dark:#14251c;
+    --green-light:#385744;
+    --olive:#707b55;
+    --gold:#b49352;
+    --gold-light:#d0b46b;
+    --brown:#765b40;
+    --blue-green:#416c69;
+    --text:#344239;
+    --muted:#667064;
+    --white:#ffffff;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-html {
-    scroll-behavior: smooth;
+html{
+    scroll-behavior:smooth;
 }
 
-body {
-    background: var(--cream);
-    color: var(--text);
-    font-family: Arial, Helvetica, sans-serif;
-    overflow-x: hidden;
+body{
+    font-family:
+        "Trebuchet MS",
+        Arial,
+        sans-serif;
+    background:var(--cream-light);
+    color:var(--text);
+    overflow-x:hidden;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+button,
+a{
+    -webkit-tap-highlight-color:transparent;
 }
 
 
-/* =====================================================
+/* =========================================================
    NAVIGATION
-===================================================== */
-
-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    padding: 22px 6%;
-
-    transition: 0.4s ease;
-}
-
-nav.scrolled {
-    background: rgba(244, 239, 228, 0.93);
-    backdrop-filter: blur(14px);
-    box-shadow: 0 5px 25px rgba(32, 56, 44, 0.08);
-}
-
-.logo {
-    text-decoration: none;
-    color: var(--green);
-
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 22px;
-    letter-spacing: 4px;
-}
-
-.logo span {
-    color: var(--gold);
-}
-
-.nav-links {
-    display: flex;
-    gap: 28px;
-    list-style: none;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: var(--green);
-
-    font-size: 11px;
-    letter-spacing: 1.6px;
-    text-transform: uppercase;
-
-    position: relative;
-}
-
-.nav-links a::after {
-    content: "";
-
-    position: absolute;
-    left: 0;
-    bottom: -7px;
-
-    width: 0;
-    height: 1px;
-
-    background: var(--gold);
-
-    transition: 0.3s;
-}
-
-.nav-links a:hover::after {
-    width: 100%;
-}
-
-
-/* =====================================================
-   HERO
-===================================================== */
-
-.hero {
-    min-height: 100vh;
-
-    padding: 150px 7% 90px;
-
-    position: relative;
-    overflow: hidden;
-
-    display: flex;
-    align-items: center;
-}
-
-.hero-content {
-    width: 100%;
-    max-width: 1250px;
-    margin: auto;
-
-    position: relative;
-    z-index: 3;
-}
-
-.branch-label {
-    display: inline-flex;
-    align-items: center;
-    gap: 12px;
-
-    color: var(--gold);
-
-    font-size: 11px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-
-    margin-bottom: 30px;
-}
-
-.branch-label::before {
-    content: "";
-
-    width: 35px;
-    height: 1px;
-
-    background: var(--gold);
-}
-
-.hero h1 {
-    font-family: Georgia, "Times New Roman", serif;
-    font-weight: normal;
-
-    font-size: clamp(70px, 14vw, 190px);
-
-    line-height: 0.78;
-    letter-spacing: -8px;
-
-    color: var(--green);
-}
-
-.hero h1 span {
-    color: var(--brown);
-    font-style: italic;
-}
-
-.hero-sub {
-    margin-top: 45px;
-
-    max-width: 620px;
-
-    font-family: Georgia, "Times New Roman", serif;
-
-    font-size: clamp(20px, 2.5vw, 30px);
-
-    line-height: 1.5;
-
-    color: var(--muted);
-}
-
-.hero-sub strong {
-    color: var(--green);
-    font-weight: normal;
-}
-
-.hero-meta {
-    margin-top: 50px;
-
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.meta-item {
-    border-left: 1px solid var(--gold);
-    padding-left: 14px;
-
-    font-size: 10px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-
-    color: var(--muted);
-}
-
-
-/* =====================================================
-   WAVE VISUAL
-===================================================== */
-
-.wave-field {
-    position: absolute;
-
-    right: -8%;
-    bottom: -5%;
-
-    width: 65%;
-    height: 65%;
-
-    opacity: 0.8;
-
-    pointer-events: none;
-}
-
-.wave {
-    position: absolute;
-
-    border: 1px solid var(--gold);
-    border-left: none;
-    border-right: none;
-
-    border-radius: 50%;
-
-    transform: rotate(-8deg);
-
-    animation: floatWave 8s ease-in-out infinite;
-}
-
-.wave.one {
-    width: 750px;
-    height: 260px;
-    right: 0;
-    bottom: 120px;
-}
-
-.wave.two {
-    width: 650px;
-    height: 220px;
-    right: 60px;
-    bottom: 40px;
-
-    animation-delay: 1.5s;
-}
-
-.wave.three {
-    width: 520px;
-    height: 180px;
-    right: 130px;
-    bottom: -25px;
-
-    animation-delay: 3s;
-}
-
-@keyframes floatWave {
-
-    0%,100% {
-        transform: rotate(-8deg) translateY(0);
-    }
-
-    50% {
-        transform: rotate(-8deg) translateY(-15px);
-    }
-
-}
-
-
-/* =====================================================
-   INTRO
-===================================================== */
-
-.intro {
-    background: var(--green);
-
-    color: var(--cream);
-
-    padding: 140px 8%;
-
-    text-align: center;
-}
-
-.section-label {
-    font-size: 10px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-
-    color: var(--gold);
-
-    margin-bottom: 25px;
-}
-
-.intro h2 {
-    max-width: 950px;
-
-    margin: auto;
-
-    font-family: Georgia, "Times New Roman", serif;
-
-    font-weight: normal;
-
-    font-size: clamp(45px, 7vw, 90px);
-
-    line-height: 0.95;
-}
-
-.intro h2 em {
-    color: #c8a968;
-}
-
-.intro p {
-    max-width: 680px;
-
-    margin: 40px auto 0;
-
-    color: #c5cec5;
-
-    line-height: 1.9;
-
-    font-size: 16px;
-}
-
-
-/* =====================================================
-   WHY GWAVES
-===================================================== */
-
-.why {
-    padding: 130px 8%;
-}
-
-.why-inner {
-    max-width: 1150px;
-    margin: auto;
-}
-
-.why-title {
-    max-width: 800px;
-}
-
-.why-title h2 {
-    font-family: Georgia, "Times New Roman", serif;
-
-    font-size: clamp(45px, 7vw, 85px);
-
-    line-height: 0.95;
-
-    font-weight: normal;
-
-    color: var(--green);
-}
-
-.why-title p {
-    margin-top: 30px;
-
-    max-width: 600px;
-
-    color: var(--muted);
-
-    line-height: 1.8;
-}
-
-.meaning {
-    margin-top: 80px;
-
-    display: grid;
-
-    grid-template-columns: repeat(4, 1fr);
-
-    border-top: 1px solid rgba(32,56,44,0.15);
-}
-
-.meaning-item {
-    padding: 35px 25px;
-
-    border-right: 1px solid rgba(32,56,44,0.12);
-}
-
-.meaning-item:last-child {
-    border-right: none;
-}
-
-.meaning-letter {
-    font-family: Georgia, "Times New Roman", serif;
-
-    font-size: 60px;
-
-    color: var(--gold);
-}
-
-.meaning-item h3 {
-    margin-top: 10px;
-
-    color: var(--green);
-
-    font-family: Georgia, "Times New Roman", serif;
-
-    font-size: 24px;
-
-    font-weight: normal;
-}
-
-.meaning-item p {
-    margin-top: 12px;
-
-    font-size: 13px;
-
-    line-height: 1.7;
-
-    color: var(--muted);
-}
-
-
-/* =====================================================
-   SERVICES
-===================================================== */
-
-.services {
-    background: var(--cream-light);
-
-    padding: 130px 8%;
-}
-
-.services-header {
-    max-width: 1000px;
-    margin-bottom: 70px;
-}
-
-.services-header h2 {
-    font-family: Georgia, "Times New Roman", serif;
-
-    font-size: clamp(45px, 7vw, 85px);
-
-    font-weight: normal;
-
-    line-height: 0.95;
-
-    color: var(--green);
-}
-
-.services-grid {
-    max-width: 1200px;
-
-    margin: auto;
-
-    display: grid;
-
-    grid-template-columns: repeat(5, 1fr);
-
-    gap: 1px;
-
-    background: rgba(32,56,44,0.15);
-}
-
-.service {
-    background: var(--cream-light);
-
-    padding: 38px 25px;
-
-    min-height: 240px;
-
-    transition: 0.4s ease;
-}
-
-.service:hover {
-    background: var(--cream);
-    transform: translateY(-5px);
-}
-
-.service-number {
-    font-family: Georgia, "Times New Roman", serif;
-
-    color: var(--gold);
-
-    font-size: 18px;
-}
-
-.service h3 {
-    margin-top: 50px;
-
-    font-family: Georgia, "Times New Roman", serif;
-
-    font-size: 22px;
-
-    font-weight: normal;
-
-    color: var(--green);
-}
-
-.service p {
-    margin-top: 15px;
-
-    color: var(--muted);
-
-    font-size: 13px;
-
-    line-height: 1.7;
-}
-
-
-/* =====================================================
-   APPROACH
-===================================================== */
-
-.approach {
-    padding: 140px 8%;
-}
-
-.approach-inner {
-    max-width: 1150px;
-    margin: auto;
-
-    display: grid;
-
-    grid-template-columns: 0.8fr 1.2fr;
-
-    gap: 100px;
-}
-
-.approach-title h2 {
-    font-family: Georgia, "Times New Roman", serif;
-
-    font-size: clamp(45px, 6vw, 75px);
-
-    font-weight: normal;
-
-    line-height: 0.95;
-
-    color: var(--green);
-}
-
-.approach-title h2 em {
-    color: var(--brown);
-}
-
-.approach-copy {
-    padding-top: 10px;
-}
-
-.approach-copy > p {
-    font-size: 20px;
-
-    font-family: Georgia, "Times New Roman", serif;
-
-    line-height: 1.6;
-
-    color: var(--green);
-}
-
-.process {
-    margin-top: 45px;
-}
-
-.process-item {
-    display: grid;
-
-    grid-template-columns: 50px 1fr;
-
-    gap: 20px;
-
-    padding: 20px 0;
-
-    border-top: 1px solid rgba(32,56,44,0.15);
-}
-
-.process-number {
-    color: var(--gold);
-
-    font-size: 11px;
-
-    letter-spacing: 2px;
-}
-
-.process-item h3 {
-    font-family: Georgia, "Times New Roman", serif;
-
-    font-weight: normal;
-
-    color: var(--green);
-
-    font-size: 22px;
-}
-
-.process-item p {
-    margin-top: 6px;
-
-    color: var(--muted);
-
-    font-size: 13px;
-
-    line-height: 1.6;
-}
-
-
-/* =====================================================
-   WHO WE WORK WITH
-===================================================== */
-
-.audience {
-    background: var(--green-dark);
-
-    color: var(--cream);
-
-    padding: 130px 8%;
-}
-
-.audience-inner {
-    max-width: 1150px;
-    margin: auto;
-}
-
-.audience h2 {
-    font-family: Georgia, "Times New Roman", serif;
-
-    font-size: clamp(45px, 7vw, 85px);
-
-    font-weight: normal;
-
-    line-height: 0.95;
-}
-
-.audience h2 em {
-    color: #c7a864;
-}
-
-.audience-list {
-    margin-top: 70px;
-
-    display: grid;
-
-    grid-template-columns: repeat(3, 1fr);
-
-    gap: 20px;
-}
-
-.audience-item {
-    border: 1px solid rgba(255,255,255,0.15);
-
-    padding: 30px;
-
-    min-height: 150px;
-
-    display: flex;
-    align-items: flex-end;
-
-    transition: 0.4s;
-}
-
-.audience-item:hover {
-    border-color: var(--gold);
-    transform: translateY(-5px);
-}
-
-.audience-item span {
-    font-family: Georgia, "Times New Roman", serif;
-
-    font-size: 25px;
-
-    color: #d6ddd6;
-}
-
-
-/* =====================================================
-   SELECTED WAVES
-===================================================== */
-
-.work {
-    padding: 140px 8%;
-
-    background: var(--cream);
-}
-
-.work-header {
-    max-width: 1000px;
-
-    margin: auto auto 70px;
-}
-
-.work-header h2 {
-    font-family: Georgia, "Times New Roman", serif;
-
-    font-size: clamp(48px, 7vw, 90px);
-
-    font-weight: normal;
-
-    line-height: 0.9;
-
-    color: var(--green);
-}
-
-.work-header p {
-    margin-top: 25px;
-
-    color: var(--muted);
-
-    max-width: 600px;
-
-    line-height: 1.8;
-}
-
-.work-grid {
-    max-width: 1200px;
-
-    margin: auto;
-
-    display: grid;
-
-    grid-template-columns: 1fr 1fr;
-
-    gap: 25px;
-}
-
-.project {
-    min-height: 370px;
-
-    padding: 40px;
-
-    background: var(--cream-light);
-
-    position: relative;
-
-    overflow: hidden;
-
-    display: flex;
-
-    flex-direction: column;
-
-    justify-content: space-between;
-
-    transition: 0.4s;
-}
-
-.project:hover {
-    transform: translateY(-7px);
-
-    box-shadow: 0 25px 50px rgba(32,56,44,0.08);
-}
-
-.project:nth-child(2) {
-    background: var(--green);
-    color: var(--cream);
-}
-
-.project:nth-child(3) {
-    background: #e6dfce;
-}
-
-.project:nth-child(4) {
-    background: var(--green-light);
-    color: var(--cream);
-}
-
-.project-tag {
-    font-size: 10px;
-
-    letter-spacing: 2px;
-
-    text-transform: uppercase;
-
-    color: var(--gold);
-}
-
-.project h3 {
-    font-family: Georgia, "Times New Roman", serif;
-
-    font-weight: normal;
-
-    font-size: clamp(30px, 4vw, 48px);
-
-    line-height: 1;
-
-    max-width: 450px;
-}
-
-.project p {
-    max-width: 480px;
-
-    font-size: 14px;
-
-    line-height: 1.7;
-
-    opacity: 0.75;
-}
-
-.project-arrow {
-    position: absolute;
-
-    right: 35px;
-    bottom: 30px;
-
-    font-family: Georgia, "Times New Roman", serif;
-
-    font-size: 35px;
-
-    color: var(--gold);
-}
-
-
-/* =====================================================
-   PACKAGES
-===================================================== */
-
-.packages {
-    padding: 130px 8%;
-
-    background: var(--cream-light);
-}
-
-.packages-header {
-    max-width: 850px;
-
-    margin-bottom: 70px;
-}
-
-.packages-header h2 {
-    font-family: Georgia, "Times New Roman", serif;
-
-    font-size: clamp(45px, 7vw, 80px);
-
-    font-weight: normal;
-
-    line-height: 0.95;
-
-    color: var(--green);
-}
-
-.package-grid {
-    max-width: 1150px;
-
-    margin: auto;
-
-    display: grid;
-
-    grid-template-columns: repeat(3, 1fr);
-
-    gap: 20px;
-}
-
-.package {
-    border: 1px solid rgba(32,56,44,0.15);
-
-    padding: 40px 30px;
-
-    min-height: 270px;
-}
-
-.package-number {
-    color: var(--gold);
-
-    font-size: 11px;
-
-    letter-spacing: 2px;
-}
-
-.package h3 {
-    margin-top: 35px;
-
-    font-family: Georgia, "Times New Roman", serif;
-
-    font-size: 28px;
-
-    font-weight: normal;
-
-    color: var(--green);
-}
-
-.package p {
-    margin-top: 15px;
-
-    color: var(--muted);
-
-    line-height: 1.7;
-
-    font-size: 14px;
-}
-
-
-/* =====================================================
-   VALIASS CONNECTION
-===================================================== */
-
-.connection {
-    background: var(--green);
-
-    color: var(--cream);
-
-    padding: 140px 8%;
-
-    text-align: center;
-}
-
-.connection h2 {
-    font-family: Georgia, "Times New Roman", serif;
-
-    font-weight: normal;
-
-    font-size: clamp(50px, 8vw, 105px);
-
-    line-height: 0.88;
-}
-
-.connection h2 em {
-    color: #c9a966;
-}
-
-.connection p {
-    max-width: 620px;
-
-    margin: 35px auto 50px;
-
-    color: #c4cec5;
-
-    line-height: 1.8;
-}
-
-.connection-flow {
-    max-width: 700px;
-
-    margin: auto;
-
-    display: flex;
-
-    justify-content: center;
-
-    align-items: center;
-
-    gap: 20px;
-
-    flex-wrap: wrap;
-}
-
-.flow-item {
-    font-size: 10px;
-
-    letter-spacing: 2px;
-
-    text-transform: uppercase;
-
-    color: #d6ddd6;
-}
-
-.flow-arrow {
-    color: var(--gold);
-}
-
-.back-btn {
-    display: inline-block;
-
-    margin-top: 55px;
-
-    padding: 16px 28px;
-
-    border: 1px solid var(--gold);
-
-    color: var(--cream);
-
-    text-decoration: none;
-
-    font-size: 10px;
-
-    letter-spacing: 2px;
-
-    text-transform: uppercase;
-
-    transition: 0.3s;
-}
-
-.back-btn:hover {
-    background: var(--gold);
-
-    color: var(--green-dark);
-}
-
-
-/* =====================================================
-   FINAL CTA
-===================================================== */
-
-.final {
-    min-height: 75vh;
-
-    padding: 130px 8%;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    text-align: center;
-
-    position: relative;
-
-    overflow: hidden;
-}
-
-.final-content {
-    position: relative;
-
-    z-index: 2;
-}
-
-.final h2 {
-    font-family: Georgia, "Times New Roman", serif;
-
-    font-size: clamp(55px, 9vw, 120px);
-
-    font-weight: normal;
-
-    line-height: 0.88;
-
-    letter-spacing: -4px;
-
-    color: var(--green);
-}
-
-.final h2 em {
-    color: var(--brown);
-}
-
-.final p {
-    max-width: 550px;
-
-    margin: 35px auto;
-
-    color: var(--muted);
-
-    line-height: 1.8;
-}
-
-.cta-btn {
-    display: inline-block;
-
-    padding: 17px 30px;
-
-    background: var(--green);
-
-    color: var(--cream);
-
-    text-decoration: none;
-
-    font-size: 10px;
-
-    letter-spacing: 2px;
-
-    text-transform: uppercase;
-
-    transition: 0.3s;
-}
-
-.cta-btn:hover {
-    background: var(--brown);
-
-    transform: translateY(-4px);
-}
-
-
-/* =====================================================
-   FOOTER
-===================================================== */
-
-footer {
-    background: var(--green-dark);
-
-    color: #aeb9af;
-
-    padding: 35px 6%;
-
-    display: flex;
-
-    justify-content: space-between;
-
-    align-items: center;
-
-    font-size: 9px;
-
-    letter-spacing: 2px;
-
-    text-transform: uppercase;
-}
-
-footer a {
-    color: #c7d0c8;
-
-    text-decoration: none;
-}
-
-
-/* =====================================================
-   REVEAL
-===================================================== */
-
-.reveal {
-    opacity: 0;
-
-    transform: translateY(35px);
+========================================================= */
+
+#navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:78px;
+    z-index:1000;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    padding:0 6vw;
+
+    background:rgba(20,37,28,.94);
+    backdrop-filter:blur(16px);
+    -webkit-backdrop-filter:blur(16px);
+
+    border-bottom:1px solid rgba(208,180,107,.14);
 
     transition:
-        opacity 0.8s ease,
-        transform 0.8s ease;
+        background .35s ease,
+        box-shadow .35s ease;
 }
 
-.reveal.visible {
-    opacity: 1;
-
-    transform: translateY(0);
+#navbar.scrolled{
+    background:rgba(20,37,28,.98);
+    box-shadow:0 10px 35px rgba(0,0,0,.14);
 }
 
 
-/* =====================================================
-   MOBILE
-===================================================== */
+/* GWAVES BRAND */
 
-@media (max-width: 900px) {
+.logo{
+    display:flex;
+    align-items:center;
+    gap:2px;
 
-    .nav-links {
-        display: none;
-    }
+    color:#f5f0e4;
 
-    .hero {
-        padding: 140px 7% 100px;
-    }
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
 
-    .hero h1 {
-        font-size: clamp(65px, 17vw, 120px);
-        letter-spacing: -4px;
-    }
+    font-size:21px;
+    font-weight:600;
+    letter-spacing:1.4px;
 
-    .wave-field {
-        opacity: 0.3;
-        width: 100%;
-    }
-
-    .meaning {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .meaning-item:nth-child(2) {
-        border-right: none;
-    }
-
-    .services-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .approach-inner {
-        grid-template-columns: 1fr;
-        gap: 60px;
-    }
-
-    .audience-list {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .package-grid {
-        grid-template-columns: 1fr;
-    }
-
+    white-space:nowrap;
 }
 
-@media (max-width: 600px) {
+.logo span{
+    color:var(--gold-light);
+}
 
-    .hero {
-        min-height: 90vh;
+.logo::after{
+    content:"";
+    display:block;
+
+    width:5px;
+    height:5px;
+
+    margin-left:5px;
+
+    border-radius:50%;
+    background:var(--gold-light);
+}
+
+
+/* NAV LINKS */
+
+.nav-links{
+    list-style:none;
+
+    display:flex;
+    align-items:center;
+    gap:30px;
+}
+
+.nav-links a{
+    position:relative;
+
+    color:rgba(245,240,228,.68);
+
+    font-size:11px;
+    letter-spacing:1.7px;
+    text-transform:uppercase;
+
+    padding:29px 0;
+
+    transition:
+        color .3s ease;
+}
+
+.nav-links a::after{
+    content:"";
+
+    position:absolute;
+    left:0;
+    bottom:20px;
+
+    width:0;
+    height:1px;
+
+    background:var(--gold-light);
+
+    transition:width .3s ease;
+}
+
+.nav-links a:hover{
+    color:#f5f0e4;
+}
+
+.nav-links a:hover::after{
+    width:100%;
+}
+
+
+/* PARENT VALIASS LINK */
+
+.nav-links .valiass-link{
+    color:var(--gold-light);
+}
+
+.nav-links .valiass-link::before{
+    content:"↑";
+    margin-right:5px;
+    opacity:.8;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero{
+    min-height:100vh;
+
+    position:relative;
+    overflow:hidden;
+
+    display:flex;
+    align-items:center;
+
+    background:
+        radial-gradient(
+            circle at 75% 50%,
+            rgba(65,108,105,.20),
+            transparent 35%
+        ),
+        linear-gradient(
+            120deg,
+            #102018 0%,
+            #20382c 50%,
+            #14251c 100%
+        );
+
+    color:#fff;
+}
+
+
+/* cinematic atmosphere */
+
+.hero::before{
+    content:"";
+
+    position:absolute;
+    inset:0;
+
+    background:
+        radial-gradient(
+            circle at 20% 30%,
+            rgba(180,148,82,.08),
+            transparent 28%
+        ),
+        linear-gradient(
+            90deg,
+            rgba(8,17,12,.62),
+            transparent 72%
+        );
+
+    pointer-events:none;
+}
+
+
+/* =========================================================
+   WAVE FIELD
+========================================================= */
+
+.wave-field{
+    position:absolute;
+    inset:0;
+
+    overflow:hidden;
+
+    opacity:.75;
+}
+
+.wave{
+    position:absolute;
+
+    width:150%;
+    height:360px;
+
+    left:-25%;
+
+    border:1px solid rgba(208,180,107,.20);
+    border-left:0;
+    border-right:0;
+
+    border-radius:50%;
+
+    transform:rotate(-5deg);
+
+    animation:
+        waveMove 13s ease-in-out infinite;
+}
+
+.wave.one{
+    top:35%;
+}
+
+.wave.two{
+    top:43%;
+
+    opacity:.55;
+
+    animation-delay:-4s;
+}
+
+.wave.three{
+    top:51%;
+
+    opacity:.35;
+
+    animation-delay:-8s;
+}
+
+@keyframes waveMove{
+
+    0%,
+    100%{
+        transform:
+            translateX(-3%)
+            rotate(-5deg)
+            scaleY(.95);
     }
 
-    .hero-meta {
-        gap: 14px;
+    50%{
+        transform:
+            translateX(3%)
+            rotate(-3deg)
+            scaleY(1.08);
+    }
+}
+
+
+/* HERO CONTENT */
+
+.hero-content{
+    position:relative;
+    z-index:2;
+
+    width:min(1120px,88%);
+
+    margin:0 auto;
+
+    padding-top:70px;
+}
+
+.branch-label{
+    display:inline-flex;
+    align-items:center;
+    gap:12px;
+
+    margin-bottom:28px;
+
+    color:var(--gold-light);
+
+    font-size:10px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+}
+
+.branch-label::before{
+    content:"";
+
+    width:38px;
+    height:1px;
+
+    background:var(--gold-light);
+}
+
+
+.hero h1{
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(72px,12vw,170px);
+
+    font-weight:400;
+    line-height:.86;
+
+    letter-spacing:-5px;
+
+    color:#f8f3e8;
+}
+
+.hero h1 span{
+    color:var(--gold-light);
+}
+
+
+.hero-sub{
+    max-width:670px;
+
+    margin-top:42px;
+
+    color:rgba(245,240,228,.72);
+
+    font-size:17px;
+    line-height:1.85;
+}
+
+.hero-sub strong{
+    color:#fff;
+    font-weight:400;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:25px;
+}
+
+
+.hero-meta{
+    display:flex;
+    flex-wrap:wrap;
+
+    margin-top:48px;
+
+    border-top:1px solid rgba(208,180,107,.20);
+
+    max-width:700px;
+}
+
+.meta-item{
+    padding:16px 25px 0 0;
+    margin-right:25px;
+
+    color:rgba(245,240,228,.48);
+
+    font-size:9px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+
+/* =========================================================
+   COMMON
+========================================================= */
+
+section{
+    position:relative;
+}
+
+.section-label{
+    margin-bottom:20px;
+
+    color:var(--gold);
+
+    font-size:10px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+}
+
+.container{
+    width:min(1120px,88%);
+    margin:auto;
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.intro{
+    padding:150px 8vw;
+
+    text-align:center;
+
+    background:var(--cream-light);
+}
+
+.intro h2{
+    max-width:850px;
+
+    margin:0 auto 30px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(38px,5vw,66px);
+
+    line-height:1.08;
+
+    font-weight:400;
+
+    color:var(--green);
+}
+
+.intro h2 em{
+    color:var(--gold);
+
+    font-style:italic;
+}
+
+.intro p{
+    max-width:670px;
+
+    margin:auto;
+
+    color:var(--muted);
+
+    font-size:16px;
+    line-height:1.95;
+}
+
+
+/* =========================================================
+   THE GWAVES IDEA
+========================================================= */
+
+.why{
+    padding:150px 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--green-dark),
+            var(--green)
+        );
+
+    color:#fff;
+
+    overflow:hidden;
+}
+
+.why::before{
+    content:"";
+
+    position:absolute;
+
+    width:650px;
+    height:650px;
+
+    right:-250px;
+    top:-250px;
+
+    border:1px solid rgba(208,180,107,.10);
+    border-radius:50%;
+}
+
+.why::after{
+    content:"";
+
+    position:absolute;
+
+    width:480px;
+    height:480px;
+
+    left:-280px;
+    bottom:-280px;
+
+    border:1px solid rgba(208,180,107,.08);
+    border-radius:50%;
+}
+
+.why-inner{
+    width:min(1120px,88%);
+    margin:auto;
+
+    position:relative;
+    z-index:2;
+}
+
+.why-title{
+    max-width:800px;
+}
+
+.why-title .section-label{
+    color:var(--gold-light);
+}
+
+.why-title h2{
+    margin-bottom:30px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(42px,6vw,78px);
+
+    line-height:1;
+
+    font-weight:400;
+}
+
+.why-title h2 em{
+    color:var(--gold-light);
+    font-style:italic;
+}
+
+.why-title p{
+    max-width:720px;
+
+    color:rgba(255,255,255,.62);
+
+    font-size:16px;
+    line-height:1.95;
+}
+
+
+/* FLOW JOURNEY */
+
+.flow-journey{
+    position:relative;
+
+    display:grid;
+    grid-template-columns:
+        repeat(5,1fr);
+
+    margin-top:100px;
+
+    border-top:1px solid rgba(208,180,107,.28);
+}
+
+.flow-item{
+    position:relative;
+
+    padding:38px 24px 0 0;
+
+    transition:
+        transform .4s ease;
+}
+
+.flow-item:not(:last-child){
+    margin-right:24px;
+}
+
+.flow-item::before{
+    content:"";
+
+    position:absolute;
+
+    top:-5px;
+    left:0;
+
+    width:9px;
+    height:9px;
+
+    border-radius:50%;
+
+    background:var(--gold-light);
+
+    box-shadow:
+        0 0 0 5px rgba(208,180,107,.08);
+}
+
+.flow-item:hover{
+    transform:translateY(-6px);
+}
+
+.flow-number{
+    margin-bottom:15px;
+
+    color:rgba(208,180,107,.42);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:14px;
+}
+
+.flow-item h3{
+    margin-bottom:12px;
+
+    color:#f8f3e8;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:24px;
+    font-weight:400;
+}
+
+.flow-item p{
+    color:rgba(255,255,255,.52);
+
+    font-size:13px;
+    line-height:1.7;
+}
+
+.flow-signature{
+    margin-top:90px;
+
+    text-align:center;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(28px,4vw,46px);
+
+    color:#f5f0e4;
+}
+
+.flow-signature em{
+    color:var(--gold-light);
+}
+
+
+/* =========================================================
+   SERVICES
+========================================================= */
+
+.services{
+    padding:145px 0;
+
+    background:var(--cream-light);
+}
+
+.services-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+
+    gap:40px;
+
+    margin-bottom:70px;
+}
+
+.services-header h2{
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(40px,5vw,64px);
+
+    line-height:1;
+
+    font-weight:400;
+
+    color:var(--green);
+}
+
+.services-header p{
+    max-width:390px;
+
+    color:var(--muted);
+
+    font-size:14px;
+    line-height:1.8;
+}
+
+.service-grid{
+    display:grid;
+
+    grid-template-columns:
+        repeat(5,1fr);
+
+    border-top:1px solid #dcd7ca;
+    border-bottom:1px solid #dcd7ca;
+}
+
+.service{
+    padding:38px 25px 42px;
+
+    border-right:1px solid #dcd7ca;
+
+    transition:
+        background .3s ease,
+        transform .3s ease;
+}
+
+.service:last-child{
+    border-right:0;
+}
+
+.service:hover{
+    background:#f7f3e9;
+}
+
+.service-number{
+    margin-bottom:60px;
+
+    color:var(--gold);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:15px;
+}
+
+.service h3{
+    margin-bottom:15px;
+
+    color:var(--green);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:22px;
+    font-weight:400;
+}
+
+.service p{
+    color:var(--muted);
+
+    font-size:12px;
+    line-height:1.75;
+}
+
+
+/* =========================================================
+   APPROACH
+========================================================= */
+
+.approach{
+    padding:150px 0;
+
+    background:var(--cream);
+}
+
+.approach-layout{
+    display:grid;
+
+    grid-template-columns:
+        .85fr 1.15fr;
+
+    gap:100px;
+
+    align-items:start;
+}
+
+.approach-heading h2{
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(42px,5vw,66px);
+
+    line-height:1.05;
+
+    font-weight:400;
+
+    color:var(--green);
+}
+
+.approach-heading h2 em{
+    color:var(--gold);
+    font-style:italic;
+}
+
+.approach-heading p{
+    margin-top:28px;
+
+    max-width:400px;
+
+    color:var(--muted);
+
+    font-size:15px;
+    line-height:1.9;
+}
+
+.approach-list{
+    border-top:1px solid #d7d0c0;
+}
+
+.approach-item{
+    display:grid;
+
+    grid-template-columns:70px 1fr;
+
+    gap:30px;
+
+    padding:30px 0;
+
+    border-bottom:1px solid #d7d0c0;
+}
+
+.approach-number{
+    color:var(--gold);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:18px;
+}
+
+.approach-item h3{
+    margin-bottom:8px;
+
+    color:var(--green);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:25px;
+    font-weight:400;
+}
+
+.approach-item p{
+    color:var(--muted);
+
+    font-size:13px;
+    line-height:1.8;
+}
+
+
+/* =========================================================
+   AUDIENCE
+========================================================= */
+
+.audience{
+    padding:150px 0;
+
+    background:var(--green-dark);
+
+    color:#fff;
+}
+
+.audience-inner{
+    width:min(1120px,88%);
+    margin:auto;
+
+    text-align:center;
+}
+
+.audience h2{
+    max-width:850px;
+
+    margin:0 auto 30px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(40px,5vw,66px);
+
+    line-height:1.05;
+
+    font-weight:400;
+}
+
+.audience h2 em{
+    color:var(--gold-light);
+    font-style:italic;
+}
+
+.audience p{
+    max-width:650px;
+
+    margin:auto;
+
+    color:rgba(255,255,255,.58);
+
+    font-size:15px;
+    line-height:1.9;
+}
+
+.audience-list{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+
+    margin-top:65px;
+
+    border-top:1px solid rgba(208,180,107,.18);
+    border-bottom:1px solid rgba(208,180,107,.18);
+}
+
+.audience-item{
+    padding:22px 28px;
+
+    color:rgba(255,255,255,.66);
+
+    font-size:10px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+
+/* =========================================================
+   WORK
+========================================================= */
+
+.work{
+    padding:150px 0;
+
+    background:var(--cream-light);
+}
+
+.work-header{
+    margin-bottom:75px;
+}
+
+.work-header h2{
+    margin-bottom:22px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(42px,5vw,68px);
+
+    line-height:1;
+
+    font-weight:400;
+
+    color:var(--green);
+}
+
+.work-header p{
+    max-width:650px;
+
+    color:var(--muted);
+
+    font-size:15px;
+    line-height:1.9;
+}
+
+.work-grid{
+    display:grid;
+
+    grid-template-columns:
+        repeat(2,1fr);
+
+    gap:2px;
+
+    background:#d8d2c4;
+}
+
+.work-card{
+    min-height:360px;
+
+    position:relative;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+
+    padding:42px;
+
+    overflow:hidden;
+
+    background:var(--green);
+
+    color:#fff;
+}
+
+.work-card:nth-child(2){
+    background:#315142;
+}
+
+.work-card:nth-child(3){
+    background:#51604c;
+}
+
+.work-card:nth-child(4){
+    background:#35595a;
+}
+
+.work-card::before{
+    content:"";
+
+    position:absolute;
+
+    width:230px;
+    height:230px;
+
+    right:-70px;
+    top:-70px;
+
+    border:1px solid rgba(208,180,107,.16);
+
+    border-radius:50%;
+}
+
+.work-card::after{
+    content:"";
+
+    position:absolute;
+
+    width:150px;
+    height:150px;
+
+    right:-25px;
+    top:-25px;
+
+    border:1px solid rgba(208,180,107,.12);
+
+    border-radius:50%;
+}
+
+.work-number{
+    position:absolute;
+
+    top:35px;
+    left:40px;
+
+    color:rgba(255,255,255,.35);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:14px;
+}
+
+.work-card h3{
+    position:relative;
+    z-index:2;
+
+    margin-bottom:10px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:32px;
+    font-weight:400;
+}
+
+.work-card p{
+    position:relative;
+    z-index:2;
+
+    max-width:430px;
+
+    color:rgba(255,255,255,.62);
+
+    font-size:13px;
+    line-height:1.75;
+}
+
+
+/* =========================================================
+   PACKAGES
+========================================================= */
+
+.packages{
+    padding:145px 0;
+
+    background:var(--cream);
+}
+
+.packages-header{
+    text-align:center;
+
+    margin-bottom:70px;
+}
+
+.packages-header h2{
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(40px,5vw,62px);
+
+    font-weight:400;
+
+    color:var(--green);
+}
+
+.packages-header p{
+    margin-top:18px;
+
+    color:var(--muted);
+
+    font-size:14px;
+}
+
+.package-grid{
+    display:grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap:20px;
+}
+
+.package{
+    padding:42px 34px 48px;
+
+    border:1px solid #d8d1c2;
+
+    background:rgba(255,255,255,.38);
+
+    transition:
+        transform .35s ease,
+        border-color .35s ease;
+}
+
+.package:hover{
+    transform:translateY(-7px);
+
+    border-color:var(--gold);
+}
+
+.package-number{
+    color:var(--gold);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:15px;
+}
+
+.package h3{
+    margin:50px 0 15px;
+
+    color:var(--green);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:28px;
+    font-weight:400;
+}
+
+.package p{
+    color:var(--muted);
+
+    font-size:13px;
+    line-height:1.8;
+}
+
+
+/* =========================================================
+   VALIASS CONNECTION
+========================================================= */
+
+.connection{
+    padding:150px 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            #14251c,
+            #20382c
+        );
+
+    color:#fff;
+
+    overflow:hidden;
+}
+
+.connection-inner{
+    width:min(1050px,88%);
+    margin:auto;
+
+    text-align:center;
+}
+
+.connection .section-label{
+    color:var(--gold-light);
+}
+
+.connection h2{
+    margin-bottom:25px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(40px,5vw,65px);
+
+    font-weight:400;
+}
+
+.connection h2 em{
+    color:var(--gold-light);
+    font-style:italic;
+}
+
+.connection p{
+    max-width:680px;
+
+    margin:auto;
+
+    color:rgba(255,255,255,.58);
+
+    font-size:15px;
+    line-height:1.9;
+}
+
+.connection-flow{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    margin-top:70px;
+}
+
+.connection-flow span{
+    color:#f5f0e4;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:18px;
+}
+
+.connection-flow .arrow{
+    padding:0 18px;
+
+    color:var(--gold-light);
+
+    font-family:Arial,sans-serif;
+}
+
+
+/* =========================================================
+   FINAL CTA
+========================================================= */
+
+.final-cta{
+    padding:170px 8vw;
+
+    text-align:center;
+
+    background:var(--cream-light);
+}
+
+.final-cta .section-label{
+    color:var(--gold);
+}
+
+.final-cta h2{
+    max-width:900px;
+
+    margin:0 auto 30px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(44px,6vw,78px);
+
+    line-height:1;
+
+    font-weight:400;
+
+    color:var(--green);
+}
+
+.final-cta h2 em{
+    color:var(--gold);
+
+    font-style:italic;
+}
+
+.final-cta p{
+    max-width:620px;
+
+    margin:auto;
+
+    color:var(--muted);
+
+    font-size:15px;
+    line-height:1.9;
+}
+
+.cta-button{
+    display:inline-block;
+
+    margin-top:42px;
+
+    padding:16px 30px;
+
+    border:1px solid var(--gold);
+
+    color:var(--green);
+
+    font-size:10px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+
+    transition:
+        background .3s ease,
+        color .3s ease,
+        border-color .3s ease;
+}
+
+.cta-button:hover{
+    background:var(--green-dark);
+    border-color:var(--green-dark);
+    color:#fff;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer{
+    padding:45px 6vw;
+
+    background:#101b15;
+
+    color:rgba(255,255,255,.48);
+
+    border-top:1px solid rgba(208,180,107,.12);
+}
+
+.footer-inner{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    gap:30px;
+}
+
+.footer-brand{
+    color:#f5f0e4;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:15px;
+    letter-spacing:1.5px;
+}
+
+.footer-brand span{
+    color:var(--gold-light);
+}
+
+.footer-text{
+    font-size:10px;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+}
+
+.footer-parent{
+    color:var(--gold-light);
+
+    font-size:10px;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+}
+
+.footer-parent:hover{
+    color:#fff;
+}
+
+
+/* =========================================================
+   REVEAL
+========================================================= */
+
+.reveal{
+    opacity:0;
+
+    transform:translateY(35px);
+
+    transition:
+        opacity .9s ease,
+        transform .9s ease;
+}
+
+.reveal.visible{
+    opacity:1;
+    transform:translateY(0);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media(max-width:900px){
+
+    #navbar{
+        height:70px;
+        padding:0 5vw;
     }
 
-    .meaning {
-        grid-template-columns: 1fr;
+    .nav-links{
+        gap:16px;
     }
 
-    .meaning-item {
-        border-right: none;
-        border-bottom: 1px solid rgba(32,56,44,0.12);
+    .nav-links a{
+        font-size:9px;
+        letter-spacing:1.1px;
     }
 
-    .services-grid {
-        grid-template-columns: 1fr;
+    .hero-content{
+        padding-top:50px;
     }
 
-    .audience-list {
-        grid-template-columns: 1fr;
+    .service-grid{
+        grid-template-columns:
+            repeat(2,1fr);
     }
 
-    .work-grid {
-        grid-template-columns: 1fr;
+    .service:nth-child(2){
+        border-right:0;
     }
 
-    .project {
-        min-height: 320px;
+    .service:nth-child(3),
+    .service:nth-child(4),
+    .service:nth-child(5){
+        border-top:1px solid #dcd7ca;
     }
 
-    footer {
-        flex-direction: column;
-        gap: 15px;
-        text-align: center;
+    .service:nth-child(5){
+        grid-column:1/-1;
     }
 
+    .approach-layout{
+        grid-template-columns:1fr;
+
+        gap:65px;
+    }
+
+    .package-grid{
+        grid-template-columns:1fr;
+    }
+
+    .flow-journey{
+        grid-template-columns:1fr;
+        border-top:0;
+    }
+
+    .flow-item{
+        padding:
+            28px 0 28px 30px;
+
+        border-left:1px solid
+            rgba(208,180,107,.28);
+    }
+
+    .flow-item:not(:last-child){
+        margin-right:0;
+    }
+
+    .flow-item::before{
+        top:29px;
+        left:-5px;
+    }
+}
+
+
+@media(max-width:700px){
+
+    #navbar{
+        position:absolute;
+
+        height:auto;
+        min-height:70px;
+
+        align-items:flex-start;
+
+        padding:
+            22px 5vw;
+    }
+
+    .logo{
+        font-size:17px;
+    }
+
+    .nav-links{
+        display:none;
+    }
+
+    .hero{
+        min-height:92vh;
+    }
+
+    .hero h1{
+        font-size:
+            clamp(62px,20vw,110px);
+
+        letter-spacing:-3px;
+    }
+
+    .hero-sub{
+        font-size:14px;
+    }
+
+    .hero-sub strong{
+        font-size:21px;
+    }
+
+    .hero-meta{
+        margin-top:35px;
+    }
+
+    .intro,
+    .why,
+    .services,
+    .approach,
+    .audience,
+    .work,
+    .packages,
+    .connection{
+        padding:
+            100px 0;
+    }
+
+    .services-header{
+        display:block;
+    }
+
+    .services-header p{
+        margin-top:25px;
+    }
+
+    .service-grid{
+        grid-template-columns:1fr;
+    }
+
+    .service,
+    .service:nth-child(2),
+    .service:nth-child(3),
+    .service:nth-child(4),
+    .service:nth-child(5){
+        grid-column:auto;
+
+        border-right:0;
+        border-top:1px solid #dcd7ca;
+    }
+
+    .service:first-child{
+        border-top:0;
+    }
+
+    .work-grid{
+        grid-template-columns:1fr;
+    }
+
+    .work-card{
+        min-height:310px;
+        padding:35px;
+    }
+
+    .audience-list{
+        display:block;
+    }
+
+    .audience-item{
+        border-bottom:
+            1px solid rgba(208,180,107,.12);
+    }
+
+    .connection-flow{
+        display:block;
+    }
+
+    .connection-flow span{
+        display:block;
+
+        margin:13px 0;
+    }
+
+    .connection-flow .arrow{
+        padding:0;
+    }
+
+    .footer-inner{
+        flex-direction:column;
+
+        align-items:flex-start;
+    }
 }
 
 </style>
@@ -1232,51 +1703,47 @@ footer a {
 <body>
 
 
-<!-- =====================================================
-     NAVIGATION
-===================================================== -->
+<!-- =======================================================
+     GWAVES HEADER
+======================================================== -->
 
 <nav id="navbar">
 
-    <a href="../../index.html" class="logo">
+    <a href="index.html" class="logo">
         G<span>WAVES</span>.DIGITAL
     </a>
 
     <ul class="nav-links">
 
         <li>
-            <a href="../../index.html">
+            <a href="#home">Home</a>
+        </li>
+
+        <li>
+            <a href="#about">About</a>
+        </li>
+
+        <li>
+            <a href="#services">Services</a>
+        </li>
+
+        <li>
+            <a href="#work">Work</a>
+        </li>
+
+        <li>
+            <a href="#approach">Approach</a>
+        </li>
+
+        <li>
+            <a href="#contact">Contact</a>
+        </li>
+
+        <li>
+            <a
+                href="../../index.html"
+                class="valiass-link">
                 VALIASS
-            </a>
-        </li>
-
-        <li>
-            <a href="../../story.html">
-                Story
-            </a>
-        </li>
-
-        <li>
-            <a href="../../branches.html">
-                Branches
-            </a>
-        </li>
-
-        <li>
-            <a href="#services">
-                Services
-            </a>
-        </li>
-
-        <li>
-            <a href="#work">
-                Work
-            </a>
-        </li>
-
-        <li>
-            <a href="../../contact.html">
-                Contact
             </a>
         </li>
 
@@ -1285,11 +1752,12 @@ footer a {
 </nav>
 
 
-<!-- =====================================================
-     HERO
-===================================================== -->
 
-<section class="hero">
+<!-- =======================================================
+     HERO
+======================================================== -->
+
+<section class="hero" id="home">
 
     <div class="wave-field">
 
@@ -1306,22 +1774,26 @@ footer a {
             A VALIASS INITIATIVE
         </div>
 
+
         <h1>
             G<span>WAVES</span>
         </h1>
 
+
         <p class="hero-sub">
 
-            <strong>We make ideas move.</strong>
+            <strong>
+                Where ideas flow like the Godavari.
+            </strong>
+
+            <br><br>
+
+            Stories. Websites. Videos. Digital experiences.
 
             <br>
 
-            Websites. Stories. Videos. Digital presence.
-
-            <br>
-
-            We turn ideas into things people can
-            see, feel and remember.
+            We help ideas move from thought to possibility —
+            and towards the Sea of Innovation.
 
         </p>
 
@@ -1351,39 +1823,54 @@ footer a {
 </section>
 
 
-<!-- =====================================================
-     INTRO
-===================================================== -->
 
-<section class="intro reveal">
+<!-- =======================================================
+     INTRO
+======================================================== -->
+
+<section class="intro reveal" id="about">
 
     <div class="section-label">
         The Idea
     </div>
+
 
     <h2>
         Digital isn't just about
         <em>being online.</em>
     </h2>
 
+
     <p>
-        It's about being seen.
-        Being understood.
-        Being remembered.
+
+        It's about giving an idea
+        a place to flow.
+
+        <br><br>
+
+        Every idea has a journey.
+
+        It begins somewhere,
+        gathers energy,
+        finds people,
+        takes shape
+        and moves forward.
 
         <br><br>
 
         GWAVES.DIGITAL helps businesses,
-        institutions and ideas find their place
-        in the digital world.
+        institutions and meaningful ideas
+        find that direction in the digital world.
+
     </p>
 
 </section>
 
 
-<!-- =====================================================
-     WHY GWAVES
-===================================================== -->
+
+<!-- =======================================================
+     GWAVES PHILOSOPHY
+======================================================== -->
 
 <section class="why">
 
@@ -1392,84 +1879,100 @@ footer a {
         <div class="why-title reveal">
 
             <div class="section-label">
-                Why GWAVES?
+                The GWAVES Idea
             </div>
 
+
             <h2>
-                A name with
-                <br>
-                <em>a flow.</em>
+                Where ideas flow
+                like the <em>Godavari.</em>
             </h2>
 
+
             <p>
-                GWAVES carries our connection to where
-                we come from, who we are and what we
-                believe in — movement through togetherness.
+
+                GWAVES is inspired by the way the Godavari flows.
+
+                It begins from its roots,
+                gathers strength through its journey,
+                touches many lives,
+                takes different turns
+                and keeps moving forward.
+
+                <br><br>
+
+                In the same way,
+                an idea should never remain still.
+
+                It can begin as a thought.
+                It can gather people,
+                energy and creativity.
+
+                It can become a story,
+                a brand,
+                a product
+                or an experience.
+
+                <br><br>
+
+                And just like the Godavari keeps flowing
+                towards the sea,
+                our ideas keep moving towards something bigger —
+
+                <strong>
+                    the Sea of Innovation.
+                </strong>
+
             </p>
 
         </div>
 
 
-        <div class="meaning">
+        <!-- FLOW JOURNEY -->
 
-            <div class="meaning-item reveal">
+        <div class="flow-journey reveal">
 
-                <div class="meaning-letter">
-                    G
+
+            <div class="flow-item">
+
+                <div class="flow-number">
+                    01
                 </div>
 
                 <h3>
-                    Godavari
+                    Roots
                 </h3>
 
                 <p>
-                    Our connection to the river,
-                    its flow, its energy and its roots.
+                    Every idea begins somewhere —
+                    with a thought, a need or a dream.
                 </p>
 
             </div>
 
 
-            <div class="meaning-item reveal">
+            <div class="flow-item">
 
-                <div class="meaning-letter">
-                    I
+                <div class="flow-number">
+                    02
                 </div>
 
                 <h3>
-                    Ippanapadu
+                    Flow
                 </h3>
 
                 <p>
-                    Where a part of our journey begins.
-                    A place that remains part of our identity.
+                    A thought begins to move,
+                    finding direction and possibility.
                 </p>
 
             </div>
 
 
-            <div class="meaning-item reveal">
+            <div class="flow-item">
 
-                <div class="meaning-letter">
-                    WE
-                </div>
-
-                <h3>
-                    You + I
-                </h3>
-
-                <p>
-                    Ideas become stronger when people
-                    come together.
-                </p>
-
-            </div>
-
-
-            <div class="meaning-item reveal">
-
-                <div class="meaning-letter">
-                    ∿
+                <div class="flow-number">
+                    03
                 </div>
 
                 <h3>
@@ -1477,12 +1980,63 @@ footer a {
                 </h3>
 
                 <p>
-                    Movement. Energy. Growth.
-                    One wave creating another.
+                    People, energy and creativity
+                    give the idea momentum.
                 </p>
 
             </div>
 
+
+            <div class="flow-item">
+
+                <div class="flow-number">
+                    04
+                </div>
+
+                <h3>
+                    Innovation
+                </h3>
+
+                <p>
+                    The idea takes shape
+                    and becomes something real.
+                </p>
+
+            </div>
+
+
+            <div class="flow-item">
+
+                <div class="flow-number">
+                    05
+                </div>
+
+                <h3>
+                    Sea
+                </h3>
+
+                <p>
+                    The journey reaches
+                    a bigger possibility —
+                    the Sea of Innovation.
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="flow-signature reveal">
+
+            From the roots of the Godavari,
+            <br>
+
+            to the waves of ideas,
+            <br>
+
+            towards the <em>Sea of Innovation.</em>
+
         </div>
 
     </div>
@@ -1490,118 +2044,142 @@ footer a {
 </section>
 
 
-<!-- =====================================================
+
+<!-- =======================================================
      SERVICES
-===================================================== -->
+======================================================== -->
 
 <section class="services" id="services">
 
-    <div class="services-header reveal">
+    <div class="container">
 
-        <div class="section-label">
-            What We Do
-        </div>
+        <div class="services-header reveal">
 
-        <h2>
-            From an idea
-            <br>
-            to a digital presence.
-        </h2>
+            <div>
 
-    </div>
+                <div class="section-label">
+                    What We Create
+                </div>
 
+                <h2>
+                    Give the idea
+                    <br>
+                    a direction.
+                </h2>
 
-    <div class="services-grid">
-
-        <div class="service reveal">
-
-            <div class="service-number">
-                01
             </div>
 
-            <h3>
-                Websites
-            </h3>
 
             <p>
-                Clean, modern websites that give
-                businesses and projects a professional
-                digital home.
+
+                We don't start with a template.
+
+                We start with the idea —
+                then find the right digital form
+                to help it move.
+
             </p>
 
         </div>
 
 
-        <div class="service reveal">
+        <div class="service-grid">
 
-            <div class="service-number">
-                02
+
+            <div class="service reveal">
+
+                <div class="service-number">
+                    01
+                </div>
+
+                <h3>
+                    Websites
+                </h3>
+
+                <p>
+                    Digital spaces that make
+                    your business easy to understand,
+                    trust and remember.
+                </p>
+
             </div>
 
-            <h3>
-                AI Video
-            </h3>
 
-            <p>
-                Creative short-form videos and
-                advertisements designed for today's
-                digital audience.
-            </p>
+            <div class="service reveal">
 
-        </div>
+                <div class="service-number">
+                    02
+                </div>
 
+                <h3>
+                    AI Video
+                </h3>
 
-        <div class="service reveal">
+                <p>
+                    Short-form visual stories
+                    designed to make ideas
+                    move and connect.
+                </p>
 
-            <div class="service-number">
-                03
             </div>
 
-            <h3>
-                Social Media
-            </h3>
 
-            <p>
-                Content planning, reels, posts and
-                consistent digital presence.
-            </p>
+            <div class="service reveal">
 
-        </div>
+                <div class="service-number">
+                    03
+                </div>
 
+                <h3>
+                    Social Media
+                </h3>
 
-        <div class="service reveal">
+                <p>
+                    Consistent digital presence
+                    that keeps your story
+                    moving.
+                </p>
 
-            <div class="service-number">
-                04
             </div>
 
-            <h3>
-                Storytelling
-            </h3>
 
-            <p>
-                Finding the story behind an idea
-                and turning it into content people
-                can connect with.
-            </p>
+            <div class="service reveal">
 
-        </div>
+                <div class="service-number">
+                    04
+                </div>
 
+                <h3>
+                    Storytelling
+                </h3>
 
-        <div class="service reveal">
+                <p>
+                    Ideas shaped into stories
+                    people can understand,
+                    feel and remember.
+                </p>
 
-            <div class="service-number">
-                05
             </div>
 
-            <h3>
-                Brand Presence
-            </h3>
 
-            <p>
-                Helping brands look clear,
-                consistent and memorable online.
-            </p>
+            <div class="service reveal">
+
+                <div class="service-number">
+                    05
+                </div>
+
+                <h3>
+                    Brand Presence
+                </h3>
+
+                <p>
+                    Bringing all the pieces
+                    together into one
+                    recognizable identity.
+                </p>
+
+            </div>
+
 
         </div>
 
@@ -1610,40 +2188,52 @@ footer a {
 </section>
 
 
-<!-- =====================================================
+
+<!-- =======================================================
      APPROACH
-===================================================== -->
+======================================================== -->
 
-<section class="approach">
+<section class="approach" id="approach">
 
-    <div class="approach-inner">
+    <div class="container">
 
-        <div class="approach-title reveal">
+        <div class="approach-layout">
 
-            <div class="section-label">
-                Our Approach
+
+            <div class="approach-heading reveal">
+
+                <div class="section-label">
+                    Our Approach
+                </div>
+
+                <h2>
+                    We start with
+                    <em>the idea.</em>
+                </h2>
+
+                <p>
+
+                    Before choosing a platform,
+                    format or trend,
+                    we understand what needs
+                    to move.
+
+                    <br><br>
+
+                    Then we find the right way
+                    to give it direction.
+
+                </p>
+
             </div>
 
-            <h2>
-                We don't start
-                <br>
-                with the <em>tool.</em>
-            </h2>
 
-        </div>
+            <div class="approach-list">
 
 
-        <div class="approach-copy reveal">
+                <div class="approach-item reveal">
 
-            <p>
-                We start with the idea.
-            </p>
-
-            <div class="process">
-
-                <div class="process-item">
-
-                    <div class="process-number">
+                    <div class="approach-number">
                         01
                     </div>
 
@@ -1654,8 +2244,9 @@ footer a {
                         </h3>
 
                         <p>
-                            First, we understand what you do
-                            and why it matters.
+                            What you do,
+                            what makes you different
+                            and what you want to build.
                         </p>
 
                     </div>
@@ -1663,9 +2254,9 @@ footer a {
                 </div>
 
 
-                <div class="process-item">
+                <div class="approach-item reveal">
 
-                    <div class="process-number">
+                    <div class="approach-number">
                         02
                     </div>
 
@@ -1676,8 +2267,9 @@ footer a {
                         </h3>
 
                         <p>
-                            We find the human idea behind
-                            what you are building.
+                            The story behind the idea,
+                            the people behind it
+                            and what makes it meaningful.
                         </p>
 
                     </div>
@@ -1685,9 +2277,9 @@ footer a {
                 </div>
 
 
-                <div class="process-item">
+                <div class="approach-item reveal">
 
-                    <div class="process-number">
+                    <div class="approach-number">
                         03
                     </div>
 
@@ -1698,8 +2290,9 @@ footer a {
                         </h3>
 
                         <p>
-                            We think about who needs to see,
-                            understand and remember you.
+                            Understanding the people
+                            you want to reach,
+                            connect with and serve.
                         </p>
 
                     </div>
@@ -1707,9 +2300,9 @@ footer a {
                 </div>
 
 
-                <div class="process-item">
+                <div class="approach-item reveal">
 
-                    <div class="process-number">
+                    <div class="approach-number">
                         04
                     </div>
 
@@ -1720,13 +2313,15 @@ footer a {
                         </h3>
 
                         <p>
-                            Website, video, social media,
-                            storytelling — or a combination.
+                            Website, video, social,
+                            storytelling or a combination —
+                            whatever helps the idea move.
                         </p>
 
                     </div>
 
                 </div>
+
 
             </div>
 
@@ -1737,9 +2332,10 @@ footer a {
 </section>
 
 
-<!-- =====================================================
-     WHO WE WORK WITH
-===================================================== -->
+
+<!-- =======================================================
+     AUDIENCE
+======================================================== -->
 
 <section class="audience">
 
@@ -1749,49 +2345,47 @@ footer a {
             Who We Work With
         </div>
 
+
         <h2>
-            You don't have to be a big brand
-            <br>
-            to deserve a <em>good presence.</em>
+            You don't have to be
+            a big brand to have
+            an idea worth <em>moving.</em>
         </h2>
+
+
+        <p>
+
+            GWAVES works with people and organizations
+            that have something worth building,
+            sharing or growing.
+
+        </p>
 
 
         <div class="audience-list">
 
             <div class="audience-item">
-                <span>
-                    Small Businesses
-                </span>
+                Small Businesses
             </div>
 
             <div class="audience-item">
-                <span>
-                    Local Brands
-                </span>
+                Local Brands
             </div>
 
             <div class="audience-item">
-                <span>
-                    Entrepreneurs
-                </span>
+                Entrepreneurs
             </div>
 
             <div class="audience-item">
-                <span>
-                    Startups
-                </span>
+                Startups
             </div>
 
             <div class="audience-item">
-                <span>
-                    Educational Institutions
-                </span>
+                Educational Institutions
             </div>
 
             <div class="audience-item">
-                <span>
-                    Meaningful Projects
-                </span>
+                Meaningful Projects
             </div>
 
         </div>
@@ -1801,340 +2395,353 @@ footer a {
 </section>
 
 
-<!-- =====================================================
-     SELECTED WORK
-===================================================== -->
+
+<!-- =======================================================
+     WORK
+======================================================== -->
 
 <section class="work" id="work">
 
-    <div class="work-header reveal">
+    <div class="container">
 
-        <div class="section-label">
-            Selected Waves
-        </div>
+        <div class="work-header reveal">
 
-        <h2>
-            Ideas we've
-            <br>
-            helped move.
-        </h2>
-
-        <p>
-            Every project has its own identity.
-            These are some of the initiatives and
-            projects growing through our creative work.
-        </p>
-
-    </div>
-
-
-    <div class="work-grid">
-
-
-        <!-- SVR -->
-
-        <div class="project reveal">
-
-            <div class="project-tag">
-                Food Brand · Creative Digital
+            <div class="section-label">
+                Selected Work
             </div>
 
-            <h3>
-                SVR Food Products
-            </h3>
+
+            <h2>
+                Waves we've helped
+                <br>
+                set in motion.
+            </h2>
+
 
             <p>
-                Creative advertising concepts,
-                AI video campaigns, product storytelling
-                and digital presence.
-            </p>
 
-            <div class="project-arrow">
-                ↗
-            </div>
+                Every project begins differently.
+
+                Our role is to help the idea
+                find its direction,
+                shape and digital expression.
+
+            </p>
 
         </div>
 
 
-        <!-- V CODE -->
+        <div class="work-grid">
 
-        <div class="project reveal">
 
-            <div class="project-tag">
-                Industrial · Brand Storytelling
+            <div class="work-card reveal">
+
+                <div class="work-number">
+                    01
+                </div>
+
+                <h3>
+                    SVR Food Products
+                </h3>
+
+                <p>
+                    Product storytelling,
+                    digital presence,
+                    creative advertising
+                    and brand communication.
+                </p>
+
             </div>
 
-            <h3>
-                V CODE Inkjet Solutions
-            </h3>
 
-            <p>
-                A character-led creative journey
-                connecting industrial printing technology
-                with memorable storytelling.
-            </p>
+            <div class="work-card reveal">
 
-            <div class="project-arrow">
-                ↗
+                <div class="work-number">
+                    02
+                </div>
+
+                <h3>
+                    V CODE Inkjet Solutions
+                </h3>
+
+                <p>
+                    Industrial technology
+                    transformed into stories,
+                    characters and memorable
+                    digital communication.
+                </p>
+
             </div>
+
+
+            <div class="work-card reveal">
+
+                <div class="work-number">
+                    03
+                </div>
+
+                <h3>
+                    Dagguluru MPPS School
+                </h3>
+
+                <p>
+                    Education,
+                    identity and digital storytelling
+                    brought together with purpose.
+                </p>
+
+            </div>
+
+
+            <div class="work-card reveal">
+
+                <div class="work-number">
+                    04
+                </div>
+
+                <h3>
+                    Digital Mana Badi
+                </h3>
+
+                <p>
+                    A digital-first approach
+                    to communicating educational
+                    ideas and possibilities.
+                </p>
+
+            </div>
+
 
         </div>
-
-
-        <!-- DAGGULURU -->
-
-        <div class="project reveal">
-
-            <div class="project-tag">
-                Education · Digital Presence
-            </div>
-
-            <h3>
-                Dagguluru MPPS School
-            </h3>
-
-            <p>
-                A digital vision for a school —
-                bringing its identity, environment
-                and story into a modern digital experience.
-            </p>
-
-            <div class="project-arrow">
-                ↗
-            </div>
-
-        </div>
-
-
-        <!-- DIGITAL MANA BADI -->
-
-        <div class="project reveal">
-
-            <div class="project-tag">
-                Education · Digital Project
-            </div>
-
-            <h3>
-                Digital Mana Badi
-            </h3>
-
-            <p>
-                A project focused on bringing schools,
-                children, learning and digital creativity
-                together.
-            </p>
-
-            <div class="project-arrow">
-                ↗
-            </div>
-
-        </div>
-
 
     </div>
 
 </section>
 
 
-<!-- =====================================================
-     STARTING POINTS
-===================================================== -->
+
+<!-- =======================================================
+     PACKAGES
+======================================================== -->
 
 <section class="packages">
 
-    <div class="packages-header reveal">
+    <div class="container">
 
-        <div class="section-label">
-            Starting Points
-        </div>
+        <div class="packages-header reveal">
 
-        <h2>
-            Start small.
-            <br>
-            Grow from there.
-        </h2>
-
-    </div>
-
-
-    <div class="package-grid">
-
-
-        <div class="package reveal">
-
-            <div class="package-number">
-                01 · DIGITAL START
+            <div class="section-label">
+                Ways To Begin
             </div>
 
-            <h3>
-                Website
-            </h3>
+            <h2>
+                Start small.
+                Grow from there.
+            </h2>
 
             <p>
-                A clean digital home for your
-                business, institution or idea.
+                Every journey can begin with one step.
             </p>
 
         </div>
 
 
-        <div class="package reveal">
+        <div class="package-grid">
 
-            <div class="package-number">
-                02 · DIGITAL PRESENCE
+
+            <div class="package reveal">
+
+                <div class="package-number">
+                    01
+                </div>
+
+                <h3>
+                    Website
+                </h3>
+
+                <p>
+                    A clean, professional digital
+                    home for your business,
+                    project or idea.
+                </p>
+
             </div>
 
-            <h3>
-                Website + Content
-            </h3>
 
-            <p>
-                Website combined with creative
-                AI videos and social presence.
-            </p>
+            <div class="package reveal">
 
-        </div>
+                <div class="package-number">
+                    02
+                </div>
 
+                <h3>
+                    Website + Content
+                </h3>
 
-        <div class="package reveal">
+                <p>
+                    A website supported by
+                    creative videos and a
+                    consistent social presence.
+                </p>
 
-            <div class="package-number">
-                03 · DIGITAL GROWTH
             </div>
 
-            <h3>
-                Complete Presence
-            </h3>
 
-            <p>
-                A consistent digital journey with
-                content, social media and creative direction.
-            </p>
+            <div class="package reveal">
+
+                <div class="package-number">
+                    03
+                </div>
+
+                <h3>
+                    Complete Presence
+                </h3>
+
+                <p>
+                    Strategy, website,
+                    content and ongoing
+                    social media handling.
+                </p>
+
+            </div>
+
 
         </div>
-
 
     </div>
 
 </section>
 
 
-<!-- =====================================================
+
+<!-- =======================================================
      VALIASS CONNECTION
-===================================================== -->
+======================================================== -->
 
 <section class="connection">
 
-    <div class="reveal">
+    <div class="connection-inner reveal">
 
         <div class="section-label">
-            The Bigger Picture
+            The Origin
         </div>
+
 
         <h2>
             One branch.
-            <br>
-            Part of a bigger <em>tree.</em>
+            <em>One flow.</em>
         </h2>
 
+
         <p>
+
             GWAVES.DIGITAL is one of the initiatives
             growing from VALIASS.
 
-            <br><br>
-
-            It has its own identity.
-            Its own direction.
-            Its own possibilities.
-
-            <br><br>
+            It has its own identity,
+            direction and possibilities.
 
             But its roots remain connected
             to the same origin.
+
+            <br><br>
+
+            Like every branch,
+            GWAVES carries the spirit
+            of the larger tree —
+            while finding its own direction
+            and its own journey.
+
         </p>
 
 
         <div class="connection-flow">
 
-            <span class="flow-item">
+            <span>
                 VALIASS
             </span>
 
-            <span class="flow-arrow">
+            <span class="arrow">
                 →
             </span>
 
-            <span class="flow-item">
+            <span>
                 ROOTS
             </span>
 
-            <span class="flow-arrow">
+            <span class="arrow">
                 →
             </span>
 
-            <span class="flow-item">
+            <span>
                 IDEAS
             </span>
 
-            <span class="flow-arrow">
+            <span class="arrow">
                 →
             </span>
 
-            <span class="flow-item">
+            <span>
                 GWAVES
             </span>
 
-            <span class="flow-arrow">
+            <span class="arrow">
                 →
             </span>
 
-            <span class="flow-item">
-                POSSIBILITIES
+            <span>
+                SEA OF INNOVATION
             </span>
 
         </div>
-
-
-        <a href="../../branches.html" class="back-btn">
-            Explore VALIASS Branches →
-        </a>
 
     </div>
 
 </section>
 
 
-<!-- =====================================================
+
+<!-- =======================================================
      FINAL CTA
-===================================================== -->
+======================================================== -->
 
-<section class="final">
+<section class="final-cta" id="contact">
 
-    <div class="final-content reveal">
+    <div class="reveal">
 
         <div class="section-label">
-            Let's Create
+            Let's Begin
         </div>
 
+
         <h2>
-            HAVE SOMETHING
-            <br>
-            IN <em>MIND?</em>
+            Have something
+            <em>in mind?</em>
         </h2>
 
+
         <p>
+
             Maybe it's a business.
+
             Maybe it's a project.
+
             Maybe it's just an idea.
 
             <br><br>
 
-            Let's turn that thought
-            into a wave.
+            Let's give it a direction —
+            and let it flow.
+
         </p>
 
-        <a href="../../contact.html" class="cta-btn">
+
+        <a
+            href="../../contact.html"
+            class="cta-button">
+
             Start A Conversation →
+
         </a>
 
     </div>
@@ -2142,40 +2749,63 @@ footer a {
 </section>
 
 
-<!-- =====================================================
+
+<!-- =======================================================
      FOOTER
-===================================================== -->
+======================================================== -->
 
 <footer>
 
-    <div>
-        GWAVES.DIGITAL — WE MAKE IDEAS MOVE.
-    </div>
+    <div class="footer-inner">
 
-    <a href="../../index.html">
-        VALIASS ↑
-    </a>
+        <div class="footer-brand">
+
+            G<span>WAVES</span>.DIGITAL
+
+        </div>
+
+
+        <div class="footer-text">
+
+            WHERE IDEAS FLOW.
+
+        </div>
+
+
+        <a
+            href="../../index.html"
+            class="footer-parent">
+
+            ↑ VALIASS
+
+        </a>
+
+    </div>
 
 </footer>
 
 
-<!-- =====================================================
+
+<!-- =======================================================
      JAVASCRIPT
-===================================================== -->
+======================================================== -->
 
 <script>
 
-/* Navbar */
+/* =========================================================
+   NAVBAR SCROLL
+========================================================= */
 
-const navbar = document.getElementById("navbar");
+const navbar =
+    document.getElementById("navbar");
 
-window.addEventListener("scroll", () => {
+window.addEventListener("scroll",function(){
 
-    if (window.scrollY > 40) {
+    if(window.scrollY > 30){
 
         navbar.classList.add("scrolled");
 
-    } else {
+    }else{
 
         navbar.classList.remove("scrolled");
 
@@ -2184,43 +2814,79 @@ window.addEventListener("scroll", () => {
 });
 
 
-/* Reveal animation */
+/* =========================================================
+   REVEAL ANIMATION
+========================================================= */
 
-const reveals = document.querySelectorAll(".reveal");
+const revealElements =
+    document.querySelectorAll(".reveal");
 
-const observer = new IntersectionObserver(
+const revealObserver =
+    new IntersectionObserver(
 
-    entries => {
+        function(entries){
 
-        entries.forEach(entry => {
+            entries.forEach(function(entry){
 
-            if (entry.isIntersecting) {
+                if(entry.isIntersecting){
 
-                entry.target.classList.add("visible");
+                    entry.target.classList.add("visible");
 
-                observer.unobserve(entry.target);
+                    revealObserver.unobserve(
+                        entry.target
+                    );
 
-            }
+                }
 
-        });
+            });
 
-    },
+        },
 
-    {
-        threshold: 0.12
-    }
+        {
+            threshold:.12
+        }
 
-);
+    );
 
 
-reveals.forEach(element => {
+revealElements.forEach(function(element){
 
-    observer.observe(element);
+    revealObserver.observe(element);
+
+});
+
+
+/* =========================================================
+   SMOOTH NAVIGATION
+========================================================= */
+
+document.querySelectorAll(
+    '.nav-links a[href^="#"]'
+).forEach(function(link){
+
+    link.addEventListener("click",function(event){
+
+        const targetId =
+            link.getAttribute("href");
+
+        const target =
+            document.querySelector(targetId);
+
+        if(target){
+
+            event.preventDefault();
+
+            target.scrollIntoView({
+                behavior:"smooth"
+            });
+
+        }
+
+    });
 
 });
 
 </script>
-
 
 </body>
 </html>
