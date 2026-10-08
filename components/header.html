@@ -1,158 +1,351 @@
-<!-- VALIASS MASTER HEADER -->
-<header class="valiass-header">
+<header class="valiass-header" id="valiassHeader">
 
-  <div class="valiass-header-inner">
+    <div class="valiass-header-inner">
 
-    <!-- BRAND -->
-    <a href="index.html" class="valiass-brand">
-      <span class="valiass-logo">V</span>
-      <span class="valiass-name">VALIASS initiatives</span>
-    </a>
+        <!-- =========================
+             BRAND
+        ========================== -->
+        <a href="index.html" class="valiass-brand" aria-label="VALIASS Home">
 
+            <span class="valiass-logo">V</span>
 
-    <!-- MOBILE HOME -->
-    <a
-      href="index.html"
-      class="mobile-home"
-    >
-      Home
-    </a>
+            <span class="valiass-name">
+                VALIASS
+                <small>initiatives</small>
+            </span>
+
+        </a>
 
 
-    <!-- MOBILE MENU BUTTON -->
-    <button
-      class="mobile-menu-button"
-      id="mobileMenuButton"
-      type="button"
-      aria-label="Open menu"
-    >
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
+        <!-- =========================
+             DESKTOP / MOBILE NAV
+        ========================== -->
+        <nav class="valiass-nav" id="valiassNav">
+
+            <!-- Mobile Close -->
+            <button
+                class="mobile-nav-close"
+                id="mobileNavClose"
+                type="button"
+                aria-label="Close menu"
+            >
+                ×
+            </button>
 
 
-    <!-- DESKTOP + MOBILE NAV -->
-    <nav
-      class="valiass-nav"
-      id="valiassNav"
-    >
+            <!-- HOME -->
+            <a href="index.html" class="nav-link">
+                Home
+            </a>
 
-      <!-- MOBILE NAV TOP -->
-      <div class="mobile-nav-header">
 
-        <span>
-          NAVIGATION
-        </span>
+            <!-- STORY -->
+            <a href="story.html" class="nav-link">
+                Story
+            </a>
 
+
+            <!-- FAMILY -->
+            <a href="family.html" class="nav-link">
+                Family
+            </a>
+
+
+            <!-- ROOTS -->
+            <a href="roots.html" class="nav-link">
+                Roots
+            </a>
+
+
+            <!-- =========================
+                 BRANCHES
+            ========================== -->
+            <div class="nav-dropdown">
+
+                <button
+                    id="branchesButton"
+                    class="nav-link nav-dropdown-trigger"
+                    type="button"
+                    aria-expanded="false"
+                >
+
+                    <span>Branches</span>
+
+                    <span class="branches-arrow">⌄</span>
+
+                </button>
+
+
+                <!-- =========================
+                     PREMIUM BRANCHES PANEL
+                ========================== -->
+                <div class="nav-dropdown-menu">
+
+
+                    <!-- PANEL INTRO -->
+                    <div class="branches-menu-heading">
+
+                        <div class="branches-menu-kicker">
+                            VALIASS
+                        </div>
+
+                        <div class="branches-menu-title">
+                            BRANCHES
+                        </div>
+
+                        <div class="branches-menu-description">
+                            Initiatives growing from our roots
+                        </div>
+
+                    </div>
+
+
+                    <!-- =========================
+                         OVERVIEW
+                    ========================== -->
+                    <a
+                        href="branches.html"
+                        class="branch-overview"
+                    >
+
+                        <span class="branch-overview-label">
+                            OVERVIEW
+                        </span>
+
+                        <span class="branch-overview-action">
+                            Explore all branches
+                            <span>→</span>
+                        </span>
+
+                    </a>
+
+
+                    <div class="branch-divider"></div>
+
+
+                    <!-- =========================
+                         01 — GWAVES
+                    ========================== -->
+                    <a
+                        href="branches/gwaves/index.html"
+                        class="branch-item branch-live"
+                    >
+
+                        <span class="branch-number">
+                            01
+                        </span>
+
+                        <span class="branch-copy">
+
+                            <span class="branch-item-main">
+                                GWAVES.DIGITAL
+                            </span>
+
+                            <span class="branch-item-sub">
+                                Websites • AI Content • Digital Growth
+                            </span>
+
+                        </span>
+
+                        <span class="branch-item-arrow">
+                            →
+                        </span>
+
+                        <span class="branch-hover-line"></span>
+
+                    </a>
+
+
+                    <!-- =========================
+                         02
+                    ========================== -->
+                    <a
+                        href="#"
+                        class="branch-item branch-future"
+                    >
+
+                        <span class="branch-number">
+                            02
+                        </span>
+
+                        <span class="branch-copy">
+
+                            <span class="branch-item-main">
+                                FUTURE INITIATIVE
+                            </span>
+
+                            <span class="branch-item-sub">
+                                Learning • Skills • Young Minds
+                            </span>
+
+                        </span>
+
+                        <span class="branch-item-arrow">
+                            →
+                        </span>
+
+                        <span class="branch-hover-line"></span>
+
+                    </a>
+
+
+                    <!-- =========================
+                         03
+                    ========================== -->
+                    <a
+                        href="#"
+                        class="branch-item branch-future"
+                    >
+
+                        <span class="branch-number">
+                            03
+                        </span>
+
+                        <span class="branch-copy">
+
+                            <span class="branch-item-main">
+                                FUTURE INITIATIVE
+                            </span>
+
+                            <span class="branch-item-sub">
+                                Stories • Culture • Identity
+                            </span>
+
+                        </span>
+
+                        <span class="branch-item-arrow">
+                            →
+                        </span>
+
+                        <span class="branch-hover-line"></span>
+
+                    </a>
+
+
+                    <!-- =========================
+                         04
+                    ========================== -->
+                    <a
+                        href="#"
+                        class="branch-item branch-future"
+                    >
+
+                        <span class="branch-number">
+                            04
+                        </span>
+
+                        <span class="branch-copy">
+
+                            <span class="branch-item-main">
+                                FUTURE INITIATIVE
+                            </span>
+
+                            <span class="branch-item-sub">
+                                Nature • Community • Sustainability
+                            </span>
+
+                        </span>
+
+                        <span class="branch-item-arrow">
+                            →
+                        </span>
+
+                        <span class="branch-hover-line"></span>
+
+                    </a>
+
+
+                    <!-- =========================
+                         05
+                    ========================== -->
+                    <a
+                        href="#"
+                        class="branch-item branch-future"
+                    >
+
+                        <span class="branch-number">
+                            05
+                        </span>
+
+                        <span class="branch-copy">
+
+                            <span class="branch-item-main">
+                                FUTURE INITIATIVE
+                            </span>
+
+                            <span class="branch-item-sub">
+                                Ideas • Innovation • New Possibilities
+                            </span>
+
+                        </span>
+
+                        <span class="branch-item-arrow">
+                            →
+                        </span>
+
+                        <span class="branch-hover-line"></span>
+
+                    </a>
+
+
+                    <!-- =========================
+                         FOOTER CTA
+                    ========================== -->
+                    <div class="branches-menu-footer">
+
+                        <a
+                            href="branches.html"
+                            class="view-all-initiatives"
+                        >
+
+                            <span>
+                                View All Initiatives
+                            </span>
+
+                            <span>
+                                →
+                            </span>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- VISION -->
+            <a href="vision.html" class="nav-link">
+                Vision
+            </a>
+
+
+            <!-- CONTACT -->
+            <a href="contact.html" class="nav-link">
+                Contact
+            </a>
+
+        </nav>
+
+
+        <!-- =========================
+             MOBILE MENU BUTTON
+        ========================== -->
         <button
-          id="mobileNavClose"
-          type="button"
-          aria-label="Close menu"
+            class="mobile-menu-button"
+            id="mobileMenuButton"
+            type="button"
+            aria-label="Open menu"
         >
-          ×
+
+            <span></span>
+            <span></span>
+            <span></span>
+
         </button>
 
-      </div>
-
-
-      <!-- HOME -->
-      <a
-        href="index.html"
-        class="nav-link nav-home"
-      >
-        Home
-      </a>
-
-
-      <!-- STORY -->
-      <a
-        href="story.html"
-        class="nav-link"
-      >
-        Story
-      </a>
-
-
-      <!-- FAMILY -->
-      <a
-        href="family.html"
-        class="nav-link"
-      >
-        Family
-      </a>
-
-
-      <!-- ROOTS -->
-      <a
-        href="roots.html"
-        class="nav-link"
-      >
-        Roots
-      </a>
-
-
-      <!-- BRANCHES -->
-      <div class="nav-dropdown">
-
-        <button
-          class="nav-dropdown-button"
-          id="branchesButton"
-          type="button"
-        >
-
-          Branches
-
-          <span class="dropdown-arrow">
-            ⌄
-          </span>
-
-        </button>
-
-
-        <div class="nav-dropdown-menu">
-
-          <a href="branches.html">
-            Branches Overview
-          </a>
-
-          <a href="branches/gwaves/index.html">
-            GWAVES
-          </a>
-
-          <a href="#">
-            Coming Soon 02
-          </a>
-
-          <a href="#">
-            Coming Soon 03
-          </a>
-
-        </div>
-
-      </div>
-
-
-      <!-- VISION -->
-      <a
-        href="vision.html"
-        class="nav-link"
-      >
-        Vision
-      </a>
-
-
-      <!-- CONTACT -->
-      <a
-        href="contact.html"
-        class="nav-link"
-      >
-        Contact
-      </a>
-
-    </nav>
-
-  </div>
+    </div>
 
 </header>
 
@@ -160,53 +353,35 @@
 <style>
 
 /* =========================================================
-   VALIASS MASTER HEADER
+   VALIASS HEADER
 ========================================================= */
 
-.valiass-header{
+.valiass-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 78px;
+    z-index: 1000;
 
-  position:fixed;
+    background: rgba(14, 25, 19, 0.97);
 
-  top:0;
-  left:0;
+    border-bottom: 1px solid rgba(208, 180, 107, 0.42);
 
-  width:100%;
-  height:78px;
-
-  z-index:9999;
-
-  background:
-    rgba(14,25,19,.94);
-
-  border-bottom:
-    1px solid
-    rgba(208,180,107,.18);
-
-  backdrop-filter:
-    blur(12px);
-
-  -webkit-backdrop-filter:
-    blur(12px);
-
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
 }
 
 
-.valiass-header-inner{
+.valiass-header-inner {
+    width: 92%;
+    max-width: 1250px;
+    height: 100%;
+    margin: 0 auto;
 
-  width:100%;
-  height:100%;
-
-  display:flex;
-
-  align-items:center;
-
-  justify-content:space-between;
-
-  padding:
-    0 42px;
-
-  box-sizing:border-box;
-
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 
@@ -214,286 +389,739 @@
    BRAND
 ========================================================= */
 
-.valiass-brand{
+.valiass-brand {
+    display: flex;
+    align-items: center;
+    gap: 11px;
 
-  display:flex;
+    text-decoration: none;
 
-  align-items:center;
-
-  gap:11px;
-
-  text-decoration:none;
-
-  flex-shrink:0;
-
+    flex-shrink: 0;
 }
 
 
-.valiass-logo{
+.valiass-logo {
+    width: 36px;
+    height: 36px;
 
-  width:38px;
-  height:38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-  display:flex;
+    border: 1px solid #d0b46b;
+    border-radius: 50%;
 
-  align-items:center;
-  justify-content:center;
+    color: #d0b46b;
 
-  border:
-    1px solid
-    #d0b46b;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 20px;
 
-  border-radius:50%;
-
-  color:#d0b46b;
-
-  font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
-
-  font-size:22px;
-
-  line-height:1;
-
+    line-height: 1;
 }
 
 
-.valiass-name{
+.valiass-name {
+    display: flex;
+    align-items: baseline;
+    gap: 7px;
 
-  color:#f5f0e4;
+    color: #f5f0e4;
 
-  font-family:
-    "Trebuchet MS",
-    Arial,
-    sans-serif;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
 
-  font-size:17px;
 
-  letter-spacing:1.5px;
+.valiass-name small {
+    color: rgba(245, 240, 228, 0.58);
 
-  white-space:nowrap;
-
+    font-size: 9px;
+    letter-spacing: 1.2px;
+    text-transform: lowercase;
 }
 
 
 /* =========================================================
-   DESKTOP NAV
+   NAVIGATION
 ========================================================= */
 
-.valiass-nav{
+.valiass-nav {
+    height: 100%;
 
-  height:100%;
-
-  display:flex;
-
-  align-items:center;
-
-  gap:30px;
-
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
 
 
-.nav-link,
-.nav-dropdown-button{
+.nav-link {
+    position: relative;
 
-  position:relative;
+    height: 78px;
+    padding: 0 14px;
 
-  color:#f5f0e4;
+    display: inline-flex;
+    align-items: center;
 
-  font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
+    border: 0;
+    background: transparent;
 
-  font-size:15px;
+    color: rgba(245, 240, 228, 0.84);
 
-  text-decoration:none;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 14px;
 
-  background:none;
+    text-decoration: none;
 
-  border:none;
+    cursor: pointer;
 
-  cursor:pointer;
-
-  padding:8px 0;
-
-  transition:
-    color .25s ease;
-
+    transition:
+        color 0.35s ease,
+        opacity 0.35s ease;
 }
 
 
-.nav-link:hover,
-.nav-dropdown-button:hover{
+.nav-link:hover {
+    color: #d0b46b;
+}
 
-  color:#d0b46b;
 
+.nav-link.active {
+    color: #d0b46b;
+}
+
+
+.nav-link.active::after {
+    content: "";
+
+    position: absolute;
+
+    left: 14px;
+    right: 14px;
+    bottom: 20px;
+
+    height: 1px;
+
+    background: #d0b46b;
+
+    opacity: 0.8;
 }
 
 
 /* =========================================================
-   ACTIVE LINK
+   BRANCHES TRIGGER
 ========================================================= */
 
-.nav-link.active{
+.nav-dropdown {
+    position: relative;
+    height: 100%;
 
-  color:#d0b46b;
-
+    display: flex;
+    align-items: center;
 }
 
 
-.nav-link.active::after{
+.nav-dropdown-trigger {
+    gap: 7px;
+}
 
-  content:"";
 
-  position:absolute;
+.branches-arrow {
+    display: inline-block;
 
-  left:0;
-  right:0;
+    color: rgba(245, 240, 228, 0.58);
 
-  bottom:0;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
 
-  height:1px;
+    transform: translateY(-1px);
 
-  background:#d0b46b;
+    transition:
+        transform 0.4s ease,
+        color 0.35s ease;
+}
 
+
+.nav-dropdown:hover .branches-arrow,
+.nav-dropdown-trigger.open .branches-arrow {
+    color: #d0b46b;
+}
+
+
+.nav-dropdown-trigger.open .branches-arrow {
+    transform: rotate(180deg) translateY(1px);
 }
 
 
 /* =========================================================
-   BRANCHES
+   PREMIUM BRANCHES PANEL
 ========================================================= */
 
-.nav-dropdown{
+.nav-dropdown-menu {
+    position: absolute;
 
-  position:relative;
+    top: calc(100% + 13px);
+    right: -80px;
 
+    width: 455px;
+
+    padding: 28px 30px 24px;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(19, 34, 26, 0.99),
+            rgba(12, 23, 17, 0.99)
+        );
+
+    border: 1px solid rgba(208, 180, 107, 0.32);
+
+    box-shadow:
+        0 24px 60px rgba(0, 0, 0, 0.38),
+        0 5px 18px rgba(0, 0, 0, 0.18);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform:
+        translateY(-12px)
+        scale(0.985);
+
+    transform-origin: top right;
+
+    transition:
+        opacity 0.42s ease,
+        transform 0.5s cubic-bezier(.22,.61,.36,1),
+        visibility 0.42s ease;
+
+    overflow: hidden;
 }
 
 
-.dropdown-arrow{
+/* subtle gold line at top */
 
-  margin-left:5px;
+.nav-dropdown-menu::before {
+    content: "";
 
-  color:#d0b46b;
+    position: absolute;
 
-  font-size:13px;
+    top: 0;
+    left: 30px;
 
-  display:inline-block;
+    width: 46px;
+    height: 1px;
 
-  transition:
-    transform .25s ease;
+    background: #d0b46b;
 
+    opacity: 0.9;
+}
+
+
+/* small cinematic shadow */
+
+.nav-dropdown-menu::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    background:
+        radial-gradient(
+            circle at 85% 0%,
+            rgba(208, 180, 107, 0.07),
+            transparent 35%
+        );
+}
+
+
+/* desktop open */
+
+.nav-dropdown:hover .nav-dropdown-menu,
+.nav-dropdown:focus-within .nav-dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+
+    transform:
+        translateY(0)
+        scale(1);
 }
 
 
 /* =========================================================
-   DESKTOP BRANCHES DROPDOWN
+   PANEL INTRO
 ========================================================= */
 
-.nav-dropdown-menu{
+.branches-menu-heading {
+    position: relative;
+    z-index: 1;
 
-  position:absolute;
+    margin-bottom: 22px;
 
-  top:
-    calc(100% + 16px);
+    opacity: 0;
 
-  right:-20px;
+    transform: translateY(9px);
 
-  min-width:220px;
-
-  padding:10px 0;
-
-  background:
-    rgba(14,25,19,.98);
-
-  border:
-    1px solid
-    rgba(208,180,107,.25);
-
-  box-shadow:
-    0 15px 40px
-    rgba(0,0,0,.35);
-
-  opacity:0;
-
-  visibility:hidden;
-
-  transform:
-    translateY(-8px);
-
-  transition:
-
-    opacity .25s ease,
-
-    visibility .25s ease,
-
-    transform .25s ease;
-
+    transition:
+        opacity 0.45s ease 0.08s,
+        transform 0.45s ease 0.08s;
 }
 
 
-.nav-dropdown:hover
-.nav-dropdown-menu{
-
-  opacity:1;
-
-  visibility:visible;
-
-  transform:
-    translateY(0);
-
+.nav-dropdown:hover .branches-menu-heading,
+.nav-dropdown:focus-within .branches-menu-heading {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 
-.nav-dropdown-menu a{
+.branches-menu-kicker {
+    margin-bottom: 7px;
 
-  display:block;
+    color: rgba(208, 180, 107, 0.72);
 
-  padding:
-    12px 20px;
-
-  color:#f5f0e4;
-
-  font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
-
-  font-size:14px;
-
-  text-decoration:none;
-
-  transition:
-
-    background .2s ease,
-
-    color .2s ease;
-
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    font-size: 9px;
+    letter-spacing: 3px;
 }
 
 
-.nav-dropdown-menu a:hover{
+.branches-menu-title {
+    color: #f5f0e4;
 
-  background:
-    rgba(208,180,107,.08);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 22px;
+    letter-spacing: 2.5px;
 
-  color:#d0b46b;
+    line-height: 1.15;
+}
 
+
+.branches-menu-description {
+    margin-top: 7px;
+
+    color: rgba(245, 240, 228, 0.57);
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 12px;
+
+    letter-spacing: 0.3px;
 }
 
 
 /* =========================================================
-   MOBILE ELEMENTS
+   OVERVIEW
 ========================================================= */
 
-.mobile-home,
-.mobile-menu-button,
-.mobile-nav-header{
+.branch-overview {
+    position: relative;
+    z-index: 1;
 
-  display:none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
+    padding: 12px 0 15px;
+
+    color: #f5f0e4;
+
+    text-decoration: none;
+
+    opacity: 0;
+    transform: translateY(10px);
+
+    transition:
+        opacity 0.42s ease 0.18s,
+        transform 0.42s ease 0.18s;
+}
+
+
+.nav-dropdown:hover .branch-overview,
+.nav-dropdown:focus-within .branch-overview {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.branch-overview-label {
+    color: #d0b46b;
+
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    font-size: 9px;
+
+    letter-spacing: 2px;
+}
+
+
+.branch-overview-action {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    color: rgba(245, 240, 228, 0.78);
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 12px;
+
+    transition: color 0.3s ease;
+}
+
+
+.branch-overview-action span {
+    color: #d0b46b;
+
+    transition:
+        transform 0.3s ease;
+}
+
+
+.branch-overview:hover .branch-overview-action {
+    color: #f5f0e4;
+}
+
+
+.branch-overview:hover .branch-overview-action span {
+    transform: translateX(4px);
+}
+
+
+.branch-divider {
+    position: relative;
+    z-index: 1;
+
+    width: 100%;
+    height: 1px;
+
+    background: rgba(245, 240, 228, 0.09);
+
+    margin-bottom: 3px;
+}
+
+
+/* =========================================================
+   BRANCH ITEMS
+========================================================= */
+
+.branch-item {
+    position: relative;
+    z-index: 1;
+
+    min-height: 66px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 9px 8px 9px 0;
+
+    color: #f5f0e4;
+
+    text-decoration: none;
+
+    border-bottom: 1px solid rgba(245, 240, 228, 0.065);
+
+    opacity: 0;
+    transform: translateY(13px);
+
+    transition:
+        opacity 0.48s ease,
+        transform 0.48s ease,
+        padding-left 0.35s ease;
+}
+
+
+/* sequential cinematic reveal */
+
+.nav-dropdown:hover .branch-item,
+.nav-dropdown:focus-within .branch-item {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.nav-dropdown:hover .branch-item:nth-of-type(1) {
+    transition-delay: 0.24s;
+}
+
+.nav-dropdown:hover .branch-item:nth-of-type(2) {
+    transition-delay: 0.31s;
+}
+
+.nav-dropdown:hover .branch-item:nth-of-type(3) {
+    transition-delay: 0.38s;
+}
+
+.nav-dropdown:hover .branch-item:nth-of-type(4) {
+    transition-delay: 0.45s;
+}
+
+.nav-dropdown:hover .branch-item:nth-of-type(5) {
+    transition-delay: 0.52s;
+}
+
+
+/* numbers */
+
+.branch-number {
+    width: 28px;
+
+    flex-shrink: 0;
+
+    color: rgba(208, 180, 107, 0.58);
+
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+
+/* text */
+
+.branch-copy {
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+
+.branch-item-main {
+    color: #f5f0e4;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 14px;
+
+    letter-spacing: 0.7px;
+
+    transition: color 0.3s ease;
+}
+
+
+.branch-item-sub {
+    color: rgba(245, 240, 228, 0.48);
+
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    font-size: 9px;
+
+    letter-spacing: 0.35px;
+
+    transition: color 0.3s ease;
+}
+
+
+/* future initiatives */
+
+.branch-future .branch-item-main {
+    color: rgba(245, 240, 228, 0.66);
+}
+
+
+.branch-future .branch-item-sub {
+    color: rgba(245, 240, 228, 0.35);
+}
+
+
+/* arrow */
+
+.branch-item-arrow {
+    margin-left: auto;
+
+    color: rgba(208, 180, 107, 0.45);
+
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+
+    opacity: 0;
+
+    transform: translateX(-5px);
+
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+/* hover line */
+
+.branch-hover-line {
+    position: absolute;
+
+    left: 0;
+    bottom: -1px;
+
+    width: 0;
+    height: 1px;
+
+    background: #d0b46b;
+
+    transition:
+        width 0.4s cubic-bezier(.22,.61,.36,1);
+}
+
+
+.branch-item:hover {
+    padding-left: 7px;
+}
+
+
+.branch-item:hover .branch-item-main {
+    color: #d0b46b;
+}
+
+
+.branch-item:hover .branch-item-sub {
+    color: rgba(245, 240, 228, 0.66);
+}
+
+
+.branch-item:hover .branch-item-arrow {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+.branch-item:hover .branch-hover-line {
+    width: 42px;
+}
+
+
+/* live branch */
+
+.branch-live .branch-number {
+    color: #d0b46b;
+}
+
+
+/* =========================================================
+   FOOTER CTA
+========================================================= */
+
+.branches-menu-footer {
+    position: relative;
+    z-index: 1;
+
+    padding-top: 18px;
+
+    opacity: 0;
+    transform: translateY(9px);
+
+    transition:
+        opacity 0.45s ease 0.58s,
+        transform 0.45s ease 0.58s;
+}
+
+
+.nav-dropdown:hover .branches-menu-footer,
+.nav-dropdown:focus-within .branches-menu-footer {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.view-all-initiatives {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    color: #d0b46b;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 12px;
+
+    letter-spacing: 0.5px;
+
+    text-decoration: none;
+
+    transition:
+        color 0.3s ease,
+        padding-left 0.3s ease;
+}
+
+
+.view-all-initiatives span:last-child {
+    font-family: Arial, sans-serif;
+
+    transition:
+        transform 0.3s ease;
+}
+
+
+.view-all-initiatives:hover {
+    color: #f5f0e4;
+}
+
+
+.view-all-initiatives:hover span:last-child {
+    transform: translateX(5px);
+}
+
+
+/* =========================================================
+   MOBILE MENU BUTTON
+========================================================= */
+
+.mobile-menu-button {
+    display: none;
+
+    width: 42px;
+    height: 42px;
+
+    padding: 0;
+
+    border: 0;
+    background: transparent;
+
+    cursor: pointer;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 5px;
+}
+
+
+.mobile-menu-button span {
+    display: block;
+
+    width: 22px;
+    height: 1px;
+
+    background: #d0b46b;
+
+    transition:
+        transform 0.3s ease,
+        opacity 0.3s ease;
+}
+
+
+.mobile-menu-button.open span:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+}
+
+
+.mobile-menu-button.open span:nth-child(2) {
+    opacity: 0;
+}
+
+
+.mobile-menu-button.open span:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
+}
+
+
+/* =========================================================
+   MOBILE CLOSE
+========================================================= */
+
+.mobile-nav-close {
+    display: none;
 }
 
 
@@ -501,446 +1129,326 @@
    MOBILE
 ========================================================= */
 
-@media (max-width:800px){
+@media (max-width: 800px) {
 
-  .valiass-header{
+    .valiass-header {
+        height: 70px;
+    }
 
-    height:70px;
 
-  }
+    .valiass-header-inner {
+        width: 90%;
+    }
 
 
-  .valiass-header-inner{
+    .valiass-logo {
+        width: 34px;
+        height: 34px;
 
-    padding:
-      0 18px;
+        font-size: 18px;
+    }
 
-  }
 
+    .valiass-name {
+        font-size: 17px;
+        letter-spacing: 1.8px;
+    }
 
-  /* ---------------------------------------------
-     BRAND
-  --------------------------------------------- */
 
-  .valiass-brand{
+    .valiass-name small {
+        font-size: 8px;
+    }
 
-    gap:9px;
 
-  }
+    /* show mobile button */
 
+    .mobile-menu-button {
+        display: flex;
+    }
 
-  .valiass-logo{
 
-    width:34px;
-    height:34px;
+    /* =====================================================
+       MOBILE NAV PANEL
+    ===================================================== */
 
-    font-size:20px;
+    .valiass-nav {
+        position: fixed;
 
-  }
+        top: 70px;
+        left: 0;
 
+        width: 100%;
+        height: calc(100vh - 70px);
 
-  .valiass-name{
+        padding: 58px 7% 40px;
 
-    font-size:15px;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
 
-    letter-spacing:1px;
+        gap: 0;
 
-  }
+        background: rgba(14, 25, 19, 0.98);
 
+        border-top: 1px solid rgba(208, 180, 107, 0.22);
 
-  /* ---------------------------------------------
-     MOBILE HOME
-  --------------------------------------------- */
+        overflow-y: auto;
+        overflow-x: hidden;
 
-  .mobile-home{
+        opacity: 0;
+        visibility: hidden;
 
-    display:block;
+        transform: translateY(-10px);
 
-    margin-left:auto;
+        transition:
+            opacity 0.35s ease,
+            transform 0.4s ease,
+            visibility 0.35s ease;
+    }
 
-    margin-right:18px;
 
-    color:#f5f0e4;
+    .valiass-nav.mobile-open {
+        opacity: 1;
+        visibility: visible;
 
-    font-family:
-      Georgia,
-      "Times New Roman",
-      serif;
+        transform: translateY(0);
+    }
 
-    font-size:14px;
 
-    text-decoration:none;
+    /* close */
 
-  }
+    .mobile-nav-close {
+        position: absolute;
 
+        top: 12px;
+        right: 7%;
 
-  .mobile-home:hover{
+        width: 42px;
+        height: 42px;
 
-    color:#d0b46b;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
-  }
+        border: 0;
+        background: transparent;
 
+        color: rgba(245, 240, 228, 0.72);
 
-  /* ---------------------------------------------
-     HAMBURGER
-  --------------------------------------------- */
+        font-family: Arial, sans-serif;
+        font-size: 28px;
+        font-weight: 200;
 
-  .mobile-menu-button{
+        cursor: pointer;
+    }
 
-    width:38px;
-    height:38px;
 
-    padding:7px;
+    /* nav links */
 
-    display:flex;
+    .nav-link {
+        width: 100%;
+        height: 54px;
 
-    flex-direction:column;
+        padding: 0;
 
-    justify-content:center;
+        justify-content: flex-start;
 
-    align-items:center;
+        border-bottom: 1px solid rgba(245, 240, 228, 0.07);
 
-    gap:5px;
+        font-size: 15px;
+    }
 
-    background:transparent;
 
-    border:
-      1px solid
-      rgba(208,180,107,.35);
+    .nav-link.active::after {
+        display: none;
+    }
 
-    border-radius:5px;
 
-    cursor:pointer;
+    /* =====================================================
+       MOBILE BRANCHES
+    ===================================================== */
 
-    flex-shrink:0;
+    .nav-dropdown {
+        width: 100%;
+        height: auto;
 
-  }
+        display: block;
+    }
 
 
-  .mobile-menu-button span{
+    .nav-dropdown-trigger {
+        justify-content: space-between;
 
-    display:block;
+        width: 100%;
+    }
 
-    width:19px;
-    height:2px;
 
-    background:#d0b46b;
+    .branches-arrow {
+        margin-right: 4px;
 
-    transition:
-      all .25s ease;
+        font-size: 17px;
+    }
 
-  }
 
+    /* IMPORTANT:
+       desktop dropdown rules are overridden here
+    */
 
-  /* ---------------------------------------------
-     HAMBURGER → X
-  --------------------------------------------- */
+    .nav-dropdown-menu {
+        position: static;
 
-  .mobile-menu-button.open
-  span:nth-child(1){
+        width: 100%;
 
-    transform:
-      translateY(7px)
-      rotate(45deg);
+        padding: 0 0 14px;
 
-  }
+        background: transparent;
 
+        border: 0;
 
-  .mobile-menu-button.open
-  span:nth-child(2){
+        box-shadow: none;
 
-    opacity:0;
+        opacity: 0;
+        visibility: hidden;
 
-  }
+        max-height: 0;
 
+        overflow: hidden;
 
-  .mobile-menu-button.open
-  span:nth-child(3){
+        transform: none;
 
-    transform:
-      translateY(-7px)
-      rotate(-45deg);
+        transition:
+            max-height 0.5s ease,
+            opacity 0.35s ease,
+            visibility 0.35s ease;
+    }
 
-  }
 
+    .nav-dropdown-menu::before,
+    .nav-dropdown-menu::after {
+        display: none;
+    }
 
-  /* =================================================
-     MOBILE NAV PANEL
-  ================================================= */
 
-  .valiass-nav{
+    /* JS adds this class */
 
-    position:fixed;
+    .nav-dropdown-menu.mobile-open {
+        opacity: 1;
+        visibility: visible;
 
-    top:70px;
-    left:0;
+        max-height: 700px;
+    }
 
-    width:100%;
 
-    height:
-      calc(100vh - 70px);
+    /* mobile heading */
 
-    display:flex;
+    .branches-menu-heading {
+        margin: 20px 0 13px;
+        padding-left: 3px;
 
-    flex-direction:column;
+        opacity: 1;
+        transform: none;
+    }
 
-    align-items:stretch;
 
-    gap:0;
+    .branches-menu-kicker {
+        font-size: 8px;
+        letter-spacing: 2.5px;
+    }
 
-    padding:0;
 
-    box-sizing:border-box;
+    .branches-menu-title {
+        font-size: 18px;
+    }
 
-    overflow-y:auto;
 
-    background:
-      rgba(14,25,19,.99);
+    .branches-menu-description {
+        font-size: 11px;
+    }
 
-    border-top:
-      1px solid
-      rgba(208,180,107,.18);
 
-    transform:
-      translateX(100%);
+    /* overview */
 
-    visibility:hidden;
+    .branch-overview {
+        padding: 12px 3px;
 
-    opacity:0;
+        opacity: 1;
+        transform: none;
 
-    transition:
+        border-bottom: 1px solid rgba(245, 240, 228, 0.07);
+    }
 
-      transform .3s ease,
 
-      opacity .3s ease,
+    .branch-overview-action {
+        font-size: 11px;
+    }
 
-      visibility .3s ease;
 
-  }
+    .branch-divider {
+        display: none;
+    }
 
 
-  /* ---------------------------------------------
-     OPEN MENU
-  --------------------------------------------- */
+    /* items */
 
-  .valiass-nav.mobile-open{
+    .branch-item {
+        min-height: 63px;
 
-    transform:
-      translateX(0);
+        padding: 9px 3px;
 
-    visibility:visible;
+        opacity: 1;
+        transform: none;
 
-    opacity:1;
+        gap: 14px;
+    }
 
-  }
 
+    .branch-item:hover {
+        padding-left: 3px;
+    }
 
-  /* =================================================
-     MOBILE NAV HEADER
-  ================================================= */
 
-  .mobile-nav-header{
+    .branch-number {
+        width: 25px;
 
-    display:flex;
+        font-size: 9px;
+    }
 
-    align-items:center;
 
-    justify-content:space-between;
+    .branch-item-main {
+        font-size: 13px;
+    }
 
-    padding:
-      18px 22px;
 
-    color:#d0b46b;
+    .branch-item-sub {
+        font-size: 8px;
 
-    font-family:
-      "Trebuchet MS",
-      Arial,
-      sans-serif;
+        line-height: 1.45;
+    }
 
-    font-size:12px;
 
-    letter-spacing:2px;
+    .branch-item-arrow {
+        display: none;
+    }
 
-    border-bottom:
-      1px solid
-      rgba(208,180,107,.15);
 
-  }
+    .branch-hover-line {
+        display: none;
+    }
 
 
-  .mobile-nav-header button{
+    /* footer */
 
-    width:32px;
-    height:32px;
+    .branches-menu-footer {
+        padding: 17px 3px 7px;
 
-    display:flex;
+        opacity: 1;
+        transform: none;
+    }
 
-    align-items:center;
-    justify-content:center;
 
-    background:transparent;
-
-    border:
-      1px solid
-      rgba(208,180,107,.35);
-
-    border-radius:50%;
-
-    color:#d0b46b;
-
-    font-size:22px;
-
-    line-height:1;
-
-    cursor:pointer;
-
-  }
-
-
-  /* =================================================
-     MOBILE NAV LINKS
-  ================================================= */
-
-  .valiass-nav .nav-link{
-
-    display:block;
-
-    padding:
-      17px 22px;
-
-    color:#f5f0e4;
-
-    font-size:16px;
-
-    border-bottom:
-      1px solid
-      rgba(208,180,107,.08);
-
-  }
-
-
-  .valiass-nav
-  .nav-link.active::after{
-
-    display:none;
-
-  }
-
-
-  /* HOME ALREADY EXISTS IN HEADER */
-
-  .valiass-nav
-  .nav-home{
-
-    display:none;
-
-  }
-
-
-  /* =================================================
-     MOBILE BRANCHES
-  ================================================= */
-
-  .nav-dropdown{
-
-    width:100%;
-
-  }
-
-
-  .nav-dropdown-button{
-
-    width:100%;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:space-between;
-
-    padding:
-      17px 22px;
-
-    color:#f5f0e4;
-
-    font-size:16px;
-
-    text-align:left;
-
-    border-bottom:
-      1px solid
-      rgba(208,180,107,.08);
-
-  }
-
-
-  .nav-dropdown-button.open{
-
-    color:#d0b46b;
-
-  }
-
-
-  .nav-dropdown-button.open
-  .dropdown-arrow{
-
-    transform:
-      rotate(180deg);
-
-  }
-
-
-  /* =================================================
-     MOBILE BRANCH SUBMENU
-  ================================================= */
-
-  .nav-dropdown-menu{
-
-    position:static;
-
-    width:100%;
-
-    min-width:0;
-
-    padding:0;
-
-    display:none;
-
-    opacity:1;
-
-    visibility:visible;
-
-    transform:none;
-
-    background:
-      rgba(0,0,0,.12);
-
-    border:none;
-
-    box-shadow:none;
-
-  }
-
-
-  .nav-dropdown-menu.mobile-open{
-
-    display:block;
-
-  }
-
-
-  .nav-dropdown-menu a{
-
-    padding:
-      14px 22px 14px 42px;
-
-    font-size:14px;
-
-    border-bottom:
-      1px solid
-      rgba(208,180,107,.06);
-
-  }
+    .view-all-initiatives {
+        font-size: 11px;
+    }
 
 }
 
@@ -949,28 +1457,37 @@
    SMALL MOBILE
 ========================================================= */
 
-@media (max-width:480px){
+@media (max-width: 480px) {
 
-  .valiass-header-inner{
-
-    padding:
-      0 14px;
-
-  }
+    .valiass-header-inner {
+        width: 88%;
+    }
 
 
-  .valiass-name{
-
-    font-size:14px;
-
-  }
+    .valiass-name {
+        font-size: 16px;
+    }
 
 
-  .mobile-home{
+    .valiass-name small {
+        display: none;
+    }
 
-    margin-right:12px;
 
-  }
+    .valiass-nav {
+        padding-left: 8%;
+        padding-right: 8%;
+    }
+
+
+    .mobile-nav-close {
+        right: 8%;
+    }
+
+
+    .branch-item-sub {
+        max-width: 235px;
+    }
 
 }
 
