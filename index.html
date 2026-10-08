@@ -43,81 +43,6 @@ a{
     text-decoration:none;
 }
 
-/* =========================
-   NAVIGATION
-========================= */
-
-.navbar{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    z-index:1000;
-    padding:24px 5%;
-    transition:.4s ease;
-}
-
-.navbar.scrolled{
-    background:rgba(20,37,28,.94);
-    backdrop-filter:blur(14px);
-    padding:16px 5%;
-}
-
-.nav-inner{
-    max-width:1300px;
-    margin:auto;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-}
-
-.logo{
-    width:48px;
-    height:48px;
-    border:1px solid rgba(255,255,255,.65);
-    border-radius:50%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    color:white;
-    font-size:9px;
-    letter-spacing:1px;
-}
-
-.nav-links{
-    display:flex;
-    gap:32px;
-    align-items:center;
-    color:white;
-    font-size:13px;
-    letter-spacing:1px;
-    text-transform:uppercase;
-}
-
-.nav-links a{
-    position:relative;
-    opacity:.88;
-    transition:.3s;
-}
-
-.nav-links a:hover{
-    opacity:1;
-}
-
-.nav-links a::after{
-    content:"";
-    position:absolute;
-    left:0;
-    bottom:-7px;
-    width:0;
-    height:1px;
-    background:var(--gold);
-    transition:.3s;
-}
-
-.nav-links a:hover::after{
-    width:100%;
-}
 
 /* =========================
    HERO
@@ -129,6 +54,7 @@ a{
     display:flex;
     align-items:center;
     overflow:hidden;
+
     background:
         linear-gradient(
             90deg,
@@ -144,6 +70,7 @@ a{
     content:"";
     position:absolute;
     inset:0;
+
     background:
         linear-gradient(
             180deg,
@@ -151,16 +78,20 @@ a{
             transparent 40%,
             rgba(0,0,0,.35)
         );
+
     pointer-events:none;
 }
 
 .hero-content{
     position:relative;
     z-index:2;
+
     max-width:1300px;
     width:100%;
     margin:auto;
+
     padding:140px 7% 100px;
+
     color:white;
 }
 
@@ -168,35 +99,47 @@ a{
     font-size:12px;
     letter-spacing:4px;
     text-transform:uppercase;
+
     color:#d6c49c;
+
     margin-bottom:25px;
 }
 
 .hero h1{
     max-width:850px;
+
     font-size:clamp(58px,9vw,125px);
+
     font-weight:400;
     line-height:.9;
     letter-spacing:-5px;
+
     margin-bottom:30px;
 }
 
 .hero p{
     max-width:570px;
+
     font-size:19px;
     line-height:1.8;
+
     color:rgba(255,255,255,.82);
 }
 
 .hero-button{
     display:inline-block;
+
     margin-top:38px;
     padding:15px 26px;
+
     border:1px solid rgba(255,255,255,.55);
+
     color:white;
+
     font-size:11px;
     letter-spacing:2px;
     text-transform:uppercase;
+
     transition:.4s;
 }
 
@@ -207,14 +150,19 @@ a{
 
 .scroll-note{
     position:absolute;
+
     bottom:35px;
     left:7%;
+
     z-index:3;
+
     color:rgba(255,255,255,.65);
+
     font-size:10px;
     letter-spacing:3px;
     text-transform:uppercase;
 }
+
 
 /* =========================
    GENERAL SECTIONS
@@ -231,26 +179,34 @@ a{
 
 .section-label{
     color:var(--gold);
+
     font-size:11px;
     letter-spacing:3px;
     text-transform:uppercase;
+
     margin-bottom:25px;
 }
 
 .section h2{
     font-size:clamp(42px,6vw,78px);
+
     font-weight:400;
     line-height:1;
+
     color:var(--green);
+
     margin-bottom:30px;
 }
 
 .section-intro{
     max-width:650px;
+
     font-size:20px;
     line-height:1.8;
+
     color:#5d665d;
 }
+
 
 /* =========================
    CINEMATIC IMAGE
@@ -264,10 +220,14 @@ a{
 .cinematic-image img{
     width:100%;
     height:100%;
+
     object-fit:cover;
     display:block;
+
     filter:saturate(.82) contrast(1.04);
+
     transform:scale(1.01);
+
     transition:transform 1.2s ease;
 }
 
@@ -277,16 +237,20 @@ a{
 
 .cinematic-image::after{
     content:"";
+
     position:absolute;
     inset:0;
+
     background:
         linear-gradient(
             180deg,
             rgba(0,0,0,.02),
             rgba(0,0,0,.24)
         );
+
     pointer-events:none;
 }
+
 
 /* =========================
    PHILOSOPHY
@@ -298,9 +262,12 @@ a{
 
 .philosophy-grid{
     margin-top:75px;
+
     display:grid;
     grid-template-columns:1fr 1fr;
+
     gap:70px;
+
     align-items:center;
 }
 
@@ -314,17 +281,22 @@ a{
 
 .philosophy-text h3{
     font-size:40px;
+
     font-weight:400;
     line-height:1.15;
+
     color:var(--green);
+
     margin-bottom:25px;
 }
 
 .philosophy-text p{
     font-size:18px;
     line-height:1.9;
+
     color:#626b63;
 }
+
 
 /* =========================
    ROOTS
@@ -345,41 +317,54 @@ a{
 
 .roots-grid{
     margin-top:70px;
+
     display:grid;
     grid-template-columns:1fr 1fr;
+
     gap:25px;
 }
 
 .root-card{
     min-height:310px;
+
     padding:45px;
+
     border:1px solid rgba(255,255,255,.13);
+
     background:rgba(255,255,255,.035);
+
     transition:.4s;
 }
 
 .root-card:hover{
     background:rgba(255,255,255,.07);
+
     transform:translateY(-5px);
 }
 
 .root-number{
     color:var(--gold);
+
     font-size:12px;
     letter-spacing:2px;
+
     margin-bottom:50px;
 }
 
 .root-card h3{
     font-size:34px;
+
     font-weight:400;
+
     margin-bottom:18px;
 }
 
 .root-card p{
     color:#bfc8c0;
+
     line-height:1.8;
 }
+
 
 /* =========================
    ROOT CINEMATIC STRIP
@@ -387,7 +372,9 @@ a{
 
 .root-visual{
     height:550px;
+
     margin-top:90px;
+
     background:
         linear-gradient(
             90deg,
@@ -396,17 +383,22 @@ a{
         ),
         url("https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=2200&q=90")
         center/cover no-repeat;
+
     display:flex;
     align-items:flex-end;
+
     padding:55px;
 }
 
 .root-visual p{
     max-width:600px;
+
     color:white;
+
     font-size:27px;
     line-height:1.35;
 }
+
 
 /* =========================
    BRANCHES
@@ -418,7 +410,9 @@ a{
 
 .branches-visual{
     height:620px;
+
     margin-top:70px;
+
     background:
         linear-gradient(
             180deg,
@@ -431,22 +425,28 @@ a{
 
 .branches-content{
     margin-top:60px;
+
     display:grid;
     grid-template-columns:1fr 1fr;
+
     gap:70px;
 }
 
 .branches-content h3{
     font-size:42px;
+
     font-weight:400;
+
     color:var(--green);
 }
 
 .branches-content p{
     font-size:18px;
     line-height:1.9;
+
     color:#62685f;
 }
+
 
 /* =========================
    VISION
@@ -458,9 +458,12 @@ a{
 
 .vision-grid{
     margin-top:75px;
+
     display:grid;
     grid-template-columns:1.1fr .9fr;
+
     gap:70px;
+
     align-items:center;
 }
 
@@ -475,17 +478,48 @@ a{
 
 .vision-text h3{
     font-size:46px;
+
     font-weight:400;
     color:var(--green);
+
     line-height:1.1;
+
     margin-bottom:25px;
 }
 
 .vision-text p{
     font-size:18px;
     line-height:1.9;
+
     color:#62685f;
 }
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.section-button{
+    display:inline-block;
+
+    margin-top:35px;
+    padding:15px 27px;
+
+    border:1px solid rgba(255,255,255,.45);
+
+    font-size:11px;
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+    transition:.35s;
+}
+
+.section-button:hover{
+    background:white;
+    color:var(--green-dark);
+}
+
 
 /* =========================
    CONTACT CTA
@@ -493,11 +527,16 @@ a{
 
 .contact-section{
     position:relative;
+
     min-height:620px;
+
     display:flex;
     align-items:center;
+
     overflow:hidden;
+
     color:white;
+
     background:
         linear-gradient(
             90deg,
@@ -511,9 +550,11 @@ a{
 .contact-content{
     position:relative;
     z-index:2;
+
     max-width:1200px;
     width:100%;
     margin:auto;
+
     padding:100px 7%;
 }
 
@@ -524,57 +565,13 @@ a{
 
 .contact-content p{
     max-width:600px;
+
     font-size:19px;
     line-height:1.8;
+
     color:#d9ddd3;
 }
 
-.section-button{
-    display:inline-block;
-    margin-top:35px;
-    padding:15px 27px;
-    border:1px solid rgba(255,255,255,.45);
-    font-size:11px;
-    letter-spacing:2px;
-    text-transform:uppercase;
-    transition:.35s;
-}
-
-.section-button:hover{
-    background:white;
-    color:var(--green-dark);
-}
-
-/* =========================
-   FOOTER
-========================= */
-
-footer{
-    background:#101d16;
-    color:#aeb8ae;
-    padding:55px 7%;
-}
-
-.footer-inner{
-    max-width:1200px;
-    margin:auto;
-    display:flex;
-    justify-content:space-between;
-    gap:30px;
-    align-items:center;
-}
-
-.footer-logo{
-    color:white;
-    letter-spacing:3px;
-    font-size:15px;
-}
-
-.footer-text{
-    font-size:11px;
-    letter-spacing:1.5px;
-    text-transform:uppercase;
-}
 
 /* =========================
    REVEAL
@@ -582,28 +579,26 @@ footer{
 
 .reveal{
     opacity:0;
+
     transform:translateY(35px);
-    transition:opacity .9s ease, transform .9s ease;
+
+    transition:
+        opacity .9s ease,
+        transform .9s ease;
 }
 
 .reveal.visible{
     opacity:1;
+
     transform:translateY(0);
 }
+
 
 /* =========================
    RESPONSIVE
 ========================= */
 
 @media(max-width:800px){
-
-    .navbar{
-        padding:18px 6%;
-    }
-
-    .nav-links{
-        display:none;
-    }
 
     .hero-content{
         padding:130px 7% 100px;
@@ -660,10 +655,6 @@ footer{
         min-height:520px;
     }
 
-    .footer-inner{
-        flex-direction:column;
-        align-items:flex-start;
-    }
 }
 
 </style>
@@ -671,37 +662,21 @@ footer{
 
 <body>
 
-<!-- =========================
-     NAVIGATION
-========================= -->
 
-<nav class="navbar" id="navbar">
+<!-- =====================================================
+     MASTER HEADER COMPONENT
+     
+     Replace this component placeholder with your
+     finalized VALIASS header component.
+     
+     Header:
+     LEFT  → Round Logo + VALIASS
+     RIGHT → Home / Story / Roots / Branches / Vision / Contact
+     
+     HOME is ACTIVE on this page.
+====================================================== -->
 
-    <div class="nav-inner">
-
-        <a href="index.html" class="logo">
-            LOGO
-        </a>
-
-        <div class="nav-links">
-
-            <a href="index.html">Home</a>
-
-            <a href="story.html">Story</a>
-
-            <a href="roots.html">Roots</a>
-
-            <a href="branches.html">Branches</a>
-
-            <a href="vision.html">Vision</a>
-
-            <a href="contact.html">Contact</a>
-
-        </div>
-
-    </div>
-
-</nav>
+<div id="valiass-header"></div>
 
 
 <!-- =========================
@@ -789,7 +764,8 @@ footer{
                     to develop its own identity, purpose and journey.
                 </p>
 
-                <a href="story.html" class="section-button"
+                <a href="story.html"
+                   class="section-button"
                    style="border-color:var(--green);color:var(--green);">
                     Read Our Story →
                 </a>
@@ -1104,49 +1080,24 @@ footer{
 </section>
 
 
-<!-- =========================
-     FOOTER
-========================= -->
+<!-- =====================================================
+     MASTER FOOTER COMPONENT
 
-<footer>
+     LEFT  → Round Logo + VALIASS
+     RIGHT → One origin. Strong roots. Many possibilities.
+     
+     Lower area:
+     Divider + Copyright + Navigation
+====================================================== -->
 
-    <div class="footer-inner">
-
-        <a href="index.html" class="footer-logo">
-            VALIASS
-        </a>
-
-        <div class="footer-text">
-            ONE ORIGIN. STRONG ROOTS. MANY POSSIBILITIES.
-        </div>
-
-    </div>
-
-</footer>
+<div id="valiass-footer"></div>
 
 
 <!-- =========================
-     JAVASCRIPT
+     REVEAL JAVASCRIPT
 ========================= -->
 
 <script>
-
-const navbar = document.getElementById("navbar");
-
-window.addEventListener("scroll", () => {
-
-    if(window.scrollY > 40){
-
-        navbar.classList.add("scrolled");
-
-    }else{
-
-        navbar.classList.remove("scrolled");
-
-    }
-
-});
-
 
 const observer = new IntersectionObserver(
 
@@ -1176,6 +1127,49 @@ document.querySelectorAll(".reveal").forEach(el => {
     observer.observe(el);
 
 });
+
+</script>
+
+
+<!-- =====================================================
+     COMPONENT LOADER
+
+     Use this only if your components repository is
+     exposed at these URLs.
+
+     Replace the URLs with your actual component URLs.
+====================================================== -->
+
+<script>
+
+async function loadValiassComponents(){
+
+    try{
+
+        const header =
+            await fetch("YOUR_HEADER_COMPONENT_URL")
+            .then(response => response.text());
+
+        const footer =
+            await fetch("YOUR_FOOTER_COMPONENT_URL")
+            .then(response => response.text());
+
+        document.getElementById("valiass-header").innerHTML = header;
+
+        document.getElementById("valiass-footer").innerHTML = footer;
+
+    }catch(error){
+
+        console.error(
+            "VALIASS components could not be loaded:",
+            error
+        );
+
+    }
+
+}
+
+loadValiassComponents();
 
 </script>
 
