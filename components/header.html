@@ -25,10 +25,65 @@
 
 
         <!-- =================================================
+             MOBILE HOME
+             Visible only on mobile
+             ================================================= -->
+
+        <a
+            href="index.html"
+            class="mobile-home"
+        >
+            Home
+        </a>
+
+
+        <!-- =================================================
+             MOBILE MENU BUTTON
+             Visible only on mobile
+             ================================================= -->
+
+        <button
+            class="mobile-menu-button"
+            type="button"
+            aria-label="Open navigation"
+            aria-expanded="false"
+        >
+
+            <span class="menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </span>
+
+        </button>
+
+
+        <!-- =================================================
              MAIN NAVIGATION
              ================================================= -->
 
-        <nav class="valiass-nav" aria-label="Main navigation">
+        <nav
+            class="valiass-nav"
+            aria-label="Main navigation"
+        >
+
+            <!-- MOBILE MENU HEADER -->
+
+            <div class="mobile-nav-header">
+
+                <span>
+                    NAVIGATION
+                </span>
+
+                <button
+                    class="mobile-nav-close"
+                    type="button"
+                    aria-label="Close navigation"
+                >
+                    ×
+                </button>
+
+            </div>
 
 
             <!-- HOME -->
@@ -393,8 +448,6 @@
 }
 
 
-/* subtle inner circle */
-
 .valiass-logo::after{
 
     content:"";
@@ -511,7 +564,7 @@
 .valiass-nav > a:hover,
 .nav-dropdown-trigger:hover{
 
-    color:#f4efe3;
+    color:#f4f0e3;
 }
 
 
@@ -946,6 +999,18 @@ a.branch-menu-item:hover{
 
 
 /* =========================================================
+   MOBILE ELEMENTS — HIDDEN BY DEFAULT
+   ========================================================= */
+
+.mobile-home,
+.mobile-menu-button,
+.mobile-nav-header{
+
+    display:none;
+}
+
+
+/* =========================================================
    MOBILE
    ========================================================= */
 
@@ -987,65 +1052,406 @@ a.branch-menu-item:hover{
     }
 
 
-    .valiass-nav{
+    /* =====================================================
+       MOBILE HOME
+       ===================================================== */
 
-        gap:20px;
+    .mobile-home{
 
-        overflow-x:auto;
+        display:flex;
 
-        overflow-y:visible;
+        align-items:center;
 
-        scrollbar-width:none;
+        justify-content:center;
 
-        -ms-overflow-style:none;
+        margin-left:auto;
 
-        max-width:65vw;
+        margin-right:20px;
+
+        color:
+            rgba(244,239,227,.82);
+
+        font-family:
+            Georgia,
+            "Times New Roman",
+            serif;
+
+        font-size:13px;
+
+        text-decoration:none;
+
+        transition:
+            color .3s ease;
     }
 
 
-    .valiass-nav::-webkit-scrollbar{
+    .mobile-home:hover{
 
-        display:none;
+        color:#d7bc76;
     }
 
 
-    .valiass-nav > a,
-    .nav-dropdown-trigger{
+    /* =====================================================
+       MOBILE MENU BUTTON
+       ===================================================== */
 
-        font-size:12px;
+    .mobile-menu-button{
+
+        width:38px;
+        height:38px;
+
+        padding:0;
+
+        display:flex;
+
+        align-items:center;
+        justify-content:center;
+
+        background:transparent;
+
+        border:
+            1px solid
+            rgba(208,180,107,.20);
+
+        border-radius:50%;
+
+        cursor:pointer;
 
         flex-shrink:0;
     }
 
 
-    .valiass-nav > a::after,
-    .nav-dropdown-trigger::after{
+    .menu-icon{
 
-        bottom:9px;
+        width:16px;
+
+        display:flex;
+
+        flex-direction:column;
+
+        gap:4px;
     }
 
 
-    /* MOBILE DROPDOWN */
+    .menu-icon span{
 
-    .branches-dropdown{
+        display:block;
+
+        width:100%;
+
+        height:1px;
+
+        background:#d0b46b;
+
+        transition:
+            transform .3s ease,
+            opacity .3s ease;
+    }
+
+
+    /* =====================================================
+       OPEN MENU BUTTON → X
+       ===================================================== */
+
+    .mobile-menu-button.open
+    .menu-icon span:nth-child(1){
+
+        transform:
+            translateY(5px)
+            rotate(45deg);
+    }
+
+
+    .mobile-menu-button.open
+    .menu-icon span:nth-child(2){
+
+        opacity:0;
+    }
+
+
+    .mobile-menu-button.open
+    .menu-icon span:nth-child(3){
+
+        transform:
+            translateY(-5px)
+            rotate(-45deg);
+    }
+
+
+    /* =====================================================
+       MOBILE NAV PANEL
+       ===================================================== */
+
+    .valiass-nav{
 
         position:fixed;
 
         top:70px;
 
-        left:20px;
+        left:0;
+        right:0;
 
-        right:20px;
+        height:
+            calc(100vh - 70px);
 
-        width:auto;
+        padding:
+            0 24px 35px;
 
-        max-height:
-            calc(100vh - 90px);
+        display:flex;
+
+        flex-direction:column;
+
+        align-items:stretch;
+
+        gap:0;
 
         overflow-y:auto;
 
+        background:
+            rgba(14,25,19,.98);
+
+        border-top:
+            1px solid
+            rgba(208,180,107,.12);
+
+        box-shadow:
+            0 25px 70px
+            rgba(0,0,0,.40);
+
+        backdrop-filter:
+            blur(20px);
+
+        -webkit-backdrop-filter:
+            blur(20px);
+
+        opacity:0;
+
+        visibility:hidden;
+
+        pointer-events:none;
+
+        transform:
+            translateY(-10px);
+
+        transition:
+            opacity .25s ease,
+            transform .25s ease,
+            visibility .25s ease;
+    }
+
+
+    .valiass-nav.mobile-open{
+
+        opacity:1;
+
+        visibility:visible;
+
+        pointer-events:auto;
+
+        transform:
+            translateY(0);
+    }
+
+
+    /* =====================================================
+       MOBILE NAV HEADER
+       ===================================================== */
+
+    .mobile-nav-header{
+
+        display:flex;
+
+        align-items:center;
+
+        justify-content:space-between;
+
         padding:
-            24px 24px 20px;
+            24px 0 18px;
+
+        border-bottom:
+            1px solid
+            rgba(208,180,107,.13);
+
+        color:#d9c17d;
+
+        font-size:10px;
+
+        letter-spacing:2.5px;
+    }
+
+
+    .mobile-nav-close{
+
+        width:32px;
+        height:32px;
+
+        display:flex;
+
+        align-items:center;
+        justify-content:center;
+
+        padding:0;
+
+        border:
+            1px solid
+            rgba(208,180,107,.20);
+
+        border-radius:50%;
+
+        background:transparent;
+
+        color:#d0b46b;
+
+        font-size:22px;
+
+        line-height:1;
+
+        cursor:pointer;
+    }
+
+
+    /* =====================================================
+       MOBILE NORMAL LINKS
+       ===================================================== */
+
+    .valiass-nav > a{
+
+        height:auto;
+
+        min-height:54px;
+
+        justify-content:flex-start;
+
+        padding:
+            0 4px;
+
+        border-bottom:
+            1px solid
+            rgba(208,180,107,.08);
+
+        color:
+            rgba(244,239,227,.78);
+
+        font-size:15px;
+
+        letter-spacing:.4px;
+    }
+
+
+    .valiass-nav > a::after{
+
+        display:none;
+    }
+
+
+    /* HOME INSIDE MENU IS HIDDEN
+       BECAUSE HOME IS ALWAYS IN HEADER */
+
+    .valiass-nav > a[data-page="index.html"]{
+
+        display:none;
+    }
+
+
+    /* =====================================================
+       MOBILE BRANCHES
+       ===================================================== */
+
+    .branches-menu{
+
+        height:auto;
+
+        width:100%;
+
+        display:block;
+
+        border-bottom:
+            1px solid
+            rgba(208,180,107,.08);
+    }
+
+
+    .nav-dropdown-trigger{
+
+        width:100%;
+
+        height:54px;
+
+        justify-content:space-between;
+
+        color:
+            rgba(244,239,227,.78);
+
+        font-size:15px;
+
+        letter-spacing:.4px;
+    }
+
+
+    .nav-dropdown-trigger::after{
+
+        display:none;
+    }
+
+
+    .dropdown-arrow{
+
+        font-size:10px;
+    }
+
+
+    /* =====================================================
+       MOBILE BRANCH DROPDOWN
+       ===================================================== */
+
+    .branches-dropdown{
+
+        position:relative;
+
+        top:auto;
+
+        left:auto;
+
+        right:auto;
+
+        width:100%;
+
+        max-height:none;
+
+        overflow:visible;
+
+        padding:
+            8px 18px 18px;
+
+        background:
+            rgba(255,255,255,.025);
+
+        border:
+            0;
+
+        border-left:
+            1px solid
+            rgba(208,180,107,.15);
+
+        box-shadow:none;
+
+        backdrop-filter:none;
+
+        -webkit-backdrop-filter:none;
+
+        opacity:0;
+
+        visibility:hidden;
+
+        pointer-events:none;
+
+        transform:
+            translateY(-5px);
+
+        transition:
+            opacity .25s ease,
+            transform .25s ease,
+            visibility .25s ease;
     }
 
 
@@ -1056,8 +1462,63 @@ a.branch-menu-item:hover{
 
         visibility:visible;
 
+        pointer-events:auto;
+
         transform:
             translateY(0);
+    }
+
+
+    /* =====================================================
+       MOBILE BRANCH CONTENT
+       ===================================================== */
+
+    .branches-dropdown-header{
+
+        padding:
+            12px 0 14px;
+    }
+
+
+    .branches-dropdown-title{
+
+        font-size:10px;
+    }
+
+
+    .branches-dropdown-subtitle{
+
+        font-size:11px;
+    }
+
+
+    .branch-menu-overview{
+
+        padding:
+            12px 0;
+
+        font-size:12px;
+    }
+
+
+    .branch-menu-item{
+
+        padding:
+            12px 0;
+
+        gap:14px;
+    }
+
+
+    .branch-menu-text strong{
+
+        font-size:13px;
+    }
+
+
+    .branch-menu-text small{
+
+        font-size:10px;
     }
 
 }
@@ -1099,18 +1560,25 @@ a.branch-menu-item:hover{
     }
 
 
-    .valiass-nav{
+    .mobile-home{
 
-        max-width:62vw;
+        margin-right:15px;
 
-        gap:18px;
+        font-size:12px;
     }
 
 
-    .valiass-nav > a,
-    .nav-dropdown-trigger{
+    .mobile-menu-button{
 
-        font-size:11px;
+        width:36px;
+        height:36px;
+    }
+
+
+    .valiass-nav{
+
+        padding-left:20px;
+        padding-right:20px;
     }
 
 }
@@ -1290,7 +1758,129 @@ a.branch-menu-item:hover{
 
 
     /* =====================================================
-       MOBILE TOGGLE
+       MOBILE MENU ELEMENTS
+       ===================================================== */
+
+    const mobileMenuButton =
+        document.querySelector(
+            ".mobile-menu-button"
+        );
+
+
+    const mobileNav =
+        document.querySelector(
+            ".valiass-nav"
+        );
+
+
+    const mobileNavClose =
+        document.querySelector(
+            ".mobile-nav-close"
+        );
+
+
+    /* =====================================================
+       OPEN / CLOSE MAIN MOBILE MENU
+       ===================================================== */
+
+    function closeMobileMenu(){
+
+        mobileNav.classList.remove(
+            "mobile-open"
+        );
+
+        mobileMenuButton.classList.remove(
+            "open"
+        );
+
+        mobileMenuButton.setAttribute(
+            "aria-expanded",
+            "false"
+        );
+
+        mobileMenuButton.setAttribute(
+            "aria-label",
+            "Open navigation"
+        );
+
+
+        branchesMenu.classList.remove(
+            "open"
+        );
+
+        branchesTrigger.setAttribute(
+            "aria-expanded",
+            "false"
+        );
+
+    }
+
+
+    function openMobileMenu(){
+
+        mobileNav.classList.add(
+            "mobile-open"
+        );
+
+        mobileMenuButton.classList.add(
+            "open"
+        );
+
+        mobileMenuButton.setAttribute(
+            "aria-expanded",
+            "true"
+        );
+
+        mobileMenuButton.setAttribute(
+            "aria-label",
+            "Close navigation"
+        );
+
+    }
+
+
+    mobileMenuButton.addEventListener(
+        "click",
+        function(event){
+
+            event.stopPropagation();
+
+            const isOpen =
+                mobileNav.classList.contains(
+                    "mobile-open"
+                );
+
+
+            if(isOpen){
+
+                closeMobileMenu();
+
+            }else{
+
+                openMobileMenu();
+
+            }
+
+        }
+    );
+
+
+    /* =====================================================
+       HIDE / CLOSE BUTTON
+       ===================================================== */
+
+    mobileNavClose.addEventListener(
+        "click",
+        function(){
+
+            closeMobileMenu();
+
+        }
+    );
+
+
+    /* =====================================================
+       MOBILE BRANCHES TOGGLE
        ===================================================== */
 
     branchesTrigger.addEventListener(
@@ -1302,6 +1892,8 @@ a.branch-menu-item:hover{
             ){
 
                 event.preventDefault();
+
+                event.stopPropagation();
 
 
                 const isOpen =
@@ -1328,7 +1920,41 @@ a.branch-menu-item:hover{
 
 
     /* =====================================================
-       CLOSE MOBILE DROPDOWN
+       CLOSE MOBILE MENU WHEN LINK IS SELECTED
+       ===================================================== */
+
+    const mobilePageLinks =
+        document.querySelectorAll(
+            ".valiass-nav > a:not([data-page='index.html']), " +
+            ".branch-menu-overview, " +
+            "a.branch-menu-item"
+        );
+
+
+    mobilePageLinks.forEach(
+        function(link){
+
+            link.addEventListener(
+                "click",
+                function(){
+
+                    if(
+                        window.innerWidth <= 800
+                    ){
+
+                        closeMobileMenu();
+
+                    }
+
+                }
+            );
+
+        }
+    );
+
+
+    /* =====================================================
+       CLOSE WHEN CLICKING OUTSIDE
        ===================================================== */
 
     document.addEventListener(
@@ -1337,20 +1963,38 @@ a.branch-menu-item:hover{
 
             if(
                 window.innerWidth <= 800 &&
-                !branchesMenu.contains(
+                mobileNav.classList.contains(
+                    "mobile-open"
+                ) &&
+                !mobileNav.contains(
+                    event.target
+                ) &&
+                !mobileMenuButton.contains(
                     event.target
                 )
             ){
 
-                branchesMenu.classList.remove(
-                    "open"
-                );
+                closeMobileMenu();
+
+            }
+
+        }
+    );
 
 
-                branchesTrigger.setAttribute(
-                    "aria-expanded",
-                    "false"
-                );
+    /* =====================================================
+       RESET MOBILE STATE WHEN RETURNING TO DESKTOP
+       ===================================================== */
+
+    window.addEventListener(
+        "resize",
+        function(){
+
+            if(
+                window.innerWidth > 800
+            ){
+
+                closeMobileMenu();
 
             }
 
