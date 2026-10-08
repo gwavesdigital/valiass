@@ -9,44 +9,106 @@
       <span class="valiass-name">VALIASS initiatives</span>
     </a>
 
+
     <!-- MOBILE HOME -->
-    <a href="index.html" class="mobile-home">Home</a>
+    <a
+      href="index.html"
+      class="mobile-home"
+    >
+      Home
+    </a>
+
 
     <!-- MOBILE MENU BUTTON -->
-    <button class="mobile-menu-button" id="mobileMenuButton" type="button" aria-label="Open menu">
+    <button
+      class="mobile-menu-button"
+      id="mobileMenuButton"
+      type="button"
+      aria-label="Open menu"
+    >
       <span></span>
       <span></span>
       <span></span>
     </button>
 
+
     <!-- DESKTOP + MOBILE NAV -->
-    <nav class="valiass-nav" id="valiassNav">
+    <nav
+      class="valiass-nav"
+      id="valiassNav"
+    >
 
       <!-- MOBILE NAV TOP -->
       <div class="mobile-nav-header">
-        <span>NAVIGATION</span>
-        <button id="mobileNavClose" type="button" aria-label="Close menu">×</button>
+
+        <span>
+          NAVIGATION
+        </span>
+
+        <button
+          id="mobileNavClose"
+          type="button"
+          aria-label="Close menu"
+        >
+          ×
+        </button>
+
       </div>
 
+
       <!-- HOME -->
-      <a href="index.html" class="nav-link nav-home">Home</a>
+      <a
+        href="index.html"
+        class="nav-link nav-home"
+      >
+        Home
+      </a>
+
 
       <!-- STORY -->
-      <a href="story.html" class="nav-link">Story</a>
+      <a
+        href="story.html"
+        class="nav-link"
+      >
+        Story
+      </a>
+
 
       <!-- FAMILY -->
-      <a href="family.html" class="nav-link">Family</a>
+      <a
+        href="family.html"
+        class="nav-link"
+      >
+        Family
+      </a>
+
 
       <!-- ROOTS -->
-      <a href="roots.html" class="nav-link">Roots</a>
+      <a
+        href="roots.html"
+        class="nav-link"
+      >
+        Roots
+      </a>
+
 
       <!-- BRANCHES -->
       <div class="nav-dropdown">
 
-        <button class="nav-dropdown-button" id="branchesButton" type="button">
+        <button
+          class="nav-dropdown-button"
+          id="branchesButton"
+          type="button"
+        >
+
           Branches
-          <span class="dropdown-arrow">⌄</span>
+
+          <span class="dropdown-arrow">
+            ⌄
+          </span>
+
         </button>
+
 
         <div class="nav-dropdown-menu">
 
@@ -70,11 +132,23 @@
 
       </div>
 
+
       <!-- VISION -->
-      <a href="vision.html" class="nav-link">Vision</a>
+      <a
+        href="vision.html"
+        class="nav-link"
+      >
+        Vision
+      </a>
+
 
       <!-- CONTACT -->
-      <a href="contact.html" class="nav-link">Contact</a>
+      <a
+        href="contact.html"
+        class="nav-link"
+      >
+        Contact
+      </a>
 
     </nav>
 
@@ -85,783 +159,819 @@
 
 <style>
 
-/* =========================================
+/* =========================================================
    VALIASS MASTER HEADER
-   ========================================= */
+========================================================= */
 
-.valiass-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 78px;
-  z-index: 9999;
+.valiass-header{
 
-  background: rgba(14, 25, 19, 0.94);
+  position:fixed;
 
-  border-bottom: 1px solid rgba(208, 180, 107, 0.18);
+  top:0;
+  left:0;
 
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  width:100%;
+  height:78px;
+
+  z-index:9999;
+
+  background:
+    rgba(14,25,19,.94);
+
+  border-bottom:
+    1px solid
+    rgba(208,180,107,.18);
+
+  backdrop-filter:
+    blur(12px);
+
+  -webkit-backdrop-filter:
+    blur(12px);
+
 }
 
-.valiass-header-inner {
-  width: 100%;
-  height: 100%;
 
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.valiass-header-inner{
 
-  padding: 0 42px;
-  box-sizing: border-box;
+  width:100%;
+  height:100%;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:space-between;
+
+  padding:
+    0 42px;
+
+  box-sizing:border-box;
+
 }
 
 
-/* =========================================
+/* =========================================================
    BRAND
-   ========================================= */
+========================================================= */
 
-.valiass-brand {
-  display: flex;
-  align-items: center;
-  gap: 11px;
+.valiass-brand{
 
-  text-decoration: none;
+  display:flex;
 
-  flex-shrink: 0;
-}
+  align-items:center;
 
-.valiass-logo {
-  width: 38px;
-  height: 38px;
+  gap:11px;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  text-decoration:none;
 
-  border: 1px solid #d0b46b;
-  border-radius: 50%;
+  flex-shrink:0;
 
-  color: #d0b46b;
-
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 22px;
-
-  line-height: 1;
-}
-
-.valiass-name {
-  color: #f5f0e4;
-
-  font-family: "Trebuchet MS", Arial, sans-serif;
-
-  font-size: 17px;
-  letter-spacing: 1.5px;
-
-  white-space: nowrap;
 }
 
 
-/* =========================================
+.valiass-logo{
+
+  width:38px;
+  height:38px;
+
+  display:flex;
+
+  align-items:center;
+  justify-content:center;
+
+  border:
+    1px solid
+    #d0b46b;
+
+  border-radius:50%;
+
+  color:#d0b46b;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size:22px;
+
+  line-height:1;
+
+}
+
+
+.valiass-name{
+
+  color:#f5f0e4;
+
+  font-family:
+    "Trebuchet MS",
+    Arial,
+    sans-serif;
+
+  font-size:17px;
+
+  letter-spacing:1.5px;
+
+  white-space:nowrap;
+
+}
+
+
+/* =========================================================
    DESKTOP NAV
-   ========================================= */
+========================================================= */
 
-.valiass-nav {
-  height: 100%;
+.valiass-nav{
 
-  display: flex;
-  align-items: center;
+  height:100%;
 
-  gap: 30px;
+  display:flex;
+
+  align-items:center;
+
+  gap:30px;
+
 }
+
 
 .nav-link,
-.nav-dropdown-button {
-  position: relative;
+.nav-dropdown-button{
 
-  color: #f5f0e4;
+  position:relative;
 
-  font-family: Georgia, "Times New Roman", serif;
+  color:#f5f0e4;
 
-  font-size: 15px;
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
 
-  text-decoration: none;
+  font-size:15px;
 
-  background: none;
-  border: none;
+  text-decoration:none;
 
-  cursor: pointer;
+  background:none;
 
-  padding: 8px 0;
+  border:none;
 
-  transition: color 0.25s ease;
+  cursor:pointer;
+
+  padding:8px 0;
+
+  transition:
+    color .25s ease;
+
 }
+
 
 .nav-link:hover,
-.nav-dropdown-button:hover {
-  color: #d0b46b;
+.nav-dropdown-button:hover{
+
+  color:#d0b46b;
+
 }
 
 
-/* ACTIVE LINK */
+/* =========================================================
+   ACTIVE LINK
+========================================================= */
 
-.nav-link.active {
-  color: #d0b46b;
-}
+.nav-link.active{
 
-.nav-link.active::after {
-  content: "";
+  color:#d0b46b;
 
-  position: absolute;
-
-  left: 0;
-  right: 0;
-  bottom: 0;
-
-  height: 1px;
-
-  background: #d0b46b;
 }
 
 
-/* =========================================
-   BRANCHES DROPDOWN
-   ========================================= */
+.nav-link.active::after{
 
-.nav-dropdown {
-  position: relative;
+  content:"";
+
+  position:absolute;
+
+  left:0;
+  right:0;
+
+  bottom:0;
+
+  height:1px;
+
+  background:#d0b46b;
+
 }
 
-.dropdown-arrow {
-  margin-left: 5px;
 
-  color: #d0b46b;
+/* =========================================================
+   BRANCHES
+========================================================= */
 
-  font-size: 13px;
+.nav-dropdown{
+
+  position:relative;
+
 }
 
 
-/* DESKTOP DROPDOWN */
+.dropdown-arrow{
 
-.nav-dropdown-menu {
-  position: absolute;
+  margin-left:5px;
 
-  top: calc(100% + 16px);
-  right: -20px;
+  color:#d0b46b;
 
-  min-width: 220px;
+  font-size:13px;
 
-  padding: 10px 0;
-
-  background: rgba(14, 25, 19, 0.98);
-
-  border: 1px solid rgba(208, 180, 107, 0.25);
-
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
-
-  opacity: 0;
-  visibility: hidden;
-
-  transform: translateY(-8px);
+  display:inline-block;
 
   transition:
-    opacity 0.25s ease,
-    visibility 0.25s ease,
-    transform 0.25s ease;
+    transform .25s ease;
+
 }
 
-.nav-dropdown:hover .nav-dropdown-menu {
-  opacity: 1;
-  visibility: visible;
 
-  transform: translateY(0);
-}
+/* =========================================================
+   DESKTOP BRANCHES DROPDOWN
+========================================================= */
 
-.nav-dropdown-menu a {
-  display: block;
+.nav-dropdown-menu{
 
-  padding: 12px 20px;
+  position:absolute;
 
-  color: #f5f0e4;
+  top:
+    calc(100% + 16px);
 
-  font-family: Georgia, "Times New Roman", serif;
+  right:-20px;
 
-  font-size: 14px;
+  min-width:220px;
 
-  text-decoration: none;
+  padding:10px 0;
+
+  background:
+    rgba(14,25,19,.98);
+
+  border:
+    1px solid
+    rgba(208,180,107,.25);
+
+  box-shadow:
+    0 15px 40px
+    rgba(0,0,0,.35);
+
+  opacity:0;
+
+  visibility:hidden;
+
+  transform:
+    translateY(-8px);
 
   transition:
-    background 0.2s ease,
-    color 0.2s ease;
+
+    opacity .25s ease,
+
+    visibility .25s ease,
+
+    transform .25s ease;
+
 }
 
-.nav-dropdown-menu a:hover {
-  background: rgba(208, 180, 107, 0.08);
 
-  color: #d0b46b;
+.nav-dropdown:hover
+.nav-dropdown-menu{
+
+  opacity:1;
+
+  visibility:visible;
+
+  transform:
+    translateY(0);
+
 }
 
 
-/* =========================================
+.nav-dropdown-menu a{
+
+  display:block;
+
+  padding:
+    12px 20px;
+
+  color:#f5f0e4;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size:14px;
+
+  text-decoration:none;
+
+  transition:
+
+    background .2s ease,
+
+    color .2s ease;
+
+}
+
+
+.nav-dropdown-menu a:hover{
+
+  background:
+    rgba(208,180,107,.08);
+
+  color:#d0b46b;
+
+}
+
+
+/* =========================================================
    MOBILE ELEMENTS
-   ========================================= */
+========================================================= */
 
 .mobile-home,
 .mobile-menu-button,
-.mobile-nav-header {
-  display: none;
+.mobile-nav-header{
+
+  display:none;
+
 }
 
 
-/* =========================================
+/* =========================================================
    MOBILE
-   ========================================= */
+========================================================= */
 
-@media (max-width: 800px) {
+@media (max-width:800px){
 
-  .valiass-header {
-    height: 70px;
-  }
+  .valiass-header{
 
-  .valiass-header-inner {
-    padding: 0 18px;
-  }
+    height:70px;
 
-
-  /* BRAND */
-
-  .valiass-brand {
-    gap: 9px;
-  }
-
-  .valiass-logo {
-    width: 34px;
-    height: 34px;
-
-    font-size: 20px;
-  }
-
-  .valiass-name {
-    font-size: 15px;
-    letter-spacing: 1px;
   }
 
 
-  /* MOBILE HOME */
+  .valiass-header-inner{
 
-  .mobile-home {
-    display: block;
+    padding:
+      0 18px;
 
-    margin-left: auto;
-    margin-right: 18px;
-
-    color: #f5f0e4;
-
-    font-family: Georgia, "Times New Roman", serif;
-
-    font-size: 14px;
-
-    text-decoration: none;
-  }
-
-  .mobile-home:hover {
-    color: #d0b46b;
   }
 
 
-  /* HAMBURGER */
+  /* ---------------------------------------------
+     BRAND
+  --------------------------------------------- */
 
-  .mobile-menu-button {
-    width: 38px;
-    height: 38px;
+  .valiass-brand{
 
-    padding: 7px;
+    gap:9px;
 
-    display: flex;
-
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    gap: 5px;
-
-    background: transparent;
-
-    border: 1px solid rgba(208, 180, 107, 0.35);
-
-    border-radius: 5px;
-
-    cursor: pointer;
-  }
-
-  .mobile-menu-button span {
-    display: block;
-
-    width: 19px;
-    height: 2px;
-
-    background: #d0b46b;
-
-    transition: all 0.25s ease;
   }
 
 
-  /* HAMBURGER → X */
+  .valiass-logo{
 
-  .mobile-menu-button.open span:nth-child(1) {
-    transform: translateY(7px) rotate(45deg);
-  }
+    width:34px;
+    height:34px;
 
-  .mobile-menu-button.open span:nth-child(2) {
-    opacity: 0;
-  }
+    font-size:20px;
 
-  .mobile-menu-button.open span:nth-child(3) {
-    transform: translateY(-7px) rotate(-45deg);
   }
 
 
-  /* =====================================
-     MOBILE NAV PANEL
-     ===================================== */
+  .valiass-name{
 
-  .valiass-nav {
-    position: fixed;
+    font-size:15px;
 
-    top: 70px;
-    left: 0;
+    letter-spacing:1px;
 
-    width: 100%;
+  }
 
-    height: calc(100vh - 70px);
 
-    display: flex;
+  /* ---------------------------------------------
+     MOBILE HOME
+  --------------------------------------------- */
 
-    flex-direction: column;
+  .mobile-home{
 
-    align-items: stretch;
+    display:block;
 
-    gap: 0;
+    margin-left:auto;
 
-    padding: 0;
+    margin-right:18px;
 
-    box-sizing: border-box;
+    color:#f5f0e4;
 
-    overflow-y: auto;
+    font-family:
+      Georgia,
+      "Times New Roman",
+      serif;
 
-    background: rgba(14, 25, 19, 0.99);
+    font-size:14px;
 
-    border-top: 1px solid rgba(208, 180, 107, 0.18);
+    text-decoration:none;
 
-    transform: translateX(100%);
+  }
 
-    visibility: hidden;
 
-    opacity: 0;
+  .mobile-home:hover{
+
+    color:#d0b46b;
+
+  }
+
+
+  /* ---------------------------------------------
+     HAMBURGER
+  --------------------------------------------- */
+
+  .mobile-menu-button{
+
+    width:38px;
+    height:38px;
+
+    padding:7px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:5px;
+
+    background:transparent;
+
+    border:
+      1px solid
+      rgba(208,180,107,.35);
+
+    border-radius:5px;
+
+    cursor:pointer;
+
+    flex-shrink:0;
+
+  }
+
+
+  .mobile-menu-button span{
+
+    display:block;
+
+    width:19px;
+    height:2px;
+
+    background:#d0b46b;
 
     transition:
-      transform 0.3s ease,
-      opacity 0.3s ease,
-      visibility 0.3s ease;
+      all .25s ease;
+
   }
 
 
-  /* OPEN MENU */
+  /* ---------------------------------------------
+     HAMBURGER → X
+  --------------------------------------------- */
 
-  .valiass-nav.mobile-open {
-    transform: translateX(0);
+  .mobile-menu-button.open
+  span:nth-child(1){
 
-    visibility: visible;
+    transform:
+      translateY(7px)
+      rotate(45deg);
 
-    opacity: 1;
   }
 
 
-  /* MOBILE NAV HEADER */
+  .mobile-menu-button.open
+  span:nth-child(2){
 
-  .mobile-nav-header {
-    display: flex;
+    opacity:0;
 
-    align-items: center;
-    justify-content: space-between;
-
-    padding: 18px 22px;
-
-    color: #d0b46b;
-
-    font-family: "Trebuchet MS", Arial, sans-serif;
-
-    font-size: 12px;
-
-    letter-spacing: 2px;
-
-    border-bottom: 1px solid rgba(208, 180, 107, 0.15);
-  }
-
-  .mobile-nav-header button {
-    width: 32px;
-    height: 32px;
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    background: transparent;
-
-    border: 1px solid rgba(208, 180, 107, 0.35);
-
-    border-radius: 50%;
-
-    color: #d0b46b;
-
-    font-size: 22px;
-
-    line-height: 1;
-
-    cursor: pointer;
   }
 
 
-  /* MOBILE NAV LINKS */
+  .mobile-menu-button.open
+  span:nth-child(3){
 
-  .valiass-nav .nav-link {
-    display: block;
+    transform:
+      translateY(-7px)
+      rotate(-45deg);
 
-    padding: 17px 22px;
-
-    color: #f5f0e4;
-
-    font-size: 16px;
-
-    border-bottom: 1px solid rgba(208, 180, 107, 0.08);
-  }
-
-  .valiass-nav .nav-link.active::after {
-    display: none;
   }
 
 
-  /* HOME IS ALREADY IN HEADER */
+  /* =================================================
+     MOBILE NAV PANEL
+  ================================================= */
 
-  .valiass-nav .nav-home {
-    display: none;
+  .valiass-nav{
+
+    position:fixed;
+
+    top:70px;
+    left:0;
+
+    width:100%;
+
+    height:
+      calc(100vh - 70px);
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:stretch;
+
+    gap:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+    overflow-y:auto;
+
+    background:
+      rgba(14,25,19,.99);
+
+    border-top:
+      1px solid
+      rgba(208,180,107,.18);
+
+    transform:
+      translateX(100%);
+
+    visibility:hidden;
+
+    opacity:0;
+
+    transition:
+
+      transform .3s ease,
+
+      opacity .3s ease,
+
+      visibility .3s ease;
+
   }
 
 
-  /* =====================================
+  /* ---------------------------------------------
+     OPEN MENU
+  --------------------------------------------- */
+
+  .valiass-nav.mobile-open{
+
+    transform:
+      translateX(0);
+
+    visibility:visible;
+
+    opacity:1;
+
+  }
+
+
+  /* =================================================
+     MOBILE NAV HEADER
+  ================================================= */
+
+  .mobile-nav-header{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    padding:
+      18px 22px;
+
+    color:#d0b46b;
+
+    font-family:
+      "Trebuchet MS",
+      Arial,
+      sans-serif;
+
+    font-size:12px;
+
+    letter-spacing:2px;
+
+    border-bottom:
+      1px solid
+      rgba(208,180,107,.15);
+
+  }
+
+
+  .mobile-nav-header button{
+
+    width:32px;
+    height:32px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    background:transparent;
+
+    border:
+      1px solid
+      rgba(208,180,107,.35);
+
+    border-radius:50%;
+
+    color:#d0b46b;
+
+    font-size:22px;
+
+    line-height:1;
+
+    cursor:pointer;
+
+  }
+
+
+  /* =================================================
+     MOBILE NAV LINKS
+  ================================================= */
+
+  .valiass-nav .nav-link{
+
+    display:block;
+
+    padding:
+      17px 22px;
+
+    color:#f5f0e4;
+
+    font-size:16px;
+
+    border-bottom:
+      1px solid
+      rgba(208,180,107,.08);
+
+  }
+
+
+  .valiass-nav
+  .nav-link.active::after{
+
+    display:none;
+
+  }
+
+
+  /* HOME ALREADY EXISTS IN HEADER */
+
+  .valiass-nav
+  .nav-home{
+
+    display:none;
+
+  }
+
+
+  /* =================================================
      MOBILE BRANCHES
-     ===================================== */
+  ================================================= */
 
-  .nav-dropdown {
-    width: 100%;
-  }
+  .nav-dropdown{
 
-  .nav-dropdown-button {
-    width: 100%;
+    width:100%;
 
-    display: flex;
-
-    align-items: center;
-    justify-content: space-between;
-
-    padding: 17px 22px;
-
-    color: #f5f0e4;
-
-    font-size: 16px;
-
-    text-align: left;
-
-    border-bottom: 1px solid rgba(208, 180, 107, 0.08);
-  }
-
-  .nav-dropdown-button.open {
-    color: #d0b46b;
-  }
-
-  .nav-dropdown-button.open .dropdown-arrow {
-    transform: rotate(180deg);
-  }
-
-  .dropdown-arrow {
-    transition: transform 0.25s ease;
   }
 
 
-  /* MOBILE BRANCH SUBMENU */
+  .nav-dropdown-button{
 
-  .nav-dropdown-menu {
-    position: static;
+    width:100%;
 
-    width: 100%;
+    display:flex;
 
-    min-width: 0;
+    align-items:center;
 
-    padding: 0;
+    justify-content:space-between;
 
-    display: none;
+    padding:
+      17px 22px;
 
-    opacity: 1;
+    color:#f5f0e4;
 
-    visibility: visible;
+    font-size:16px;
 
-    transform: none;
+    text-align:left;
 
-    background: rgba(0, 0, 0, 0.12);
+    border-bottom:
+      1px solid
+      rgba(208,180,107,.08);
 
-    border: none;
-
-    box-shadow: none;
   }
 
-  .nav-dropdown-menu.mobile-open {
-    display: block;
+
+  .nav-dropdown-button.open{
+
+    color:#d0b46b;
+
   }
 
-  .nav-dropdown-menu a {
-    padding: 14px 22px 14px 42px;
 
-    font-size: 14px;
+  .nav-dropdown-button.open
+  .dropdown-arrow{
 
-    border-bottom: 1px solid rgba(208, 180, 107, 0.06);
+    transform:
+      rotate(180deg);
+
+  }
+
+
+  /* =================================================
+     MOBILE BRANCH SUBMENU
+  ================================================= */
+
+  .nav-dropdown-menu{
+
+    position:static;
+
+    width:100%;
+
+    min-width:0;
+
+    padding:0;
+
+    display:none;
+
+    opacity:1;
+
+    visibility:visible;
+
+    transform:none;
+
+    background:
+      rgba(0,0,0,.12);
+
+    border:none;
+
+    box-shadow:none;
+
+  }
+
+
+  .nav-dropdown-menu.mobile-open{
+
+    display:block;
+
+  }
+
+
+  .nav-dropdown-menu a{
+
+    padding:
+      14px 22px 14px 42px;
+
+    font-size:14px;
+
+    border-bottom:
+      1px solid
+      rgba(208,180,107,.06);
+
   }
 
 }
 
 
-/* =========================================
+/* =========================================================
    SMALL MOBILE
-   ========================================= */
+========================================================= */
 
-@media (max-width: 480px) {
+@media (max-width:480px){
 
-  .valiass-header-inner {
-    padding: 0 14px;
+  .valiass-header-inner{
+
+    padding:
+      0 14px;
+
   }
 
-  .valiass-name {
-    font-size: 14px;
+
+  .valiass-name{
+
+    font-size:14px;
+
   }
 
-  .mobile-home {
-    margin-right: 12px;
+
+  .mobile-home{
+
+    margin-right:12px;
+
   }
 
 }
 
 </style>
-
-
-<script>
-
-(function () {
-
-  function initValiassHeader() {
-
-    const menuButton =
-      document.getElementById("mobileMenuButton");
-
-    const nav =
-      document.getElementById("valiassNav");
-
-    const closeButton =
-      document.getElementById("mobileNavClose");
-
-    const branchesButton =
-      document.getElementById("branchesButton");
-
-    const branchesMenu =
-      document.querySelector(".nav-dropdown-menu");
-
-    if (!menuButton || !nav) {
-      return;
-    }
-
-
-    /* ===============================
-       OPEN / CLOSE MOBILE MENU
-       =============================== */
-
-    function openMobileMenu() {
-
-      nav.classList.add("mobile-open");
-
-      menuButton.classList.add("open");
-
-      menuButton.setAttribute(
-        "aria-label",
-        "Close menu"
-      );
-
-      document.body.style.overflow = "hidden";
-    }
-
-
-    function closeMobileMenu() {
-
-      nav.classList.remove("mobile-open");
-
-      menuButton.classList.remove("open");
-
-      menuButton.setAttribute(
-        "aria-label",
-        "Open menu"
-      );
-
-      document.body.style.overflow = "";
-
-      if (branchesMenu) {
-        branchesMenu.classList.remove("mobile-open");
-      }
-
-      if (branchesButton) {
-        branchesButton.classList.remove("open");
-      }
-    }
-
-
-    /* ===============================
-       HAMBURGER
-       =============================== */
-
-    menuButton.addEventListener(
-      "click",
-      function (event) {
-
-        event.preventDefault();
-        event.stopPropagation();
-
-        if (nav.classList.contains("mobile-open")) {
-          closeMobileMenu();
-        } else {
-          openMobileMenu();
-        }
-
-      }
-    );
-
-
-    /* ===============================
-       CLOSE BUTTON
-       =============================== */
-
-    if (closeButton) {
-
-      closeButton.addEventListener(
-        "click",
-        function () {
-          closeMobileMenu();
-        }
-      );
-
-    }
-
-
-    /* ===============================
-       BRANCHES
-       =============================== */
-
-    if (branchesButton && branchesMenu) {
-
-      branchesButton.addEventListener(
-        "click",
-        function (event) {
-
-          event.preventDefault();
-          event.stopPropagation();
-
-          branchesButton.classList.toggle("open");
-
-          branchesMenu.classList.toggle(
-            "mobile-open"
-          );
-
-        }
-      );
-
-    }
-
-
-    /* ===============================
-       CLOSE AFTER NAVIGATION
-       =============================== */
-
-    const navLinks =
-      nav.querySelectorAll(
-        "a:not(.nav-dropdown-menu a)"
-      );
-
-    navLinks.forEach(function (link) {
-
-      link.addEventListener(
-        "click",
-        function () {
-
-          closeMobileMenu();
-
-        }
-      );
-
-    });
-
-
-    /* ===============================
-       CLOSE WHEN CLICKING OUTSIDE
-       =============================== */
-
-    document.addEventListener(
-      "click",
-      function (event) {
-
-        if (
-          nav.classList.contains("mobile-open") &&
-          !nav.contains(event.target) &&
-          !menuButton.contains(event.target)
-        ) {
-
-          closeMobileMenu();
-
-        }
-
-      }
-    );
-
-
-    /* ===============================
-       RESET WHEN BACK TO DESKTOP
-       =============================== */
-
-    window.addEventListener(
-      "resize",
-      function () {
-
-        if (window.innerWidth > 800) {
-          closeMobileMenu();
-        }
-
-      }
-    );
-
-  }
-
-
-  /* HEADER MAY BE LOADED DYNAMICALLY */
-
-  if (document.readyState === "loading") {
-
-    document.addEventListener(
-      "DOMContentLoaded",
-      initValiassHeader
-    );
-
-  } else {
-
-    initValiassHeader();
-
-  }
-
-})();
-
-</script>
