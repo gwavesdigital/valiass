@@ -1,1011 +1,928 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Our Vision — VALIASS</title>
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>VALIASS — Vision</title>
+
+<meta name="description"
+      content="The vision of VALIASS — create, explore, learn and grow.">
 
 <style>
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+:root{
+    --cream:#f4efe4;
+    --cream-soft:#ebe3d3;
+
+    --green:#20382c;
+    --green-dark:#101711;
+    --green-deep:#14251c;
+    --green-light:#385744;
+
+    --gold:#d0b46b;
+    --gold-soft:#b89c5d;
+
+    --text:#27342c;
+    --muted:#687067;
+
+    --white:#ffffff;
 }
 
-html {
-    scroll-behavior: smooth;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #f4efe4;
-    color: #20382c;
-    overflow-x: hidden;
+html{
+    scroll-behavior:smooth;
 }
 
-:root {
-    --cream: #f4efe4;
-    --cream-dark: #e7ddcb;
-    --green: #20382c;
-    --green-dark: #14251c;
-    --green-light: #385744;
-    --olive: #707b55;
-    --gold: #b49352;
-    --brown: #765b40;
-    --muted: #667064;
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:var(--cream);
+    color:var(--text);
+    overflow-x:hidden;
 }
 
-
-/* ==================================================
-   NAVIGATION
-================================================== */
-
-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-
-    width: 100%;
-    height: 78px;
-
-    padding: 0 7%;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    z-index: 1000;
-
-    transition: .4s ease;
+img{
+    display:block;
+    width:100%;
 }
 
-nav.scrolled {
-    background: rgba(244,239,228,.94);
-
-    backdrop-filter: blur(14px);
-
-    box-shadow:
-        0 5px 30px rgba(32,56,44,.08);
+a{
+    text-decoration:none;
 }
 
-.logo {
-    width: 48px;
-    height: 48px;
-
-    border: 1px solid var(--gold);
-
-    border-radius: 50%;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    font-family: Georgia, serif;
-
-    font-size: 9px;
-
-    letter-spacing: 1px;
-}
-
-.nav-links {
-    display: flex;
-    gap: 32px;
-}
-
-.nav-links a {
-    color: var(--green);
-
-    text-decoration: none;
-
-    font-size: 11px;
-
-    letter-spacing: 1.5px;
-
-    text-transform: uppercase;
-
-    position: relative;
-}
-
-.nav-links a::after {
-    content: "";
-
-    position: absolute;
-
-    left: 0;
-    bottom: -7px;
-
-    width: 0;
-    height: 1px;
-
-    background: var(--gold);
-
-    transition: .3s;
-}
-
-.nav-links a:hover::after {
-    width: 100%;
+#valiass-header,
+#valiass-footer{
+    position:relative;
+    z-index:1000;
 }
 
 
-/* ==================================================
+/* =====================================
    HERO
-================================================== */
+===================================== */
 
-.hero {
-    min-height: 100vh;
+.vision-hero{
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    min-height:100vh;
 
-    text-align: center;
+    position:relative;
 
-    padding: 120px 8% 80px;
+    display:flex;
+    align-items:center;
 
-    position: relative;
+    color:white;
 
-    overflow: hidden;
-
-    background:
-        radial-gradient(
-            circle at 50% 35%,
-            rgba(180,147,82,.15),
-            transparent 35%
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(10,18,13,.78),
+            rgba(10,18,13,.35),
+            rgba(10,18,13,.70)
         ),
-        var(--cream);
-}
-
-.hero::before {
-    content: "";
-
-    position: absolute;
-
-    width: 1px;
-
-    height: 65vh;
-
-    background:
-        linear-gradient(
-            to bottom,
-            transparent,
-            rgba(180,147,82,.5),
-            transparent
-        );
-
-    left: 50%;
-
-    bottom: 0;
-}
-
-.hero::after {
-    content: "";
-
-    position: absolute;
-
-    width: 700px;
-    height: 700px;
-
-    border-radius: 50%;
-
-    border: 1px solid rgba(180,147,82,.14);
-
-    left: 50%;
-    top: 50%;
-
-    transform: translate(-50%,-50%);
-}
-
-.hero-content {
-    position: relative;
-
-    z-index: 2;
-
-    max-width: 950px;
-}
-
-.eyebrow {
-    font-size: 11px;
-
-    letter-spacing: 5px;
-
-    text-transform: uppercase;
-
-    color: var(--gold);
-
-    margin-bottom: 25px;
-}
-
-h1 {
-    font-family: Georgia, "Times New Roman", serif;
-
-    font-size: clamp(65px, 11vw, 145px);
-
-    font-weight: 400;
-
-    letter-spacing: 8px;
-
-    line-height: .95;
-
-    margin-bottom: 35px;
-}
-
-.hero-line {
-    width: 70px;
-
-    height: 1px;
-
-    background: var(--gold);
-
-    margin: 0 auto 30px;
-}
-
-.hero p {
-    max-width: 700px;
-
-    margin: auto;
-
-    font-family: Georgia, serif;
-
-    font-size: 22px;
-
-    line-height: 1.75;
-
-    color: #596557;
-}
-
-
-/* ==================================================
-   OPENING VISION
-================================================== */
-
-.opening {
-    background: var(--green);
-
-    color: var(--cream);
-
-    padding: 150px 9%;
-
-    position: relative;
-
-    overflow: hidden;
-}
-
-.opening::before {
-    content: "FUTURE";
-
-    position: absolute;
-
-    right: -30px;
-    top: 40px;
-
-    font-family: Georgia, serif;
-
-    font-size: 145px;
-
-    color: rgba(255,255,255,.035);
-}
-
-.opening-inner {
-    max-width: 1150px;
-
-    margin: auto;
-
-    display: grid;
-
-    grid-template-columns: 1fr 1fr;
-
-    gap: 100px;
-
-    align-items: center;
-}
-
-.section-label {
-    font-size: 11px;
-
-    letter-spacing: 4px;
-
-    text-transform: uppercase;
-
-    color: var(--gold);
-
-    margin-bottom: 25px;
-}
-
-h2 {
-    font-family: Georgia, serif;
-
-    font-size: clamp(42px, 5vw, 70px);
-
-    font-weight: 400;
-
-    line-height: 1.08;
-
-    margin-bottom: 30px;
-}
-
-.opening-text p {
-    color: #d8ddd4;
-
-    font-size: 17px;
-
-    line-height: 1.9;
-
-    margin-bottom: 20px;
-
-    max-width: 560px;
-}
-
-
-/* SKY / FUTURE VISUAL */
-
-.future-sky {
-    height: 430px;
-
-    position: relative;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-}
-
-.sun {
-    width: 170px;
-    height: 170px;
-
-    border-radius: 50%;
-
-    background:
-        radial-gradient(
-            circle,
-            rgba(180,147,82,.55),
-            rgba(180,147,82,.12) 55%,
-            transparent 70%
-        );
-
-    box-shadow:
-        0 0 100px rgba(180,147,82,.18);
-}
-
-.sky-line {
-    position: absolute;
-
-    width: 100%;
-
-    height: 1px;
-
-    background:
-        linear-gradient(
-            to right,
-            transparent,
-            rgba(180,147,82,.5),
-            transparent
-        );
-
-    bottom: 100px;
-}
-
-.sky-dot {
-    width: 5px;
-    height: 5px;
-
-    background: var(--gold);
-
-    border-radius: 50%;
-
-    position: absolute;
-}
-
-.dot-one {
-    top: 70px;
-    left: 20%;
-}
-
-.dot-two {
-    top: 140px;
-    right: 20%;
-}
-
-.dot-three {
-    bottom: 150px;
-    left: 30%;
-}
-
-.dot-four {
-    top: 190px;
-    right: 32%;
-}
-
-
-/* ==================================================
-   CORE VISION
-================================================== */
-
-.core {
-    background: var(--cream);
-
-    padding: 150px 8%;
-}
-
-.core-heading {
-    text-align: center;
-
-    max-width: 850px;
-
-    margin: auto;
-}
-
-.core-heading h2 {
-    color: var(--green);
-}
-
-.core-heading p {
-    color: var(--muted);
-
-    font-size: 17px;
-
-    line-height: 1.9;
-}
-
-.vision-grid {
-    max-width: 1150px;
-
-    margin: 90px auto 0;
-
-    display: grid;
-
-    grid-template-columns: repeat(3, 1fr);
-
-    gap: 25px;
-}
-
-.vision-card {
-    min-height: 330px;
-
-    padding: 45px 35px;
-
-    border: 1px solid #d5c9b7;
-
-    position: relative;
+        url("https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=2200&q=90");
 
-    overflow: hidden;
-
-    transition: .4s;
-}
-
-.vision-card:hover {
-    transform: translateY(-8px);
-
-    box-shadow:
-        0 25px 60px rgba(32,56,44,.08);
-}
-
-.vision-card::after {
-    content: "";
-
-    position: absolute;
-
-    width: 150px;
-    height: 150px;
-
-    border: 1px solid rgba(180,147,82,.2);
-
-    border-radius: 50%;
-
-    right: -65px;
-    bottom: -65px;
-}
-
-.card-number {
-    font-family: Georgia, serif;
-
-    color: var(--gold);
-
-    font-size: 38px;
-
-    margin-bottom: 30px;
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
 }
-
-.vision-card h3 {
-    font-family: Georgia, serif;
 
-    font-size: 29px;
+.vision-hero-content{
 
-    font-weight: 400;
+    width:86%;
+    max-width:1200px;
 
-    color: var(--green);
+    margin:auto;
 
-    margin-bottom: 15px;
+    padding-top:80px;
 }
 
-.vision-card p {
-    color: #697267;
+.vision-kicker{
 
-    line-height: 1.8;
-}
-
+    font-size:11px;
 
-/* ==================================================
-   GROWTH PHILOSOPHY
-================================================== */
+    letter-spacing:5px;
 
-.growth {
-    background: var(--cream-dark);
+    text-transform:uppercase;
 
-    padding: 150px 8%;
+    color:var(--gold);
 
-    text-align: center;
+    margin-bottom:25px;
 }
 
-.growth-inner {
-    max-width: 900px;
-
-    margin: auto;
-}
+.vision-hero h1{
 
-.growth h2 {
-    color: var(--green);
-}
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
 
-.growth > .growth-inner > p {
-    max-width: 700px;
+    font-size:
+        clamp(58px,9vw,120px);
 
-    margin: auto;
+    line-height:.95;
 
-    color: var(--muted);
+    letter-spacing:-3px;
 
-    font-size: 18px;
+    font-weight:400;
 
-    line-height: 1.9;
+    max-width:900px;
 }
-
-
-/* GROWTH CYCLE */
 
-.growth-cycle {
-    max-width: 900px;
+.vision-hero p{
 
-    margin: 90px auto 0;
+    max-width:620px;
 
-    display: flex;
+    margin-top:35px;
 
-    align-items: center;
+    font-size:16px;
 
-    justify-content: center;
+    line-height:1.9;
 
-    gap: 20px;
+    color:rgba(255,255,255,.76);
 }
-
-.cycle-item {
-    width: 170px;
-    height: 170px;
-
-    border-radius: 50%;
-
-    border: 1px solid #c9bda9;
-
-    display: flex;
 
-    align-items: center;
+.hero-line{
 
-    justify-content: center;
+    width:80px;
 
-    text-align: center;
+    height:1px;
 
-    padding: 25px;
+    background:var(--gold);
 
-    font-family: Georgia, serif;
-
-    font-size: 20px;
-
-    color: var(--green);
-
-    transition: .4s;
+    margin-top:45px;
 }
 
-.cycle-item:hover {
-    border-color: var(--gold);
 
-    transform: scale(1.05);
-}
+/* =====================================
+   COMMON
+===================================== */
 
-.cycle-arrow {
-    color: var(--gold);
+.vision-section{
 
-    font-size: 24px;
+    padding:
+        125px 7%;
 }
-
-
-/* ==================================================
-   UNKNOWN FUTURE
-================================================== */
-
-.unknown {
-    min-height: 90vh;
 
-    background: var(--green-dark);
+.vision-container{
 
-    color: var(--cream);
+    width:100%;
+    max-width:1150px;
 
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    text-align: center;
-
-    padding: 120px 8%;
-
-    position: relative;
-
-    overflow: hidden;
+    margin:auto;
 }
-
-.unknown::before {
-    content: "";
 
-    position: absolute;
+.vision-label{
 
-    width: 800px;
-    height: 800px;
+    font-size:10px;
 
-    border-radius: 50%;
+    letter-spacing:4px;
 
-    border: 1px solid rgba(180,147,82,.12);
+    text-transform:uppercase;
 
-    left: 50%;
-    top: 50%;
+    color:var(--gold-soft);
 
-    transform: translate(-50%,-50%);
+    margin-bottom:20px;
 }
 
-.unknown::after {
-    content: "";
+.vision-title{
 
-    position: absolute;
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
 
-    width: 500px;
-    height: 500px;
+    font-size:
+        clamp(40px,5vw,70px);
 
-    border-radius: 50%;
+    line-height:1.08;
 
-    border: 1px solid rgba(180,147,82,.1);
+    font-weight:400;
 
-    left: 50%;
-    top: 50%;
+    color:var(--green-dark);
 
-    transform: translate(-50%,-50%);
+    margin-bottom:30px;
 }
 
-.unknown-content {
-    max-width: 950px;
+.vision-text{
 
-    position: relative;
+    max-width:720px;
 
-    z-index: 2;
-}
+    font-size:16px;
 
-.unknown h2 {
-    font-size: clamp(50px, 7vw, 90px);
+    line-height:2;
 
-    margin-bottom: 35px;
+    color:var(--muted);
 }
-
-.unknown p {
-    max-width: 700px;
-
-    margin: auto;
 
-    color: #d3d8cf;
-
-    font-family: Georgia, serif;
-
-    font-size: 22px;
-
-    line-height: 1.8;
+.vision-text p + p{
+    margin-top:22px;
 }
-
 
-/* ==================================================
-   FUTURE PRINCIPLES
-================================================== */
 
-.principles {
-    background: var(--cream);
+/* =====================================
+   BIG STATEMENT
+===================================== */
 
-    padding: 150px 8%;
-}
+.statement{
 
-.principles-heading {
-    text-align: center;
+    background:var(--green-dark);
 
-    max-width: 800px;
+    color:var(--cream);
 
-    margin: auto;
-}
+    text-align:center;
 
-.principles-heading h2 {
-    color: var(--green);
+    padding:
+        145px 7%;
 }
 
-.principles-heading p {
-    color: var(--muted);
+.statement-inner{
 
-    line-height: 1.8;
+    max-width:1050px;
 
-    font-size: 17px;
+    margin:auto;
 }
 
-.principle-list {
-    max-width: 950px;
+.statement .vision-label{
 
-    margin: 80px auto 0;
+    color:var(--gold);
 }
-
-.principle {
-    display: grid;
-
-    grid-template-columns: 100px 1fr;
-
-    gap: 35px;
-
-    padding: 40px 0;
-
-    border-bottom: 1px solid #d5c9b7;
 
-    align-items: center;
-}
+.statement h2{
 
-.principle:first-child {
-    border-top: 1px solid #d5c9b7;
-}
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
 
-.principle-number {
-    font-family: Georgia, serif;
+    font-size:
+        clamp(42px,6vw,78px);
 
-    font-size: 32px;
+    line-height:1.15;
 
-    color: var(--gold);
+    font-weight:400;
 }
-
-.principle h3 {
-    font-family: Georgia, serif;
 
-    font-size: 30px;
+.statement p{
 
-    font-weight: 400;
+    max-width:650px;
 
-    margin-bottom: 8px;
+    margin:
+        35px auto 0;
 
-    color: var(--green);
-}
+    font-size:15px;
 
-.principle p {
-    color: #697267;
+    line-height:1.9;
 
-    line-height: 1.7;
+    color:rgba(244,239,228,.62);
 }
-
-
-/* ==================================================
-   CLOSING
-================================================== */
-
-.closing {
-    min-height: 80vh;
 
-    background: #f4efe4;
 
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    text-align: center;
-
-    padding: 100px 8%;
-}
-
-.closing-content {
-    max-width: 900px;
-}
+/* =====================================
+   CREATE EXPLORE GROW
+===================================== */
 
-.closing h2 {
-    color: var(--green);
+.three-directions{
 
-    font-size: clamp(50px, 7vw, 90px);
+    background:var(--cream);
 
-    margin-bottom: 30px;
 }
 
-.closing p {
-    font-family: Georgia, serif;
+.directions-intro{
 
-    color: var(--muted);
+    max-width:750px;
 
-    font-size: 21px;
-
-    line-height: 1.8;
-
-    margin-bottom: 45px;
+    margin-bottom:75px;
 }
-
-.cta {
-    display: inline-block;
-
-    padding: 16px 32px;
-
-    border: 1px solid var(--gold);
-
-    color: var(--green);
-
-    text-decoration: none;
 
-    font-size: 11px;
+.direction-grid{
 
-    letter-spacing: 3px;
+    display:grid;
 
-    text-transform: uppercase;
+    grid-template-columns:
+        repeat(3,1fr);
 
-    transition: .3s;
+    gap:2px;
 }
 
-.cta:hover {
-    background: var(--gold);
+.direction-card{
 
-    color: var(--green);
-}
-
-
-/* ==================================================
-   FOOTER
-================================================== */
-
-footer {
-    background: #101d17;
+    min-height:390px;
 
-    color: #aeb5aa;
+    padding:45px 35px;
 
-    text-align: center;
-
-    padding: 35px 20px;
-
-    font-size: 11px;
-
-    letter-spacing: 2px;
-}
+    background:var(--cream-soft);
 
+    border:
+        1px solid
+        rgba(32,56,44,.07);
 
-/* ==================================================
-   REVEAL
-================================================== */
+    display:flex;
 
-.reveal {
-    opacity: 0;
+    flex-direction:column;
 
-    transform: translateY(35px);
+    justify-content:space-between;
 
     transition:
-        opacity .9s ease,
-        transform .9s ease;
+        transform .4s ease,
+        background .4s ease;
 }
 
-.reveal.visible {
-    opacity: 1;
+.direction-card:hover{
 
-    transform: translateY(0);
+    transform:translateY(-7px);
+
+    background:#e3dac6;
+}
+
+.direction-number{
+
+    font-family:Georgia,serif;
+
+    font-size:18px;
+
+    color:var(--gold-soft);
+}
+
+.direction-card h3{
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(34px,4vw,48px);
+
+    font-weight:400;
+
+    color:var(--green-dark);
+}
+
+.direction-card p{
+
+    font-size:13px;
+
+    line-height:1.9;
+
+    color:var(--muted);
+
+    max-width:330px;
 }
 
 
-/* ==================================================
-   MOBILE
-================================================== */
+/* =====================================
+   PROCESS
+===================================== */
 
-@media(max-width: 800px) {
+.process{
 
-    nav {
-        padding: 0 5%;
+    background:#fff;
+}
+
+.process-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap:90px;
+
+    align-items:center;
+}
+
+.process-image{
+
+    height:620px;
+
+    overflow:hidden;
+}
+
+.process-image img{
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:
+        transform 1.2s ease;
+}
+
+.process-image:hover img{
+
+    transform:scale(1.04);
+}
+
+.process-list{
+
+    margin-top:45px;
+
+    border-top:
+        1px solid
+        rgba(39,52,44,.12);
+}
+
+.process-item{
+
+    display:grid;
+
+    grid-template-columns:
+        55px 1fr;
+
+    gap:20px;
+
+    padding:
+        24px 0;
+
+    border-bottom:
+        1px solid
+        rgba(39,52,44,.12);
+}
+
+.process-number{
+
+    font-family:Georgia,serif;
+
+    color:var(--gold-soft);
+
+    font-size:14px;
+}
+
+.process-item h3{
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:24px;
+
+    font-weight:400;
+
+    color:var(--green-dark);
+
+    margin-bottom:8px;
+}
+
+.process-item p{
+
+    font-size:13px;
+
+    line-height:1.8;
+
+    color:var(--muted);
+}
+
+
+/* =====================================
+   PRINCIPLES
+===================================== */
+
+.principles{
+
+    background:var(--green);
+
+    color:var(--cream);
+}
+
+.principles-intro{
+
+    max-width:750px;
+
+    margin-bottom:70px;
+}
+
+.principles .vision-label{
+
+    color:var(--gold);
+}
+
+.principles .vision-title{
+
+    color:var(--cream);
+}
+
+.principles .vision-text{
+
+    color:rgba(244,239,228,.65);
+}
+
+.principles-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    gap:2px;
+}
+
+.principle{
+
+    min-height:300px;
+
+    padding:38px 28px;
+
+    background:
+        rgba(255,255,255,.045);
+
+    border:
+        1px solid
+        rgba(255,255,255,.08);
+}
+
+.principle-number{
+
+    font-family:Georgia,serif;
+
+    color:var(--gold);
+
+    font-size:16px;
+
+    margin-bottom:55px;
+}
+
+.principle h3{
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:25px;
+
+    font-weight:400;
+
+    margin-bottom:15px;
+}
+
+.principle p{
+
+    font-size:12px;
+
+    line-height:1.9;
+
+    color:rgba(244,239,228,.55);
+}
+
+
+/* =====================================
+   FUTURE
+===================================== */
+
+.future{
+
+    min-height:80vh;
+
+    display:flex;
+
+    align-items:center;
+
+    background-image:
+        linear-gradient(
+            rgba(16,23,17,.28),
+            rgba(16,23,17,.78)
+        ),
+        url("https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=2200&q=90");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-attachment:fixed;
+
+    color:white;
+}
+
+.future-inner{
+
+    width:86%;
+
+    max-width:1150px;
+
+    margin:auto;
+}
+
+.future .vision-label{
+
+    color:var(--gold);
+}
+
+.future h2{
+
+    max-width:900px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(45px,7vw,90px);
+
+    line-height:1.05;
+
+    font-weight:400;
+}
+
+.future p{
+
+    max-width:620px;
+
+    margin-top:30px;
+
+    font-size:16px;
+
+    line-height:1.9;
+
+    color:rgba(255,255,255,.68);
+}
+
+
+/* =====================================
+   CLOSING
+===================================== */
+
+.vision-closing{
+
+    background:var(--cream);
+
+    text-align:center;
+
+    padding:
+        145px 7%;
+}
+
+.vision-closing-inner{
+
+    max-width:900px;
+
+    margin:auto;
+}
+
+.vision-closing .vision-text{
+
+    margin:auto;
+}
+
+.closing-line{
+
+    width:70px;
+
+    height:1px;
+
+    background:var(--gold);
+
+    margin:
+        50px auto;
+}
+
+.vision-button{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    padding:
+        16px 28px;
+
+    border:
+        1px solid
+        var(--green);
+
+    color:var(--green);
+
+    font-size:11px;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+    transition:.35s ease;
+}
+
+.vision-button:hover{
+
+    background:var(--green);
+
+    color:white;
+}
+
+
+/* =====================================
+   REVEAL
+===================================== */
+
+.reveal{
+
+    opacity:0;
+
+    transform:
+        translateY(35px);
+
+    transition:
+        opacity 1s ease,
+        transform 1s ease;
+}
+
+.reveal.show{
+
+    opacity:1;
+
+    transform:
+        translateY(0);
+}
+
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media(max-width:1000px){
+
+    .principles-grid{
+
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+}
+
+@media(max-width:900px){
+
+    .vision-section{
+
+        padding:90px 7%;
     }
 
-    .nav-links {
-        gap: 13px;
+    .process-grid{
+
+        grid-template-columns:1fr;
+
+        gap:55px;
     }
 
-    .nav-links a {
-        font-size: 8px;
+    .process-image{
+
+        height:480px;
     }
 
-    .opening-inner {
-        grid-template-columns: 1fr;
+    .direction-grid{
 
-        gap: 40px;
+        grid-template-columns:1fr;
     }
 
-    .vision-grid {
-        grid-template-columns: 1fr;
+    .vision-hero,
+    .future{
+
+        background-attachment:scroll;
+    }
+}
+
+@media(max-width:600px){
+
+    .vision-hero{
+
+        min-height:90vh;
     }
 
-    .growth-cycle {
-        flex-direction: column;
+    .vision-hero-content{
+
+        width:86%;
+
+        padding-top:70px;
     }
 
-    .cycle-arrow {
-        transform: rotate(90deg);
+    .vision-hero h1{
+
+        letter-spacing:-1px;
     }
 
-    .principle {
-        grid-template-columns: 60px 1fr;
+    .vision-hero p{
 
-        gap: 20px;
+        font-size:14px;
+
+        line-height:1.8;
     }
 
-    h1 {
-        letter-spacing: 4px;
+    .vision-section{
+
+        padding:
+            75px 7%;
     }
 
+    .statement,
+    .principles,
+    .vision-closing{
+
+        padding:
+            95px 7%;
+    }
+
+    .process-image{
+
+        height:390px;
+    }
+
+    .principles-grid{
+
+        grid-template-columns:1fr;
+    }
+
+    .principle{
+
+        min-height:250px;
+    }
+
+    .direction-card{
+
+        min-height:300px;
+    }
+
+    .future{
+
+        min-height:70vh;
+    }
 }
 
 </style>
+
 </head>
 
 
 <body>
 
 
-<!-- ==================================================
-     NAVIGATION
-================================================== -->
+<!-- =====================================
+     SHARED HEADER
+===================================== -->
 
-<nav id="navbar">
-
-    <!-- Replace with actual VALIASS logo -->
-    <div class="logo">
-        LOGO
-    </div>
-
-    <div class="nav-links">
-
-        <a href="index.html">Home</a>
-
-        <a href="story.html">Story</a>
-
-        <a href="roots.html">Roots</a>
-
-        <a href="branches.html">Branches</a>
-
-        <a href="vision.html">Vision</a>
-
-    </div>
-
-</nav>
+<div id="valiass-header"></div>
 
 
-<!-- ==================================================
+<!-- =====================================
      HERO
-================================================== -->
+===================================== -->
 
-<section class="hero">
+<section class="vision-hero">
 
-    <div class="hero-content reveal">
+    <div class="vision-hero-content reveal">
 
-        <div class="eyebrow">
+        <div class="vision-kicker">
             Looking Ahead
         </div>
 
         <h1>
-            OUR VISION
+            Our Vision
         </h1>
+
+        <p>
+            We don't know every branch yet.
+            And that's the beauty of growing.
+            We want to stay open to ideas,
+            possibilities and unexpected directions.
+        </p>
 
         <div class="hero-line"></div>
 
+    </div>
+
+</section>
+
+
+<!-- =====================================
+     STATEMENT
+===================================== -->
+
+<section class="statement">
+
+    <div class="statement-inner reveal">
+
+        <div class="vision-label">
+            01 — The Vision
+        </div>
+
+        <h2>
+            We don't want to
+            predict the future.
+            We want to grow into it.
+        </h2>
+
         <p>
-            We don't know every branch yet.<br>
-            And that's the beauty of growing.
+            The world changes.
+            People change.
+            Ideas change.
+            So our vision is not about knowing
+            everything that comes next.
         </p>
 
     </div>
@@ -1013,209 +930,99 @@ footer {
 </section>
 
 
-<!-- ==================================================
-     OPENING
-================================================== -->
+<!-- =====================================
+     CREATE / EXPLORE / GROW
+===================================== -->
 
-<section class="opening">
+<section class="vision-section three-directions">
 
-    <div class="opening-inner">
+    <div class="vision-container">
 
+        <div class="directions-intro reveal">
 
-        <div class="opening-text reveal">
-
-            <div class="section-label">
-                01 — Looking Forward
+            <div class="vision-label">
+                02 — Our Direction
             </div>
 
-            <h2>
-                We are not building<br>
-                a destination.
+            <h2 class="vision-title">
+                Three simple things
+                guide us forward.
             </h2>
 
-            <p>
-                We are building a foundation from which
-                possibilities can continue to grow.
-            </p>
+            <div class="vision-text">
 
-            <p>
-                The future of VALIASS is not one fixed
-                picture. It is a landscape of ideas,
-                experiments, ventures and journeys.
-            </p>
+                <p>
+                    We want to create things that matter,
+                    explore things we don't yet understand,
+                    and keep growing through the process.
+                </p>
 
-            <p>
-                Some branches will be planned.
-                Some will appear unexpectedly.
-                Some may grow in directions we never imagined.
-            </p>
-
-        </div>
-
-
-        <div class="future-sky reveal">
-
-            <div class="sun"></div>
-
-            <div class="sky-line"></div>
-
-            <div class="sky-dot dot-one"></div>
-            <div class="sky-dot dot-two"></div>
-            <div class="sky-dot dot-three"></div>
-            <div class="sky-dot dot-four"></div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ==================================================
-     CORE VISION
-================================================== -->
-
-<section class="core">
-
-
-    <div class="core-heading reveal">
-
-        <div class="section-label">
-            02 — What We Want To Create
-        </div>
-
-        <h2>
-            Give good ideas<br>
-            room to grow.
-        </h2>
-
-        <p>
-            Our vision is simple:
-            create an environment where ideas can become
-            meaningful realities without losing the values
-            that created them.
-        </p>
-
-    </div>
-
-
-    <div class="vision-grid">
-
-
-        <div class="vision-card reveal">
-
-            <div class="card-number">
-                01
             </div>
 
-            <h3>
-                Create
-            </h3>
-
-            <p>
-                Turn imagination into something real,
-                useful and meaningful.
-            </p>
-
         </div>
 
 
-        <div class="vision-card reveal">
+        <div class="direction-grid">
 
-            <div class="card-number">
-                02
+
+            <div class="direction-card reveal">
+
+                <div class="direction-number">
+                    01
+                </div>
+
+                <h3>
+                    Create
+                </h3>
+
+                <p>
+                    Turn ideas into something real —
+                    stories, products, experiences,
+                    businesses and possibilities.
+                </p>
+
             </div>
 
-            <h3>
-                Explore
-            </h3>
 
-            <p>
-                Stay curious enough to discover
-                possibilities beyond what we already know.
-            </p>
+            <div class="direction-card reveal">
 
-        </div>
+                <div class="direction-number">
+                    02
+                </div>
 
+                <h3>
+                    Explore
+                </h3>
 
-        <div class="vision-card reveal">
+                <p>
+                    Stay curious.
+                    Try new directions.
+                    Ask questions.
+                    Discover what could exist.
+                </p>
 
-            <div class="card-number">
-                03
             </div>
 
-            <h3>
-                Grow
-            </h3>
 
-            <p>
-                Let every idea develop at its own pace
-                while remaining connected to strong roots.
-            </p>
+            <div class="direction-card reveal">
 
-        </div>
+                <div class="direction-number">
+                    03
+                </div>
 
+                <h3>
+                    Grow
+                </h3>
 
-    </div>
+                <p>
+                    Learn from every experiment,
+                    adapt with time and let each
+                    experience create the next branch.
+                </p>
 
-</section>
-
-
-<!-- ==================================================
-     GROWTH
-================================================== -->
-
-<section class="growth">
+            </div>
 
 
-    <div class="growth-inner reveal">
-
-        <div class="section-label">
-            03 — Our Way Of Growing
-        </div>
-
-        <h2>
-            Growth is not a straight line.
-        </h2>
-
-        <p>
-            Some ideas grow quickly.
-            Some need years.
-            Some change shape before they find their place.
-            We believe all of that is part of the journey.
-        </p>
-
-    </div>
-
-
-    <div class="growth-cycle reveal">
-
-        <div class="cycle-item">
-            Idea
-        </div>
-
-        <div class="cycle-arrow">
-            →
-        </div>
-
-        <div class="cycle-item">
-            Experiment
-        </div>
-
-        <div class="cycle-arrow">
-            →
-        </div>
-
-        <div class="cycle-item">
-            Learn
-        </div>
-
-        <div class="cycle-arrow">
-            →
-        </div>
-
-        <div class="cycle-item">
-            Grow
         </div>
 
     </div>
@@ -1223,181 +1030,335 @@ footer {
 </section>
 
 
-<!-- ==================================================
-     UNKNOWN
-================================================== -->
+<!-- =====================================
+     PROCESS
+===================================== -->
 
-<section class="unknown">
+<section class="vision-section process">
 
-    <div class="unknown-content reveal">
+    <div class="vision-container process-grid">
 
-        <div class="section-label">
-            04 — The Unknown
+        <div class="process-image reveal">
+
+            <img
+                src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1400&q=85"
+                alt="Creative workspace"
+            >
+
         </div>
 
-        <h2>
-            The most exciting<br>
-            branch may not exist yet.
-        </h2>
 
-        <p>
-            We don't want to pretend that we already know
-            everything VALIASS will become.
-            The future should have space to surprise us.
-        </p>
+        <div class="reveal">
+
+            <div class="vision-label">
+                03 — How We Grow
+            </div>
+
+            <h2 class="vision-title">
+                There is no
+                perfect first step.
+            </h2>
+
+            <div class="vision-text">
+
+                <p>
+                    Every meaningful thing starts
+                    somewhere.
+                </p>
+
+            </div>
+
+
+            <div class="process-list">
+
+
+                <div class="process-item">
+
+                    <div class="process-number">
+                        01
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Idea
+                        </h3>
+
+                        <p>
+                            Something catches our attention
+                            and makes us think.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="process-item">
+
+                    <div class="process-number">
+                        02
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Experiment
+                        </h3>
+
+                        <p>
+                            We give the idea a chance
+                            to become something real.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="process-item">
+
+                    <div class="process-number">
+                        03
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Learn
+                        </h3>
+
+                        <p>
+                            We listen, observe, improve
+                            and understand what works.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="process-item">
+
+                    <div class="process-number">
+                        04
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Grow
+                        </h3>
+
+                        <p>
+                            What works can become
+                            a new branch.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
 
     </div>
 
 </section>
 
 
-<!-- ==================================================
+<!-- =====================================
      PRINCIPLES
-================================================== -->
+===================================== -->
 
-<section class="principles">
+<section class="vision-section principles">
 
+    <div class="vision-container">
 
-    <div class="principles-heading reveal">
+        <div class="principles-intro reveal">
 
-        <div class="section-label">
-            05 — What Will Never Change
-        </div>
-
-        <h2>
-            The branches may change.<br>
-            The roots won't.
-        </h2>
-
-        <p>
-            As VALIASS grows, new ideas may bring
-            new identities and new directions.
-            But some principles remain constant.
-        </p>
-
-    </div>
-
-
-    <div class="principle-list">
-
-
-        <div class="principle reveal">
-
-            <div class="principle-number">
-                01
+            <div class="vision-label">
+                04 — Principles
             </div>
 
-            <div>
+            <h2 class="vision-title">
+                How we want
+                to grow.
+            </h2>
+
+            <div class="vision-text">
+
+                <p>
+                    Growth is not only about becoming bigger.
+                    It is also about becoming better,
+                    wiser and more useful.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="principles-grid">
+
+
+            <div class="principle reveal">
+
+                <div class="principle-number">
+                    01
+                </div>
 
                 <h3>
                     Stay Human
                 </h3>
 
                 <p>
-                    People and relationships remain
-                    more important than numbers.
+                    People come before processes.
+                    Creativity should remain connected
+                    to real human experiences.
                 </p>
 
             </div>
 
-        </div>
 
+            <div class="principle reveal">
 
-        <div class="principle reveal">
-
-            <div class="principle-number">
-                02
-            </div>
-
-            <div>
+                <div class="principle-number">
+                    02
+                </div>
 
                 <h3>
                     Stay Curious
                 </h3>
 
                 <p>
-                    Keep learning, questioning and
-                    exploring new possibilities.
+                    Keep asking.
+                    Keep learning.
+                    Keep looking beyond
+                    what already exists.
                 </p>
 
             </div>
 
-        </div>
 
+            <div class="principle reveal">
 
-        <div class="principle reveal">
-
-            <div class="principle-number">
-                03
-            </div>
-
-            <div>
+                <div class="principle-number">
+                    03
+                </div>
 
                 <h3>
                     Stay Grounded
                 </h3>
 
                 <p>
-                    Growth should never disconnect
-                    us from the roots that created it.
+                    New branches should never
+                    make us forget the roots
+                    that gave them life.
                 </p>
 
             </div>
 
-        </div>
 
+            <div class="principle reveal">
 
-        <div class="principle reveal">
-
-            <div class="principle-number">
-                04
-            </div>
-
-            <div>
+                <div class="principle-number">
+                    04
+                </div>
 
                 <h3>
                     Keep Growing
                 </h3>
 
                 <p>
-                    Never stop giving meaningful ideas
-                    a chance to become something more.
+                    There is always another lesson,
+                    another possibility and
+                    another direction to explore.
                 </p>
 
             </div>
 
-        </div>
 
+        </div>
 
     </div>
 
 </section>
 
 
-<!-- ==================================================
-     CLOSING
-================================================== -->
+<!-- =====================================
+     FUTURE
+===================================== -->
 
-<section class="closing">
+<section class="future">
 
-    <div class="closing-content reveal">
+    <div class="future-inner reveal">
 
-        <div class="section-label">
-            Beyond Today
+        <div class="vision-label">
+            05 — Tomorrow
         </div>
 
         <h2>
-            One seed can become<br>
-            a tree.
+            We don't know
+            every branch yet.
+            And that's okay.
         </h2>
 
         <p>
-            One idea can become a world.<br>
-            And we are only beginning to grow.
+            The future should have room for surprise.
+            We want VALIASS to remain open enough
+            for new ideas to find their own path.
         </p>
 
-        <a href="contact.html" class="cta">
-            Grow With Us
+    </div>
+
+</section>
+
+
+<!-- =====================================
+     CLOSING
+===================================== -->
+
+<section class="vision-closing">
+
+    <div class="vision-closing-inner reveal">
+
+        <div class="vision-label">
+            06 — The Next Step
+        </div>
+
+        <h2 class="vision-title">
+            Maybe the next branch
+            begins with a conversation.
+        </h2>
+
+        <div class="vision-text">
+
+            <p>
+                An idea, a collaboration, a question
+                or simply a thought worth exploring.
+            </p>
+
+            <p>
+                That is how many possibilities begin.
+            </p>
+
+        </div>
+
+        <div class="closing-line"></div>
+
+        <a
+            href="contact.html"
+            class="vision-button"
+        >
+            Start A Conversation
+
+            <span>
+                →
+            </span>
+
         </a>
 
     </div>
@@ -1405,77 +1366,121 @@ footer {
 </section>
 
 
-<!-- ==================================================
-     FOOTER
-================================================== -->
+<!-- =====================================
+     SHARED FOOTER
+===================================== -->
 
-<footer>
+<div id="valiass-footer"></div>
 
-    VALIASS — ONE ORIGIN. STRONG ROOTS. MANY POSSIBILITIES.
 
-</footer>
-
+<!-- =====================================
+     COMPONENT LOADER
+===================================== -->
 
 <script>
 
-/* ==================================================
-   NAVBAR
-================================================== */
+async function loadComponent(
+    elementId,
+    componentPath
+){
 
-const navbar =
-    document.getElementById("navbar");
+    try{
 
-window.addEventListener("scroll", () => {
+        const response =
+            await fetch(componentPath);
 
-    if (window.scrollY > 50) {
+        if(!response.ok){
 
-        navbar.classList.add("scrolled");
+            throw new Error(
+                `Could not load ${componentPath}`
+            );
 
-    } else {
+        }
 
-        navbar.classList.remove("scrolled");
+        const html =
+            await response.text();
+
+        document.getElementById(
+            elementId
+        ).innerHTML = html;
 
     }
 
-});
+    catch(error){
+
+        console.error(
+            "VALIASS component error:",
+            error
+        );
+
+    }
+
+}
 
 
-/* ==================================================
-   REVEAL ANIMATION
-================================================== */
+loadComponent(
+    "valiass-header",
+    "components/header.html"
+);
+
+
+loadComponent(
+    "valiass-footer",
+    "components/footer.html"
+);
+
+
+/* =========================
+   SCROLL REVEAL
+========================= */
 
 const revealElements =
     document.querySelectorAll(".reveal");
 
-const observer =
+
+const revealObserver =
     new IntersectionObserver(
 
         (entries) => {
 
-            entries.forEach(entry => {
+            entries.forEach(
+                (entry) => {
 
-                if (entry.isIntersecting) {
+                    if(
+                        entry.isIntersecting
+                    ){
 
-                    entry.target.classList.add("visible");
+                        entry.target.classList.add(
+                            "show"
+                        );
+
+                        revealObserver.unobserve(
+                            entry.target
+                        );
+
+                    }
 
                 }
-
-            });
+            );
 
         },
 
         {
-            threshold: 0.15
+            threshold:0.12
         }
 
     );
 
 
-revealElements.forEach(element => {
+revealElements.forEach(
+    (element) => {
 
-    observer.observe(element);
+        revealObserver.observe(
+            element
+        );
 
-});
+    }
+);
 
 </script>
 
