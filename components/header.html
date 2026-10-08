@@ -550,9 +550,7 @@
 <div class="valiass-contact-float">
 
 
-    <!-- ========================================================
-         CALL
-    ========================================================= -->
+    <!-- CALL -->
 
     <a
         href="tel:8985361991"
@@ -580,9 +578,7 @@
     </a>
 
 
-    <!-- ========================================================
-         WHATSAPP
-    ========================================================= -->
+    <!-- WHATSAPP -->
 
     <a
         href="https://wa.me/918985361991"
@@ -1232,8 +1228,6 @@
 }
 
 
-/* cinematic stagger */
-
 .nav-dropdown:hover .branch-item:nth-of-type(1) {
 
     transition-delay: 0.24s;
@@ -1264,8 +1258,6 @@
 }
 
 
-/* number */
-
 .branch-number {
 
     width: 28px;
@@ -1285,8 +1277,6 @@
     letter-spacing: 1px;
 }
 
-
-/* copy */
 
 .branch-copy {
 
@@ -1351,8 +1341,6 @@
 }
 
 
-/* arrow */
-
 .branch-item-arrow {
 
     margin-left: auto;
@@ -1374,8 +1362,6 @@
         transform 0.3s ease;
 }
 
-
-/* gold hover line */
 
 .branch-hover-line {
 
@@ -1593,6 +1579,7 @@
 
 /* ============================================================
    RIGHT SOCIAL RIBBON
+   UPDATED ONLY FOR VISIBILITY / LAYERING
 ============================================================ */
 
 .valiass-social-ribbon-right {
@@ -1606,11 +1593,17 @@
         translateY(-50%)
         translateX(64px);
 
-    z-index: 900;
+    z-index: 9997;
 
     display: flex;
 
     align-items: center;
+
+    visibility: visible;
+
+    opacity: 1;
+
+    pointer-events: auto;
 
     transition:
         transform 0.55s cubic-bezier(.22,.61,.36,1);
@@ -1648,6 +1641,8 @@
 
     box-shadow:
         -5px 8px 20px rgba(0, 0, 0, 0.18);
+
+    pointer-events: auto;
 }
 
 
@@ -1704,8 +1699,6 @@
         translateX(0);
 }
 
-
-/* social links */
 
 .premium-social-link {
 
@@ -1829,6 +1822,7 @@
 
 /* ============================================================
    FLOATING CONTACT
+   UPDATED ONLY FOR BOTTOM-RIGHT VISIBILITY
 ============================================================ */
 
 .valiass-contact-float {
@@ -1838,7 +1832,7 @@
     right: 20px;
     bottom: 22px;
 
-    z-index: 950;
+    z-index: 9998;
 
     display: flex;
 
@@ -1847,6 +1841,15 @@
     align-items: flex-end;
 
     gap: 10px;
+
+    pointer-events: auto;
+}
+
+
+.valiass-call-button,
+.valiass-whatsapp-button {
+
+    pointer-events: auto;
 }
 
 
@@ -2288,8 +2291,6 @@
     }
 
 
-    /* Existing index.html JS adds this class */
-
     .nav-dropdown-menu.mobile-open {
 
         opacity: 1;
@@ -2449,13 +2450,30 @@
 
     /* ========================================================
        SOCIAL RIBBON
+       UPDATED ONLY FOR VISIBILITY
     ======================================================== */
 
     .valiass-social-ribbon-right {
 
+        right: 0;
+        top: 50%;
+
         transform:
             translateY(-50%)
             translateX(42px);
+
+        z-index: 9997;
+
+        visibility: visible;
+        opacity: 1;
+    }
+
+
+    .valiass-social-ribbon-right:hover {
+
+        transform:
+            translateY(-50%)
+            translateX(0);
     }
 
 
@@ -2503,13 +2521,15 @@
 
     /* ========================================================
        CONTACT BUTTONS
+       BOTTOM RIGHT
     ======================================================== */
 
     .valiass-contact-float {
 
         right: 13px;
-
         bottom: 15px;
+
+        z-index: 9998;
 
         gap: 8px;
     }
@@ -2613,6 +2633,17 @@
     .branch-item-sub {
 
         max-width: 235px;
+    }
+
+
+    /* KEEP CONTACT BUTTONS ABOVE ALL CONTENT */
+
+    .valiass-contact-float {
+
+        right: 12px;
+        bottom: 12px;
+
+        z-index: 9998;
     }
 
 }
