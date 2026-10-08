@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -228,9 +229,6 @@ a{
 
     color:#fff;
 }
-
-
-/* cinematic atmosphere */
 
 .hero::before{
     content:"";
@@ -1339,25 +1337,48 @@ section{
 
 
 /* =========================================================
-   FINAL CTA
+   GWAVES PREMIUM FOOTER
 ========================================================= */
 
-.final-cta{
-    padding:170px 8vw;
+.gwaves-footer{
+    background:#0c1711;
+    color:#f5f0e4;
 
-    text-align:center;
+    padding:100px 6vw 35px;
 
-    background:var(--cream-light);
+    border-top:
+        1px solid rgba(208,180,107,.14);
 }
 
-.final-cta .section-label{
-    color:var(--gold);
+.gwaves-footer-inner{
+    max-width:1120px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:1.2fr .8fr;
+
+    gap:100px;
 }
 
-.final-cta h2{
-    max-width:900px;
 
-    margin:0 auto 30px;
+/* =========================================================
+   CONTACT INTRO
+========================================================= */
+
+.footer-label{
+    color:#d0b46b;
+
+    font-size:10px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+
+    margin-bottom:22px;
+}
+
+.footer-contact h2{
+    max-width:600px;
+
+    margin:0 0 22px;
 
     font-family:
         Georgia,
@@ -1365,42 +1386,44 @@ section{
         serif;
 
     font-size:
-        clamp(44px,6vw,78px);
+        clamp(40px,5vw,64px);
 
-    line-height:1;
-
+    line-height:1.05;
     font-weight:400;
-
-    color:var(--green);
 }
 
-.final-cta h2 em{
-    color:var(--gold);
-
+.footer-contact h2 em{
+    color:#d0b46b;
     font-style:italic;
 }
 
-.final-cta p{
-    max-width:620px;
+.footer-contact p{
+    max-width:480px;
 
-    margin:auto;
+    margin:0;
 
-    color:var(--muted);
+    color:rgba(255,255,255,.52);
 
-    font-size:15px;
-    line-height:1.9;
+    font-size:14px;
+    line-height:1.8;
 }
 
-.cta-button{
+
+/* =========================================================
+   FOOTER CTA
+========================================================= */
+
+.footer-cta{
     display:inline-block;
 
-    margin-top:42px;
+    margin-top:30px;
 
-    padding:16px 30px;
+    padding:15px 27px;
 
-    border:1px solid var(--gold);
+    border:
+        1px solid #b49352;
 
-    color:var(--green);
+    color:#f5f0e4;
 
     font-size:10px;
     letter-spacing:2px;
@@ -1408,37 +1431,120 @@ section{
 
     transition:
         background .3s ease,
-        color .3s ease,
-        border-color .3s ease;
+        border-color .3s ease,
+        color .3s ease;
 }
 
-.cta-button:hover{
-    background:var(--green-dark);
-    border-color:var(--green-dark);
-    color:#fff;
+.footer-cta:hover{
+    background:#d0b46b;
+
+    border-color:#d0b46b;
+
+    color:#14251c;
 }
 
 
 /* =========================================================
-   FOOTER
+   CONTACT DETAILS
 ========================================================= */
 
-footer{
-    padding:45px 6vw;
+.footer-details{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
 
-    background:#101b15;
+    border-left:
+        1px solid rgba(208,180,107,.16);
 
-    color:rgba(255,255,255,.48);
-
-    border-top:1px solid rgba(208,180,107,.12);
+    padding-left:55px;
 }
 
-.footer-inner{
+.footer-detail{
+    padding:19px 0;
+
+    border-bottom:
+        1px solid rgba(208,180,107,.12);
+}
+
+.footer-detail:first-child{
+    padding-top:0;
+}
+
+.footer-detail:last-child{
+    border-bottom:0;
+}
+
+.footer-detail span{
+    display:block;
+
+    margin-bottom:9px;
+
+    color:#b49352;
+
+    font-size:9px;
+    letter-spacing:2px;
+}
+
+.footer-detail a{
+    color:rgba(255,255,255,.78);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:17px;
+
+    transition:
+        color .3s ease;
+}
+
+.footer-detail a:hover{
+    color:#d0b46b;
+}
+
+.footer-location{
+    color:rgba(255,255,255,.62);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:15px;
+
+    line-height:1.7;
+}
+
+
+/* =========================================================
+   DIVIDER
+========================================================= */
+
+.footer-line{
+    max-width:1120px;
+
+    height:1px;
+
+    margin:80px auto 28px;
+
+    background:
+        rgba(208,180,107,.14);
+}
+
+
+/* =========================================================
+   BOTTOM BAR
+========================================================= */
+
+.footer-bottom{
+    max-width:1120px;
+    margin:auto;
+
     display:flex;
     align-items:center;
-    justify-content:space-between;
 
-    gap:30px;
+    gap:28px;
 }
 
 .footer-brand{
@@ -1454,25 +1560,38 @@ footer{
 }
 
 .footer-brand span{
-    color:var(--gold-light);
+    color:#d0b46b;
 }
 
-.footer-text{
-    font-size:10px;
-    letter-spacing:1.5px;
-    text-transform:uppercase;
+.footer-tagline{
+    color:rgba(255,255,255,.38);
+
+    font-size:9px;
+    letter-spacing:2px;
 }
 
 .footer-parent{
-    color:var(--gold-light);
+    margin-left:auto;
 
-    font-size:10px;
-    letter-spacing:1.5px;
+    color:#d0b46b;
+
+    font-size:9px;
+    letter-spacing:1.8px;
     text-transform:uppercase;
+
+    transition:
+        color .3s ease;
 }
 
 .footer-parent:hover{
     color:#fff;
+}
+
+.footer-copy{
+    color:rgba(255,255,255,.30);
+
+    font-size:9px;
+    letter-spacing:1px;
 }
 
 
@@ -1689,11 +1808,47 @@ footer{
         padding:0;
     }
 
-    .footer-inner{
-        flex-direction:column;
 
-        align-items:flex-start;
+    /* FOOTER MOBILE */
+
+    .gwaves-footer{
+        padding:80px 7vw 30px;
     }
+
+    .gwaves-footer-inner{
+        grid-template-columns:1fr;
+
+        gap:55px;
+    }
+
+    .footer-details{
+        border-left:0;
+
+        border-top:
+            1px solid rgba(208,180,107,.16);
+
+        padding-left:0;
+        padding-top:20px;
+    }
+
+    .footer-line{
+        margin-top:65px;
+    }
+
+    .footer-bottom{
+        flex-wrap:wrap;
+
+        gap:18px;
+    }
+
+    .footer-parent{
+        margin-left:0;
+    }
+
+    .footer-copy{
+        width:100%;
+    }
+
 }
 
 </style>
@@ -2699,236 +2854,222 @@ footer{
 
 </section>
 
-/* =========================================================
-   CTA
-========================================================= */
-
-.footer-cta{
-    display:inline-block;
-
-    margin-top:30px;
-
-    padding:15px 27px;
-
-    border:
-        1px solid #b49352;
-
-    color:#f5f0e4;
-
-    font-size:10px;
-    letter-spacing:2px;
-    text-transform:uppercase;
-
-    transition:
-        background .3s ease,
-        border-color .3s ease,
-        color .3s ease;
-}
-
-.footer-cta:hover{
-    background:#d0b46b;
-
-    border-color:#d0b46b;
-
-    color:#14251c;
-}
 
 
-/* =========================================================
-   CONTACT DETAILS
-========================================================= */
+<!-- =======================================================
+     GWAVES PREMIUM FOOTER
+======================================================== -->
 
-.footer-details{
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
+<footer class="gwaves-footer">
 
-    border-left:
-        1px solid rgba(208,180,107,.16);
+    <div class="gwaves-footer-inner">
 
-    padding-left:55px;
-}
+        <!-- LEFT : CONTACT INTRO -->
+        <div class="footer-contact">
 
-.footer-detail{
-    padding:19px 0;
+            <div class="footer-label">
+                LET'S CONNECT
+            </div>
 
-    border-bottom:
-        1px solid rgba(208,180,107,.12);
-}
+            <h2>
+                Have an idea?
+                <em>Let it flow.</em>
+            </h2>
 
-.footer-detail:first-child{
-    padding-top:0;
-}
+            <p>
+                Tell us what you're thinking.
+                Let's give your idea a direction
+                and let it move forward.
+            </p>
 
-.footer-detail:last-child{
-    border-bottom:0;
-}
+            <a
+                href="mailto:team.valiass@gmail.com"
+                class="footer-cta">
+                Start A Conversation →
+            </a>
 
-.footer-detail span{
-    display:block;
-
-    margin-bottom:9px;
-
-    color:#b49352;
-
-    font-size:9px;
-    letter-spacing:2px;
-}
-
-.footer-detail a{
-    color:rgba(255,255,255,.78);
-
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
-    font-size:17px;
-
-    transition:
-        color .3s ease;
-}
-
-.footer-detail a:hover{
-    color:#d0b46b;
-}
-
-.footer-location{
-    color:rgba(255,255,255,.62);
-
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
-    font-size:15px;
-
-    line-height:1.7;
-}
+        </div>
 
 
-/* =========================================================
-   DIVIDER
-========================================================= */
+        <!-- RIGHT : CONTACT DETAILS -->
+        <div class="footer-details">
 
-.footer-line{
-    max-width:1120px;
+            <div class="footer-detail">
 
-    height:1px;
+                <span>EMAIL</span>
 
-    margin:80px auto 28px;
+                <a href="mailto:team.valiass@gmail.com">
+                    team.valiass@gmail.com
+                </a>
 
-    background:
-        rgba(208,180,107,.14);
-}
+            </div>
 
+
+            <div class="footer-detail">
+
+                <span>PHONE / WHATSAPP</span>
+
+                <a href="tel:+918985361991">
+                    +91 89853 61991
+                </a>
+
+            </div>
+
+
+            <div class="footer-detail">
+
+                <span>ALTERNATE</span>
+
+                <a href="tel:+919133140148">
+                    +91 91331 40148
+                </a>
+
+            </div>
+
+
+            <div class="footer-detail">
+
+                <span>BASED IN</span>
+
+                <div class="footer-location">
+                    Ippanapadu, Mandapeta,<br>
+                    East Godavari, Andhra Pradesh – 533340
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- DIVIDER -->
+    <div class="footer-line"></div>
+
+
+    <!-- BOTTOM BRAND BAR -->
+    <div class="footer-bottom">
+
+        <div class="footer-brand">
+            G<span>WAVES</span>.DIGITAL
+        </div>
+
+        <div class="footer-tagline">
+            WHERE IDEAS FLOW.
+        </div>
+
+        <a
+            href="../../index.html"
+            class="footer-parent">
+            ↑ VALIASS
+        </a>
+
+        <div class="footer-copy">
+            © 2026 GWAVES.DIGITAL
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<script>
 
 /* =========================================================
-   BOTTOM BAR
+   NAVBAR SCROLL
 ========================================================= */
 
-.footer-bottom{
-    max-width:1120px;
-    margin:auto;
+const navbar = document.getElementById("navbar");
 
-    display:flex;
-    align-items:center;
+window.addEventListener("scroll", function(){
 
-    gap:28px;
-}
+    if(window.scrollY > 30){
 
-.footer-brand{
-    color:#f5f0e4;
+        navbar.classList.add("scrolled");
 
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
+    }else{
 
-    font-size:15px;
-    letter-spacing:1.5px;
-}
+        navbar.classList.remove("scrolled");
 
-.footer-brand span{
-    color:#d0b46b;
-}
+    }
 
-.footer-tagline{
-    color:rgba(255,255,255,.38);
-
-    font-size:9px;
-    letter-spacing:2px;
-}
-
-.footer-parent{
-    margin-left:auto;
-
-    color:#d0b46b;
-
-    font-size:9px;
-    letter-spacing:1.8px;
-    text-transform:uppercase;
-
-    transition:
-        color .3s ease;
-}
-
-.footer-parent:hover{
-    color:#fff;
-}
-
-.footer-copy{
-    color:rgba(255,255,255,.30);
-
-    font-size:9px;
-    letter-spacing:1px;
-}
+});
 
 
 /* =========================================================
-   MOBILE
+   REVEAL ANIMATION
 ========================================================= */
 
-@media(max-width:750px){
+const revealElements =
+    document.querySelectorAll(".reveal");
 
-    .gwaves-footer{
-        padding:80px 7vw 30px;
-    }
+const revealObserver =
+    new IntersectionObserver(
 
-    .gwaves-footer-inner{
-        grid-template-columns:1fr;
+        function(entries){
 
-        gap:55px;
-    }
+            entries.forEach(function(entry){
 
-    .footer-details{
-        border-left:0;
+                if(entry.isIntersecting){
 
-        border-top:
-            1px solid rgba(208,180,107,.16);
+                    entry.target.classList.add("visible");
 
-        padding-left:0;
-        padding-top:20px;
-    }
+                    revealObserver.unobserve(entry.target);
 
-    .footer-line{
-        margin-top:65px;
-    }
+                }
 
-    .footer-bottom{
-        flex-wrap:wrap;
+            });
 
-        gap:18px;
-    }
+        },
 
-    .footer-parent{
-        margin-left:0;
-    }
+        {
+            threshold:.12
+        }
 
-    .footer-copy{
-        width:100%;
-    }
+    );
+
+
+revealElements.forEach(function(element){
+
+    revealObserver.observe(element);
+
+});
+
+
+/* =========================================================
+   CONTACT NAVIGATION
+========================================================= */
+
+const contactLink =
+    document.querySelector(
+        '.nav-links a[href="#contact"]'
+    );
+
+if(contactLink){
+
+    contactLink.addEventListener("click", function(event){
+
+        event.preventDefault();
+
+        const footer =
+            document.querySelector(".gwaves-footer");
+
+        if(footer){
+
+            footer.scrollIntoView({
+                behavior:"smooth"
+            });
+
+        }
+
+    });
 
 }
 
-</style>
+</script>
+
+
+</body>
+</html>
+```
