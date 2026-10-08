@@ -4,23 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Our Roots — VALIASS</title>
+<title>VALIASS — Our Roots</title>
 
 <style>
-
-:root{
-    --cream:#f4efe4;
-    --cream-dark:#e7ddcb;
-    --green:#20382c;
-    --green-dark:#14251c;
-    --green-light:#385744;
-    --olive:#707b55;
-    --gold:#b49352;
-    --brown:#765b40;
-    --text:#26342b;
-    --white:#ffffff;
-}
-
 *{
     margin:0;
     padding:0;
@@ -32,91 +18,69 @@ html{
 }
 
 body{
-    font-family:Georgia,"Times New Roman",serif;
-    background:var(--cream);
-    color:var(--text);
-    overflow-x:hidden;
+    font-family: Georgia, "Times New Roman", serif;
+    background:#f4f0e7;
+    color:#182019;
+    line-height:1.7;
 }
 
 a{
-    color:inherit;
     text-decoration:none;
+    color:inherit;
 }
 
 /* =========================
    NAVIGATION
 ========================= */
 
-.navbar{
+nav{
     position:fixed;
     top:0;
     left:0;
     width:100%;
     z-index:1000;
-    padding:24px 5%;
-    transition:.4s ease;
-}
 
-.navbar.scrolled{
-    background:rgba(20,37,28,.94);
-    backdrop-filter:blur(14px);
-    padding:16px 5%;
-}
-
-.nav-inner{
-    max-width:1300px;
-    margin:auto;
     display:flex;
-    align-items:center;
     justify-content:space-between;
+    align-items:center;
+
+    padding:22px 6%;
+
+    background:rgba(20,28,22,0.45);
+    backdrop-filter:blur(10px);
+
+    color:#fff;
+
+    transition:0.4s ease;
+}
+
+nav.scrolled{
+    background:rgba(20,28,22,0.94);
+    padding:15px 6%;
 }
 
 .logo{
-    width:48px;
-    height:48px;
-    border:1px solid rgba(255,255,255,.65);
-    border-radius:50%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    color:white;
-    font-size:9px;
-    letter-spacing:1px;
+    font-size:24px;
+    letter-spacing:5px;
+    font-weight:bold;
 }
 
 .nav-links{
     display:flex;
-    gap:32px;
-    align-items:center;
-    color:white;
+    gap:30px;
+    font-family:Arial, sans-serif;
     font-size:13px;
     letter-spacing:1px;
-    text-transform:uppercase;
 }
 
 .nav-links a{
-    position:relative;
-    opacity:.88;
-    transition:.3s;
+    opacity:0.8;
+    transition:0.3s;
 }
 
-.nav-links a:hover{
+.nav-links a:hover,
+.nav-links .active{
     opacity:1;
-}
-
-.nav-links a::after{
-    content:"";
-    position:absolute;
-    left:0;
-    bottom:-7px;
-    width:0;
-    height:1px;
-    background:var(--gold);
-    transition:.3s;
-}
-
-.nav-links a:hover::after{
-    width:100%;
 }
 
 /* =========================
@@ -124,250 +88,185 @@ a{
 ========================= */
 
 .hero{
-    min-height:92vh;
-    position:relative;
+    min-height:100vh;
+
     display:flex;
-    align-items:flex-end;
-    overflow:hidden;
+    align-items:center;
+
+    padding:140px 8% 100px;
+
+    color:#fff;
 
     background:
         linear-gradient(
             90deg,
-            rgba(10,24,17,.84),
-            rgba(10,24,17,.42),
-            rgba(10,24,17,.08)
+            rgba(12,20,15,0.78),
+            rgba(12,20,15,0.35)
         ),
-        url("https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=2200&q=90")
+        url("https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=2400&q=95")
         center/cover no-repeat;
-}
-
-.hero::after{
-    content:"";
-    position:absolute;
-    inset:0;
-
-    background:
-        linear-gradient(
-            180deg,
-            rgba(0,0,0,.05),
-            transparent 55%,
-            rgba(0,0,0,.48)
-        );
 }
 
 .hero-content{
-    position:relative;
-    z-index:2;
-    width:100%;
-    max-width:1300px;
-    margin:auto;
-    padding:150px 7% 100px;
-    color:white;
+    max-width:760px;
 }
 
 .eyebrow{
-    font-size:11px;
+    font-family:Arial, sans-serif;
+    font-size:12px;
     letter-spacing:4px;
     text-transform:uppercase;
-    color:#d6c49c;
     margin-bottom:25px;
+    opacity:0.75;
 }
 
 .hero h1{
-    font-size:clamp(60px,9vw,120px);
-    line-height:.9;
-    letter-spacing:-5px;
-    font-weight:400;
-    margin-bottom:30px;
+    font-size:clamp(60px,9vw,125px);
+    line-height:0.95;
+    font-weight:normal;
+    margin-bottom:35px;
 }
 
 .hero p{
-    max-width:600px;
-    color:rgba(255,255,255,.82);
-    font-size:19px;
-    line-height:1.8;
+    max-width:620px;
+    font-size:20px;
+    color:#eee;
 }
 
 /* =========================
-   GENERAL
+   GENERAL SECTIONS
 ========================= */
 
-.section{
-    padding:130px 7%;
-}
-
-.container{
-    max-width:1200px;
-    margin:auto;
+section{
+    padding:120px 8%;
 }
 
 .section-label{
-    color:var(--gold);
+    font-family:Arial, sans-serif;
     font-size:11px;
-    letter-spacing:3px;
+    letter-spacing:4px;
     text-transform:uppercase;
-    margin-bottom:25px;
+    color:#7d735e;
+    margin-bottom:22px;
 }
 
-.section h2{
-    font-size:clamp(43px,6vw,76px);
-    font-weight:400;
-    line-height:1;
-    color:var(--green);
-    margin-bottom:30px;
+.section-title{
+    font-size:clamp(42px,6vw,78px);
+    line-height:1.05;
+    font-weight:normal;
+    max-width:850px;
 }
 
-.section-intro{
-    max-width:680px;
-    font-size:20px;
-    line-height:1.85;
-    color:#5f675f;
-}
-
-/* =========================
-   CINEMATIC IMAGES
-========================= */
-
-.cinematic-image{
-    position:relative;
-    overflow:hidden;
-}
-
-.cinematic-image img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    display:block;
-    filter:saturate(.78) contrast(1.06);
-    transition:transform 1.2s ease;
-}
-
-.cinematic-image:hover img{
-    transform:scale(1.045);
+.section-text{
+    max-width:700px;
+    font-size:19px;
+    color:#555b51;
+    margin-top:30px;
 }
 
 /* =========================
-   ROOT INTRO
+   INTRO
 ========================= */
 
-.root-intro{
-    background:var(--cream);
+.intro{
+    background:#f4f0e7;
 }
 
-.root-intro-grid{
-    margin-top:80px;
+.intro-grid{
     display:grid;
-    grid-template-columns:1.05fr .95fr;
-    gap:75px;
-    align-items:center;
+    grid-template-columns:1fr 1fr;
+    gap:80px;
+    align-items:end;
 }
 
-.root-intro-image{
-    height:650px;
-}
-
-.root-intro-text h3{
-    font-size:44px;
-    line-height:1.15;
-    font-weight:400;
-    color:var(--green);
-    margin-bottom:25px;
-}
-
-.root-intro-text p{
-    font-size:18px;
-    line-height:1.9;
-    color:#626a62;
+.intro-number{
+    font-family:Arial,sans-serif;
+    font-size:13px;
+    letter-spacing:3px;
+    color:#8b8069;
 }
 
 /* =========================
-   FOUR ROOTS
+   ROOT CARDS
 ========================= */
 
-.roots-four{
-    background:var(--green-dark);
-    color:white;
-}
-
-.roots-four h2{
-    color:white;
-}
-
-.roots-four .section-intro{
-    color:#c4ccc5;
+.foundation{
+    background:#ebe5d7;
 }
 
 .root-grid{
-    margin-top:80px;
+    margin-top:70px;
+
     display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:25px;
+    grid-template-columns:repeat(4,1fr);
+
+    gap:20px;
 }
 
 .root-card{
-    min-height:370px;
-    padding:48px;
-    border:1px solid rgba(255,255,255,.12);
-    background:rgba(255,255,255,.035);
-    transition:.4s ease;
+    min-height:280px;
+    padding:35px;
+
+    background:#f6f2e9;
+
+    border:1px solid rgba(50,60,45,0.08);
+
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+
+    transition:0.4s ease;
 }
 
 .root-card:hover{
-    transform:translateY(-6px);
-    background:rgba(255,255,255,.065);
+    transform:translateY(-8px);
+    box-shadow:0 20px 45px rgba(30,35,25,0.10);
 }
 
 .root-number{
-    color:var(--gold);
+    font-family:Arial,sans-serif;
     font-size:11px;
     letter-spacing:3px;
-    margin-bottom:65px;
+    color:#91856c;
 }
 
 .root-card h3{
-    font-size:38px;
-    font-weight:400;
-    margin-bottom:20px;
+    font-size:29px;
+    font-weight:normal;
+    margin-bottom:12px;
 }
 
 .root-card p{
-    color:#bcc5bd;
-    font-size:17px;
-    line-height:1.85;
+    font-family:Arial,sans-serif;
+    font-size:14px;
+    color:#66695f;
 }
 
 /* =========================
-   ROOTS IMAGE
+   CINEMATIC IMAGE
 ========================= */
 
-.deep-roots{
-    background:var(--green-dark);
-    padding-top:0;
+.image-section{
+    padding:0;
 }
 
-.deep-roots-image{
-    height:680px;
-    position:relative;
-    overflow:hidden;
-
-    background:
-        linear-gradient(
-            90deg,
-            rgba(10,24,17,.52),
-            rgba(10,24,17,.05)
-        ),
-        url("https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=2200&q=90")
-        center/cover no-repeat;
+.cinematic-image{
+    width:100%;
+    height:75vh;
+    object-fit:cover;
+    display:block;
 }
 
-.deep-roots-caption{
-    position:absolute;
-    left:55px;
-    bottom:50px;
-    max-width:700px;
-    color:white;
-    font-size:30px;
-    line-height:1.35;
+.image-caption{
+    padding:35px 8%;
+    background:#192219;
+    color:#eee;
+}
+
+.image-caption p{
+    max-width:900px;
+    font-size:25px;
+    font-style:italic;
 }
 
 /* =========================
@@ -375,60 +274,76 @@ a{
 ========================= */
 
 .quote-section{
-    background:var(--cream-dark);
-    text-align:center;
+    background:#182019;
+    color:#f4f0e7;
+
+    min-height:65vh;
+
+    display:flex;
+    align-items:center;
 }
 
-.quote-mark{
-    font-size:80px;
-    line-height:.7;
-    color:var(--gold);
-    margin-bottom:30px;
+.quote{
+    max-width:1000px;
 }
 
-.quote-section blockquote{
-    max-width:900px;
-    margin:auto;
-    font-size:clamp(30px,4vw,52px);
-    line-height:1.25;
-    font-weight:400;
-    color:var(--green);
+.quote p{
+    font-size:clamp(38px,5vw,70px);
+    line-height:1.15;
+    font-weight:normal;
+}
+
+.quote small{
+    display:block;
+    margin-top:35px;
+
+    font-family:Arial,sans-serif;
+    font-size:11px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+
+    color:#aaa996;
 }
 
 /* =========================
    FOUNDATION
 ========================= */
 
-.foundation{
-    background:var(--cream);
+.foundation-story{
+    background:#f4f0e7;
 }
 
-.foundation-grid{
-    margin-top:80px;
+.story-grid{
+    margin-top:70px;
+
     display:grid;
-    grid-template-columns:.8fr 1.2fr;
+    grid-template-columns:1fr 1fr;
+
     gap:80px;
-    align-items:start;
 }
 
-.foundation-number{
-    font-size:clamp(90px,12vw,160px);
-    color:var(--green);
-    line-height:.8;
-    opacity:.12;
+.story-block{
+    padding-top:25px;
+    border-top:1px solid rgba(30,40,30,0.18);
 }
 
-.foundation-text h3{
-    font-size:44px;
-    font-weight:400;
-    color:var(--green);
-    margin-bottom:25px;
+.story-block span{
+    font-family:Arial,sans-serif;
+    font-size:11px;
+    letter-spacing:3px;
+    color:#817660;
 }
 
-.foundation-text p{
-    font-size:18px;
-    line-height:1.9;
-    color:#626a62;
+.story-block h3{
+    font-size:38px;
+    font-weight:normal;
+    margin:25px 0 18px;
+}
+
+.story-block p{
+    color:#5b6057;
+    font-size:17px;
+    max-width:500px;
 }
 
 /* =========================
@@ -436,44 +351,36 @@ a{
 ========================= */
 
 .connection{
-    background:var(--cream-dark);
+    background:#e5dece;
 }
 
 .connection-flow{
     margin-top:80px;
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    border-top:1px solid rgba(32,56,44,.25);
-    border-bottom:1px solid rgba(32,56,44,.25);
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:20px;
+
+    flex-wrap:wrap;
 }
 
-.connection-item{
-    min-height:250px;
-    padding:40px 30px;
-    border-right:1px solid rgba(32,56,44,.2);
-}
+.flow-item{
+    padding:25px 35px;
 
-.connection-item:last-child{
-    border-right:none;
-}
+    background:#f5f0e5;
 
-.connection-number{
-    color:var(--gold);
-    font-size:11px;
+    border:1px solid rgba(40,50,40,0.1);
+
+    font-family:Arial,sans-serif;
+    font-size:13px;
     letter-spacing:2px;
-    margin-bottom:45px;
+    text-transform:uppercase;
 }
 
-.connection-item h3{
-    font-size:27px;
-    font-weight:400;
-    color:var(--green);
-    margin-bottom:15px;
-}
-
-.connection-item p{
-    color:#667066;
-    line-height:1.7;
+.arrow{
+    font-size:25px;
+    color:#8c8068;
 }
 
 /* =========================
@@ -481,55 +388,58 @@ a{
 ========================= */
 
 .closing{
-    min-height:620px;
+    min-height:70vh;
+
     display:flex;
     align-items:center;
-    color:white;
+
+    color:#fff;
 
     background:
         linear-gradient(
-            90deg,
-            rgba(14,31,22,.86),
-            rgba(14,31,22,.36)
+            rgba(16,24,18,0.60),
+            rgba(16,24,18,0.75)
         ),
-        url("https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=2200&q=90")
+        url("https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=2200&q=95")
         center/cover no-repeat;
 }
 
 .closing-content{
-    max-width:1200px;
-    width:100%;
-    margin:auto;
-    padding:100px 7%;
-}
-
-.closing h2{
-    color:white;
     max-width:850px;
 }
 
+.closing h2{
+    font-size:clamp(48px,7vw,95px);
+    line-height:1;
+    font-weight:normal;
+    margin-bottom:35px;
+}
+
 .closing p{
+    font-size:20px;
     max-width:650px;
-    color:#d8ded8;
-    font-size:19px;
-    line-height:1.8;
+    color:#e5e5e0;
 }
 
 .button{
     display:inline-block;
-    margin-top:38px;
-    padding:15px 27px;
-    border:1px solid rgba(255,255,255,.5);
-    color:white;
-    font-size:11px;
+
+    margin-top:40px;
+    padding:15px 28px;
+
+    border:1px solid rgba(255,255,255,0.5);
+
+    font-family:Arial,sans-serif;
+    font-size:12px;
     letter-spacing:2px;
     text-transform:uppercase;
-    transition:.35s;
+
+    transition:0.3s;
 }
 
 .button:hover{
-    background:white;
-    color:var(--green-dark);
+    background:#fff;
+    color:#182019;
 }
 
 /* =========================
@@ -537,30 +447,23 @@ a{
 ========================= */
 
 footer{
-    background:#101d16;
-    color:#aeb8ae;
-    padding:55px 7%;
-}
+    background:#101610;
+    color:#bfc2b9;
 
-.footer-inner{
-    max-width:1200px;
-    margin:auto;
+    padding:60px 8%;
+
     display:flex;
     justify-content:space-between;
     align-items:center;
-    gap:30px;
+
+    font-family:Arial,sans-serif;
+    font-size:12px;
 }
 
 .footer-logo{
-    color:white;
-    letter-spacing:3px;
-    font-size:15px;
-}
-
-.footer-text{
-    font-size:11px;
-    letter-spacing:1.5px;
-    text-transform:uppercase;
+    color:#fff;
+    letter-spacing:5px;
+    font-size:18px;
 }
 
 /* =========================
@@ -570,9 +473,7 @@ footer{
 .reveal{
     opacity:0;
     transform:translateY(35px);
-    transition:
-        opacity .9s ease,
-        transform .9s ease;
+    transition:opacity 1s ease, transform 1s ease;
 }
 
 .reveal.visible{
@@ -584,145 +485,111 @@ footer{
    RESPONSIVE
 ========================= */
 
-@media(max-width:800px){
-
-    .navbar{
-        padding:18px 6%;
-    }
+@media(max-width:900px){
 
     .nav-links{
-        display:none;
+        gap:15px;
+        font-size:10px;
     }
 
-    .hero{
-        min-height:85vh;
-    }
-
-    .hero-content{
-        padding:130px 7% 85px;
-    }
-
-    .hero h1{
-        font-size:58px;
-        letter-spacing:-3px;
-    }
-
-    .hero p{
-        font-size:16px;
-    }
-
-    .section{
-        padding:90px 7%;
-    }
-
-    .root-intro-grid,
-    .root-grid,
-    .foundation-grid{
-        grid-template-columns:1fr;
-        gap:35px;
-    }
-
-    .root-intro-image{
-        height:470px;
-    }
-
-    .root-card{
-        min-height:320px;
-        padding:35px;
-    }
-
-    .root-number{
-        margin-bottom:45px;
-    }
-
-    .deep-roots{
-        padding-top:0;
-    }
-
-    .deep-roots-image{
-        height:470px;
-    }
-
-    .deep-roots-caption{
-        left:30px;
-        right:30px;
-        bottom:30px;
-        font-size:22px;
-    }
-
-    .foundation-number{
-        font-size:100px;
-    }
-
-    .connection-flow{
+    .root-grid{
         grid-template-columns:1fr 1fr;
     }
 
-    .connection-item:nth-child(2){
-        border-right:none;
+    .intro-grid,
+    .story-grid{
+        grid-template-columns:1fr;
+        gap:40px;
     }
 
-    .connection-item{
-        border-bottom:1px solid rgba(32,56,44,.2);
+    .cinematic-image{
+        height:60vh;
     }
-
-    .closing{
-        min-height:530px;
-    }
-
-    .footer-inner{
-        flex-direction:column;
-        align-items:flex-start;
-    }
-
 }
 
-@media(max-width:520px){
+@media(max-width:600px){
 
-    .connection-flow{
+    nav{
+        padding:18px 5%;
+    }
+
+    .logo{
+        font-size:18px;
+        letter-spacing:3px;
+    }
+
+    .nav-links{
+        gap:10px;
+        font-size:8px;
+    }
+
+    section{
+        padding:85px 7%;
+    }
+
+    .hero{
+        padding:120px 7% 80px;
+    }
+
+    .hero h1{
+        font-size:60px;
+    }
+
+    .hero p{
+        font-size:17px;
+    }
+
+    .root-grid{
         grid-template-columns:1fr;
     }
 
-    .connection-item{
-        border-right:none;
+    .root-card{
+        min-height:230px;
     }
 
-}
+    .cinematic-image{
+        height:50vh;
+    }
 
+    .image-caption p{
+        font-size:20px;
+    }
+
+    .connection-flow{
+        flex-direction:column;
+    }
+
+    .arrow{
+        transform:rotate(90deg);
+    }
+
+    footer{
+        flex-direction:column;
+        gap:20px;
+        text-align:center;
+    }
+}
 </style>
 </head>
 
-<body>
 
+<body>
 
 <!-- =========================
      NAVIGATION
 ========================= -->
 
-<nav class="navbar" id="navbar">
+<nav id="navbar">
 
-    <div class="nav-inner">
+    <a href="index.html" class="logo">VALIASS</a>
 
-        <a href="index.html" class="logo">
-            LOGO
-        </a>
-
-        <div class="nav-links">
-
-            <a href="index.html">Home</a>
-
-            <a href="story.html">Story</a>
-
-            <a href="roots.html">Roots</a>
-
-            <a href="branches.html">Branches</a>
-
-            <a href="vision.html">Vision</a>
-
-            <a href="contact.html">Contact</a>
-
-        </div>
-
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="story.html">Story</a>
+        <a href="roots.html" class="active">Roots</a>
+        <a href="branches.html">Branches</a>
+        <a href="vision.html">Vision</a>
+        <a href="contact.html">Contact</a>
     </div>
 
 </nav>
@@ -732,12 +599,12 @@ footer{
      HERO
 ========================= -->
 
-<section class="hero">
+<header class="hero">
 
     <div class="hero-content reveal">
 
         <div class="eyebrow">
-            What Holds Us
+            VALIASS / THE FOUNDATION
         </div>
 
         <h1>
@@ -752,63 +619,144 @@ footer{
 
     </div>
 
+</header>
+
+
+<!-- =========================
+     INTRO
+========================= -->
+
+<section class="intro">
+
+    <div class="intro-grid">
+
+        <div class="reveal">
+
+            <div class="section-label">
+                01 / Beneath Everything
+            </div>
+
+            <h2 class="section-title">
+                What you see is not everything.
+            </h2>
+
+        </div>
+
+        <div class="reveal">
+
+            <div class="intro-number">
+                ROOTS ARE INVISIBLE.
+                <br><br>
+                BUT THEY DEFINE EVERYTHING ABOVE.
+            </div>
+
+            <p class="section-text">
+                Every idea, every decision and every journey
+                is shaped by something deeper.
+                Values. Experiences. Beliefs. Purpose.
+            </p>
+
+        </div>
+
+    </div>
+
 </section>
 
 
 <!-- =========================
-     ROOT INTRO
+     FOUNDATION CARDS
 ========================= -->
 
-<section class="section root-intro">
+<section class="foundation">
 
-    <div class="container">
+    <div class="reveal">
 
-        <div class="section-label reveal">
-            01 — Beneath Everything
+        <div class="section-label">
+            02 / The Foundation
         </div>
 
-        <h2 class="reveal">
-            What you see<br>
-            is not everything.
+        <h2 class="section-title">
+            What keeps us grounded.
         </h2>
 
-        <p class="section-intro reveal">
-            The most important parts of a tree are often
-            the parts nobody sees.
+        <p class="section-text">
+            These are not rules written on paper.
+            They are the things that quietly influence
+            how we think, create and grow.
         </p>
 
+    </div>
 
-        <div class="root-intro-grid">
 
-            <div class="cinematic-image root-intro-image reveal">
+    <div class="root-grid">
 
-                <img
-                src="https://images.unsplash.com/photo-1523742812210-5d2b0f2d3b3f?auto=format&fit=crop&w=1600&q=90"
-                alt="Natural roots and forest ground">
+        <div class="root-card reveal">
 
+            <div class="root-number">
+                ROOT 01
             </div>
 
-
-            <div class="root-intro-text reveal">
-
-                <h3>
-                    Roots don't ask to be noticed.
-                    They simply hold everything together.
-                </h3>
+            <div>
+                <h3>Values</h3>
 
                 <p>
-                    VALIASS is built on the same idea.
-                    What appears on the outside may change —
-                    names, projects, directions and identities.
+                    What we believe in
+                    and what matters to us.
                 </p>
+            </div>
 
-                <br>
+        </div>
+
+
+        <div class="root-card reveal">
+
+            <div class="root-number">
+                ROOT 02
+            </div>
+
+            <div>
+                <h3>Morals</h3>
 
                 <p>
-                    But beneath everything are a few
-                    principles that remain constant.
+                    How we choose to move
+                    when choices are not easy.
                 </p>
+            </div>
 
+        </div>
+
+
+        <div class="root-card reveal">
+
+            <div class="root-number">
+                ROOT 03
+            </div>
+
+            <div>
+                <h3>Experience</h3>
+
+                <p>
+                    Everything life taught us,
+                    directly and indirectly.
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="root-card reveal">
+
+            <div class="root-number">
+                ROOT 04
+            </div>
+
+            <div>
+                <h3>Purpose</h3>
+
+                <p>
+                    The reason we continue
+                    to grow and create.
+                </p>
             </div>
 
         </div>
@@ -819,130 +767,23 @@ footer{
 
 
 <!-- =========================
-     FOUR ROOTS
+     CINEMATIC ROOT IMAGE
 ========================= -->
 
-<section class="section roots-four">
+<section class="image-section">
 
-    <div class="container">
+    <img
+        class="cinematic-image"
+        src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1800&q=95"
+        alt="Cinematic natural landscape"
+    >
 
-        <div class="section-label reveal">
-            02 — The Foundation
-        </div>
+    <div class="image-caption">
 
-        <h2 class="reveal">
-            Four roots.<br>
-            One foundation.
-        </h2>
-
-        <p class="section-intro reveal">
-            These are the ideas that quietly influence
-            every direction we take.
+        <p>
+            “Strong branches are not created by looking strong.
+            They are created by growing strong roots.”
         </p>
-
-
-        <div class="root-grid">
-
-            <div class="root-card reveal">
-
-                <div class="root-number">
-                    01 — VALUES
-                </div>
-
-                <h3>
-                    What we believe.
-                </h3>
-
-                <p>
-                    Values are the internal compass.
-                    They influence what we create,
-                    how we work and what we choose
-                    to stand behind.
-                </p>
-
-            </div>
-
-
-            <div class="root-card reveal">
-
-                <div class="root-number">
-                    02 — MORALS
-                </div>
-
-                <h3>
-                    How we choose.
-                </h3>
-
-                <p>
-                    Growth has meaning only when the
-                    way we grow remains honest,
-                    responsible and grounded.
-                </p>
-
-            </div>
-
-
-            <div class="root-card reveal">
-
-                <div class="root-number">
-                    03 — EXPERIENCE
-                </div>
-
-                <h3>
-                    What shaped us.
-                </h3>
-
-                <p>
-                    Every success, failure, lesson,
-                    relationship and experience becomes
-                    another layer of the foundation.
-                </p>
-
-            </div>
-
-
-            <div class="root-card reveal">
-
-                <div class="root-number">
-                    04 — PURPOSE
-                </div>
-
-                <h3>
-                    Why we grow.
-                </h3>
-
-                <p>
-                    We believe growth should create
-                    something useful, meaningful and
-                    capable of making a difference.
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     DEEP ROOTS
-========================= -->
-
-<section class="section deep-roots">
-
-    <div class="container">
-
-        <div class="cinematic-image deep-roots-image reveal">
-
-            <div class="deep-roots-caption">
-                Strong branches are not created by
-                looking strong. They are created by
-                growing strong roots.
-            </div>
-
-        </div>
 
     </div>
 
@@ -953,20 +794,20 @@ footer{
      QUOTE
 ========================= -->
 
-<section class="section quote-section">
+<section class="quote-section">
 
-    <div class="container">
+    <div class="quote reveal">
 
-        <div class="quote-mark reveal">
-            “
-        </div>
-
-        <blockquote class="reveal">
+        <p>
             Growth is not only about
             reaching higher.
             It is also about knowing
             what keeps you grounded.
-        </blockquote>
+        </p>
+
+        <small>
+            The philosophy behind VALIASS
+        </small>
 
     </div>
 
@@ -974,60 +815,61 @@ footer{
 
 
 <!-- =========================
-     FOUNDATION
+     FOUNDATION STORY
 ========================= -->
 
-<section class="section foundation">
+<section class="foundation-story">
 
-    <div class="container">
+    <div class="reveal">
 
-        <div class="section-label reveal">
-            03 — The Foundation
+        <div class="section-label">
+            03 / The Foundation
         </div>
 
-        <h2 class="reveal">
-            Before the branches,<br>
+        <h2 class="section-title">
+            Before the branches,
             there is the trunk.
         </h2>
 
-
-        <div class="foundation-grid">
-
-            <div class="foundation-number reveal">
-                05
-            </div>
+    </div>
 
 
-            <div class="foundation-text reveal">
+    <div class="story-grid">
 
-                <h3>
-                    Shared foundation.
-                    Independent growth.
-                </h3>
+        <div class="story-block reveal">
 
-                <p>
-                    VALIASS doesn't exist to make every
-                    initiative look the same.
-                </p>
+            <span>
+                SHARED FOUNDATION
+            </span>
 
-                <br>
+            <h3>
+                One origin.
+            </h3>
 
-                <p>
-                    The foundation gives every branch
-                    a sense of origin and direction,
-                    while allowing it the freedom to
-                    discover its own identity.
-                </p>
+            <p>
+                VALIASS begins from shared values,
+                experiences and a desire to build
+                something meaningful.
+            </p>
 
-                <br>
+        </div>
 
-                <p>
-                    That balance — connection without
-                    limitation — is at the heart of
-                    the VALIASS philosophy.
-                </p>
 
-            </div>
+        <div class="story-block reveal">
+
+            <span>
+                INDIVIDUAL GROWTH
+            </span>
+
+            <h3>
+                Many directions.
+            </h3>
+
+            <p>
+                The people, ideas and initiatives
+                that grow from this foundation
+                are free to discover their own direction.
+            </p>
 
         </div>
 
@@ -1040,94 +882,56 @@ footer{
      CONNECTION
 ========================= -->
 
-<section class="section connection">
+<section class="connection">
 
-    <div class="container">
+    <div class="reveal">
 
-        <div class="section-label reveal">
-            04 — How Everything Connects
+        <div class="section-label">
+            04 / Connection
         </div>
 
-        <h2 class="reveal">
-            From within<br>
-            to beyond.
+        <h2 class="section-title">
+            Everything connects.
         </h2>
 
-        <p class="section-intro reveal">
-            The journey from what we believe
-            to what we eventually create.
+        <p class="section-text">
+            Values become experience.
+            Experience becomes ideas.
+            Ideas become branches.
+            And branches become new possibilities.
         </p>
 
-
-        <div class="connection-flow">
-
-            <div class="connection-item reveal">
-
-                <div class="connection-number">
-                    01
-                </div>
-
-                <h3>
-                    Values
-                </h3>
-
-                <p>
-                    What gives us direction.
-                </p>
-
-            </div>
+    </div>
 
 
-            <div class="connection-item reveal">
+    <div class="connection-flow reveal">
 
-                <div class="connection-number">
-                    02
-                </div>
+        <div class="flow-item">
+            Values
+        </div>
 
-                <h3>
-                    Experience
-                </h3>
+        <div class="arrow">
+            →
+        </div>
 
-                <p>
-                    What gives us perspective.
-                </p>
+        <div class="flow-item">
+            Experience
+        </div>
 
-            </div>
+        <div class="arrow">
+            →
+        </div>
 
+        <div class="flow-item">
+            Ideas
+        </div>
 
-            <div class="connection-item reveal">
+        <div class="arrow">
+            →
+        </div>
 
-                <div class="connection-number">
-                    03
-                </div>
-
-                <h3>
-                    Ideas
-                </h3>
-
-                <p>
-                    What gives us possibility.
-                </p>
-
-            </div>
-
-
-            <div class="connection-item reveal">
-
-                <div class="connection-number">
-                    04
-                </div>
-
-                <h3>
-                    Branches
-                </h3>
-
-                <p>
-                    What gives ideas a life of their own.
-                </p>
-
-            </div>
-
+        <div class="flow-item">
+            Branches
         </div>
 
     </div>
@@ -1136,15 +940,15 @@ footer{
 
 
 <!-- =========================
-     CLOSING
+     CLOSING CINEMATIC
 ========================= -->
 
 <section class="closing">
 
     <div class="closing-content reveal">
 
-        <div class="section-label">
-            The Next Growth
+        <div class="section-label" style="color:#c7c1af;">
+            THE NEXT CHAPTER
         </div>
 
         <h2>
@@ -1153,8 +957,9 @@ footer{
         </h2>
 
         <p>
-            Strong roots give ideas the confidence
-            to reach in different directions.
+            The foundation is strong.
+            The direction is open.
+            What grows next is part of the journey.
         </p>
 
         <a href="branches.html" class="button">
@@ -1172,46 +977,43 @@ footer{
 
 <footer>
 
-    <div class="footer-inner">
+    <a href="index.html" class="footer-logo">
+        VALIASS
+    </a>
 
-        <a href="index.html" class="footer-logo">
-            VALIASS
-        </a>
-
-        <div class="footer-text">
-            ONE ORIGIN. STRONG ROOTS. MANY POSSIBILITIES.
-        </div>
-
+    <div>
+        One origin. Strong roots. Many possibilities.
     </div>
 
 </footer>
 
 
-<!-- =========================
-     JAVASCRIPT
-========================= -->
-
 <script>
+
+/* =========================
+   NAVBAR SCROLL
+========================= */
 
 const navbar = document.getElementById("navbar");
 
 window.addEventListener("scroll", () => {
 
-    if(window.scrollY > 40){
-
+    if(window.scrollY > 50){
         navbar.classList.add("scrolled");
-
     }else{
-
         navbar.classList.remove("scrolled");
-
     }
 
 });
 
 
-const observer = new IntersectionObserver(
+/* =========================
+   REVEAL ANIMATION
+========================= */
 
+const reveals = document.querySelectorAll(".reveal");
+
+const observer = new IntersectionObserver(
     entries => {
 
         entries.forEach(entry => {
@@ -1220,22 +1022,22 @@ const observer = new IntersectionObserver(
 
                 entry.target.classList.add("visible");
 
+                observer.unobserve(entry.target);
+
             }
 
         });
 
     },
-
     {
         threshold:0.12
     }
-
 );
 
 
-document.querySelectorAll(".reveal").forEach(el => {
+reveals.forEach(element => {
 
-    observer.observe(el);
+    observer.observe(element);
 
 });
 
