@@ -1843,10 +1843,14 @@ img{
 
 
 <!-- ========================================================
-     COMPONENT LOADER
+     COMPONENT LOADER + HEADER FUNCTIONALITY
 ========================================================= -->
 
 <script>
+
+/* ========================================================
+   COMPONENT LOADER
+========================================================= */
 
 async function loadComponent(
     elementId,
@@ -1887,56 +1891,366 @@ async function loadComponent(
 }
 
 
-/* Load shared components */
+/* ========================================================
+   LOAD SHARED COMPONENTS
+========================================================= */
 
-loadComponent(
-    "valiass-header",
-    "components/header.html"
-);
+async function initializeComponents(){
 
-loadComponent(
-    "valiass-footer",
-    "components/footer.html"
-);
+    /*
+       Header MUST finish loading first.
+       This is important because the mobile
+       menu elements are inside header.html.
+    */
+
+    await loadComponent(
+        "valiass-header",
+        "components/header.html"
+    );
+
+
+    /*
+       Footer can load after the header.
+    */
+
+    await loadComponent(
+        "valiass-footer",
+        "components/footer.html"
+    );
+
+
+    /*
+       Now initialize header functionality.
+    */
+
+    initializeMobileHeader();
+
+    initializeActiveHeader();
+
+}
+
+
+/* ========================================================
+   MOBILE HEADER
+========================================================= */
+
+function initializeMobileHeader(){
+
+    const menuButton =
+        document.getElementById(
+            "mobileMenuButton"
+        );
+
+    const nav =
+        document.getElementById(
+            "valiassNav"
+        );
+
+    const closeButton =
+        document.getElementById(
+            "mobileNavClose"
+        );
+
+    const branchesButton =
+        document.getElementById(
+            "branchesButton"
+        );
+
+    const branchesMenu =
+        document.querySelector(
+            "#valiass-header .nav-dropdown-menu"
+        );
+
+
+    /*
+       SAFETY CHECK
+    */
+
+    if(!menuButton || !nav){
+
+        console.error(
+            "VALIASS mobile menu elements not found."
+        );
+
+        return;
+
+    }
+
+
+    /* ====================================================
+       OPEN MENU
+    ==================================================== */
+
+    function openMenu(){
+
+        nav.classList.add(
+            "mobile-open"
+        );
+
+        menuButton.classList.add(
+            "open"
+        );
+
+        menuButton.setAttribute(
+            "aria-label",
+            "Close menu"
+        );
+
+        document.body.style.overflow =
+            "hidden";
+
+    }
+
+
+    /* ====================================================
+       CLOSE MENU
+    ==================================================== */
+
+    function closeMenu(){
+
+        nav.classList.remove(
+            "mobile-open"
+        );
+
+        menuButton.classList.remove(
+            "open"
+        );
+
+        menuButton.setAttribute(
+            "aria-label",
+            "Open menu"
+        );
+
+        document.body.style.overflow =
+            "";
+
+
+        if(branchesMenu){
+
+            branchesMenu.classList.remove(
+                "mobile-open"
+            );
+
+        }
+
+
+        if(branchesButton){
+
+            branchesButton.classList.remove(
+                "open"
+            );
+
+        }
+
+    }
+
+
+    /* ====================================================
+       HAMBURGER BUTTON
+    ==================================================== */
+
+    menuButton.addEventListener(
+        "click",
+        function(event){
+
+            event.preventDefault();
+            event.stopPropagation();
+
+            if(
+                nav.classList.contains(
+                    "mobile-open"
+                )
+            ){
+
+                closeMenu();
+
+            }
+            else{
+
+                openMenu();
+
+            }
+
+        }
+    );
+
+
+    /* ====================================================
+       CLOSE BUTTON
+    ==================================================== */
+
+    if(closeButton){
+
+        closeButton.addEventListener(
+            "click",
+            function(event){
+
+                event.preventDefault();
+
+                closeMenu();
+
+            }
+        );
+
+    }
+
+
+    /* ====================================================
+       BRANCHES MOBILE EXPAND
+    ==================================================== */
+
+    if(
+        branchesButton &&
+        branchesMenu
+    ){
+
+        branchesButton.addEventListener(
+            "click",
+            function(event){
+
+                event.preventDefault();
+                event.stopPropagation();
+
+                branchesButton.classList.toggle(
+                    "open"
+                );
+
+                branchesMenu.classList.toggle(
+                    "mobile-open"
+                );
+
+            }
+        );
+
+    }
+
+
+    /* ====================================================
+       CLOSE AFTER LINK SELECTION
+    ==================================================== */
+
+    const navigationLinks =
+        nav.querySelectorAll(
+            "a"
+        );
+
+    navigationLinks.forEach(
+        function(link){
+
+            link.addEventListener(
+                "click",
+                function(){
+
+                    closeMenu();
+
+                }
+            );
+
+        }
+    );
+
+
+    /* ====================================================
+       CLOSE WHEN CLICKING OUTSIDE
+    ==================================================== */
+
+    document.addEventListener(
+        "click",
+        function(event){
+
+            if(
+                nav.classList.contains(
+                    "mobile-open"
+                ) &&
+                !nav.contains(
+                    event.target
+                ) &&
+                !menuButton.contains(
+                    event.target
+                )
+            ){
+
+                closeMenu();
+
+            }
+
+        }
+    );
+
+
+    /* ====================================================
+       RESET WHEN RETURNING TO DESKTOP
+    ==================================================== */
+
+    window.addEventListener(
+        "resize",
+        function(){
+
+            if(
+                window.innerWidth > 800
+            ){
+
+                closeMenu();
+
+            }
+
+        }
+    );
+
+}
 
 
 /* ========================================================
    ACTIVE HEADER LINK
-
-   Home is automatically active on index.html.
 ========================================================= */
 
-setTimeout(() => {
+function initializeActiveHeader(){
 
     const currentPage =
         window.location.pathname
         .split("/")
-        .pop() || "index.html";
+        .pop() ||
+        "index.html";
+
 
     document
         .querySelectorAll(
             "#valiass-header a"
         )
-        .forEach(link => {
+        .forEach(
+            function(link){
 
-            const href =
-                link.getAttribute("href");
+                const href =
+                    link.getAttribute(
+                        "href"
+                    );
 
-            if(
-                href === currentPage ||
-                (
-                    currentPage === "" &&
-                    href === "index.html"
-                )
-            ){
 
-                link.classList.add("active");
+                if(
+                    href === currentPage ||
+                    (
+                        currentPage === "" &&
+                        href === "index.html"
+                    )
+                ){
+
+                    link.classList.add(
+                        "active"
+                    );
+
+                }
 
             }
+        );
 
-        });
+}
 
-},500);
+
+/* ========================================================
+   START COMPONENTS
+========================================================= */
+
+initializeComponents();
 
 
 /* ========================================================
@@ -1948,23 +2262,25 @@ const revealObserver =
 
         entries => {
 
-            entries.forEach(entry => {
+            entries.forEach(
+                entry => {
 
-                if(
-                    entry.isIntersecting
-                ){
+                    if(
+                        entry.isIntersecting
+                    ){
 
-                    entry.target.classList.add(
-                        "visible"
-                    );
+                        entry.target.classList.add(
+                            "visible"
+                        );
 
-                    revealObserver.unobserve(
-                        entry.target
-                    );
+                        revealObserver.unobserve(
+                            entry.target
+                        );
+
+                    }
 
                 }
-
-            });
+            );
 
         },
 
@@ -1976,12 +2292,18 @@ const revealObserver =
 
 
 document
-    .querySelectorAll(".reveal")
-    .forEach(element => {
+    .querySelectorAll(
+        ".reveal"
+    )
+    .forEach(
+        element => {
 
-        revealObserver.observe(element);
+            revealObserver.observe(
+                element
+            );
 
-    });
+        }
+    );
 
 </script>
 
