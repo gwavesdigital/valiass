@@ -1,0 +1,1183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>VALIASS — One Origin. Strong Roots. Many Possibilities.</title>
+
+<style>
+
+:root{
+    --cream:#f4efe4;
+    --cream-dark:#e7ddcb;
+    --green:#20382c;
+    --green-dark:#14251c;
+    --green-light:#385744;
+    --olive:#707b55;
+    --gold:#b49352;
+    --brown:#765b40;
+    --text:#26342b;
+    --white:#ffffff;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Georgia, "Times New Roman", serif;
+    background:var(--cream);
+    color:var(--text);
+    overflow-x:hidden;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
+    padding:24px 5%;
+    transition:.4s ease;
+}
+
+.navbar.scrolled{
+    background:rgba(20,37,28,.94);
+    backdrop-filter:blur(14px);
+    padding:16px 5%;
+}
+
+.nav-inner{
+    max-width:1300px;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    width:48px;
+    height:48px;
+    border:1px solid rgba(255,255,255,.65);
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:white;
+    font-size:9px;
+    letter-spacing:1px;
+}
+
+.nav-links{
+    display:flex;
+    gap:32px;
+    align-items:center;
+    color:white;
+    font-size:13px;
+    letter-spacing:1px;
+    text-transform:uppercase;
+}
+
+.nav-links a{
+    position:relative;
+    opacity:.88;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    opacity:1;
+}
+
+.nav-links a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-7px;
+    width:0;
+    height:1px;
+    background:var(--gold);
+    transition:.3s;
+}
+
+.nav-links a:hover::after{
+    width:100%;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    min-height:100vh;
+    position:relative;
+    display:flex;
+    align-items:center;
+    overflow:hidden;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(10,24,17,.82) 0%,
+            rgba(10,24,17,.54) 45%,
+            rgba(10,24,17,.16) 100%
+        ),
+        url("https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=2200&q=90")
+        center/cover no-repeat;
+}
+
+.hero::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+        linear-gradient(
+            180deg,
+            rgba(0,0,0,.15),
+            transparent 40%,
+            rgba(0,0,0,.35)
+        );
+    pointer-events:none;
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    max-width:1300px;
+    width:100%;
+    margin:auto;
+    padding:140px 7% 100px;
+    color:white;
+}
+
+.eyebrow{
+    font-size:12px;
+    letter-spacing:4px;
+    text-transform:uppercase;
+    color:#d6c49c;
+    margin-bottom:25px;
+}
+
+.hero h1{
+    max-width:850px;
+    font-size:clamp(58px,9vw,125px);
+    font-weight:400;
+    line-height:.9;
+    letter-spacing:-5px;
+    margin-bottom:30px;
+}
+
+.hero p{
+    max-width:570px;
+    font-size:19px;
+    line-height:1.8;
+    color:rgba(255,255,255,.82);
+}
+
+.hero-button{
+    display:inline-block;
+    margin-top:38px;
+    padding:15px 26px;
+    border:1px solid rgba(255,255,255,.55);
+    color:white;
+    font-size:11px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    transition:.4s;
+}
+
+.hero-button:hover{
+    background:white;
+    color:var(--green-dark);
+}
+
+.scroll-note{
+    position:absolute;
+    bottom:35px;
+    left:7%;
+    z-index:3;
+    color:rgba(255,255,255,.65);
+    font-size:10px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+}
+
+/* =========================
+   GENERAL SECTIONS
+========================= */
+
+.section{
+    padding:130px 7%;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+}
+
+.section-label{
+    color:var(--gold);
+    font-size:11px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    margin-bottom:25px;
+}
+
+.section h2{
+    font-size:clamp(42px,6vw,78px);
+    font-weight:400;
+    line-height:1;
+    color:var(--green);
+    margin-bottom:30px;
+}
+
+.section-intro{
+    max-width:650px;
+    font-size:20px;
+    line-height:1.8;
+    color:#5d665d;
+}
+
+/* =========================
+   CINEMATIC IMAGE
+========================= */
+
+.cinematic-image{
+    position:relative;
+    overflow:hidden;
+}
+
+.cinematic-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    filter:saturate(.82) contrast(1.04);
+    transform:scale(1.01);
+    transition:transform 1.2s ease;
+}
+
+.cinematic-image:hover img{
+    transform:scale(1.045);
+}
+
+.cinematic-image::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+        linear-gradient(
+            180deg,
+            rgba(0,0,0,.02),
+            rgba(0,0,0,.24)
+        );
+    pointer-events:none;
+}
+
+/* =========================
+   PHILOSOPHY
+========================= */
+
+.philosophy{
+    background:var(--cream);
+}
+
+.philosophy-grid{
+    margin-top:75px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:70px;
+    align-items:center;
+}
+
+.philosophy-image{
+    height:650px;
+}
+
+.philosophy-text{
+    padding:30px 0;
+}
+
+.philosophy-text h3{
+    font-size:40px;
+    font-weight:400;
+    line-height:1.15;
+    color:var(--green);
+    margin-bottom:25px;
+}
+
+.philosophy-text p{
+    font-size:18px;
+    line-height:1.9;
+    color:#626b63;
+}
+
+/* =========================
+   ROOTS
+========================= */
+
+.roots-section{
+    background:var(--green-dark);
+    color:white;
+}
+
+.roots-section h2{
+    color:white;
+}
+
+.roots-section .section-intro{
+    color:#c5cec5;
+}
+
+.roots-grid{
+    margin-top:70px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
+}
+
+.root-card{
+    min-height:310px;
+    padding:45px;
+    border:1px solid rgba(255,255,255,.13);
+    background:rgba(255,255,255,.035);
+    transition:.4s;
+}
+
+.root-card:hover{
+    background:rgba(255,255,255,.07);
+    transform:translateY(-5px);
+}
+
+.root-number{
+    color:var(--gold);
+    font-size:12px;
+    letter-spacing:2px;
+    margin-bottom:50px;
+}
+
+.root-card h3{
+    font-size:34px;
+    font-weight:400;
+    margin-bottom:18px;
+}
+
+.root-card p{
+    color:#bfc8c0;
+    line-height:1.8;
+}
+
+/* =========================
+   ROOT CINEMATIC STRIP
+========================= */
+
+.root-visual{
+    height:550px;
+    margin-top:90px;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(20,37,28,.42),
+            rgba(20,37,28,.08)
+        ),
+        url("https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=2200&q=90")
+        center/cover no-repeat;
+    display:flex;
+    align-items:flex-end;
+    padding:55px;
+}
+
+.root-visual p{
+    max-width:600px;
+    color:white;
+    font-size:27px;
+    line-height:1.35;
+}
+
+/* =========================
+   BRANCHES
+========================= */
+
+.branches-section{
+    background:var(--cream-dark);
+}
+
+.branches-visual{
+    height:620px;
+    margin-top:70px;
+    background:
+        linear-gradient(
+            180deg,
+            rgba(20,37,28,.05),
+            rgba(20,37,28,.38)
+        ),
+        url("https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=2200&q=90")
+        center/cover no-repeat;
+}
+
+.branches-content{
+    margin-top:60px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:70px;
+}
+
+.branches-content h3{
+    font-size:42px;
+    font-weight:400;
+    color:var(--green);
+}
+
+.branches-content p{
+    font-size:18px;
+    line-height:1.9;
+    color:#62685f;
+}
+
+/* =========================
+   VISION
+========================= */
+
+.vision-section{
+    background:var(--cream);
+}
+
+.vision-grid{
+    margin-top:75px;
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    gap:70px;
+    align-items:center;
+}
+
+.vision-image{
+    height:600px;
+    order:2;
+}
+
+.vision-text{
+    order:1;
+}
+
+.vision-text h3{
+    font-size:46px;
+    font-weight:400;
+    color:var(--green);
+    line-height:1.1;
+    margin-bottom:25px;
+}
+
+.vision-text p{
+    font-size:18px;
+    line-height:1.9;
+    color:#62685f;
+}
+
+/* =========================
+   CONTACT CTA
+========================= */
+
+.contact-section{
+    position:relative;
+    min-height:620px;
+    display:flex;
+    align-items:center;
+    overflow:hidden;
+    color:white;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(15,32,23,.84),
+            rgba(15,32,23,.40)
+        ),
+        url("https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=2200&q=90")
+        center/cover no-repeat;
+}
+
+.contact-content{
+    position:relative;
+    z-index:2;
+    max-width:1200px;
+    width:100%;
+    margin:auto;
+    padding:100px 7%;
+}
+
+.contact-content h2{
+    color:white;
+    max-width:700px;
+}
+
+.contact-content p{
+    max-width:600px;
+    font-size:19px;
+    line-height:1.8;
+    color:#d9ddd3;
+}
+
+.section-button{
+    display:inline-block;
+    margin-top:35px;
+    padding:15px 27px;
+    border:1px solid rgba(255,255,255,.45);
+    font-size:11px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    transition:.35s;
+}
+
+.section-button:hover{
+    background:white;
+    color:var(--green-dark);
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    background:#101d16;
+    color:#aeb8ae;
+    padding:55px 7%;
+}
+
+.footer-inner{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    gap:30px;
+    align-items:center;
+}
+
+.footer-logo{
+    color:white;
+    letter-spacing:3px;
+    font-size:15px;
+}
+
+.footer-text{
+    font-size:11px;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+}
+
+/* =========================
+   REVEAL
+========================= */
+
+.reveal{
+    opacity:0;
+    transform:translateY(35px);
+    transition:opacity .9s ease, transform .9s ease;
+}
+
+.reveal.visible{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:800px){
+
+    .navbar{
+        padding:18px 6%;
+    }
+
+    .nav-links{
+        display:none;
+    }
+
+    .hero-content{
+        padding:130px 7% 100px;
+    }
+
+    .hero h1{
+        font-size:58px;
+        letter-spacing:-3px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .section{
+        padding:90px 7%;
+    }
+
+    .philosophy-grid,
+    .roots-grid,
+    .branches-content,
+    .vision-grid{
+        grid-template-columns:1fr;
+        gap:35px;
+    }
+
+    .philosophy-image{
+        height:470px;
+    }
+
+    .root-visual{
+        height:450px;
+        padding:30px;
+    }
+
+    .root-visual p{
+        font-size:21px;
+    }
+
+    .branches-visual{
+        height:470px;
+    }
+
+    .vision-image{
+        order:1;
+        height:470px;
+    }
+
+    .vision-text{
+        order:2;
+    }
+
+    .contact-section{
+        min-height:520px;
+    }
+
+    .footer-inner{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<nav class="navbar" id="navbar">
+
+    <div class="nav-inner">
+
+        <a href="index.html" class="logo">
+            LOGO
+        </a>
+
+        <div class="nav-links">
+
+            <a href="index.html">Home</a>
+
+            <a href="story.html">Story</a>
+
+            <a href="roots.html">Roots</a>
+
+            <a href="branches.html">Branches</a>
+
+            <a href="vision.html">Vision</a>
+
+            <a href="contact.html">Contact</a>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero">
+
+    <div class="hero-content reveal">
+
+        <div class="eyebrow">
+            Inspired by Tradition. Driven by Innovation.
+        </div>
+
+        <h1>
+            One Origin.<br>
+            Many Possibilities.
+        </h1>
+
+        <p>
+            VALIASS is a living journey of ideas, values,
+            experiences and possibilities — growing from one
+            strong origin into many meaningful directions.
+        </p>
+
+        <a href="story.html" class="hero-button">
+            Discover The Story →
+        </a>
+
+    </div>
+
+    <div class="scroll-note">
+        Scroll to explore
+    </div>
+
+</section>
+
+
+<!-- =========================
+     PHILOSOPHY
+========================= -->
+
+<section class="section philosophy">
+
+    <div class="container">
+
+        <div class="section-label reveal">
+            The Idea
+        </div>
+
+        <h2 class="reveal">
+            We are not an umbrella.<br>
+            We are a tree.
+        </h2>
+
+        <p class="section-intro reveal">
+            One origin. Strong roots. A growing trunk.
+            And branches that are free to discover their
+            own direction.
+        </p>
+
+
+        <div class="philosophy-grid">
+
+            <div class="cinematic-image philosophy-image reveal">
+
+                <img
+                src="https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=1600&q=90"
+                alt="Majestic tree in cinematic natural light">
+
+            </div>
+
+
+            <div class="philosophy-text reveal">
+
+                <h3>
+                    Every branch can become
+                    something of its own.
+                </h3>
+
+                <p>
+                    VALIASS is the origin that connects them.
+                    The values remain shared. The spirit remains
+                    connected. But every initiative has the freedom
+                    to develop its own identity, purpose and journey.
+                </p>
+
+                <a href="story.html" class="section-button"
+                   style="border-color:var(--green);color:var(--green);">
+                    Read Our Story →
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     ROOTS
+========================= -->
+
+<section class="section roots-section">
+
+    <div class="container">
+
+        <div class="section-label reveal">
+            What Holds Us
+        </div>
+
+        <h2 class="reveal">
+            Strong roots.<br>
+            Quiet strength.
+        </h2>
+
+        <p class="section-intro reveal">
+            Before anything grows outward,
+            something has to grow inward.
+        </p>
+
+
+        <div class="roots-grid">
+
+            <div class="root-card reveal">
+
+                <div class="root-number">
+                    01 — VALUES
+                </div>
+
+                <h3>
+                    What we believe.
+                </h3>
+
+                <p>
+                    The principles that guide every idea,
+                    every decision and every direction.
+                </p>
+
+            </div>
+
+
+            <div class="root-card reveal">
+
+                <div class="root-number">
+                    02 — MORALS
+                </div>
+
+                <h3>
+                    How we choose.
+                </h3>
+
+                <p>
+                    The sense of right and wrong that keeps
+                    growth meaningful.
+                </p>
+
+            </div>
+
+
+            <div class="root-card reveal">
+
+                <div class="root-number">
+                    03 — EXPERIENCE
+                </div>
+
+                <h3>
+                    What shaped us.
+                </h3>
+
+                <p>
+                    Every lesson, success, failure and
+                    journey becomes part of our foundation.
+                </p>
+
+            </div>
+
+
+            <div class="root-card reveal">
+
+                <div class="root-number">
+                    04 — PURPOSE
+                </div>
+
+                <h3>
+                    Why we grow.
+                </h3>
+
+                <p>
+                    Growth matters when it creates something
+                    useful, meaningful and lasting.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="root-visual reveal">
+
+            <p>
+                “Strong branches are not created by
+                looking strong. They are created by
+                growing strong roots.”
+            </p>
+
+        </div>
+
+
+        <div style="text-align:center;margin-top:55px;" class="reveal">
+
+            <a href="roots.html"
+               class="section-button">
+                Explore Our Roots →
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     BRANCHES
+========================= -->
+
+<section class="section branches-section">
+
+    <div class="container">
+
+        <div class="section-label reveal">
+            Where Ideas Grow
+        </div>
+
+        <h2 class="reveal">
+            Different directions.<br>
+            One origin.
+        </h2>
+
+        <p class="section-intro reveal">
+            Ideas don't always grow in the same direction.
+            And they don't have to.
+        </p>
+
+
+        <div class="branches-visual reveal"
+             style="
+             background-image:
+             linear-gradient(
+                 180deg,
+                 rgba(20,37,28,.05),
+                 rgba(20,37,28,.40)
+             ),
+             url('https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=2200&q=90');
+             ">
+        </div>
+
+
+        <div class="branches-content">
+
+            <h3 class="reveal">
+                One tree.<br>
+                Many branches.
+            </h3>
+
+            <div class="reveal">
+
+                <p>
+                    Some branches may become businesses.
+                    Some may become creative projects.
+                    Some may explore technology, storytelling,
+                    education or completely new possibilities.
+                </p>
+
+                <br>
+
+                <p>
+                    They can have different names,
+                    different identities and different purposes.
+                    But somewhere beneath everything,
+                    they remain connected to the same roots.
+                </p>
+
+                <a href="branches.html"
+                   class="section-button"
+                   style="border-color:var(--green);color:var(--green);">
+                    Explore Our Branches →
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     VISION
+========================= -->
+
+<section class="section vision-section">
+
+    <div class="container">
+
+        <div class="section-label reveal">
+            Looking Ahead
+        </div>
+
+        <h2 class="reveal">
+            We don't know every<br>
+            branch yet.
+        </h2>
+
+        <p class="section-intro reveal">
+            And that's the beauty of growing.
+        </p>
+
+
+        <div class="vision-grid">
+
+            <div class="vision-text reveal">
+
+                <h3>
+                    Give good ideas
+                    room to grow.
+                </h3>
+
+                <p>
+                    We are not building a destination.
+                    We are creating the space for ideas to
+                    evolve, experiment, learn and become
+                    something greater.
+                </p>
+
+                <br>
+
+                <p>
+                    The next branch may already be an idea.
+                    Or perhaps it hasn't been imagined yet.
+                </p>
+
+                <a href="vision.html"
+                   class="section-button"
+                   style="border-color:var(--green);color:var(--green);">
+                    Explore Our Vision →
+                </a>
+
+            </div>
+
+
+            <div class="cinematic-image vision-image reveal">
+
+                <img
+                src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1600&q=90"
+                alt="Looking through trees toward light">
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section class="contact-section">
+
+    <div class="contact-content reveal">
+
+        <div class="section-label">
+            Let's Grow Together
+        </div>
+
+        <h2>
+            Every branch starts
+            with a conversation.
+        </h2>
+
+        <p>
+            Some ideas begin with a clear plan.
+            Some begin with a simple conversation.
+            Tell us what's on your mind.
+        </p>
+
+        <a href="contact.html" class="section-button">
+            Start A Conversation →
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <div class="footer-inner">
+
+        <a href="index.html" class="footer-logo">
+            VALIASS
+        </a>
+
+        <div class="footer-text">
+            ONE ORIGIN. STRONG ROOTS. MANY POSSIBILITIES.
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script>
+
+const navbar = document.getElementById("navbar");
+
+window.addEventListener("scroll", () => {
+
+    if(window.scrollY > 40){
+
+        navbar.classList.add("scrolled");
+
+    }else{
+
+        navbar.classList.remove("scrolled");
+
+    }
+
+});
+
+
+const observer = new IntersectionObserver(
+
+    entries => {
+
+        entries.forEach(entry => {
+
+            if(entry.isIntersecting){
+
+                entry.target.classList.add("visible");
+
+            }
+
+        });
+
+    },
+
+    {
+        threshold:0.12
+    }
+
+);
+
+
+document.querySelectorAll(".reveal").forEach(el => {
+
+    observer.observe(el);
+
+});
+
+</script>
+
+</body>
+</html>
