@@ -1579,31 +1579,31 @@
 
 /* ============================================================
    RIGHT SOCIAL RIBBON
-   UPDATED ONLY FOR VISIBILITY / LAYERING
+   DESKTOP / WEB FIX
 ============================================================ */
 
 .valiass-social-ribbon-right {
 
-    position: fixed;
+    position: fixed !important;
 
-    right: 0;
-    top: 50%;
+    right: 0 !important;
+    top: 50% !important;
 
     transform:
         translateY(-50%)
         translateX(64px);
 
-    z-index: 9997;
+    z-index: 9997 !important;
 
-    display: flex;
+    display: flex !important;
 
     align-items: center;
 
-    visibility: visible;
+    visibility: visible !important;
 
-    opacity: 1;
+    opacity: 1 !important;
 
-    pointer-events: auto;
+    pointer-events: auto !important;
 
     transition:
         transform 0.55s cubic-bezier(.22,.61,.36,1);
@@ -1822,7 +1822,6 @@
 
 /* ============================================================
    FLOATING CONTACT
-   UPDATED ONLY FOR BOTTOM-RIGHT VISIBILITY
 ============================================================ */
 
 .valiass-contact-float {
@@ -2450,22 +2449,26 @@
 
     /* ========================================================
        SOCIAL RIBBON
-       UPDATED ONLY FOR VISIBILITY
+       MOBILE — EXISTING BEHAVIOUR RETAINED
     ======================================================== */
 
     .valiass-social-ribbon-right {
 
         right: 0;
+
         top: 50%;
 
         transform:
             translateY(-50%)
             translateX(42px);
 
-        z-index: 9997;
+        z-index: 9997 !important;
 
-        visibility: visible;
-        opacity: 1;
+        display: flex !important;
+
+        visibility: visible !important;
+
+        opacity: 1 !important;
     }
 
 
