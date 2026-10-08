@@ -1,0 +1,1286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Our Roots — VALIASS</title>
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4efe4;
+    color: #20382c;
+    overflow-x: hidden;
+}
+
+:root {
+    --cream: #f4efe4;
+    --cream-dark: #e7ddcb;
+    --green: #20382c;
+    --green-dark: #14251c;
+    --green-light: #385744;
+    --olive: #707b55;
+    --gold: #b49352;
+    --brown: #765b40;
+    --text-light: #d9ddd3;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 78px;
+    padding: 0 7%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    z-index: 1000;
+
+    transition: .4s ease;
+}
+
+nav.scrolled {
+    background: rgba(244,239,228,.94);
+    backdrop-filter: blur(14px);
+
+    box-shadow:
+        0 5px 30px rgba(32,56,44,.08);
+}
+
+.logo {
+    width: 48px;
+    height: 48px;
+
+    border: 1px solid var(--gold);
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: Georgia, serif;
+    font-size: 9px;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 32px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--green);
+
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+
+    position: relative;
+}
+
+.nav-links a::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+
+    width: 0;
+    height: 1px;
+
+    background: var(--gold);
+
+    transition: .3s;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 120px 8% 80px;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 750px;
+    height: 750px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(112,123,85,.16),
+            transparent 65%
+        );
+
+    left: -300px;
+    bottom: -300px;
+}
+
+.hero::after {
+    content: "";
+
+    position: absolute;
+
+    width: 600px;
+    height: 600px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(180,147,82,.16),
+            transparent 65%
+        );
+
+    right: -220px;
+    top: -200px;
+}
+
+.hero-content {
+    max-width: 900px;
+    position: relative;
+    z-index: 2;
+}
+
+.eyebrow {
+    font-size: 11px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+
+    color: var(--gold);
+
+    margin-bottom: 25px;
+}
+
+h1 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(65px, 11vw, 140px);
+
+    font-weight: 400;
+
+    letter-spacing: 8px;
+
+    line-height: .95;
+
+    margin-bottom: 35px;
+}
+
+.hero-line {
+    width: 70px;
+    height: 1px;
+
+    background: var(--gold);
+
+    margin: 0 auto 30px;
+}
+
+.hero p {
+    font-family: Georgia, serif;
+
+    font-size: 22px;
+
+    line-height: 1.7;
+
+    color: #596557;
+}
+
+
+/* =========================
+   ROOT INTRO
+========================= */
+
+.root-intro {
+    background: var(--green);
+
+    color: var(--cream);
+
+    padding: 140px 9%;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.root-intro::before {
+    content: "ROOTS";
+
+    position: absolute;
+
+    right: -30px;
+    top: 50px;
+
+    font-family: Georgia, serif;
+
+    font-size: 150px;
+
+    color: rgba(255,255,255,.035);
+}
+
+.intro-grid {
+    max-width: 1150px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 100px;
+
+    align-items: center;
+}
+
+.section-label {
+    font-size: 11px;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+
+    color: var(--gold);
+
+    margin-bottom: 25px;
+}
+
+h2 {
+    font-family: Georgia, serif;
+
+    font-size: clamp(42px, 5vw, 70px);
+
+    font-weight: 400;
+
+    line-height: 1.08;
+
+    margin-bottom: 30px;
+}
+
+.intro-copy p {
+    font-size: 17px;
+
+    line-height: 1.9;
+
+    color: var(--text-light);
+
+    margin-bottom: 20px;
+
+    max-width: 560px;
+}
+
+
+/* ROOT ILLUSTRATION */
+
+.root-visual {
+    height: 430px;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+.root-core {
+    width: 110px;
+    height: 110px;
+
+    border-radius: 50%;
+
+    border: 1px solid var(--gold);
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    font-family: Georgia, serif;
+
+    font-size: 18px;
+
+    color: var(--cream);
+
+    position: relative;
+
+    z-index: 5;
+}
+
+.root {
+    position: absolute;
+
+    height: 2px;
+
+    background: rgba(180,147,82,.6);
+
+    transform-origin: left center;
+}
+
+.r1 {
+    width: 220px;
+    transform: rotate(155deg);
+}
+
+.r2 {
+    width: 250px;
+    transform: rotate(195deg);
+}
+
+.r3 {
+    width: 190px;
+    transform: rotate(225deg);
+}
+
+.r4 {
+    width: 220px;
+    transform: rotate(25deg);
+}
+
+.r5 {
+    width: 250px;
+    transform: rotate(-20deg);
+}
+
+.r6 {
+    width: 180px;
+    transform: rotate(-48deg);
+}
+
+
+/* =========================
+   FOUR ROOTS
+========================= */
+
+.values {
+    padding: 150px 8%;
+
+    background: var(--cream);
+}
+
+.center-heading {
+    text-align: center;
+
+    max-width: 800px;
+
+    margin: auto;
+}
+
+.center-heading p {
+    font-family: Georgia, serif;
+
+    font-size: 20px;
+
+    line-height: 1.8;
+
+    color: #667064;
+}
+
+.root-cards {
+    max-width: 1150px;
+
+    margin: 90px auto 0;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+.root-card {
+    min-height: 300px;
+
+    padding: 45px;
+
+    border: 1px solid #d6cab8;
+
+    background: rgba(255,255,255,.25);
+
+    transition: .4s;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.root-card::before {
+    content: "";
+
+    position: absolute;
+
+    width: 100px;
+    height: 100px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(180,147,82,.25);
+
+    right: -35px;
+    bottom: -35px;
+}
+
+.root-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 25px 60px rgba(32,56,44,.08);
+}
+
+.root-number {
+    font-family: Georgia, serif;
+
+    font-size: 40px;
+
+    color: var(--gold);
+
+    margin-bottom: 25px;
+}
+
+.root-card h3 {
+    font-family: Georgia, serif;
+
+    font-size: 32px;
+
+    font-weight: 400;
+
+    margin-bottom: 17px;
+}
+
+.root-card p {
+    color: #687064;
+
+    line-height: 1.8;
+
+    max-width: 450px;
+}
+
+
+/* =========================
+   VALUES QUOTE
+========================= */
+
+.quote-section {
+    background: var(--cream-dark);
+
+    padding: 140px 8%;
+
+    text-align: center;
+}
+
+.quote {
+    max-width: 900px;
+
+    margin: auto;
+
+    font-family: Georgia, serif;
+
+    font-size: clamp(35px, 5vw, 65px);
+
+    line-height: 1.25;
+
+    font-weight: 400;
+
+    color: var(--green);
+}
+
+.quote span {
+    color: var(--gold);
+}
+
+
+/* =========================
+   FOUNDATION
+========================= */
+
+.foundation {
+    background: var(--green-dark);
+
+    color: var(--cream);
+
+    padding: 150px 8%;
+}
+
+.foundation-grid {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: .8fr 1.2fr;
+
+    gap: 100px;
+
+    align-items: center;
+}
+
+.foundation-number {
+    font-family: Georgia, serif;
+
+    font-size: 180px;
+
+    line-height: .8;
+
+    color: rgba(180,147,82,.18);
+}
+
+.foundation-text h2 {
+    margin-bottom: 25px;
+}
+
+.foundation-text p {
+    color: #d2d8ce;
+
+    font-size: 17px;
+
+    line-height: 1.9;
+
+    margin-bottom: 20px;
+
+    max-width: 600px;
+}
+
+
+/* =========================
+   ROOT TO BRANCH
+========================= */
+
+.connection {
+    background: var(--cream);
+
+    padding: 150px 8%;
+
+    text-align: center;
+}
+
+.connection h2 {
+    max-width: 850px;
+
+    margin: auto auto 30px;
+}
+
+.connection > p {
+    max-width: 650px;
+
+    margin: auto;
+
+    color: #667064;
+
+    font-size: 17px;
+
+    line-height: 1.9;
+}
+
+.connection-flow {
+    max-width: 950px;
+
+    margin: 90px auto 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 20px;
+}
+
+.flow-item {
+    width: 180px;
+    height: 180px;
+
+    border-radius: 50%;
+
+    border: 1px solid #cdbfa8;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 25px;
+
+    font-family: Georgia, serif;
+
+    font-size: 20px;
+
+    transition: .4s;
+}
+
+.flow-item:hover {
+    border-color: var(--gold);
+
+    transform: scale(1.05);
+}
+
+.flow-arrow {
+    font-size: 25px;
+
+    color: var(--gold);
+}
+
+
+/* =========================
+   CLOSING
+========================= */
+
+.closing {
+    min-height: 75vh;
+
+    background: #16291f;
+
+    color: var(--cream);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 100px 8%;
+}
+
+.closing-content {
+    max-width: 900px;
+}
+
+.closing h2 {
+    font-size: clamp(50px, 7vw, 90px);
+
+    margin-bottom: 30px;
+}
+
+.closing p {
+    font-family: Georgia, serif;
+
+    font-size: 21px;
+
+    line-height: 1.8;
+
+    color: #d3d8cf;
+
+    margin-bottom: 45px;
+}
+
+.cta {
+    display: inline-block;
+
+    padding: 16px 32px;
+
+    border: 1px solid var(--gold);
+
+    color: var(--cream);
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+    transition: .3s;
+}
+
+.cta:hover {
+    background: var(--gold);
+
+    color: var(--green);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #101d17;
+
+    color: #aeb5aa;
+
+    text-align: center;
+
+    padding: 35px 20px;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+}
+
+
+/* =========================
+   REVEAL
+========================= */
+
+.reveal {
+    opacity: 0;
+
+    transform: translateY(35px);
+
+    transition:
+        opacity .9s ease,
+        transform .9s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width: 800px) {
+
+    nav {
+        padding: 0 5%;
+    }
+
+    .nav-links {
+        gap: 13px;
+    }
+
+    .nav-links a {
+        font-size: 8px;
+    }
+
+    .intro-grid {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+    .root-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .foundation-grid {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+    .foundation-number {
+        font-size: 110px;
+    }
+
+    .connection-flow {
+        flex-direction: column;
+    }
+
+    .flow-arrow {
+        transform: rotate(90deg);
+    }
+
+    h1 {
+        letter-spacing: 4px;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     NAVIGATION
+========================== -->
+
+<nav id="navbar">
+
+    <!-- Replace with actual VALIASS logo -->
+    <div class="logo">
+        LOGO
+    </div>
+
+    <div class="nav-links">
+
+        <a href="index.html">Home</a>
+
+        <a href="story.html">Story</a>
+
+        <a href="roots.html">Roots</a>
+
+        <a href="branches.html">Branches</a>
+
+        <a href="vision.html">Vision</a>
+
+    </div>
+
+</nav>
+
+
+<!-- =========================
+     HERO
+========================== -->
+
+<section class="hero">
+
+    <div class="hero-content reveal">
+
+        <div class="eyebrow">
+            What Holds Us
+        </div>
+
+        <h1>
+            OUR ROOTS
+        </h1>
+
+        <div class="hero-line"></div>
+
+        <p>
+            Before a tree reaches the sky,<br>
+            it learns how to hold itself to the earth.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     ROOT INTRO
+========================== -->
+
+<section class="root-intro">
+
+    <div class="intro-grid">
+
+        <div class="intro-copy reveal">
+
+            <div class="section-label">
+                01 — Beneath Everything
+            </div>
+
+            <h2>
+                What you see<br>
+                is not everything.
+            </h2>
+
+            <p>
+                Every idea, every project and every branch
+                that grows from VALIASS is connected to
+                something deeper.
+            </p>
+
+            <p>
+                Our roots are the values, experiences,
+                beliefs and purpose that existed before
+                the branches did.
+            </p>
+
+        </div>
+
+
+        <div class="root-visual reveal">
+
+            <div class="root-core">
+                OUR<br>ROOTS
+            </div>
+
+            <div class="root r1"></div>
+            <div class="root r2"></div>
+            <div class="root r3"></div>
+            <div class="root r4"></div>
+            <div class="root r5"></div>
+            <div class="root r6"></div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOUR ROOTS
+========================== -->
+
+<section class="values">
+
+    <div class="center-heading reveal">
+
+        <div class="section-label">
+            02 — The Foundation
+        </div>
+
+        <h2>
+            Four roots.<br>
+            One foundation.
+        </h2>
+
+        <p>
+            These are the things that quietly shape
+            everything we choose to build.
+        </p>
+
+    </div>
+
+
+    <div class="root-cards">
+
+
+        <div class="root-card reveal">
+
+            <div class="root-number">
+                01
+            </div>
+
+            <h3>
+                Values
+            </h3>
+
+            <p>
+                The principles that guide our choices,
+                our relationships and the way we create.
+            </p>
+
+        </div>
+
+
+        <div class="root-card reveal">
+
+            <div class="root-number">
+                02
+            </div>
+
+            <h3>
+                Morals
+            </h3>
+
+            <p>
+                What we believe is right matters more than
+                what simply looks successful.
+            </p>
+
+        </div>
+
+
+        <div class="root-card reveal">
+
+            <div class="root-number">
+                03
+            </div>
+
+            <h3>
+                Experience
+            </h3>
+
+            <p>
+                Every success, mistake, lesson and journey
+                becomes part of what we build next.
+            </p>
+
+        </div>
+
+
+        <div class="root-card reveal">
+
+            <div class="root-number">
+                04
+            </div>
+
+            <h3>
+                Purpose
+            </h3>
+
+            <p>
+                Growth means more when it creates something
+                meaningful beyond ourselves.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     QUOTE
+========================== -->
+
+<section class="quote-section">
+
+    <div class="quote reveal">
+
+        “Strong branches are not created
+        by <span>looking strong.</span><br>
+        They are created by
+        <span>growing strong roots.</span>”
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOUNDATION
+========================== -->
+
+<section class="foundation">
+
+    <div class="foundation-grid">
+
+        <div class="foundation-number reveal">
+            05
+        </div>
+
+
+        <div class="foundation-text reveal">
+
+            <div class="section-label">
+                The Invisible Strength
+            </div>
+
+            <h2>
+                Our roots don't need
+                to be seen to matter.
+            </h2>
+
+            <p>
+                The strongest part of a tree is often the
+                part nobody sees.
+            </p>
+
+            <p>
+                In the same way, our principles may not
+                always appear on the surface of a project,
+                but they influence every decision underneath it.
+            </p>
+
+            <p>
+                That is what keeps VALIASS connected,
+                even as its branches grow in different directions.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     ROOT TO BRANCH
+========================== -->
+
+<section class="connection">
+
+    <div class="reveal">
+
+        <div class="section-label">
+            06 — The Connection
+        </div>
+
+        <h2>
+            Different branches.<br>
+            Same roots.
+        </h2>
+
+        <p>
+            A branch can grow in its own direction.
+            It can have its own identity, purpose and
+            personality. But it never forgets where it began.
+        </p>
+
+    </div>
+
+
+    <div class="connection-flow reveal">
+
+        <div class="flow-item">
+            Values
+        </div>
+
+        <div class="flow-arrow">
+            →
+        </div>
+
+        <div class="flow-item">
+            Experience
+        </div>
+
+        <div class="flow-arrow">
+            →
+        </div>
+
+        <div class="flow-item">
+            Ideas
+        </div>
+
+        <div class="flow-arrow">
+            →
+        </div>
+
+        <div class="flow-item">
+            Branches
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CLOSING
+========================== -->
+
+<section class="closing">
+
+    <div class="closing-content reveal">
+
+        <div class="section-label">
+            From The Roots
+        </div>
+
+        <h2>
+            Now let the<br>
+            branches grow.
+        </h2>
+
+        <p>
+            The roots give us strength.<br>
+            The branches give us possibilities.
+        </p>
+
+        <a href="branches.html" class="cta">
+            Explore Our Branches
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================== -->
+
+<footer>
+
+    VALIASS — ONE ORIGIN. STRONG ROOTS. MANY POSSIBILITIES.
+
+</footer>
+
+
+<script>
+
+/* =========================
+   NAVBAR
+========================= */
+
+const navbar =
+    document.getElementById("navbar");
+
+window.addEventListener("scroll", () => {
+
+    if (window.scrollY > 50) {
+
+        navbar.classList.add("scrolled");
+
+    } else {
+
+        navbar.classList.remove("scrolled");
+
+    }
+
+});
+
+
+/* =========================
+   REVEAL ANIMATION
+========================= */
+
+const revealElements =
+    document.querySelectorAll(".reveal");
+
+const observer =
+    new IntersectionObserver(
+        (entries) => {
+
+            entries.forEach(entry => {
+
+                if (entry.isIntersecting) {
+
+                    entry.target.classList.add("visible");
+
+                }
+
+            });
+
+        },
+        {
+            threshold: 0.15
+        }
+    );
+
+
+revealElements.forEach(element => {
+
+    observer.observe(element);
+
+});
+
+</script>
+
+</body>
+</html>

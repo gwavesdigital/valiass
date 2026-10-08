@@ -1,0 +1,1256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Our Story — VALIASS</title>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background: #f4efe4;
+        color: #20382c;
+        overflow-x: hidden;
+    }
+
+    /* =========================
+       VARIABLES
+    ========================== */
+
+    :root {
+        --cream: #f4efe4;
+        --cream-dark: #e9dfcf;
+        --green: #20382c;
+        --green-light: #345341;
+        --olive: #707b55;
+        --gold: #b49352;
+        --brown: #745b42;
+        --white: #fffdf8;
+    }
+
+    /* =========================
+       NAVIGATION
+    ========================== */
+
+    nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 78px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 7%;
+        z-index: 1000;
+        transition: .4s ease;
+    }
+
+    nav.scrolled {
+        background: rgba(244,239,228,.92);
+        backdrop-filter: blur(12px);
+        box-shadow: 0 5px 30px rgba(32,56,44,.08);
+    }
+
+    .logo {
+        width: 48px;
+        height: 48px;
+        border: 1px solid var(--gold);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: Georgia, serif;
+        font-size: 10px;
+        letter-spacing: 1px;
+        color: var(--green);
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 32px;
+    }
+
+    .nav-links a {
+        text-decoration: none;
+        color: var(--green);
+        font-size: 12px;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        position: relative;
+    }
+
+    .nav-links a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -7px;
+        width: 0;
+        height: 1px;
+        background: var(--gold);
+        transition: .3s;
+    }
+
+    .nav-links a:hover::after {
+        width: 100%;
+    }
+
+    /* =========================
+       HERO
+    ========================== */
+
+    .hero {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 120px 8% 80px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .hero::before {
+        content: "";
+        position: absolute;
+        width: 700px;
+        height: 700px;
+        border-radius: 50%;
+        background: radial-gradient(
+            circle,
+            rgba(180,147,82,.18),
+            transparent 65%
+        );
+        top: -250px;
+        right: -180px;
+    }
+
+    .hero::after {
+        content: "";
+        position: absolute;
+        width: 600px;
+        height: 600px;
+        border-radius: 50%;
+        background: radial-gradient(
+            circle,
+            rgba(112,123,85,.13),
+            transparent 65%
+        );
+        bottom: -250px;
+        left: -200px;
+    }
+
+    .hero-content {
+        position: relative;
+        z-index: 2;
+        max-width: 900px;
+    }
+
+    .eyebrow {
+        font-size: 11px;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+        color: var(--gold);
+        margin-bottom: 25px;
+    }
+
+    h1 {
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(60px, 10vw, 130px);
+        font-weight: 400;
+        letter-spacing: 8px;
+        line-height: .95;
+        margin-bottom: 35px;
+    }
+
+    .hero-line {
+        width: 70px;
+        height: 1px;
+        background: var(--gold);
+        margin: 0 auto 30px;
+    }
+
+    .hero p {
+        max-width: 650px;
+        margin: auto;
+        font-family: Georgia, serif;
+        font-size: 22px;
+        line-height: 1.7;
+        color: #526052;
+    }
+
+    /* =========================
+       ORIGIN
+    ========================== */
+
+    .origin {
+        padding: 130px 9%;
+        background: var(--green);
+        color: var(--cream);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .origin::before {
+        content: "01";
+        position: absolute;
+        right: 7%;
+        top: 50px;
+        font-family: Georgia, serif;
+        font-size: 180px;
+        color: rgba(255,255,255,.035);
+    }
+
+    .section-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 100px;
+        align-items: center;
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .section-label {
+        font-size: 11px;
+        letter-spacing: 4px;
+        color: var(--gold);
+        text-transform: uppercase;
+        margin-bottom: 25px;
+    }
+
+    h2 {
+        font-family: Georgia, serif;
+        font-size: clamp(40px, 5vw, 70px);
+        font-weight: 400;
+        line-height: 1.08;
+        margin-bottom: 30px;
+    }
+
+    .origin-text p {
+        font-size: 17px;
+        line-height: 1.9;
+        color: #d9d8cb;
+        margin-bottom: 20px;
+        max-width: 550px;
+    }
+
+    /* Seed visual */
+
+    .seed-stage {
+        height: 430px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .seed-glow {
+        width: 270px;
+        height: 270px;
+        border-radius: 50%;
+        background: radial-gradient(
+            circle,
+            rgba(180,147,82,.18),
+            transparent 65%
+        );
+        position: absolute;
+    }
+
+    .seed {
+        width: 85px;
+        height: 115px;
+        background: #8d704d;
+        border-radius: 70% 30% 65% 35%;
+        transform: rotate(35deg);
+        position: relative;
+        box-shadow: 0 25px 50px rgba(0,0,0,.3);
+        animation: floatSeed 5s ease-in-out infinite;
+    }
+
+    .seed::after {
+        content: "";
+        position: absolute;
+        width: 2px;
+        height: 70px;
+        background: rgba(255,255,255,.22);
+        left: 40px;
+        top: 20px;
+        transform: rotate(-8deg);
+    }
+
+    @keyframes floatSeed {
+        0%,100% {
+            transform: rotate(35deg) translateY(0);
+        }
+        50% {
+            transform: rotate(38deg) translateY(-15px);
+        }
+    }
+
+    /* =========================
+       TWO PEOPLE
+    ========================== */
+
+    .belief {
+        padding: 140px 9%;
+        background: var(--cream);
+    }
+
+    .belief-intro {
+        max-width: 850px;
+        margin: auto;
+        text-align: center;
+    }
+
+    .belief-intro h2 {
+        color: var(--green);
+    }
+
+    .belief-intro p {
+        font-family: Georgia, serif;
+        font-size: 21px;
+        line-height: 1.8;
+        color: #667063;
+    }
+
+    .belief-cards {
+        max-width: 1000px;
+        margin: 80px auto 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+
+    .belief-card {
+        padding: 55px 45px;
+        border: 1px solid #d8cdbb;
+        background: rgba(255,255,255,.28);
+        transition: .4s;
+    }
+
+    .belief-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 25px 60px rgba(32,56,44,.08);
+    }
+
+    .belief-number {
+        font-family: Georgia, serif;
+        color: var(--gold);
+        font-size: 35px;
+        margin-bottom: 25px;
+    }
+
+    .belief-card h3 {
+        font-family: Georgia, serif;
+        font-size: 30px;
+        font-weight: 400;
+        margin-bottom: 18px;
+    }
+
+    .belief-card p {
+        color: #687064;
+        line-height: 1.8;
+    }
+
+    /* =========================
+       TREE JOURNEY
+    ========================== */
+
+    .journey {
+        background: #e8dfce;
+        padding: 140px 7%;
+        position: relative;
+    }
+
+    .journey-heading {
+        text-align: center;
+        max-width: 750px;
+        margin: auto;
+    }
+
+    .journey-heading h2 {
+        color: var(--green);
+    }
+
+    .journey-heading p {
+        color: #687064;
+        line-height: 1.8;
+        font-size: 17px;
+    }
+
+    .timeline {
+        max-width: 1000px;
+        margin: 100px auto 0;
+        position: relative;
+    }
+
+    .timeline::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 0;
+        bottom: 0;
+        width: 1px;
+        background: #b7aa94;
+        transform: translateX(-50%);
+    }
+
+    .timeline-item {
+        width: 50%;
+        padding: 30px 60px;
+        position: relative;
+    }
+
+    .timeline-item:nth-child(even) {
+        margin-left: 50%;
+    }
+
+    .timeline-dot {
+        position: absolute;
+        top: 40px;
+        width: 13px;
+        height: 13px;
+        background: var(--gold);
+        border-radius: 50%;
+        border: 3px solid #e8dfce;
+    }
+
+    .timeline-item:nth-child(odd) .timeline-dot {
+        right: -7px;
+    }
+
+    .timeline-item:nth-child(even) .timeline-dot {
+        left: -7px;
+    }
+
+    .timeline-year {
+        font-size: 11px;
+        letter-spacing: 3px;
+        color: var(--gold);
+        margin-bottom: 15px;
+    }
+
+    .timeline-item h3 {
+        font-family: Georgia, serif;
+        font-size: 30px;
+        font-weight: 400;
+        color: var(--green);
+        margin-bottom: 12px;
+    }
+
+    .timeline-item p {
+        color: #657064;
+        line-height: 1.8;
+    }
+
+    /* =========================
+       WHY TREE
+    ========================== */
+
+    .tree-section {
+        padding: 150px 8%;
+        background: var(--green);
+        color: var(--cream);
+        text-align: center;
+    }
+
+    .tree-section h2 {
+        max-width: 800px;
+        margin: auto auto 30px;
+    }
+
+    .tree-section > p {
+        max-width: 650px;
+        margin: auto;
+        color: #d7d9ce;
+        line-height: 1.9;
+        font-size: 17px;
+    }
+
+    .tree-diagram {
+        height: 450px;
+        max-width: 900px;
+        margin: 80px auto 0;
+        position: relative;
+    }
+
+    .trunk {
+        width: 28px;
+        height: 280px;
+        background: #725b43;
+        position: absolute;
+        bottom: 35px;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 50% 50% 8px 8px;
+    }
+
+    .trunk::before,
+    .trunk::after {
+        content: "";
+        position: absolute;
+        height: 210px;
+        width: 15px;
+        background: #725b43;
+        transform-origin: bottom;
+        bottom: 120px;
+        border-radius: 100%;
+    }
+
+    .trunk::before {
+        left: 0;
+        transform: rotate(-43deg);
+    }
+
+    .trunk::after {
+        right: 0;
+        transform: rotate(43deg);
+    }
+
+    .root-line {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        width: 400px;
+        height: 1px;
+        background: rgba(180,147,82,.6);
+        transform: translateX(-50%);
+    }
+
+    .tree-label {
+        position: absolute;
+        font-size: 11px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: #d8c59b;
+    }
+
+    .root-label {
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .branch-label {
+        top: 80px;
+        left: 70%;
+    }
+
+    .branch-label.two {
+        top: 110px;
+        left: 18%;
+    }
+
+    .leaf {
+        width: 13px;
+        height: 13px;
+        background: var(--olive);
+        border-radius: 100% 0 100% 0;
+        position: absolute;
+    }
+
+    .leaf:nth-child(1) { top: 70px; left: 45%; transform: rotate(30deg); }
+    .leaf:nth-child(2) { top: 90px; left: 56%; transform: rotate(80deg); }
+    .leaf:nth-child(3) { top: 130px; left: 39%; transform: rotate(10deg); }
+    .leaf:nth-child(4) { top: 145px; left: 63%; transform: rotate(80deg); }
+    .leaf:nth-child(5) { top: 45px; left: 54%; transform: rotate(50deg); }
+
+    /* =========================
+       FIRST BRANCH
+    ========================== */
+
+    .first-branch {
+        padding: 140px 9%;
+        background: var(--cream);
+    }
+
+    .branch-box {
+        max-width: 1150px;
+        margin: auto;
+        border: 1px solid #d4c7b2;
+        padding: 80px;
+        display: grid;
+        grid-template-columns: 1.2fr .8fr;
+        gap: 70px;
+        align-items: center;
+        background: rgba(255,255,255,.25);
+    }
+
+    .branch-box h2 {
+        color: var(--green);
+    }
+
+    .branch-box p {
+        color: #657064;
+        line-height: 1.9;
+        margin-bottom: 25px;
+    }
+
+    .branch-name {
+        font-family: Georgia, serif;
+        font-size: 34px;
+        color: var(--green);
+        margin-bottom: 10px;
+    }
+
+    .branch-tag {
+        font-size: 11px;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        color: var(--gold);
+    }
+
+    .branch-visual {
+        height: 260px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+
+    .branch-circle {
+        width: 220px;
+        height: 220px;
+        border-radius: 50%;
+        border: 1px solid var(--gold);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 30px;
+        font-family: Georgia, serif;
+        font-size: 23px;
+        color: var(--green);
+    }
+
+    /* =========================
+       CLOSING
+    ========================== */
+
+    .closing {
+        min-height: 80vh;
+        background: #16291f;
+        color: var(--cream);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 100px 8%;
+        position: relative;
+    }
+
+    .closing-content {
+        max-width: 900px;
+    }
+
+    .closing h2 {
+        font-size: clamp(50px, 7vw, 90px);
+        margin-bottom: 30px;
+    }
+
+    .closing p {
+        color: #d4d8cd;
+        font-family: Georgia, serif;
+        font-size: 21px;
+        line-height: 1.8;
+        margin-bottom: 45px;
+    }
+
+    .cta {
+        display: inline-block;
+        padding: 16px 32px;
+        border: 1px solid var(--gold);
+        color: var(--cream);
+        text-decoration: none;
+        font-size: 11px;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        transition: .3s;
+    }
+
+    .cta:hover {
+        background: var(--gold);
+        color: var(--green);
+    }
+
+    /* =========================
+       FOOTER
+    ========================== */
+
+    footer {
+        background: #101d17;
+        color: #aeb5aa;
+        text-align: center;
+        padding: 35px 20px;
+        font-size: 11px;
+        letter-spacing: 2px;
+    }
+
+    /* =========================
+       ANIMATION
+    ========================== */
+
+    .reveal {
+        opacity: 0;
+        transform: translateY(35px);
+        transition: opacity .9s ease, transform .9s ease;
+    }
+
+    .reveal.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* =========================
+       MOBILE
+    ========================== */
+
+    @media(max-width: 800px) {
+
+        nav {
+            padding: 0 5%;
+        }
+
+        .nav-links {
+            gap: 14px;
+        }
+
+        .nav-links a {
+            font-size: 9px;
+        }
+
+        .section-grid {
+            grid-template-columns: 1fr;
+            gap: 50px;
+        }
+
+        .belief-cards {
+            grid-template-columns: 1fr;
+        }
+
+        .timeline::before {
+            left: 10px;
+        }
+
+        .timeline-item,
+        .timeline-item:nth-child(even) {
+            width: 100%;
+            margin-left: 0;
+            padding-left: 45px;
+            padding-right: 10px;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-dot,
+        .timeline-item:nth-child(even) .timeline-dot {
+            left: 4px;
+            right: auto;
+        }
+
+        .branch-box {
+            grid-template-columns: 1fr;
+            padding: 45px 30px;
+            gap: 40px;
+        }
+
+        .tree-diagram {
+            transform: scale(.8);
+        }
+
+        h1 {
+            letter-spacing: 4px;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<!-- =========================
+     NAVIGATION
+========================== -->
+
+<nav id="navbar">
+
+    <!-- Replace with VALIASS logo -->
+    <div class="logo">
+        LOGO
+    </div>
+
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="story.html">Story</a>
+        <a href="index.html#roots">Roots</a>
+        <a href="index.html#branches">Branches</a>
+        <a href="index.html#vision">Vision</a>
+    </div>
+
+</nav>
+
+
+<!-- =========================
+     HERO
+========================== -->
+
+<section class="hero">
+
+    <div class="hero-content reveal">
+
+        <div class="eyebrow">
+            The Beginning
+        </div>
+
+        <h1>
+            OUR STORY
+        </h1>
+
+        <div class="hero-line"></div>
+
+        <p>
+            Every tree begins somewhere.<br>
+            So did VALIASS.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     ORIGIN
+========================== -->
+
+<section class="origin">
+
+    <div class="section-grid">
+
+        <div class="origin-text reveal">
+
+            <div class="section-label">
+                01 — The Seed
+            </div>
+
+            <h2>
+                It started<br>
+                with an idea.
+            </h2>
+
+            <p>
+                Before there was a name, there was a thought.
+                A thought that different ideas, different dreams
+                and different journeys could grow from the same
+                foundation.
+            </p>
+
+            <p>
+                That thought became the first seed of VALIASS.
+            </p>
+
+        </div>
+
+
+        <div class="seed-stage reveal">
+
+            <div class="seed-glow"></div>
+
+            <div class="seed"></div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     TWO PEOPLE / BELIEF
+========================== -->
+
+<section class="belief">
+
+    <div class="belief-intro reveal">
+
+        <div class="section-label">
+            02 — The Origin
+        </div>
+
+        <h2>
+            Two people.<br>
+            One belief.
+        </h2>
+
+        <p>
+            VALIASS was born from the belief that meaningful
+            things don't have to be built all at once.
+            They can begin small, grow naturally and become
+            something much bigger with time.
+        </p>
+
+    </div>
+
+
+    <div class="belief-cards">
+
+        <div class="belief-card reveal">
+
+            <div class="belief-number">
+                01
+            </div>
+
+            <h3>
+                Roots before growth.
+            </h3>
+
+            <p>
+                We believe values come before visibility.
+                The stronger the roots, the stronger the
+                journey ahead.
+            </p>
+
+        </div>
+
+
+        <div class="belief-card reveal">
+
+            <div class="belief-number">
+                02
+            </div>
+
+            <h3>
+                Possibilities without limits.
+            </h3>
+
+            <p>
+                We don't want to decide today what VALIASS
+                must become tomorrow. We want to give ideas
+                the freedom to grow.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     JOURNEY
+========================== -->
+
+<section class="journey">
+
+    <div class="journey-heading reveal">
+
+        <div class="section-label">
+            03 — The Journey
+        </div>
+
+        <h2>
+            From thought<br>
+            to possibility.
+        </h2>
+
+        <p>
+            The journey of VALIASS is not about reaching one
+            destination. It is about creating a foundation
+            strong enough for many journeys to begin.
+        </p>
+
+    </div>
+
+
+    <div class="timeline">
+
+        <div class="timeline-item reveal">
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-year">
+                THE BEGINNING
+            </div>
+
+            <h3>
+                A thought
+            </h3>
+
+            <p>
+                An idea begins to take shape — something
+                bigger than a single project or profession.
+            </p>
+
+        </div>
+
+
+        <div class="timeline-item reveal">
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-year">
+                THE FOUNDATION
+            </div>
+
+            <h3>
+                Values
+            </h3>
+
+            <p>
+                Experiences, lessons and beliefs slowly become
+                the roots that define how we want to grow.
+            </p>
+
+        </div>
+
+
+        <div class="timeline-item reveal">
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-year">
+                THE DECISION
+            </div>
+
+            <h3>
+                Build the tree
+            </h3>
+
+            <p>
+                Instead of creating one identity for everything,
+                we chose to create a living structure where
+                every idea could have its own space.
+            </p>
+
+        </div>
+
+
+        <div class="timeline-item reveal">
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-year">
+                THE FIRST BRANCH
+            </div>
+
+            <h3>
+                GWAVES.DIGITAL
+            </h3>
+
+            <p>
+                The first branch begins its journey —
+                bringing creativity, digital thinking,
+                storytelling and technology together.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     WHY TREE
+========================== -->
+
+<section class="tree-section">
+
+    <div class="reveal">
+
+        <div class="section-label">
+            04 — Why A Tree?
+        </div>
+
+        <h2>
+            We don't build an umbrella.<br>
+            We grow a tree.
+        </h2>
+
+        <p>
+            An umbrella puts everything under one identity.
+            A tree gives every branch room to become what
+            it is meant to become — while remaining connected
+            to the same roots.
+        </p>
+
+    </div>
+
+
+    <div class="tree-diagram reveal">
+
+        <div class="trunk"></div>
+
+        <div class="root-line"></div>
+
+        <div class="leaf"></div>
+        <div class="leaf"></div>
+        <div class="leaf"></div>
+        <div class="leaf"></div>
+        <div class="leaf"></div>
+
+        <div class="tree-label root-label">
+            Shared Roots
+        </div>
+
+        <div class="tree-label branch-label">
+            Possibilities
+        </div>
+
+        <div class="tree-label branch-label two">
+            Ideas
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FIRST BRANCH
+========================== -->
+
+<section class="first-branch">
+
+    <div class="branch-box reveal">
+
+        <div>
+
+            <div class="section-label">
+                05 — The First Branch
+            </div>
+
+            <h2>
+                And then,<br>
+                we started growing.
+            </h2>
+
+            <p>
+                The first branch of the VALIASS journey is
+                built around creativity, digital experiences,
+                storytelling and new ways of connecting ideas
+                with people.
+            </p>
+
+            <div class="branch-name">
+                GWAVES.DIGITAL
+            </div>
+
+            <div class="branch-tag">
+                Creative Digital Branch
+            </div>
+
+        </div>
+
+
+        <div class="branch-visual">
+
+            <div class="branch-circle">
+                One branch.<br>
+                Many possibilities.
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CLOSING
+========================== -->
+
+<section class="closing">
+
+    <div class="closing-content reveal">
+
+        <div class="section-label">
+            The Story Continues
+        </div>
+
+        <h2>
+            This is only<br>
+            the beginning.
+        </h2>
+
+        <p>
+            The tree is still growing.<br>
+            There are branches we haven't imagined yet,
+            ideas waiting to take root and possibilities
+            waiting to become real.
+        </p>
+
+        <a href="index.html#roots" class="cta">
+            Explore Our Roots
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================== -->
+
+<footer>
+    VALIASS — ONE ORIGIN. STRONG ROOTS. MANY POSSIBILITIES.
+</footer>
+
+
+<script>
+
+    /* Navbar */
+
+    const navbar = document.getElementById("navbar");
+
+    window.addEventListener("scroll", () => {
+
+        if (window.scrollY > 50) {
+            navbar.classList.add("scrolled");
+        } else {
+            navbar.classList.remove("scrolled");
+        }
+
+    });
+
+
+    /* Reveal animation */
+
+    const revealElements =
+        document.querySelectorAll(".reveal");
+
+    const observer =
+        new IntersectionObserver((entries) => {
+
+            entries.forEach(entry => {
+
+                if (entry.isIntersecting) {
+
+                    entry.target.classList.add("visible");
+
+                }
+
+            });
+
+        }, {
+            threshold: 0.15
+        });
+
+
+    revealElements.forEach(element => {
+        observer.observe(element);
+    });
+
+</script>
+
+</body>
+</html>
