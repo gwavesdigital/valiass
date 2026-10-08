@@ -1,12 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>VALIASS — Our Roots</title>
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>VALIASS — Roots</title>
+
+<meta name="description"
+      content="The roots of VALIASS — values, morals, experience and purpose.">
 
 <style>
+
+:root{
+    --cream:#f4efe4;
+    --cream-soft:#ebe3d3;
+
+    --green:#20382c;
+    --green-dark:#101711;
+    --green-deep:#14251c;
+    --green-light:#385744;
+
+    --gold:#d0b46b;
+    --gold-soft:#b89c5d;
+
+    --text:#27342c;
+    --muted:#687067;
+
+    --white:#ffffff;
+}
+
 *{
     margin:0;
     padding:0;
@@ -18,745 +43,821 @@ html{
 }
 
 body{
-    font-family: Georgia, "Times New Roman", serif;
-    background:#f4f0e7;
-    color:#182019;
-    line-height:1.7;
+    font-family:Arial,Helvetica,sans-serif;
+    background:var(--cream);
+    color:var(--text);
+    overflow-x:hidden;
+}
+
+img{
+    display:block;
+    width:100%;
 }
 
 a{
     text-decoration:none;
-    color:inherit;
 }
 
-/* =========================
-   NAVIGATION
-========================= */
-
-nav{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
+#valiass-header,
+#valiass-footer{
+    position:relative;
     z-index:1000;
-
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-
-    padding:22px 6%;
-
-    background:rgba(20,28,22,0.45);
-    backdrop-filter:blur(10px);
-
-    color:#fff;
-
-    transition:0.4s ease;
 }
 
-nav.scrolled{
-    background:rgba(20,28,22,0.94);
-    padding:15px 6%;
-}
 
-.logo{
-    font-size:24px;
-    letter-spacing:5px;
-    font-weight:bold;
-}
-
-.nav-links{
-    display:flex;
-    gap:30px;
-    font-family:Arial, sans-serif;
-    font-size:13px;
-    letter-spacing:1px;
-}
-
-.nav-links a{
-    opacity:0.8;
-    transition:0.3s;
-}
-
-.nav-links a:hover,
-.nav-links .active{
-    opacity:1;
-}
-
-/* =========================
+/* =====================================
    HERO
-========================= */
+===================================== */
 
-.hero{
+.roots-hero{
+
     min-height:100vh;
 
+    position:relative;
+
     display:flex;
     align-items:center;
 
-    padding:140px 8% 100px;
+    color:white;
 
-    color:#fff;
-
-    background:
+    background-image:
         linear-gradient(
             90deg,
-            rgba(12,20,15,0.78),
-            rgba(12,20,15,0.35)
+            rgba(10,18,13,.82),
+            rgba(10,18,13,.40),
+            rgba(10,18,13,.60)
         ),
-        url("https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=2400&q=95")
-        center/cover no-repeat;
+        url("https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=2200&q=90");
+
+    background-size:cover;
+    background-position:center;
+
+    background-attachment:fixed;
 }
 
-.hero-content{
-    max-width:760px;
+.roots-hero-content{
+
+    width:86%;
+    max-width:1200px;
+
+    margin:auto;
+
+    padding-top:80px;
 }
 
-.eyebrow{
-    font-family:Arial, sans-serif;
-    font-size:12px;
-    letter-spacing:4px;
-    text-transform:uppercase;
-    margin-bottom:25px;
-    opacity:0.75;
-}
+.roots-kicker{
 
-.hero h1{
-    font-size:clamp(60px,9vw,125px);
-    line-height:0.95;
-    font-weight:normal;
-    margin-bottom:35px;
-}
-
-.hero p{
-    max-width:620px;
-    font-size:20px;
-    color:#eee;
-}
-
-/* =========================
-   GENERAL SECTIONS
-========================= */
-
-section{
-    padding:120px 8%;
-}
-
-.section-label{
-    font-family:Arial, sans-serif;
     font-size:11px;
-    letter-spacing:4px;
+
+    letter-spacing:5px;
+
     text-transform:uppercase;
-    color:#7d735e;
-    margin-bottom:22px;
+
+    color:var(--gold);
+
+    margin-bottom:25px;
 }
 
-.section-title{
-    font-size:clamp(42px,6vw,78px);
-    line-height:1.05;
-    font-weight:normal;
-    max-width:850px;
+.roots-hero h1{
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-weight:400;
+
+    font-size:
+        clamp(58px,9vw,120px);
+
+    line-height:.95;
+
+    letter-spacing:-3px;
+
+    max-width:800px;
 }
 
-.section-text{
-    max-width:700px;
-    font-size:19px;
-    color:#555b51;
-    margin-top:30px;
+.roots-hero p{
+
+    max-width:590px;
+
+    margin-top:35px;
+
+    font-size:16px;
+
+    line-height:1.9;
+
+    color:rgba(255,255,255,.75);
 }
 
-/* =========================
-   INTRO
-========================= */
+.hero-line{
 
-.intro{
-    background:#f4f0e7;
+    width:80px;
+
+    height:1px;
+
+    background:var(--gold);
+
+    margin-top:45px;
 }
 
-.intro-grid{
+
+/* =====================================
+   COMMON
+===================================== */
+
+.roots-section{
+
+    padding:
+        125px 7%;
+}
+
+.roots-container{
+
+    width:100%;
+    max-width:1150px;
+
+    margin:auto;
+}
+
+.roots-label{
+
+    font-size:10px;
+
+    letter-spacing:4px;
+
+    text-transform:uppercase;
+
+    color:var(--gold-soft);
+
+    margin-bottom:20px;
+}
+
+.roots-title{
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(40px,5vw,70px);
+
+    line-height:1.08;
+
+    font-weight:400;
+
+    color:var(--green-dark);
+
+    margin-bottom:30px;
+}
+
+.roots-text{
+
+    max-width:720px;
+
+    font-size:16px;
+
+    line-height:2;
+
+    color:var(--muted);
+}
+
+.roots-text p + p{
+
+    margin-top:22px;
+}
+
+
+/* =====================================
+   BENEATH EVERYTHING
+===================================== */
+
+.beneath{
+
+    background:var(--cream);
+}
+
+.beneath-grid{
+
     display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:80px;
-    align-items:end;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap:90px;
+
+    align-items:center;
 }
 
-.intro-number{
-    font-family:Arial,sans-serif;
-    font-size:13px;
-    letter-spacing:3px;
-    color:#8b8069;
+.beneath-image{
+
+    height:650px;
+
+    overflow:hidden;
+
+    position:relative;
 }
 
-/* =========================
-   ROOT CARDS
-========================= */
+.beneath-image img{
 
-.foundation{
-    background:#ebe5d7;
+    height:100%;
+
+    object-fit:cover;
+
+    transition:
+        transform 1.2s ease;
+}
+
+.beneath-image:hover img{
+
+    transform:scale(1.04);
+}
+
+.beneath-content{
+
+    padding-right:20px;
+}
+
+
+/* =====================================
+   ROOT PHILOSOPHY
+===================================== */
+
+.root-philosophy{
+
+    background:var(--green-dark);
+
+    color:var(--cream);
+
+    text-align:center;
+
+    padding:
+        135px 7%;
+}
+
+.root-philosophy-inner{
+
+    max-width:900px;
+
+    margin:auto;
+}
+
+.root-philosophy .roots-label{
+
+    color:var(--gold);
+}
+
+.root-philosophy h2{
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(38px,5vw,65px);
+
+    line-height:1.2;
+
+    font-weight:400;
+}
+
+.root-philosophy p{
+
+    max-width:650px;
+
+    margin:
+        30px auto 0;
+
+    font-size:15px;
+
+    line-height:1.9;
+
+    color:rgba(244,239,228,.62);
+}
+
+
+/* =====================================
+   FOUR ROOTS
+===================================== */
+
+.four-roots{
+
+    background:#fff;
+}
+
+.four-roots-intro{
+
+    max-width:700px;
+
+    margin-bottom:75px;
 }
 
 .root-grid{
-    margin-top:70px;
 
     display:grid;
-    grid-template-columns:repeat(4,1fr);
 
-    gap:20px;
+    grid-template-columns:
+        repeat(2,1fr);
+
+    gap:2px;
 }
 
 .root-card{
-    min-height:280px;
-    padding:35px;
 
-    background:#f6f2e9;
+    min-height:330px;
 
-    border:1px solid rgba(50,60,45,0.08);
+    padding:50px 45px;
 
-    display:flex;
-    flex-direction:column;
-    justify-content:space-between;
+    background:var(--cream-soft);
 
-    transition:0.4s ease;
+    border:
+        1px solid
+        rgba(32,56,44,.06);
+
+    transition:
+        transform .4s ease,
+        background .4s ease;
 }
 
 .root-card:hover{
-    transform:translateY(-8px);
-    box-shadow:0 20px 45px rgba(30,35,25,0.10);
+
+    transform:translateY(-6px);
+
+    background:#e5dcc9;
 }
 
 .root-number{
-    font-family:Arial,sans-serif;
-    font-size:11px;
-    letter-spacing:3px;
-    color:#91856c;
+
+    color:var(--gold-soft);
+
+    font-family:Georgia,serif;
+
+    font-size:18px;
+
+    margin-bottom:55px;
 }
 
 .root-card h3{
-    font-size:29px;
-    font-weight:normal;
-    margin-bottom:12px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:31px;
+
+    font-weight:400;
+
+    color:var(--green-dark);
+
+    margin-bottom:18px;
 }
 
 .root-card p{
-    font-family:Arial,sans-serif;
-    font-size:14px;
-    color:#66695f;
-}
 
-/* =========================
-   CINEMATIC IMAGE
-========================= */
-
-.image-section{
-    padding:0;
-}
-
-.cinematic-image{
-    width:100%;
-    height:75vh;
-    object-fit:cover;
-    display:block;
-}
-
-.image-caption{
-    padding:35px 8%;
-    background:#192219;
-    color:#eee;
-}
-
-.image-caption p{
-    max-width:900px;
-    font-size:25px;
-    font-style:italic;
-}
-
-/* =========================
-   QUOTE
-========================= */
-
-.quote-section{
-    background:#182019;
-    color:#f4f0e7;
-
-    min-height:65vh;
-
-    display:flex;
-    align-items:center;
-}
-
-.quote{
-    max-width:1000px;
-}
-
-.quote p{
-    font-size:clamp(38px,5vw,70px);
-    line-height:1.15;
-    font-weight:normal;
-}
-
-.quote small{
-    display:block;
-    margin-top:35px;
-
-    font-family:Arial,sans-serif;
-    font-size:11px;
-    letter-spacing:3px;
-    text-transform:uppercase;
-
-    color:#aaa996;
-}
-
-/* =========================
-   FOUNDATION
-========================= */
-
-.foundation-story{
-    background:#f4f0e7;
-}
-
-.story-grid{
-    margin-top:70px;
-
-    display:grid;
-    grid-template-columns:1fr 1fr;
-
-    gap:80px;
-}
-
-.story-block{
-    padding-top:25px;
-    border-top:1px solid rgba(30,40,30,0.18);
-}
-
-.story-block span{
-    font-family:Arial,sans-serif;
-    font-size:11px;
-    letter-spacing:3px;
-    color:#817660;
-}
-
-.story-block h3{
-    font-size:38px;
-    font-weight:normal;
-    margin:25px 0 18px;
-}
-
-.story-block p{
-    color:#5b6057;
-    font-size:17px;
-    max-width:500px;
-}
-
-/* =========================
-   CONNECTION
-========================= */
-
-.connection{
-    background:#e5dece;
-}
-
-.connection-flow{
-    margin-top:80px;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:20px;
-
-    flex-wrap:wrap;
-}
-
-.flow-item{
-    padding:25px 35px;
-
-    background:#f5f0e5;
-
-    border:1px solid rgba(40,50,40,0.1);
-
-    font-family:Arial,sans-serif;
     font-size:13px;
-    letter-spacing:2px;
-    text-transform:uppercase;
+
+    line-height:1.9;
+
+    color:var(--muted);
+
+    max-width:430px;
 }
 
-.arrow{
-    font-size:25px;
-    color:#8c8068;
-}
 
-/* =========================
-   CLOSING
-========================= */
+/* =====================================
+   FOUNDATION IMAGE STRIP
+===================================== */
 
-.closing{
+.root-strip{
+
     min-height:70vh;
 
     display:flex;
+
     align-items:center;
 
-    color:#fff;
-
-    background:
+    background-image:
         linear-gradient(
-            rgba(16,24,18,0.60),
-            rgba(16,24,18,0.75)
+            rgba(16,23,17,.30),
+            rgba(16,23,17,.75)
         ),
-        url("https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=2200&q=95")
-        center/cover no-repeat;
+        url("https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=2200&q=90");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-attachment:fixed;
+
+    color:white;
 }
 
-.closing-content{
-    max-width:850px;
+.root-strip-content{
+
+    width:86%;
+
+    max-width:1150px;
+
+    margin:auto;
 }
 
-.closing h2{
-    font-size:clamp(48px,7vw,95px);
-    line-height:1;
-    font-weight:normal;
-    margin-bottom:35px;
+.root-strip-content h2{
+
+    max-width:800px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(45px,7vw,88px);
+
+    font-weight:400;
+
+    line-height:1.05;
 }
 
-.closing p{
-    font-size:20px;
+.root-strip-content p{
+
+    max-width:580px;
+
+    margin-top:30px;
+
+    font-size:16px;
+
+    line-height:1.9;
+
+    color:rgba(255,255,255,.68);
+}
+
+
+/* =====================================
+   CONNECTION
+===================================== */
+
+.connection{
+
+    background:var(--cream-soft);
+
+    text-align:center;
+
+    padding:
+        140px 7%;
+}
+
+.connection-inner{
+
+    max-width:900px;
+
+    margin:auto;
+}
+
+.connection .roots-text{
+
+    margin:auto;
+}
+
+.connection-symbol{
+
+    width:70px;
+
+    height:1px;
+
+    background:var(--gold);
+
+    margin:50px auto;
+}
+
+.connection h3{
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(28px,4vw,45px);
+
+    font-weight:400;
+
+    color:var(--green-dark);
+
+    line-height:1.3;
+}
+
+
+/* =====================================
+   CLOSING
+===================================== */
+
+.roots-closing{
+
+    background:var(--green);
+
+    color:var(--cream);
+
+    text-align:center;
+
+    padding:
+        135px 7%;
+}
+
+.roots-closing-inner{
+
+    max-width:900px;
+
+    margin:auto;
+}
+
+.roots-closing .roots-label{
+
+    color:var(--gold);
+}
+
+.roots-closing h2{
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(42px,6vw,75px);
+
+    font-weight:400;
+
+    line-height:1.08;
+}
+
+.roots-closing p{
+
     max-width:650px;
-    color:#e5e5e0;
+
+    margin:30px auto 45px;
+
+    color:rgba(244,239,228,.65);
+
+    font-size:15px;
+
+    line-height:1.9;
 }
 
-.button{
-    display:inline-block;
+.roots-button{
 
-    margin-top:40px;
-    padding:15px 28px;
+    display:inline-flex;
 
-    border:1px solid rgba(255,255,255,0.5);
+    align-items:center;
 
-    font-family:Arial,sans-serif;
-    font-size:12px;
+    gap:15px;
+
+    padding:
+        16px 28px;
+
+    border:
+        1px solid
+        var(--gold);
+
+    color:var(--cream);
+
+    font-size:11px;
+
     letter-spacing:2px;
+
     text-transform:uppercase;
 
-    transition:0.3s;
+    transition:.35s ease;
 }
 
-.button:hover{
-    background:#fff;
-    color:#182019;
+.roots-button:hover{
+
+    background:var(--gold);
+
+    color:var(--green-dark);
 }
 
-/* =========================
-   FOOTER
-========================= */
 
-footer{
-    background:#101610;
-    color:#bfc2b9;
-
-    padding:60px 8%;
-
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-
-    font-family:Arial,sans-serif;
-    font-size:12px;
-}
-
-.footer-logo{
-    color:#fff;
-    letter-spacing:5px;
-    font-size:18px;
-}
-
-/* =========================
+/* =====================================
    REVEAL
-========================= */
+===================================== */
 
 .reveal{
+
     opacity:0;
+
     transform:translateY(35px);
-    transition:opacity 1s ease, transform 1s ease;
+
+    transition:
+        opacity 1s ease,
+        transform 1s ease;
 }
 
-.reveal.visible{
+.reveal.show{
+
     opacity:1;
+
     transform:translateY(0);
 }
 
-/* =========================
+
+/* =====================================
    RESPONSIVE
-========================= */
+===================================== */
 
 @media(max-width:900px){
 
-    .nav-links{
-        gap:15px;
-        font-size:10px;
+    .roots-section{
+
+        padding:90px 7%;
+    }
+
+    .beneath-grid{
+
+        grid-template-columns:1fr;
+
+        gap:55px;
+    }
+
+    .beneath-image{
+
+        height:480px;
     }
 
     .root-grid{
-        grid-template-columns:1fr 1fr;
-    }
 
-    .intro-grid,
-    .story-grid{
         grid-template-columns:1fr;
-        gap:40px;
     }
 
-    .cinematic-image{
-        height:60vh;
+    .root-strip{
+
+        background-attachment:scroll;
+    }
+
+    .roots-hero{
+
+        background-attachment:scroll;
     }
 }
+
 
 @media(max-width:600px){
 
-    nav{
-        padding:18px 5%;
+    .roots-hero{
+
+        min-height:90vh;
     }
 
-    .logo{
-        font-size:18px;
-        letter-spacing:3px;
+    .roots-hero-content{
+
+        width:86%;
+
+        padding-top:70px;
     }
 
-    .nav-links{
-        gap:10px;
-        font-size:8px;
+    .roots-hero h1{
+
+        letter-spacing:-1px;
     }
 
-    section{
-        padding:85px 7%;
+    .roots-hero p{
+
+        font-size:14px;
+
+        line-height:1.8;
     }
 
-    .hero{
-        padding:120px 7% 80px;
+    .roots-section{
+
+        padding:
+            75px 7%;
     }
 
-    .hero h1{
-        font-size:60px;
-    }
+    .beneath-image{
 
-    .hero p{
-        font-size:17px;
-    }
-
-    .root-grid{
-        grid-template-columns:1fr;
+        height:390px;
     }
 
     .root-card{
-        min-height:230px;
+
+        min-height:270px;
+
+        padding:35px 28px;
     }
 
-    .cinematic-image{
-        height:50vh;
+    .root-number{
+
+        margin-bottom:35px;
     }
 
-    .image-caption p{
-        font-size:20px;
+    .root-philosophy,
+    .connection,
+    .roots-closing{
+
+        padding:
+            95px 7%;
     }
 
-    .connection-flow{
-        flex-direction:column;
-    }
+    .root-strip{
 
-    .arrow{
-        transform:rotate(90deg);
-    }
-
-    footer{
-        flex-direction:column;
-        gap:20px;
-        text-align:center;
+        min-height:70vh;
     }
 }
+
 </style>
+
 </head>
 
 
 <body>
 
-<!-- =========================
-     NAVIGATION
-========================= -->
 
-<nav id="navbar">
+<!-- =====================================
+     SHARED HEADER
+===================================== -->
 
-    <a href="index.html" class="logo">VALIASS</a>
-
-    <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="story.html">Story</a>
-        <a href="roots.html" class="active">Roots</a>
-        <a href="branches.html">Branches</a>
-        <a href="vision.html">Vision</a>
-        <a href="contact.html">Contact</a>
-    </div>
-
-</nav>
+<div id="valiass-header"></div>
 
 
-<!-- =========================
+<!-- =====================================
      HERO
-========================= -->
+===================================== -->
 
-<header class="hero">
+<section class="roots-hero">
 
-    <div class="hero-content reveal">
+    <div class="roots-hero-content reveal">
 
-        <div class="eyebrow">
-            VALIASS / THE FOUNDATION
+        <div class="roots-kicker">
+            The Foundation
         </div>
 
         <h1>
-            Our<br>
-            Roots.
+            Our Roots
         </h1>
 
         <p>
-            Before a tree reaches the sky,
-            it learns how to hold itself to the earth.
+            A tree is known by what grows above the ground.
+            But everything begins beneath it.
+            Our roots are the values, experiences and
+            beliefs that quietly shape everything we do.
         </p>
+
+        <div class="hero-line"></div>
 
     </div>
 
-</header>
+</section>
 
 
-<!-- =========================
-     INTRO
-========================= -->
+<!-- =====================================
+     BENEATH EVERYTHING
+===================================== -->
 
-<section class="intro">
+<section class="roots-section beneath">
 
-    <div class="intro-grid">
+    <div class="roots-container beneath-grid">
 
-        <div class="reveal">
+        <div class="beneath-image reveal">
 
-            <div class="section-label">
-                01 / Beneath Everything
+            <img
+                src="https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?auto=format&fit=crop&w=1400&q=85"
+                alt="Tree roots"
+            >
+
+        </div>
+
+
+        <div class="beneath-content reveal">
+
+            <div class="roots-label">
+                01 — Beneath Everything
             </div>
 
-            <h2 class="section-title">
-                What you see is not everything.
+            <h2 class="roots-title">
+                What people see
+                is only the beginning.
             </h2>
 
-        </div>
-
-        <div class="reveal">
-
-            <div class="intro-number">
-                ROOTS ARE INVISIBLE.
-                <br><br>
-                BUT THEY DEFINE EVERYTHING ABOVE.
-            </div>
-
-            <p class="section-text">
-                Every idea, every decision and every journey
-                is shaped by something deeper.
-                Values. Experiences. Beliefs. Purpose.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     FOUNDATION CARDS
-========================= -->
-
-<section class="foundation">
-
-    <div class="reveal">
-
-        <div class="section-label">
-            02 / The Foundation
-        </div>
-
-        <h2 class="section-title">
-            What keeps us grounded.
-        </h2>
-
-        <p class="section-text">
-            These are not rules written on paper.
-            They are the things that quietly influence
-            how we think, create and grow.
-        </p>
-
-    </div>
-
-
-    <div class="root-grid">
-
-        <div class="root-card reveal">
-
-            <div class="root-number">
-                ROOT 01
-            </div>
-
-            <div>
-                <h3>Values</h3>
+            <div class="roots-text">
 
                 <p>
-                    What we believe in
-                    and what matters to us.
+                    A strong tree does not depend only
+                    on its branches.
                 </p>
-            </div>
-
-        </div>
-
-
-        <div class="root-card reveal">
-
-            <div class="root-number">
-                ROOT 02
-            </div>
-
-            <div>
-                <h3>Morals</h3>
 
                 <p>
-                    How we choose to move
-                    when choices are not easy.
+                    Its strength comes from everything
+                    beneath the surface — the roots
+                    that hold it steady through changing
+                    seasons.
                 </p>
-            </div>
-
-        </div>
-
-
-        <div class="root-card reveal">
-
-            <div class="root-number">
-                ROOT 03
-            </div>
-
-            <div>
-                <h3>Experience</h3>
 
                 <p>
-                    Everything life taught us,
-                    directly and indirectly.
+                    VALIASS is built with the same thought.
                 </p>
-            </div>
 
-        </div>
-
-
-        <div class="root-card reveal">
-
-            <div class="root-number">
-                ROOT 04
-            </div>
-
-            <div>
-                <h3>Purpose</h3>
-
-                <p>
-                    The reason we continue
-                    to grow and create.
-                </p>
             </div>
 
         </div>
@@ -766,204 +867,258 @@ footer{
 </section>
 
 
-<!-- =========================
-     CINEMATIC ROOT IMAGE
-========================= -->
+<!-- =====================================
+     PHILOSOPHY
+===================================== -->
 
-<section class="image-section">
+<section class="root-philosophy">
 
-    <img
-        class="cinematic-image"
-        src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1800&q=95"
-        alt="Cinematic natural landscape"
-    >
+    <div class="root-philosophy-inner reveal">
 
-    <div class="image-caption">
-
-        <p>
-            “Strong branches are not created by looking strong.
-            They are created by growing strong roots.”
-        </p>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     QUOTE
-========================= -->
-
-<section class="quote-section">
-
-    <div class="quote reveal">
-
-        <p>
-            Growth is not only about
-            reaching higher.
-            It is also about knowing
-            what keeps you grounded.
-        </p>
-
-        <small>
-            The philosophy behind VALIASS
-        </small>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     FOUNDATION STORY
-========================= -->
-
-<section class="foundation-story">
-
-    <div class="reveal">
-
-        <div class="section-label">
-            03 / The Foundation
-        </div>
-
-        <h2 class="section-title">
-            Before the branches,
-            there is the trunk.
-        </h2>
-
-    </div>
-
-
-    <div class="story-grid">
-
-        <div class="story-block reveal">
-
-            <span>
-                SHARED FOUNDATION
-            </span>
-
-            <h3>
-                One origin.
-            </h3>
-
-            <p>
-                VALIASS begins from shared values,
-                experiences and a desire to build
-                something meaningful.
-            </p>
-
-        </div>
-
-
-        <div class="story-block reveal">
-
-            <span>
-                INDIVIDUAL GROWTH
-            </span>
-
-            <h3>
-                Many directions.
-            </h3>
-
-            <p>
-                The people, ideas and initiatives
-                that grow from this foundation
-                are free to discover their own direction.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     CONNECTION
-========================= -->
-
-<section class="connection">
-
-    <div class="reveal">
-
-        <div class="section-label">
-            04 / Connection
-        </div>
-
-        <h2 class="section-title">
-            Everything connects.
-        </h2>
-
-        <p class="section-text">
-            Values become experience.
-            Experience becomes ideas.
-            Ideas become branches.
-            And branches become new possibilities.
-        </p>
-
-    </div>
-
-
-    <div class="connection-flow reveal">
-
-        <div class="flow-item">
-            Values
-        </div>
-
-        <div class="arrow">
-            →
-        </div>
-
-        <div class="flow-item">
-            Experience
-        </div>
-
-        <div class="arrow">
-            →
-        </div>
-
-        <div class="flow-item">
-            Ideas
-        </div>
-
-        <div class="arrow">
-            →
-        </div>
-
-        <div class="flow-item">
-            Branches
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     CLOSING CINEMATIC
-========================= -->
-
-<section class="closing">
-
-    <div class="closing-content reveal">
-
-        <div class="section-label" style="color:#c7c1af;">
-            THE NEXT CHAPTER
+        <div class="roots-label">
+            02 — Philosophy
         </div>
 
         <h2>
-            Now let the<br>
-            branches grow.
+            Grow outward.
+            Stay grounded.
         </h2>
 
         <p>
-            The foundation is strong.
-            The direction is open.
-            What grows next is part of the journey.
+            Growth should never mean losing the
+            foundation that made growth possible.
+            As new branches appear, the roots remain
+            connected to where everything began.
         </p>
 
-        <a href="branches.html" class="button">
-            Explore Our Branches →
+    </div>
+
+</section>
+
+
+<!-- =====================================
+     FOUR ROOTS
+===================================== -->
+
+<section class="roots-section four-roots">
+
+    <div class="roots-container">
+
+        <div class="four-roots-intro reveal">
+
+            <div class="roots-label">
+                03 — Our Foundation
+            </div>
+
+            <h2 class="roots-title">
+                Four things
+                keep us grounded.
+            </h2>
+
+            <div class="roots-text">
+
+                <p>
+                    These are not rules written on a wall.
+                    They are ideas we want to carry with us
+                    as we grow.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="root-grid">
+
+
+            <div class="root-card reveal">
+
+                <div class="root-number">
+                    01
+                </div>
+
+                <h3>
+                    Values
+                </h3>
+
+                <p>
+                    What we believe matters.
+                    Our choices begin with the values
+                    we choose to stand by.
+                </p>
+
+            </div>
+
+
+            <div class="root-card reveal">
+
+                <div class="root-number">
+                    02
+                </div>
+
+                <h3>
+                    Morals
+                </h3>
+
+                <p>
+                    Growth means little if we lose
+                    our sense of what is right.
+                    We want our direction to remain human.
+                </p>
+
+            </div>
+
+
+            <div class="root-card reveal">
+
+                <div class="root-number">
+                    03
+                </div>
+
+                <h3>
+                    Experience
+                </h3>
+
+                <p>
+                    Every journey leaves lessons behind.
+                    We carry those lessons forward
+                    instead of starting from zero.
+                </p>
+
+            </div>
+
+
+            <div class="root-card reveal">
+
+                <div class="root-number">
+                    04
+                </div>
+
+                <h3>
+                    Purpose
+                </h3>
+
+                <p>
+                    We want every branch to have a reason
+                    to exist — something useful,
+                    meaningful or worth exploring.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================
+     ROOT CINEMATIC STRIP
+===================================== -->
+
+<section class="root-strip">
+
+    <div class="root-strip-content reveal">
+
+        <div class="roots-label">
+            04 — Foundation
+        </div>
+
+        <h2>
+            Strong roots make
+            freedom to grow possible.
+        </h2>
+
+        <p>
+            When the foundation is strong,
+            branches can move in different directions
+            without losing their connection.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================
+     CONNECTION
+===================================== -->
+
+<section class="connection">
+
+    <div class="connection-inner reveal">
+
+        <div class="roots-label">
+            05 — Connection
+        </div>
+
+        <h2 class="roots-title">
+            Different branches.
+            Same roots.
+        </h2>
+
+        <div class="roots-text">
+
+            <p>
+                A future initiative may have its own
+                identity, audience, purpose and direction.
+            </p>
+
+            <p>
+                It does not need to look like another branch.
+                It only needs to remain connected to the
+                values that gave it life.
+            </p>
+
+        </div>
+
+        <div class="connection-symbol"></div>
+
+        <h3>
+            One origin.<br>
+            Strong roots.<br>
+            Many possibilities.
+        </h3>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================
+     CLOSING
+===================================== -->
+
+<section class="roots-closing">
+
+    <div class="roots-closing-inner reveal">
+
+        <div class="roots-label">
+            06 — Keep Growing
+        </div>
+
+        <h2>
+            The roots stay.
+            The branches grow.
+        </h2>
+
+        <p>
+            This is the foundation of VALIASS.
+            And from here, new directions begin.
+        </p>
+
+        <a
+            href="branches.html"
+            class="roots-button"
+        >
+            Explore Our Branches
+
+            <span>
+                →
+            </span>
+
         </a>
 
     </div>
@@ -971,77 +1126,124 @@ footer{
 </section>
 
 
-<!-- =========================
-     FOOTER
-========================= -->
+<!-- =====================================
+     SHARED FOOTER
+===================================== -->
 
-<footer>
+<div id="valiass-footer"></div>
 
-    <a href="index.html" class="footer-logo">
-        VALIASS
-    </a>
 
-    <div>
-        One origin. Strong roots. Many possibilities.
-    </div>
-
-</footer>
-
+<!-- =====================================
+     COMPONENT LOADER
+===================================== -->
 
 <script>
 
-/* =========================
-   NAVBAR SCROLL
-========================= */
+async function loadComponent(
+    elementId,
+    componentPath
+){
 
-const navbar = document.getElementById("navbar");
+    try{
 
-window.addEventListener("scroll", () => {
+        const response =
+            await fetch(componentPath);
 
-    if(window.scrollY > 50){
-        navbar.classList.add("scrolled");
-    }else{
-        navbar.classList.remove("scrolled");
+        if(!response.ok){
+
+            throw new Error(
+                `Could not load ${componentPath}`
+            );
+
+        }
+
+        const html =
+            await response.text();
+
+        document.getElementById(
+            elementId
+        ).innerHTML = html;
+
     }
 
-});
+    catch(error){
 
+        console.error(
+            "VALIASS component error:",
+            error
+        );
 
-/* =========================
-   REVEAL ANIMATION
-========================= */
-
-const reveals = document.querySelectorAll(".reveal");
-
-const observer = new IntersectionObserver(
-    entries => {
-
-        entries.forEach(entry => {
-
-            if(entry.isIntersecting){
-
-                entry.target.classList.add("visible");
-
-                observer.unobserve(entry.target);
-
-            }
-
-        });
-
-    },
-    {
-        threshold:0.12
     }
+
+}
+
+
+loadComponent(
+    "valiass-header",
+    "components/header.html"
 );
 
 
-reveals.forEach(element => {
+loadComponent(
+    "valiass-footer",
+    "components/footer.html"
+);
 
-    observer.observe(element);
 
-});
+/* =====================================
+   SCROLL REVEAL
+===================================== */
+
+const revealElements =
+    document.querySelectorAll(".reveal");
+
+
+const revealObserver =
+    new IntersectionObserver(
+
+        (entries) => {
+
+            entries.forEach(
+                (entry) => {
+
+                    if(
+                        entry.isIntersecting
+                    ){
+
+                        entry.target.classList.add(
+                            "show"
+                        );
+
+                        revealObserver.unobserve(
+                            entry.target
+                        );
+
+                    }
+
+                }
+            );
+
+        },
+
+        {
+            threshold:0.12
+        }
+
+    );
+
+
+revealElements.forEach(
+    (element) => {
+
+        revealObserver.observe(
+            element
+        );
+
+    }
+);
 
 </script>
+
 
 </body>
 </html>
