@@ -2,14 +2,9 @@
 
     <div class="footer-top">
 
-        <a
-            href="index.html"
-            class="footer-brand"
-        >
+        <a href="index.html" class="footer-brand">
 
-            <span class="footer-emblem">
-                V
-            </span>
+            <span class="footer-emblem">V</span>
 
             <span class="footer-name">
                 VALIASS
@@ -17,13 +12,10 @@
 
         </a>
 
-
         <p class="footer-tagline">
-
-            One origin.
-            Strong roots.
+            One origin.<br>
+            Strong roots.<br>
             Many possibilities.
-
         </p>
 
     </div>
@@ -38,32 +30,21 @@
             © 2026 VALIASS
         </span>
 
-
         <div class="footer-links">
 
-            <a href="index.html">
-                Home
-            </a>
+            <a href="index.html">Home</a>
 
-            <a href="story.html">
-                Story
-            </a>
+            <a href="story.html">Story</a>
 
-            <a href="roots.html">
-                Roots
-            </a>
+            <a href="family.html">Family</a>
 
-            <a href="branches.html">
-                Branches
-            </a>
+            <a href="roots.html">Roots</a>
 
-            <a href="vision.html">
-                Vision
-            </a>
+            <a href="branches.html">Branches</a>
 
-            <a href="contact.html">
-                Contact
-            </a>
+            <a href="vision.html">Vision</a>
+
+            <a href="contact.html">Contact</a>
 
         </div>
 
@@ -74,32 +55,34 @@
 
 <style>
 
+/* =========================================
+   VALIASS MASTER FOOTER
+   ========================================= */
+
 .valiass-footer{
 
     background:#101711;
 
-    color:#f4eee2;
+    color:#f4efe4;
 
-    padding:
-        60px 5%
-        28px;
+    padding:90px 4% 30px;
 
 }
 
 
+/* TOP */
+
 .footer-top{
 
-    width:100%;
+    width:min(1200px,92%);
 
-    max-width:1200px;
-
-    margin:auto;
+    margin:0 auto;
 
     display:flex;
 
-    align-items:center;
-
     justify-content:space-between;
+
+    align-items:flex-end;
 
     gap:40px;
 
@@ -112,57 +95,45 @@
 
     align-items:center;
 
-    gap:13px;
-
-    color:#f4eee2;
+    gap:14px;
 
     text-decoration:none;
+
+    color:#f4efe4;
 
 }
 
 
 .footer-emblem{
 
-    width:44px;
+    width:42px;
+    height:42px;
 
-    height:44px;
-
-    border:
-        1px solid
-        #d8bd7a;
+    border:1px solid rgba(208,180,107,.75);
 
     border-radius:50%;
 
     display:flex;
 
     align-items:center;
-
     justify-content:center;
 
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
+    color:#d0b46b;
 
-    font-size:17px;
+    font-family:Georgia,"Times New Roman",serif;
 
-    color:#d8bd7a;
+    font-size:19px;
 
 }
 
 
 .footer-name{
 
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
+    font-family:Georgia,"Times New Roman",serif;
 
-    font-size:20px;
+    font-size:22px;
 
-    letter-spacing:4px;
-
-    font-weight:400;
+    letter-spacing:5px;
 
 }
 
@@ -171,44 +142,41 @@
 
     margin:0;
 
-    color:
-        rgba(244,238,226,.62);
+    color:rgba(244,239,228,.55);
 
-    font-family:Arial,sans-serif;
+    font-family:Georgia,"Times New Roman",serif;
 
-    font-size:12px;
+    font-size:17px;
 
-    letter-spacing:1px;
+    line-height:1.7;
 
     text-align:right;
 
 }
 
 
+/* LINE */
+
 .footer-line{
 
-    width:100%;
-
-    max-width:1200px;
+    width:min(1200px,92%);
 
     height:1px;
 
-    margin:
-        42px auto 22px;
+    background:rgba(208,180,107,.18);
 
-    background:
-        rgba(255,255,255,.10);
+    margin:60px auto 25px;
 
 }
 
 
+/* BOTTOM */
+
 .footer-bottom{
 
-    width:100%;
+    width:min(1200px,92%);
 
-    max-width:1200px;
-
-    margin:auto;
+    margin:0 auto;
 
     display:flex;
 
@@ -218,12 +186,18 @@
 
     gap:30px;
 
-    color:
-        rgba(244,238,226,.38);
+}
 
-    font-family:Arial,sans-serif;
 
-    font-size:10px;
+.footer-bottom > span{
+
+    color:rgba(244,239,228,.4);
+
+    font-family:Arial,Helvetica,sans-serif;
+
+    font-size:11px;
+
+    letter-spacing:1px;
 
 }
 
@@ -232,46 +206,50 @@
 
     display:flex;
 
-    align-items:center;
+    gap:25px;
 
-    gap:22px;
+    flex-wrap:wrap;
+
+    justify-content:flex-end;
 
 }
 
 
 .footer-links a{
 
-    color:
-        rgba(244,238,226,.50);
+    color:rgba(244,239,228,.5);
 
     text-decoration:none;
 
-    transition:.3s ease;
+    font-family:Arial,Helvetica,sans-serif;
+
+    font-size:10px;
+
+    letter-spacing:1.2px;
+
+    text-transform:uppercase;
+
+    transition:color .3s ease;
 
 }
 
 
 .footer-links a:hover{
 
-    color:#d8bd7a;
+    color:#d0b46b;
 
 }
 
 
-/* =====================================================
-   MOBILE
-===================================================== */
+/* MOBILE */
 
 @media(max-width:700px){
 
     .valiass-footer{
 
-        padding:
-            50px 7%
-            25px;
+        padding:70px 5% 25px;
 
     }
-
 
     .footer-top{
 
@@ -279,27 +257,21 @@
 
         align-items:flex-start;
 
-        gap:25px;
-
     }
-
 
     .footer-tagline{
 
         text-align:left;
 
-        line-height:1.7;
+        font-size:15px;
 
     }
-
 
     .footer-line{
 
-        margin:
-            35px auto 22px;
+        margin:45px auto 25px;
 
     }
-
 
     .footer-bottom{
 
@@ -307,17 +279,13 @@
 
         align-items:flex-start;
 
-        gap:20px;
-
     }
-
 
     .footer-links{
 
-        flex-wrap:wrap;
+        justify-content:flex-start;
 
-        gap:
-            14px 20px;
+        gap:16px 20px;
 
     }
 
