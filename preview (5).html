@@ -1,0 +1,1192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Contact — VALIASS</title>
+
+<style>
+:root {
+    --cream: #f4efe4;
+    --cream-dark: #e9e0cf;
+    --green: #20382c;
+    --green-dark: #14251c;
+    --green-light: #385744;
+    --olive: #707b55;
+    --gold: #b49352;
+    --brown: #765b40;
+    --text: #344239;
+    --muted: #667064;
+    --white: #fffdf8;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--cream);
+    color: var(--text);
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
+/* ================= NAVIGATION ================= */
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 22px 6%;
+    transition: 0.4s ease;
+}
+
+nav.scrolled {
+    background: rgba(244, 239, 228, 0.92);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 5px 25px rgba(32, 56, 44, 0.08);
+}
+
+.logo {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 23px;
+    letter-spacing: 5px;
+    color: var(--green);
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 28px;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--green);
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+    width: 0;
+    height: 1px;
+    background: var(--gold);
+    transition: 0.3s;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* ================= HERO ================= */
+
+.hero {
+    min-height: 92vh;
+    padding: 170px 8% 100px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    max-width: 1050px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.eyebrow {
+    color: var(--gold);
+    font-size: 12px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: normal;
+    font-size: clamp(58px, 10vw, 145px);
+    line-height: 0.88;
+    color: var(--green);
+    letter-spacing: -5px;
+}
+
+.hero h1 span {
+    color: var(--brown);
+    font-style: italic;
+}
+
+.hero-text {
+    max-width: 650px;
+    margin: 42px auto 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 22px;
+    line-height: 1.7;
+    color: var(--muted);
+}
+
+.hero-text strong {
+    color: var(--green);
+    font-weight: normal;
+}
+
+/* Organic background circles */
+
+.orb {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.35;
+    pointer-events: none;
+}
+
+.orb.one {
+    width: 350px;
+    height: 350px;
+    background: var(--cream-dark);
+    top: 12%;
+    left: -150px;
+}
+
+.orb.two {
+    width: 260px;
+    height: 260px;
+    background: #d8d9bf;
+    right: -100px;
+    bottom: 5%;
+}
+
+.orb.three {
+    width: 90px;
+    height: 90px;
+    border: 1px solid var(--gold);
+    top: 25%;
+    right: 16%;
+}
+
+/* ================= INTRO ================= */
+
+.intro {
+    padding: 130px 8%;
+    background: var(--white);
+    text-align: center;
+}
+
+.section-label {
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 11px;
+    margin-bottom: 22px;
+}
+
+.intro h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: normal;
+    font-size: clamp(40px, 6vw, 78px);
+    line-height: 1;
+    color: var(--green);
+    max-width: 850px;
+    margin: auto;
+}
+
+.intro h2 em {
+    color: var(--brown);
+}
+
+.intro p {
+    max-width: 650px;
+    margin: 35px auto 0;
+    line-height: 1.9;
+    color: var(--muted);
+    font-size: 16px;
+}
+
+/* ================= CONTACT OPTIONS ================= */
+
+.options {
+    padding: 120px 8%;
+}
+
+.options-header {
+    max-width: 850px;
+    margin-bottom: 65px;
+}
+
+.options-header h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(42px, 6vw, 75px);
+    line-height: 1;
+    font-weight: normal;
+    color: var(--green);
+}
+
+.options-header p {
+    margin-top: 25px;
+    color: var(--muted);
+    max-width: 550px;
+    line-height: 1.8;
+}
+
+.option-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.option {
+    background: var(--white);
+    padding: 45px 35px;
+    min-height: 270px;
+    border: 1px solid rgba(32, 56, 44, 0.08);
+    transition: 0.4s ease;
+}
+
+.option:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px rgba(32, 56, 44, 0.08);
+}
+
+.option-number {
+    font-family: Georgia, "Times New Roman", serif;
+    color: var(--gold);
+    font-size: 18px;
+}
+
+.option h3 {
+    margin-top: 45px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: normal;
+    color: var(--green);
+    font-size: 28px;
+}
+
+.option p {
+    margin-top: 15px;
+    line-height: 1.7;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+/* ================= CONVERSATION ================= */
+
+.conversation {
+    background: var(--green);
+    color: var(--cream);
+    padding: 130px 8%;
+}
+
+.conversation-inner {
+    max-width: 1150px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 100px;
+    align-items: start;
+}
+
+.conversation-copy .section-label {
+    color: #d1b978;
+}
+
+.conversation-copy h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: normal;
+    font-size: clamp(45px, 6vw, 78px);
+    line-height: 0.98;
+}
+
+.conversation-copy p {
+    margin-top: 30px;
+    color: #c7d0c8;
+    line-height: 1.8;
+    max-width: 450px;
+}
+
+/* ================= FORM ================= */
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.field label {
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #c8d0c8;
+}
+
+.field input,
+.field select,
+.field textarea {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+    background: transparent;
+    color: var(--cream);
+    padding: 14px 2px;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    outline: none;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+    border-bottom-color: var(--gold);
+}
+
+.field select {
+    color: var(--cream);
+}
+
+.field select option {
+    color: var(--green);
+}
+
+.field textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+.field input::placeholder,
+.field textarea::placeholder {
+    color: #9ba99f;
+}
+
+.submit-btn {
+    align-self: flex-start;
+    margin-top: 15px;
+
+    padding: 17px 30px;
+
+    background: var(--gold);
+    color: var(--green-dark);
+
+    border: none;
+    cursor: pointer;
+
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    transition: 0.3s ease;
+}
+
+.submit-btn:hover {
+    background: var(--cream);
+    transform: translateY(-3px);
+}
+
+/* ================= DIRECT CONTACT ================= */
+
+.direct {
+    padding: 120px 8%;
+    background: var(--cream);
+}
+
+.direct-inner {
+    max-width: 1100px;
+    margin: auto;
+    text-align: center;
+}
+
+.direct h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(40px, 6vw, 72px);
+    font-weight: normal;
+    color: var(--green);
+}
+
+.direct p {
+    max-width: 600px;
+    margin: 25px auto 55px;
+    line-height: 1.8;
+    color: var(--muted);
+}
+
+.contact-details {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.detail {
+    padding: 35px 20px;
+    background: var(--white);
+}
+
+.detail span {
+    display: block;
+    color: var(--gold);
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.detail a,
+.detail div {
+    color: var(--green);
+    text-decoration: none;
+    line-height: 1.6;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 18px;
+}
+
+.detail a:hover {
+    color: var(--brown);
+}
+
+/* ================= WHATSAPP ================= */
+
+.whatsapp-area {
+    margin-top: 55px;
+}
+
+.whatsapp-area p {
+    margin: 0 auto 20px;
+}
+
+.whatsapp-btn {
+    display: inline-block;
+    padding: 17px 32px;
+
+    background: var(--green);
+    color: var(--cream);
+
+    text-decoration: none;
+
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    transition: 0.3s;
+}
+
+.whatsapp-btn:hover {
+    background: var(--brown);
+    transform: translateY(-3px);
+}
+
+/* ================= CLOSING ================= */
+
+.closing {
+    min-height: 75vh;
+    padding: 130px 8%;
+
+    background: var(--white);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.closing-content {
+    position: relative;
+    z-index: 2;
+}
+
+.closing h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(55px, 9vw, 125px);
+    line-height: 0.88;
+    font-weight: normal;
+    color: var(--green);
+    letter-spacing: -4px;
+}
+
+.closing h2 em {
+    color: var(--brown);
+}
+
+.closing p {
+    max-width: 550px;
+    margin: 35px auto;
+    color: var(--muted);
+    line-height: 1.8;
+}
+
+.branch-btn {
+    display: inline-block;
+    padding: 16px 28px;
+
+    border: 1px solid var(--green);
+    color: var(--green);
+
+    text-decoration: none;
+
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    transition: 0.3s;
+}
+
+.branch-btn:hover {
+    background: var(--green);
+    color: var(--cream);
+}
+
+/* Decorative seed */
+
+.seed {
+    position: absolute;
+    width: 18px;
+    height: 28px;
+    border: 1px solid var(--gold);
+    border-radius: 80% 20% 80% 20%;
+    transform: rotate(35deg);
+    bottom: 16%;
+    left: 17%;
+}
+
+.seed::after {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 80px;
+    background: var(--gold);
+    left: 7px;
+    top: 20px;
+    transform: rotate(-20deg);
+    transform-origin: top;
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+    background: var(--green-dark);
+    color: #aeb9af;
+    padding: 35px 6%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+footer a {
+    color: #c7d0c8;
+    text-decoration: none;
+}
+
+/* ================= ANIMATION ================= */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(35px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 850px) {
+
+    nav {
+        padding: 18px 5%;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero {
+        min-height: 85vh;
+        padding: 140px 7% 80px;
+    }
+
+    .hero h1 {
+        letter-spacing: -2px;
+    }
+
+    .hero-text {
+        font-size: 18px;
+    }
+
+    .option-grid,
+    .contact-details {
+        grid-template-columns: 1fr;
+    }
+
+    .conversation-inner {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+
+    .conversation {
+        padding: 90px 7%;
+    }
+
+    .options,
+    .intro,
+    .direct {
+        padding: 90px 7%;
+    }
+
+    .closing {
+        min-height: 65vh;
+        padding: 100px 7%;
+    }
+
+    .closing h2 {
+        letter-spacing: -2px;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ================= NAV ================= -->
+
+<nav id="navbar">
+
+    <!-- Replace LOGO with actual VALIASS logo later -->
+    <a href="index.html" class="logo">VALIASS</a>
+
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="story.html">Story</a></li>
+        <li><a href="roots.html">Roots</a></li>
+        <li><a href="branches.html">Branches</a></li>
+        <li><a href="vision.html">Vision</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+</nav>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+    <div class="orb one"></div>
+    <div class="orb two"></div>
+    <div class="orb three"></div>
+
+    <div class="hero-content reveal">
+
+        <div class="eyebrow">
+            The Beginning Of Something
+        </div>
+
+        <h1>
+            LET'S<br>
+            <span>GROW</span>
+            SOMETHING
+        </h1>
+
+        <p class="hero-text">
+            Every meaningful journey begins with a conversation.
+            <br><br>
+            Maybe you have an idea.
+            Maybe you want to build something.
+            Maybe you don't know what it is yet.
+            <br><br>
+            <strong>Let's talk.</strong>
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= INTRO ================= -->
+
+<section class="intro reveal">
+
+    <div class="section-label">
+        Where Branches Begin
+    </div>
+
+    <h2>
+        Some branches begin with a clear plan.
+        <br>
+        Some begin with a <em>conversation.</em>
+    </h2>
+
+    <p>
+        You don't need to have everything figured out before you reach out.
+        Bring us your thought, your question, your possibility —
+        and let's explore where it can grow.
+    </p>
+
+</section>
+
+
+<!-- ================= OPTIONS ================= -->
+
+<section class="options">
+
+    <div class="options-header reveal">
+
+        <div class="section-label">
+            Why Connect
+        </div>
+
+        <h2>
+            Bring us what you're thinking.
+        </h2>
+
+        <p>
+            Every idea has a different beginning.
+            Start wherever you are.
+        </p>
+
+    </div>
+
+
+    <div class="option-grid">
+
+        <div class="option reveal">
+
+            <div class="option-number">01</div>
+
+            <h3>Have An Idea?</h3>
+
+            <p>
+                Something is on your mind.
+                Let's give it space to grow.
+            </p>
+
+        </div>
+
+
+        <div class="option reveal">
+
+            <div class="option-number">02</div>
+
+            <h3>Want To Collaborate?</h3>
+
+            <p>
+                Different people. Different strengths.
+                One shared possibility.
+            </p>
+
+        </div>
+
+
+        <div class="option reveal">
+
+            <div class="option-number">03</div>
+
+            <h3>Build A New Branch?</h3>
+
+            <p>
+                Have an idea that could become something bigger?
+                Let's explore it together.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CONVERSATION ================= -->
+
+<section class="conversation">
+
+    <div class="conversation-inner">
+
+        <div class="conversation-copy reveal">
+
+            <div class="section-label">
+                Start A Conversation
+            </div>
+
+            <h2>
+                No formality.<br>
+                Just a conversation.
+            </h2>
+
+            <p>
+                You don't have to prepare a presentation.
+                You don't need the perfect words.
+                Just tell us what you're thinking.
+            </p>
+
+            <p>
+                Good ideas often start simply.
+            </p>
+
+        </div>
+
+
+        <form class="contact-form reveal" id="contactForm">
+
+            <div class="field">
+
+                <label for="name">
+                    Your Name
+                </label>
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Enter your name"
+                    required
+                >
+
+            </div>
+
+
+            <div class="field">
+
+                <label for="email">
+                    Your Email
+                </label>
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Enter your email"
+                    required
+                >
+
+            </div>
+
+
+            <div class="field">
+
+                <label for="reason">
+                    What brings you here?
+                </label>
+
+                <select id="reason">
+
+                    <option value="I have an idea">
+                        I have an idea
+                    </option>
+
+                    <option value="I want to collaborate">
+                        I want to collaborate
+                    </option>
+
+                    <option value="I want to build something">
+                        I want to build something
+                    </option>
+
+                    <option value="I want to know more about VALIASS">
+                        I want to know more about VALIASS
+                    </option>
+
+                    <option value="Something else">
+                        Something else
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="field">
+
+                <label for="message">
+                    Tell Us A Little About It
+                </label>
+
+                <textarea
+                    id="message"
+                    placeholder="What's on your mind?"
+                    required
+                ></textarea>
+
+            </div>
+
+
+            <button type="submit" class="submit-btn">
+                Begin The Conversation →
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+<!-- ================= DIRECT CONTACT ================= -->
+
+<section class="direct">
+
+    <div class="direct-inner reveal">
+
+        <div class="section-label">
+            Reach VALIASS
+        </div>
+
+        <h2>
+            Prefer a direct conversation?
+        </h2>
+
+        <p>
+            Sometimes the simplest way to begin is just to say hello.
+        </p>
+
+
+        <div class="contact-details">
+
+            <div class="detail">
+
+                <span>Email</span>
+
+                <a href="mailto:team.valiass@gmail.com">
+                    team.valiass@gmail.com
+                </a>
+
+            </div>
+
+
+            <div class="detail">
+
+                <span>Call</span>
+
+                <a href="tel:+918985361991">
+                    8985361991
+                </a>
+
+                <br><br>
+
+                <a href="tel:+919133140148">
+                    9133140148
+                </a>
+
+            </div>
+
+
+            <div class="detail">
+
+                <span>Location</span>
+
+                <div>
+                    Ippanapadu,<br>
+                    Mandapeta,<br>
+                    East Godavari,<br>
+                    Andhra Pradesh — 533340
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="whatsapp-area">
+
+            <p>
+                Want to talk right now?
+            </p>
+
+            <a
+                href="https://wa.me/918985361991"
+                target="_blank"
+                class="whatsapp-btn"
+            >
+                Start On WhatsApp →
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CLOSING ================= -->
+
+<section class="closing">
+
+    <div class="seed"></div>
+
+    <div class="closing-content reveal">
+
+        <div class="section-label">
+            A New Beginning
+        </div>
+
+        <h2>
+            EVERY BRANCH<br>
+            STARTS <em>SOMEWHERE.</em>
+        </h2>
+
+        <p>
+            Maybe this conversation is where yours begins.
+        </p>
+
+        <a href="branches.html" class="branch-btn">
+            Explore Our Branches →
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div>
+        VALIASS — ONE ORIGIN. STRONG ROOTS. MANY POSSIBILITIES.
+    </div>
+
+    <a href="index.html">
+        Back To VALIASS ↑
+    </a>
+
+</footer>
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script>
+
+/* Navbar scroll */
+
+const navbar = document.getElementById("navbar");
+
+window.addEventListener("scroll", () => {
+
+    if (window.scrollY > 40) {
+        navbar.classList.add("scrolled");
+    } else {
+        navbar.classList.remove("scrolled");
+    }
+
+});
+
+
+/* Reveal animation */
+
+const reveals = document.querySelectorAll(".reveal");
+
+const observer = new IntersectionObserver(
+
+    entries => {
+
+        entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+                entry.target.classList.add("visible");
+
+                observer.unobserve(entry.target);
+
+            }
+
+        });
+
+    },
+
+    {
+        threshold: 0.12
+    }
+
+);
+
+reveals.forEach(element => {
+    observer.observe(element);
+});
+
+
+/* Contact form → WhatsApp */
+
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+
+    e.preventDefault();
+
+    const name =
+        document.getElementById("name").value.trim();
+
+    const email =
+        document.getElementById("email").value.trim();
+
+    const reason =
+        document.getElementById("reason").value;
+
+    const message =
+        document.getElementById("message").value.trim();
+
+
+    const whatsappMessage =
+`Hello VALIASS,
+
+My name is ${name}.
+
+Email: ${email}
+
+I'm reaching out because:
+${reason}
+
+About my idea:
+${message}
+
+I would like to start a conversation.`;
+
+    const whatsappURL =
+        "https://wa.me/918985361991?text=" +
+        encodeURIComponent(whatsappMessage);
+
+    window.open(whatsappURL, "_blank");
+
+});
+
+</script>
+
+</body>
+</html>
